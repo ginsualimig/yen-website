@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: ServiceDetailPageProps): Prom
       title: `${title} | Yen Investment Consulting`,
       description: t(`${serviceKey}.description`),
       type: 'website',
-      url: `https://yen-consulting.vercel.app/${locale}/services/${params.service}`,
+      url: `https://yen-consulting.vercel.app/${locale}/services/${service}`,
     },
   };
 }
@@ -188,7 +188,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
     },
   };
 
-  const details = serviceDetails[params.service] || serviceDetails.mna;
+  const details = serviceDetails[service] || serviceDetails.mna;
 
   return (
     <>
