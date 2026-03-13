@@ -153,8 +153,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
             </div>
           </div>
 
-          {/* Mission & Vision */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Mission */}
+          <div className="max-w-2xl">
             <div className="card-premium p-10">
               <div className="service-icon text-gold-500 mb-6 w-12 h-12 flex items-center justify-center rounded-md" style={{ background: 'linear-gradient(135deg, rgba(201,169,97,0.12) 0%, rgba(201,169,97,0.06) 100%)' }}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
@@ -166,20 +166,6 @@ export default async function AboutPage({ params }: AboutPageProps) {
               </h2>
               <div className="h-px bg-gold-400 w-8 mb-4 opacity-60" aria-hidden="true"/>
               <p className="text-slate-600 leading-relaxed">{t('about.missionText')}</p>
-            </div>
-
-            <div className="card-premium p-10">
-              <div className="service-icon text-gold-500 mb-6 w-12 h-12 flex items-center justify-center rounded-md" style={{ background: 'linear-gradient(135deg, rgba(201,169,97,0.12) 0%, rgba(201,169,97,0.06) 100%)' }}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
-                  <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <h2 className="font-serif font-semibold text-navy-900 mb-4" style={{ fontSize: '1.5rem' }}>
-                {t('about.vision')}
-              </h2>
-              <div className="h-px bg-gold-400 w-8 mb-4 opacity-60" aria-hidden="true"/>
-              <p className="text-slate-600 leading-relaxed">{t('about.visionText')}</p>
             </div>
           </div>
         </div>
