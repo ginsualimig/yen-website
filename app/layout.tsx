@@ -1,0 +1,41 @@
+import type { Metadata } from 'next';
+import './globals.css';
+
+export const metadata: Metadata = {
+  title: 'Yen Investment Consulting | APAC Financial Advisory',
+  description: 'Leading investment consulting and financial advisory services across Asia-Pacific region',
+  metadataBase: new URL('https://yen-consulting.vercel.app'),
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://yen-consulting.vercel.app',
+    siteName: 'Yen Investment Consulting',
+    title: 'Yen Investment Consulting | APAC Financial Advisory',
+    description: 'Leading investment consulting and financial advisory services',
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#0A1428" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </head>
+      <body>
+        {children}
+      </body>
+    </html>
+  );
+}
