@@ -18,11 +18,13 @@ export default function Header({ locale }: HeaderProps) {
 
   const otherLocale = locale === 'en' ? 'zh' : 'en';
   const otherLocalePath = pathname.replace(`/${locale}`, `/${otherLocale}`);
+  const isZh = locale === 'zh';
 
   const navItems = [
     { href: `/${locale}`,           label: t('nav.home') },
     { href: `/${locale}/about`,     label: t('nav.about') },
     { href: `/${locale}/services`,  label: t('nav.services') },
+    { href: `/${locale}/insights`,  label: isZh ? '见解' : 'Insights' },
   ];
 
   useEffect(() => {

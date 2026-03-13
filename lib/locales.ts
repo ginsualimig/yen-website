@@ -14,6 +14,7 @@ export const translations = {
       about: 'About Us',
       services: 'Services',
       contact: 'Contact',
+      insights: 'Insights',
     },
 
     // Hero
@@ -125,6 +126,7 @@ export const translations = {
       about: '关于我们',
       services: '服务',
       contact: '联系我们',
+      insights: '见解',
     },
 
     // Hero
