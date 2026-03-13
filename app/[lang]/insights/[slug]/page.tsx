@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Locale, getTranslation } from '@/lib/locales';
-import { articles, topicLabels } from '@/lib/insights';
+import { topicLabels } from '@/lib/insights';
 import { allExpandedArticles } from '@/lib/insightsExpanded';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -28,22 +28,17 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   const { lang, slug } = await params;
   const locale = lang as Locale;
   
-  // Try expanded articles first
+  // Find article from expanded articles
   const expandedArticle = allExpandedArticles.find((a: any) => a.id === slug);
-  const article = expandedArticle || articles.find(a => a.slug === slug);
 
-  if (!article && !expandedArticle) {
+  if (!expandedArticle) {
     return { title: 'Article Not Found' };
   }
 
   const isZh = locale === 'zh';
   
-  const title = expandedArticle 
-    ? getTitleFromId(expandedArticle.id)
-    : isZh ? (article as any).titleZh : (article as any).titleEn;
-  const description = expandedArticle 
-    ? expandedArticle.executiveSummary?.substring(0, 200) || 'Research whitepaper'
-    : isZh ? (article as any).descriptionZh : (article as any).descriptionEn;
+  const title = getTitleFromId(expandedArticle.id);
+  const description = expandedArticle.executiveSummary?.substring(0, 200) || 'Research whitepaper';
 
   return {
     title: `${title} | Yenturi`,
@@ -53,7 +48,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       description: description,
       type: 'article',
       url: `https://yenturi.com/${locale}/insights/${slug}`,
-      publishedTime: expandedArticle ? '2026-03-14' : (article as any).publishedDate,
+      publishedTime: '2026-03-14',
     },
   };
 }
@@ -78,32 +73,26 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const t = (key: string) => getTranslation(locale, key);
   const isZh = locale === 'zh';
 
-  // Try expanded articles first - match by exact ID or partial match
+  // Find article from expanded articles
   const expandedArticle = allExpandedArticles.find((a: any) => a.id === slug);
-  
-  // Fall back to old articles
-  const article = expandedArticle || articles.find(a => a.slug === slug);
 
-  if (!article && !expandedArticle) {
+  if (!expandedArticle) {
     notFound();
   }
 
   // Get related articles from the same region
-  // Build a combined list of articles with all needed properties
-  const allArticlesForRelated = [
-    ...allExpandedArticles.map((a: any) => ({
-      id: a.id,
-      slug: a.id,
-      regionLabelEn: a.id.includes('australia') ? 'Australia' : a.id.includes('southeast') || a.id.includes('sea') || a.id.includes('asean') || a.id.includes('fintech') || a.id.includes('logistics') ? 'Southeast Asia' : 'China',
-      regionLabelZh: a.id.includes('australia') ? '澳大利亚' : a.id.includes('southeast') || a.id.includes('sea') || a.id.includes('asean') || a.id.includes('fintech') || a.id.includes('logistics') ? '东南亚' : '中国',
-      topics: a.id.includes('fintech') ? ['technology'] : a.id.includes('logistics') ? ['infrastructure'] : a.id.includes('hydrogen') ? ['infrastructure'] : ['policy'],
-      descriptionEn: a.executiveSummary?.substring(0, 150) || 'Research whitepaper',
-      descriptionZh: a.executiveSummary?.substring(0, 150) || 'Research whitepaper',
-      titleEn: getTitleFromId(a.id),
-      titleZh: getTitleFromId(a.id)
-    })),
-    ...articles
-  ];
+  // Build list from expanded articles only (no duplicates from old articles array)
+  const allArticlesForRelated = allExpandedArticles.map((a: any) => ({
+    id: a.id,
+    slug: a.id,
+    regionLabelEn: a.id.includes('australia') ? 'Australia' : a.id.includes('southeast') || a.id.includes('sea') || a.id.includes('asean') || a.id.includes('fintech') || a.id.includes('logistics') ? 'Southeast Asia' : 'China',
+    regionLabelZh: a.id.includes('australia') ? '澳大利亚' : a.id.includes('southeast') || a.id.includes('sea') || a.id.includes('asean') || a.id.includes('fintech') || a.id.includes('logistics') ? '东南亚' : '中国',
+    topics: a.id.includes('fintech') ? ['technology'] : a.id.includes('logistics') ? ['infrastructure'] : a.id.includes('hydrogen') ? ['infrastructure'] : ['policy'],
+    descriptionEn: a.executiveSummary?.substring(0, 150) || 'Research whitepaper',
+    descriptionZh: a.executiveSummary?.substring(0, 150) || 'Research whitepaper',
+    titleEn: getTitleFromId(a.id),
+    titleZh: getTitleFromId(a.id)
+  }));
   
   const relatedArticles = allArticlesForRelated
     .filter((a: any) => a.id !== (expandedArticle?.id || article?.id))
@@ -132,43 +121,22 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </Link>
           </div>
 
-          {/* Region & Topics */}
-          {!expandedArticle && (
-            <div className="flex items-center gap-3 flex-wrap mb-4">
-              <p className="text-xs uppercase tracking-widest font-semibold text-gold-400">
-                {isZh ? (article as any).regionLabelZh : (article as any).regionLabelEn}
-              </p>
-              <span className="text-gold-400" aria-hidden="true">•</span>
-              <div className="flex gap-2">
-                {(article as any).topics.map((topic: string) => (
-                  <span key={topic} className="text-xs bg-gold-400 bg-opacity-20 text-gold-300 px-2 py-1 rounded">
-                    {isZh ? topicLabels[topic as keyof typeof topicLabels].zh : topicLabels[topic as keyof typeof topicLabels].en}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-
           {/* Title */}
           <h1 className="font-serif font-bold text-cream-100 mb-5 text-balance" style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', lineHeight: '1.1', letterSpacing: '-0.02em' }}>
-            {expandedArticle ? (
-              getTitleFromId(expandedArticle.id)
-            ) : (
-              isZh ? (article as any).titleZh : (article as any).titleEn
-            )}
+            {getTitleFromId(expandedArticle.id)}
           </h1>
 
           {/* Article meta */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-slate-400 text-sm">
-            <time dateTime={expandedArticle ? '2026-03-14' : (article as any).publishedDate}>
-              {new Date(expandedArticle ? '2026-03-14' : (article as any).publishedDate).toLocaleDateString(isZh ? 'zh-CN' : 'en-US', {
+            <time dateTime="2026-03-14">
+              {new Date('2026-03-14').toLocaleDateString(isZh ? 'zh-CN' : 'en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',
               })}
             </time>
             <span className="hidden sm:block text-slate-600">•</span>
-            <span>{Math.ceil(JSON.stringify(expandedArticle || article).split(/\s+/).length / 200)} {isZh ? '分钟阅读' : 'min read'}</span>
+            <span>{Math.ceil(JSON.stringify(expandedArticle).split(/\s+/).length / 200)} {isZh ? '分钟阅读' : 'min read'}</span>
             <span className="hidden sm:block text-slate-600">•</span>
             <span>Yenturi Research</span>
           </div>
@@ -179,123 +147,69 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <section className="py-16 md:py-20 bg-cream-100">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 lg:px-10">
           <article className="prose prose-sm md:prose-base max-w-none text-slate-700">
-            {/* Render expanded article structure */}
-            {expandedArticle && 'executiveSummary' in expandedArticle ? (
-              <>
-                {/* Executive Summary */}
-                <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded mb-8">
-                  <h2 className="font-serif font-bold text-navy-900 text-xl mb-3">Executive Summary</h2>
-                  <p className="text-slate-700 leading-relaxed" style={{ lineHeight: '1.8', fontSize: '1rem' }}>
-                    {expandedArticle.executiveSummary}
-                  </p>
-                </div>
+            {/* Executive Summary */}
+            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded mb-8">
+              <h2 className="font-serif font-bold text-navy-900 text-xl mb-3">Executive Summary</h2>
+              <p className="text-slate-700 leading-relaxed" style={{ lineHeight: '1.8', fontSize: '1rem' }}>
+                {expandedArticle.executiveSummary}
+              </p>
+            </div>
 
-                {/* Sections */}
-                {expandedArticle.sections.map((section: any, sIdx: number) => (
-                  <div key={sIdx}>
-                    <h2 className="font-serif font-bold text-navy-900 text-2xl mt-8 mb-4 leading-tight">
-                      {section.title}
-                    </h2>
-                    {section.subsections.map((subsection: any, ssIdx: number) => (
-                      <div key={ssIdx} className="mb-6">
-                        <h3 className="font-serif font-semibold text-navy-900 text-lg mt-5 mb-3">
-                          {subsection.heading}
-                        </h3>
-                        <p className="text-slate-700 leading-relaxed mb-4" style={{ lineHeight: '1.8', fontSize: '1.0625rem' }}>
-                          {subsection.content}
-                        </p>
-                        {subsection.dataPoints && subsection.dataPoints.length > 0 && (
-                          <ul className="list-disc list-inside space-y-2 mb-6 text-slate-700 ml-2">
-                            {subsection.dataPoints.map((dp: string, dpIdx: number) => (
-                              <li key={dpIdx} className="leading-relaxed text-sm">
-                                {dp}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                ))}
-
-                {/* References */}
-                {expandedArticle.references && expandedArticle.references.length > 0 && (
-                  <div className="mt-10 pt-6 border-t border-slate-300">
-                    <h2 className="font-serif font-bold text-navy-900 text-xl mb-4">References</h2>
-                    <ol className="space-y-2 text-sm text-slate-600">
-                      {expandedArticle.references.map((ref: any, idx: number) => (
-                        <li key={idx} className="leading-relaxed">
-                          <span className="font-semibold">{ref.number}.</span> {ref.author} ({ref.year}). &quot;{ref.title}.&quot; <em>{ref.source}</em>
-                        </li>
-                      ))}
-                    </ol>
-                  </div>
-                )}
-
-                {/* Footnotes / Key Terms */}
-                {expandedArticle.footnotes && expandedArticle.footnotes.length > 0 && (
-                  <div className="mt-8 pt-6 border-t border-slate-300">
-                    <h2 className="font-serif font-bold text-navy-900 text-xl mb-4">Key Terms</h2>
-                    <dl className="space-y-4 text-slate-700">
-                      {expandedArticle.footnotes.map((fn: any, idx: number) => (
-                        <div key={idx}>
-                          <dt className="font-semibold text-navy-900">{fn.term}</dt>
-                          <dd className="text-slate-600 ml-4">{fn.definition}</dd>
-                        </div>
-                      ))}
-                    </dl>
-                  </div>
-                )}
-              </>
-            ) : (
-              /* Fallback to old article rendering */
-              <>
-                {(isZh ? (article as any).contentZh : (article as any).contentEn).split('\n\n').map((paragraph: string, i: number) => {
-                  // Handle headings
-                  if (paragraph.startsWith('## ')) {
-                    return (
-                      <h2 key={i} className="font-serif font-bold text-navy-900 text-2xl mt-8 mb-4 leading-tight">
-                        {paragraph.replace('## ', '')}
-                      </h2>
-                    );
-                  }
-
-                  // Handle bold lists
-                  if (paragraph.startsWith('- **')) {
-                    const items = paragraph.split('\n');
-                    return (
-                      <ul key={i} className="list-disc list-inside space-y-2 mb-6 text-slate-700">
-                        {items.map((item: string, idx: number) => (
-                          <li key={idx} className="leading-relaxed">
-                            {item.replace('- ', '').replace(/\*\*/g, '')}
+            {/* Sections */}
+            {expandedArticle.sections.map((section: any, sIdx: number) => (
+              <div key={sIdx}>
+                <h2 className="font-serif font-bold text-navy-900 text-2xl mt-8 mb-4 leading-tight">
+                  {section.title}
+                </h2>
+                {section.subsections.map((subsection: any, ssIdx: number) => (
+                  <div key={ssIdx} className="mb-6">
+                    <h3 className="font-serif font-semibold text-navy-900 text-lg mt-5 mb-3">
+                      {subsection.heading}
+                    </h3>
+                    <p className="text-slate-700 leading-relaxed mb-4" style={{ lineHeight: '1.8', fontSize: '1.0625rem' }}>
+                      {subsection.content}
+                    </p>
+                    {subsection.dataPoints && subsection.dataPoints.length > 0 && (
+                      <ul className="list-disc list-inside space-y-2 mb-6 text-slate-700 ml-2">
+                        {subsection.dataPoints.map((dp: string, dpIdx: number) => (
+                          <li key={dpIdx} className="leading-relaxed text-sm">
+                            {dp}
                           </li>
                         ))}
                       </ul>
-                    );
-                  }
+                    )}
+                  </div>
+                ))}
+              </div>
+            ))}
 
-                  // Handle numbered lists
-                  if (paragraph.match(/^\d\./)) {
-                    const items = paragraph.split('\n');
-                    return (
-                      <ol key={i} className="list-decimal list-inside space-y-2 mb-6 text-slate-700">
-                        {items.map((item: string, idx: number) => (
-                          <li key={idx} className="leading-relaxed">
-                            {item.replace(/^\d\. /, '')}
-                          </li>
-                        ))}
-                      </ol>
-                    );
-                  }
+            {/* References */}
+            {expandedArticle.references && expandedArticle.references.length > 0 && (
+              <div className="mt-10 pt-6 border-t border-slate-300">
+                <h2 className="font-serif font-bold text-navy-900 text-xl mb-4">References</h2>
+                <ol className="space-y-2 text-sm text-slate-600">
+                  {expandedArticle.references.map((ref: any, idx: number) => (
+                    <li key={idx} className="leading-relaxed">
+                      <span className="font-semibold">{ref.number}.</span> {ref.author} ({ref.year}). &quot;{ref.title}.&quot; <em>{ref.source}</em>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
 
-                  // Regular paragraphs
-                  return (
-                    <p key={i} className="text-slate-700 leading-relaxed mb-6" style={{ lineHeight: '1.8', fontSize: '1.0625rem' }}>
-                      {paragraph}
-                    </p>
-                  );
-                })}
-              </>
+            {/* Footnotes / Key Terms */}
+            {expandedArticle.footnotes && expandedArticle.footnotes.length > 0 && (
+              <div className="mt-8 pt-6 border-t border-slate-300">
+                <h2 className="font-serif font-bold text-navy-900 text-xl mb-4">Key Terms</h2>
+                <dl className="space-y-4 text-slate-700">
+                  {expandedArticle.footnotes.map((fn: any, idx: number) => (
+                    <div key={idx}>
+                      <dt className="font-semibold text-navy-900">{fn.term}</dt>
+                      <dd className="text-slate-600 ml-4">{fn.definition}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
             )}
           </article>
 

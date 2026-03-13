@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { articles, topicLabels, type Region, type Topic } from '@/lib/insights';
+import { topicLabels, type Region, type Topic } from '@/lib/insights';
 import { allExpandedArticles } from '@/lib/insightsExpanded';
 
 interface InsightsClientProps {
@@ -34,7 +34,7 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
     { key: 'infrastructure', labelEn: 'Infrastructure', labelZh: '基础设施' },
   ];
 
-  // Merge expanded articles with old articles
+  // Use expanded articles (10 total) - skip the old articles array which is now redundant
   const mergedArticles = useMemo(() => {
     // Map expanded articles to the Article interface
     const expandedMapped = allExpandedArticles.map((article: any) => {
@@ -126,7 +126,8 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
       };
     });
 
-    return [...expandedMapped, ...articles];
+    // Only return expanded articles (no duplicates from old articles array)
+    return expandedMapped;
   }, []);
 
   // Filter articles
