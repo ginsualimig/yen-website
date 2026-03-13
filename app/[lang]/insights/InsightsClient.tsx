@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { articles, topicLabels, type Region, type Topic } from '@/lib/insights';
+import { allExpandedArticles } from '@/lib/insightsExpanded';
 
 interface InsightsClientProps {
   locale: 'en' | 'zh';
@@ -33,14 +34,73 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
     { key: 'infrastructure', labelEn: 'Infrastructure', labelZh: '基础设施' },
   ];
 
+  // Merge expanded articles with old articles
+  const mergedArticles = useMemo(() => {
+    // Map expanded articles to the Article interface
+    const expandedMapped = allExpandedArticles.map((article: any) => {
+      // Map article IDs to regions and topics based on their titles/IDs
+      let region: Region = 'china';
+      let topics: Topic[] = ['policy', 'investment'];
+      let regionLabelEn = 'China';
+      let regionLabelZh = '中国';
+
+      const id = article.id.toLowerCase();
+      
+      if (id.includes('australia')) {
+        region = 'australia';
+        regionLabelEn = 'Australia';
+        regionLabelZh = '澳大利亚';
+        topics = id.includes('hydrogen') ? ['infrastructure', 'investment'] : ['investment', 'trade'];
+      } else if (id.includes('southeast') || id.includes('sea') || id.includes('asean') || id.includes('fintech') || id.includes('logistics')) {
+        region = id.includes('vietnam') ? 'vietnam' : id.includes('thailand') ? 'thailand' : id.includes('indonesia') ? 'indonesia' : id.includes('singapore') ? 'singapore' : 'philippines';
+        regionLabelEn = 'Southeast Asia';
+        regionLabelZh = '东南亚';
+        topics = id.includes('fintech') ? ['technology', 'investment'] : id.includes('logistics') ? ['infrastructure', 'investment'] : ['trade', 'investment'];
+      } else if (id.includes('tech') || id.includes('semiconductor')) {
+        topics = ['technology', 'investment'];
+      } else if (id.includes('green')) {
+        topics = ['infrastructure', 'investment'];
+      } else if (id.includes('consumption')) {
+        topics = ['markets', 'investment'];
+      }
+
+      const wordCount = JSON.stringify(article).split(/\s+/).length;
+      const readTime = Math.ceil(wordCount / 200);
+
+      return {
+        id: article.id,
+        slug: article.id,
+        titleEn: article.id
+          .split('-')
+          .map((w: string) => w.charAt(0).toUpperCase() + w.slice(1))
+          .join(' '),
+        titleZh: article.id, // Fallback - ideally would have proper Chinese titles
+        descriptionEn: article.executiveSummary?.substring(0, 200) || 'Research whitepaper',
+        descriptionZh: article.executiveSummary?.substring(0, 200) || 'Research whitepaper',
+        region,
+        regionLabelEn,
+        regionLabelZh,
+        topics,
+        topicLabels,
+        publishedDate: '2026-03-14',
+        author: 'Yenturi Research',
+        readTime,
+        contentEn: '',
+        contentZh: ''
+      };
+    });
+
+    return [...expandedMapped, ...articles];
+  }, []);
+
   // Filter articles
   const filteredArticles = useMemo(() => {
-    return articles.filter(article => {
+    return mergedArticles.filter(article => {
       const regionMatch = selectedRegions.size === 0 || selectedRegions.has(article.region);
       const topicMatch = selectedTopics.size === 0 || article.topics.some(t => selectedTopics.has(t));
       return regionMatch && topicMatch;
     });
-  }, [selectedRegions, selectedTopics]);
+  }, [selectedRegions, selectedTopics, mergedArticles]);
 
   const toggleRegion = (region: Region) => {
     const newRegions = new Set(selectedRegions);

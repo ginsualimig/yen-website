@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Locale, getTranslation } from '@/lib/locales';
 import { articles, topicLabels } from '@/lib/insights';
+import { allExpandedArticles } from '@/lib/insightsExpanded';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -11,15 +12,22 @@ interface ArticlePageProps {
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
   const { lang, slug } = await params;
   const locale = lang as Locale;
-  const article = articles.find(a => a.slug === slug);
+  
+  // Try expanded articles first
+  const expandedArticle = allExpandedArticles.find((a: any) => a.id === slug || a.id.includes(slug));
+  const article = expandedArticle || articles.find(a => a.slug === slug);
 
   if (!article) {
     return { title: 'Article Not Found' };
   }
 
   const isZh = locale === 'zh';
-  const title = isZh ? article.titleZh : article.titleEn;
-  const description = isZh ? article.descriptionZh : article.descriptionEn;
+  const title = expandedArticle 
+    ? expandedArticle.id.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+    : isZh ? (article as any).titleZh : (article as any).titleEn;
+  const description = expandedArticle 
+    ? expandedArticle.executiveSummary?.substring(0, 200)
+    : isZh ? (article as any).descriptionZh : (article as any).descriptionEn;
 
   return {
     title: `${title} | Yenturi`,
@@ -35,15 +43,17 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
 }
 
 export async function generateStaticParams() {
-  return articles.map(article => ({
-    slug: article.slug,
-    lang: 'en',
-  })).concat(
-    articles.map(article => ({
-      slug: article.slug,
-      lang: 'zh',
-    }))
-  );
+  const expandedParams = allExpandedArticles.map((a: any) => [
+    { slug: a.id, lang: 'en' },
+    { slug: a.id, lang: 'zh' }
+  ]).flat();
+  
+  const oldParams = articles.map(article => [
+    { slug: article.slug, lang: 'en' },
+    { slug: article.slug, lang: 'zh' }
+  ]).flat();
+  
+  return [...expandedParams, ...oldParams];
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
@@ -52,15 +62,32 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const t = (key: string) => getTranslation(locale, key);
   const isZh = locale === 'zh';
 
-  const article = articles.find(a => a.slug === slug);
+  // Try expanded articles first
+  const expandedArticle = allExpandedArticles.find((a: any) => a.id === slug || a.id.includes(slug));
+  
+  // Fall back to old articles
+  const article = expandedArticle || articles.find(a => a.slug === slug);
 
   if (!article) {
     notFound();
   }
 
   // Get related articles from the same region
-  const relatedArticles = articles
-    .filter(a => a.region === article.region && a.id !== article.id)
+  const allArticles = [...allExpandedArticles.map((a: any) => ({
+    id: a.id,
+    slug: a.id,
+    region: article.region,
+    regionLabelEn: 'Region',
+    regionLabelZh: '地区',
+    topics: [],
+    descriptionEn: a.executiveSummary?.substring(0, 150),
+    descriptionZh: a.executiveSummary?.substring(0, 150),
+    titleEn: a.id.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+    titleZh: a.id
+  })), ...articles];
+  
+  const relatedArticles = allArticles
+    .filter((a: any) => a.id !== article.id)
     .slice(0, 2);
 
   return (
@@ -108,17 +135,17 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
           {/* Article meta */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-slate-400 text-sm">
-            <time dateTime={article.publishedDate}>
-              {new Date(article.publishedDate).toLocaleDateString(isZh ? 'zh-CN' : 'en-US', {
+            <time dateTime={expandedArticle ? '2026-03-14' : (article as any).publishedDate}>
+              {new Date(expandedArticle ? '2026-03-14' : (article as any).publishedDate).toLocaleDateString(isZh ? 'zh-CN' : 'en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',
               })}
             </time>
             <span className="hidden sm:block text-slate-600">•</span>
-            <span>{article.readTime} {isZh ? '分钟阅读' : 'min read'}</span>
+            <span>{Math.ceil(JSON.stringify(expandedArticle || article).split(/\s+/).length / 200)} {isZh ? '分钟阅读' : 'min read'}</span>
             <span className="hidden sm:block text-slate-600">•</span>
-            <span>{isZh ? article.author : article.author}</span>
+            <span>Yenturi Research</span>
           </div>
         </div>
       </section>
@@ -127,52 +154,124 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <section className="py-16 md:py-20 bg-cream-100">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 lg:px-10">
           <article className="prose prose-sm md:prose-base max-w-none text-slate-700">
-            {/* Render markdown-like content */}
-            {(isZh ? article.contentZh : article.contentEn).split('\n\n').map((paragraph, i) => {
-              // Handle headings
-              if (paragraph.startsWith('## ')) {
-                return (
-                  <h2 key={i} className="font-serif font-bold text-navy-900 text-2xl mt-8 mb-4 leading-tight">
-                    {paragraph.replace('## ', '')}
-                  </h2>
-                );
-              }
+            {/* Render expanded article structure */}
+            {expandedArticle && 'executiveSummary' in expandedArticle ? (
+              <>
+                {/* Executive Summary */}
+                <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded mb-8">
+                  <h2 className="font-serif font-bold text-navy-900 text-xl mb-3">Executive Summary</h2>
+                  <p className="text-slate-700 leading-relaxed" style={{ lineHeight: '1.8', fontSize: '1rem' }}>
+                    {expandedArticle.executiveSummary}
+                  </p>
+                </div>
 
-              // Handle bold lists
-              if (paragraph.startsWith('- **')) {
-                const items = paragraph.split('\n');
-                return (
-                  <ul key={i} className="list-disc list-inside space-y-2 mb-6 text-slate-700">
-                    {items.map((item, idx) => (
-                      <li key={idx} className="leading-relaxed">
-                        {item.replace('- ', '').replace(/\*\*/g, '')}
-                      </li>
+                {/* Sections */}
+                {expandedArticle.sections.map((section: any, sIdx: number) => (
+                  <div key={sIdx}>
+                    <h2 className="font-serif font-bold text-navy-900 text-2xl mt-8 mb-4 leading-tight">
+                      {section.title}
+                    </h2>
+                    {section.subsections.map((subsection: any, ssIdx: number) => (
+                      <div key={ssIdx} className="mb-6">
+                        <h3 className="font-serif font-semibold text-navy-900 text-lg mt-5 mb-3">
+                          {subsection.heading}
+                        </h3>
+                        <p className="text-slate-700 leading-relaxed mb-4" style={{ lineHeight: '1.8', fontSize: '1.0625rem' }}>
+                          {subsection.content}
+                        </p>
+                        {subsection.dataPoints && subsection.dataPoints.length > 0 && (
+                          <ul className="list-disc list-inside space-y-2 mb-6 text-slate-700 ml-2">
+                            {subsection.dataPoints.map((dp: string, dpIdx: number) => (
+                              <li key={dpIdx} className="leading-relaxed text-sm">
+                                {dp}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
                     ))}
-                  </ul>
-                );
-              }
+                  </div>
+                ))}
 
-              // Handle numbered lists
-              if (paragraph.match(/^\d\./)) {
-                const items = paragraph.split('\n');
-                return (
-                  <ol key={i} className="list-decimal list-inside space-y-2 mb-6 text-slate-700">
-                    {items.map((item, idx) => (
-                      <li key={idx} className="leading-relaxed">
-                        {item.replace(/^\d\. /, '')}
-                      </li>
-                    ))}
-                  </ol>
-                );
-              }
+                {/* References */}
+                {expandedArticle.references && expandedArticle.references.length > 0 && (
+                  <div className="mt-10 pt-6 border-t border-slate-300">
+                    <h2 className="font-serif font-bold text-navy-900 text-xl mb-4">References</h2>
+                    <ol className="space-y-2 text-sm text-slate-600">
+                      {expandedArticle.references.map((ref: any, idx: number) => (
+                        <li key={idx} className="leading-relaxed">
+                          <span className="font-semibold">{ref.number}.</span> {ref.author} ({ref.year}). &quot;{ref.title}.&quot; <em>{ref.source}</em>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                )}
 
-              // Regular paragraphs
-              return (
-                <p key={i} className="text-slate-700 leading-relaxed mb-6" style={{ lineHeight: '1.8', fontSize: '1.0625rem' }}>
-                  {paragraph}
-                </p>
-              );
-            })}
+                {/* Footnotes / Key Terms */}
+                {expandedArticle.footnotes && expandedArticle.footnotes.length > 0 && (
+                  <div className="mt-8 pt-6 border-t border-slate-300">
+                    <h2 className="font-serif font-bold text-navy-900 text-xl mb-4">Key Terms</h2>
+                    <dl className="space-y-4 text-slate-700">
+                      {expandedArticle.footnotes.map((fn: any, idx: number) => (
+                        <div key={idx}>
+                          <dt className="font-semibold text-navy-900">{fn.term}</dt>
+                          <dd className="text-slate-600 ml-4">{fn.definition}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  </div>
+                )}
+              </>
+            ) : (
+              /* Fallback to old article rendering */
+              <>
+                {(isZh ? (article as any).contentZh : (article as any).contentEn).split('\n\n').map((paragraph: string, i: number) => {
+                  // Handle headings
+                  if (paragraph.startsWith('## ')) {
+                    return (
+                      <h2 key={i} className="font-serif font-bold text-navy-900 text-2xl mt-8 mb-4 leading-tight">
+                        {paragraph.replace('## ', '')}
+                      </h2>
+                    );
+                  }
+
+                  // Handle bold lists
+                  if (paragraph.startsWith('- **')) {
+                    const items = paragraph.split('\n');
+                    return (
+                      <ul key={i} className="list-disc list-inside space-y-2 mb-6 text-slate-700">
+                        {items.map((item: string, idx: number) => (
+                          <li key={idx} className="leading-relaxed">
+                            {item.replace('- ', '').replace(/\*\*/g, '')}
+                          </li>
+                        ))}
+                      </ul>
+                    );
+                  }
+
+                  // Handle numbered lists
+                  if (paragraph.match(/^\d\./)) {
+                    const items = paragraph.split('\n');
+                    return (
+                      <ol key={i} className="list-decimal list-inside space-y-2 mb-6 text-slate-700">
+                        {items.map((item: string, idx: number) => (
+                          <li key={idx} className="leading-relaxed">
+                            {item.replace(/^\d\. /, '')}
+                          </li>
+                        ))}
+                      </ol>
+                    );
+                  }
+
+                  // Regular paragraphs
+                  return (
+                    <p key={i} className="text-slate-700 leading-relaxed mb-6" style={{ lineHeight: '1.8', fontSize: '1.0625rem' }}>
+                      {paragraph}
+                    </p>
+                  );
+                })}
+              </>
+            )}
           </article>
 
           {/* Article footer */}
@@ -182,7 +281,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 <p className="text-xs uppercase tracking-widest font-semibold text-gold-600 mb-2">
                   {isZh ? '关于作者' : 'About the Author'}
                 </p>
-                <p className="text-slate-700 font-medium">{article.author}</p>
+                <p className="text-slate-700 font-medium">Yenturi Research</p>
                 <p className="text-sm text-slate-500 mt-1">
                   {isZh
                     ? 'Yenturi研究团队专注于亚太地区市场分析和战略咨询。'
