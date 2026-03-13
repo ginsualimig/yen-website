@@ -225,30 +225,6 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
           </div>
         </div>
       </section>
-
-      {/* CLOSING — no contact CTA, just a statement */}
-      <section className="section-lg bg-cream-100" style={{ borderTop: '1px solid #EDE7D8' }}>
-        <div className="max-w-3xl mx-auto px-5 sm:px-8 lg:px-10 text-center">
-          <span className="eyebrow text-gold-600">{isZh ? '我们的方式' : 'Our Approach'}</span>
-          <h2 className="section-heading text-navy-900 mb-4">
-            {isZh ? '我们通过关系开展工作' : 'We Work Through Relationships'}
-          </h2>
-          <span className="rule-gold-center" aria-hidden="true"/>
-          <p className="text-slate-600 mt-4 max-w-xl mx-auto" style={{ lineHeight: '1.75' }}>
-            {isZh
-              ? '我们与机构投资者和企业的合作关系建立在信任和相互尊重的基础之上。我们通过现有网络中的个人介绍和推荐了解新合作伙伴。'
-              : 'Our relationships with institutional investors and corporations are founded on trust and mutual respect. We are introduced to new partners through personal referrals within our existing network.'}
-          </p>
-          <div className="mt-8">
-            <Link href={`/${locale}/about`} className="btn-outline-dark">
-              {isZh ? '了解我们的故事' : 'Learn About Us'}
-              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

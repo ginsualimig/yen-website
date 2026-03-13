@@ -282,38 +282,6 @@ export default async function AboutPage({ params }: AboutPageProps) {
         </div>
       </section>
 
-      {/* OFFICE — Address only, no contact form, no email/phone CTAs */}
-      <section
-        className="section-xl"
-        style={{ background: 'linear-gradient(160deg, #060D1A 0%, #0B1626 100%)' }}
-      >
-        <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-10 text-center">
-          <span className="eyebrow">{isZh ? '我们的位置' : 'Our Office'}</span>
-          <h2 className="font-serif font-semibold text-cream-100 mb-4" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', letterSpacing: '-0.015em' }}>
-            {isZh ? '广州办公室' : 'Guangzhou Office'}
-          </h2>
-          <span className="rule-gold-center" aria-hidden="true"/>
-
-          <div className="mt-8 inline-block text-left bg-white bg-opacity-5 rounded-lg p-8 border" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
-            <p className="text-sm text-gold-500 font-semibold uppercase tracking-widest mb-3">{t('footer.office')}</p>
-            <p className="text-slate-300 whitespace-pre-line leading-relaxed text-lg font-medium mb-5">
-              {t('footer.address')}
-            </p>
-            <div className="border-t pt-5 space-y-2" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
-              <p className="text-xs text-slate-500 leading-relaxed">
-                <span className="font-semibold text-slate-400">{isZh ? '公司名称' : 'Company Name'}:</span>{' '}
-                {t('footer.companyNameCn')}
-              </p>
-              <p className="text-xs text-slate-500 leading-relaxed">
-                <span className="font-semibold text-slate-400">{isZh ? '统一社会信用代码' : 'Registration No.'}:</span>{' '}
-                {t('footer.registrationNumber')}
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
       {/* CASE STUDIES */}
       <section className="py-20 md:py-28 bg-cream-100">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">

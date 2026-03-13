@@ -164,6 +164,43 @@ export default async function HomePage({ params }: HomePageProps) {
             {/* Throat glow — pressure point highlighting */}
             <ellipse cx="450" cy="240" rx="88" ry="25" fill="url(#vg-glow)" />
 
+            {/* Animated pressure wave pulse */}
+            <circle cx="450" cy="240" r="15" fill="none" stroke="#C9A961" strokeWidth="1.5" opacity="0.3" style={{ animation: 'venturiThroatPulse 3s ease-in-out infinite' }}/>
+
+            {/* Animated flowing particles — upper converging paths */}
+            <g opacity="0.7">
+              <animateMotion path="M -80 10 Q 280 170 450 240 Q 620 170 980 10" dur="4s" repeatCount="indefinite">
+                <circle r="2.5" fill="#C9A961"/>
+              </animateMotion>
+            </g>
+            <g opacity="0.6">
+              <animateMotion path="M -80 40 Q 290 178 450 240 Q 610 178 980 40" dur="4.5s" repeatCount="indefinite" begin="0.3s">
+                <circle r="2.5" fill="#C9A961"/>
+              </animateMotion>
+            </g>
+            <g opacity="0.5">
+              <animateMotion path="M -80 70 Q 300 186 450 240 Q 600 186 980 70" dur="5s" repeatCount="indefinite" begin="0.6s">
+                <circle r="2.5" fill="#C9A961"/>
+              </animateMotion>
+            </g>
+
+            {/* Animated flowing particles — lower diverging paths */}
+            <g opacity="0.7">
+              <animateMotion path="M -80 470 Q 280 310 450 240 Q 620 310 980 470" dur="4s" repeatCount="indefinite">
+                <circle r="2.5" fill="#C9A961"/>
+              </animateMotion>
+            </g>
+            <g opacity="0.6">
+              <animateMotion path="M -80 440 Q 290 302 450 240 Q 610 302 980 440" dur="4.5s" repeatCount="indefinite" begin="0.3s">
+                <circle r="2.5" fill="#C9A961"/>
+              </animateMotion>
+            </g>
+            <g opacity="0.5">
+              <animateMotion path="M -80 410 Q 300 294 450 240 Q 600 294 980 410" dur="5s" repeatCount="indefinite" begin="0.6s">
+                <circle r="2.5" fill="#C9A961"/>
+              </animateMotion>
+            </g>
+
             {/* Left converging arrows */}
             <g opacity="0.48">
               <polyline points="185,188 218,202 185,216" fill="none" stroke="#C9A961" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
@@ -228,7 +265,6 @@ export default async function HomePage({ params }: HomePageProps) {
                 { num: '20+', label: isZh ? '年行业经验' : 'Years Experience' },
                 { num: 'APAC', label: isZh ? '区域专业覆盖' : 'Regional Expertise' },
                 { num: '6', label: isZh ? '核心服务领域' : 'Core Service Areas' },
-                { num: isZh ? '机构' : 'Inst.', label: isZh ? '机构投资者客户' : 'Institutional Clients' },
               ].map((stat, i) => (
                 <div key={i} className="flex flex-col gap-1">
                   <span className="font-serif font-bold text-gold-400" style={{ fontSize: '1.75rem', letterSpacing: '-0.02em', lineHeight: 1 }}>

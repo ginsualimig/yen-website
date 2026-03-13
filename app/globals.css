@@ -620,6 +620,115 @@ nav:hover .nav-throat-dot {
   color: #0B1626;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   VENTURI PARTICLE ANIMATIONS — Flowing particles through the effect
+═══════════════════════════════════════════════════════════════ */
+
+/* Animated particles flowing through Venturi paths */
+@keyframes venturiParticleFlow1 {
+  0% { 
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes venturiParticleFlow2 {
+  0% { 
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes venturiParticleFlow3 {
+  0% { 
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+/* Glowing throat pulse */
+@keyframes venturiThroatPulse {
+  0%, 100% { 
+    r: 10px; 
+    opacity: 0.3;
+    filter: drop-shadow(0 0 8px rgba(201,169,97,0.5));
+  }
+  50% { 
+    r: 16px; 
+    opacity: 0.6;
+    filter: drop-shadow(0 0 16px rgba(201,169,97,0.8));
+  }
+}
+
+/* Converging pressure wave */
+@keyframes venturiPressureWave {
+  0%, 100% {
+    stroke-dasharray: 0, 1000;
+    stroke-dashoffset: 0;
+    opacity: 0.2;
+  }
+  50% {
+    stroke-dasharray: 400, 600;
+    stroke-dashoffset: -200;
+    opacity: 0.5;
+  }
+}
+
+.venturi-particle {
+  animation: venturiParticleFlow1 4s ease-in-out infinite;
+  will-change: offset-distance, opacity;
+}
+
+.venturi-particle:nth-child(2) {
+  animation: venturiParticleFlow2 4.5s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+.venturi-particle:nth-child(3) {
+  animation: venturiParticleFlow3 5s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+.venturi-throat-pulse {
+  animation: venturiThroatPulse 3s ease-in-out infinite;
+  will-change: r, opacity, filter;
+}
+
+.venturi-pressure-wave {
+  animation: venturiPressureWave 4s ease-in-out infinite;
+  will-change: stroke-dasharray, stroke-dashoffset, opacity;
+}
+
 /* ─── Print ─────────────────────────────────────────────────── */
 @media print {
   body { background-color: white; color: black; }
