@@ -55,10 +55,6 @@ export default function Header({ locale }: HeaderProps) {
             className="flex items-center gap-3 flex-shrink-0 group"
             aria-label="Yenturi Investment Consulting – Home"
           >
-            {/* Monogram mark */}
-            <div className="w-9 h-9 flex items-center justify-center rounded-sm bg-navy-900 transition-all duration-250 group-hover:bg-navy-800">
-              <span className="text-gold-500 font-serif font-bold text-lg leading-none select-none">Y</span>
-            </div>
             <div className="flex flex-col leading-none">
               <span
                 className="font-serif font-semibold text-navy-900 tracking-tight"
