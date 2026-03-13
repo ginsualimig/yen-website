@@ -17,10 +17,10 @@ export const translations = {
 
     // Hero
     hero: {
-      title: 'Investment Consulting & M&A Advisory',
-      subtitle: 'Institutional advisory across Asia-Pacific. We advise institutional investors, corporations, and family offices on capital deployment, business transformation, and market opportunity.',
+      title: 'Institutional Advisory',
+      subtitle: 'Across Asia-Pacific. We advise institutional investors, corporations, and family offices on capital deployment, business transformation, and market opportunity.',
       cta: 'Our Services',
-      description: 'Institutional investment consulting and M&A advisory across Asia-Pacific.',
+      description: 'Institutional advisory services across Asia-Pacific.',
     },
 
     // Services
@@ -63,9 +63,9 @@ export const translations = {
 
     // About
     about: {
-      title: 'About Yenturi Investment Consulting',
+      title: 'About Yenturi',
       mission: 'Who We Are',
-      missionText: 'Yenturi is an investment consulting firm serving institutional investors, listed corporations, and family offices across Asia-Pacific. We advise on capital deployment, business transformation, and market strategy. Our practice draws on decades of experience in institutional advisory, cross-border transactions, and emerging market investment.',
+      missionText: 'Yenturi advises institutional investors, listed corporations, and family offices across Asia-Pacific. We focus on capital deployment, business transformation, and market strategy. Our practice draws on decades of experience in institutional advisory, cross-border transactions, and emerging market investment.',
       vision: 'How We Work',
       visionText: 'We work by introduction and referral. Our clients are institutional investors and corporations we know well. We advise through direct engagement, combine market knowledge with rigorous analysis, and remain actively involved in execution.',
       values: 'Our Principles',
@@ -107,10 +107,10 @@ export const translations = {
 
     // Hero
     hero: {
-      title: '投资咨询与并购顾问',
-      subtitle: '亚太地区机构咨询服务。我们为机构投资者、上市公司及家族办公室提供资本配置、业务转型及市场机遇方面的顾问服务。',
+      title: '机构咨询服务',
+      subtitle: '亚太地区。我们为机构投资者、上市公司及家族办公室提供资本配置、业务转型及市场机遇方面的顾问服务。',
       cta: '我们的服务',
-      description: '亚太地区投资咨询和并购顾问服务。',
+      description: '亚太地区机构咨询服务。',
     },
 
     // Services
@@ -153,9 +153,9 @@ export const translations = {
 
     // About
     about: {
-      title: '关于Yenturi投资顾问',
+      title: '关于Yenturi',
       mission: '我们是谁',
-      missionText: 'Yenturi是一家投资咨询公司，为亚太地区的机构投资者、上市公司和家族办公室提供服务。我们就资本配置、业务转型和市场战略提供顾问服务。我们的实践基于数十年的机构咨询、跨境交易和新兴市场投资经验。',
+      missionText: 'Yenturi为亚太地区的机构投资者、上市公司和家族办公室提供顾问服务。我们专注于资本配置、业务转型和市场战略。我们的实践基于数十年的机构咨询、跨境交易和新兴市场投资经验。',
       vision: '我们如何工作',
       visionText: '我们通过介绍和推荐进行业务合作。我们的客户是我们深入了解的机构投资者和企业。我们通过直接合作、将市场知识与严谨分析相结合，并在执行过程中保持积极参与。',
       values: '我们的原则',

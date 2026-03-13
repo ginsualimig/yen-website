@@ -11,10 +11,10 @@ export async function generateMetadata({ params }: AboutPageProps): Promise<Meta
   const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
   return {
-    title: `${t('about.title')} | Yenturi Investment Consulting`,
+    title: `${t('about.title')} | Yenturi`,
     description: t('about.missionText'),
     openGraph: {
-      title: `${t('about.title')} | Yenturi Investment Consulting`,
+      title: `${t('about.title')} | Yenturi`,
       description: t('about.missionText'),
       type: 'website',
       url: `https://yenturi.com/${locale}/about`,
@@ -118,8 +118,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
               <div className="space-y-4 mt-4">
                 <p className="text-slate-600 leading-relaxed" style={{ lineHeight: '1.8' }}>
                   {isZh
-                    ? 'Yenturi投资顾问是一家专注于亚太地区的机构级投资咨询和并购顾问公司。我们的团队在整个亚太地区的并购、直接投资、业务整合和企业转型领域积累了数十年的专业经验。'
-                    : 'Yenturi Investment Consulting is an institutional-grade investment advisory and M&A advisory firm focused on the Asia-Pacific region. Our team has built decades of specialized experience across M&A, direct investment, business consolidation, and corporate transformation throughout APAC.'}
+                    ? 'Yenturi是一家专注于亚太地区的机构级顾问公司。我们的团队在整个亚太地区的并购、直接投资、业务整合和企业转型领域积累了数十年的专业经验。'
+                    : 'Yenturi is an institutional-grade advisory firm focused on the Asia-Pacific region. Our team has built decades of specialized experience across M&A, direct investment, business consolidation, and corporate transformation throughout APAC.'}
                 </p>
                 <p className="text-slate-600 leading-relaxed" style={{ lineHeight: '1.8' }}>
                   {isZh
