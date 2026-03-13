@@ -13,6 +13,7 @@ export const translations = {
       home: 'Home',
       about: 'About Us',
       services: 'Services',
+      contact: 'Contact',
     },
 
     // Hero
@@ -75,6 +76,26 @@ export const translations = {
       innovation: 'Independence: Impartial advice that puts client interests first',
     },
 
+    // Contact
+    contact: {
+      title: 'Contact Us',
+      subtitle: 'We work with institutional investors, listed corporations, and family offices across Asia-Pacific. Engagements are established by introduction and referral.',
+      officeLabel: 'Guangzhou Office',
+      emailLabel: 'Email',
+      email: 'hello@yenturi.com',
+      companyLabel: 'Registered Company',
+      registrationLabel: 'Registration Number',
+      formTitle: 'Send a Message',
+      formSubtitle: 'We review all correspondence and respond to qualified inquiries.',
+      formName: 'Full Name',
+      formCompany: 'Organisation',
+      formEmail: 'Email Address',
+      formMessage: 'Message',
+      formSubmit: 'Send Message',
+      formNote: 'Your information is treated with strict confidentiality.',
+      formSuccess: 'Thank you. We will be in touch shortly.',
+    },
+
     // Footer
     footer: {
       office: 'Guangzhou Office',
@@ -103,6 +124,7 @@ export const translations = {
       home: '首页',
       about: '关于我们',
       services: '服务',
+      contact: '联系我们',
     },
 
     // Hero
@@ -121,33 +143,33 @@ export const translations = {
       
       'mna': {
         title: '并购顾问',
-        short: '跨境并购与重组',
-        description: '我们提供并购、收购和企业重组方面的顾问服务。工作涵盖交易寻源、估值、结构设计、谈判支持及并购后整合。',
+        short: '跨境并购与企业重组',
+        description: '我们为企业并购、收购及重组提供全程顾问服务，业务覆盖整个亚太地区。服务内容涵盖交易机会挖掘、目标企业估值、交易结构设计、谈判策略支持及并购后整合规划，帮助客户在复杂的跨境交易中把握战略价值。',
       },
       'business-improvement': {
         title: '业务改进',
-        short: '运营绩效与价值创造',
-        description: '我们与管理团队合作，改进运营绩效、优化流程，加强竞争地位。我们的方法结合系统分析与实际执行支持。',
+        short: '运营绩效提升与价值创造',
+        description: '我们与管理团队紧密协作，系统改进企业运营绩效、优化核心流程，并强化市场竞争地位。我们的方法论融合严格的现状诊断与切实可行的执行支持，确保改进成果转化为可持续的商业价值。',
       },
       'rollup-strategy': {
         title: '整合战略',
         short: '市场整合与平台构建',
-        description: '我们提供分散市场整合战略方面的顾问服务。工作包括平台识别、收购序列规划、整合设计及通过规模和运营杠杆创造长期价值。',
+        description: '我们为分散市场中的整合战略提供专业顾问服务。工作内容包括平台企业的识别与评估、收购序列的战略规划、整合方案的设计落地，以及通过规模效应和运营杠杆实现长期价值创造，助力客户在目标市场建立主导地位。',
       },
       'direct-investment': {
         title: '直接投资',
-        short: '增长投资识别与执行',
-        description: '我们识别并执行成长型公司和新兴领域的直接投资机会。我们提供交易寻源、严格的尽职调查、投资结构设计及积极的投资组合管理。',
+        short: '增长投资机会识别与执行',
+        description: '我们专注于识别和执行成长型企业及新兴行业的直接投资机会。服务涵盖专有渠道交易挖掘、严格的尽职调查、投资结构优化设计，以及投后积极的投资组合支持与管理，致力于为客户实现资本的长期复利增值。',
       },
       'business-management': {
         title: '业务管理',
         short: '战略规划与组织卓越',
-        description: '我们提供业务战略、组织结构及治理方面的顾问服务。我们与领导团队合作，对齐战略方向，建设管理能力，建立强有力的运营基础。',
+        description: '我们为客户提供企业战略、组织架构设计及公司治理方面的顾问服务。与领导团队深度合作，帮助企业明确战略方向、提升管理能力、建立高效运营体系，并将战略愿景转化为可执行的业务行动。',
       },
       'research-reports': {
         title: '研究与分析',
-        short: '市场情报与行业分析',
-        description: '我们进行独立的市场研究、行业分析和战略情报工作。我们的工作基于一手调研、定量分析及亚太地区各行业的深厚市场经验。',
+        short: '市场情报与行业深度分析',
+        description: '我们提供独立的市场研究、行业分析及战略情报服务。研究工作结合一手调研、定量建模与行业专家访谈，深度覆盖亚太地区主要行业，为客户提供前瞻性市场洞察和以证据为基础的战略决策支持。',
       },
     },
 
@@ -163,6 +185,26 @@ export const translations = {
       integrity: '诚信：向客户提供直率的建议和透明的沟通',
       expertise: '经验：对亚太市场的深入了解和交易执行经验',
       innovation: '独立：以客户利益为先的公正建议',
+    },
+
+    // Contact
+    contact: {
+      title: '联系我们',
+      subtitle: '我们为亚太地区的机构投资者、上市公司和家族办公室提供顾问服务。业务合作通过介绍和推荐建立。',
+      officeLabel: '广州办公室',
+      emailLabel: '电子邮件',
+      email: 'hello@yenturi.com',
+      companyLabel: '注册公司',
+      registrationLabel: '统一社会信用代码',
+      formTitle: '发送消息',
+      formSubtitle: '我们审阅所有来信，并回复符合条件的咨询。',
+      formName: '姓名',
+      formCompany: '机构',
+      formEmail: '电子邮件地址',
+      formMessage: '留言',
+      formSubmit: '发送消息',
+      formNote: '您的信息将受到严格保密。',
+      formSuccess: '感谢您的来信，我们将尽快与您联系。',
     },
 
     // Footer

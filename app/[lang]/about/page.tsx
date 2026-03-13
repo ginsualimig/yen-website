@@ -296,9 +296,19 @@ export default async function AboutPage({ params }: AboutPageProps) {
 
           <div className="mt-8 inline-block text-left bg-white bg-opacity-5 rounded-lg p-8 border" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
             <p className="text-sm text-gold-500 font-semibold uppercase tracking-widest mb-3">{t('footer.office')}</p>
-            <p className="text-slate-300 whitespace-pre-line leading-relaxed text-lg font-medium">
+            <p className="text-slate-300 whitespace-pre-line leading-relaxed text-lg font-medium mb-5">
               {t('footer.address')}
             </p>
+            <div className="border-t pt-5 space-y-2" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                <span className="font-semibold text-slate-400">{isZh ? '公司名称' : 'Company Name'}:</span>{' '}
+                {t('footer.companyNameCn')}
+              </p>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                <span className="font-semibold text-slate-400">{isZh ? '统一社会信用代码' : 'Registration No.'}:</span>{' '}
+                {t('footer.registrationNumber')}
+              </p>
+            </div>
           </div>
 
           <p className="mt-8 text-slate-500 text-sm max-w-md mx-auto" style={{ lineHeight: '1.75' }}>
