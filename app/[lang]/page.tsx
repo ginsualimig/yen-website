@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import { Locale, getTranslation } from '@/lib/locales';
+import VentureDivider from '@/components/VentureDivider';
 import type { Metadata } from 'next';
+import VenturiDivider from '@/components/VenturiDivider';
+import SocialProofConvergence from '@/components/SocialProofConvergence';
+import MetricGauge from '@/components/MetricGauge';
 
 interface HomePageProps {
   params: Promise<{ lang: string }>;
@@ -258,28 +262,27 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
-      {/* CLIENTS */}
-      <section className="py-12 bg-cream-100" style={{ borderBottom: '1px solid #EDE7D8' }}>
+      {/* ═══════════════════════════════════════════ */}
+      {/* SECTION DIVIDER 1: Hero → Clients/Social Proof */}
+      {/* ═══════════════════════════════════════════ */}
+      <VenturiDivider variant="dark-to-light" id="divider-1" />
+
+      {/* SOCIAL PROOF CONVERGENCE */}
+      <section className="section-lg bg-cream-100" style={{ paddingTop: '3rem' }}>
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-          <p className="text-center text-xs text-slate-400 uppercase tracking-widest font-semibold mb-8">
-            {isZh ? '我们的客户' : 'Our Clients'}
-          </p>
-          <div className="flex flex-wrap justify-center gap-10 items-center">
-            {[
-              isZh ? '机构投资者' : 'Institutional Investors',
-              isZh ? '上市公司'    : 'Listed Corporations',
-              isZh ? '私募股权基金' : 'Private Equity Funds',
-              isZh ? '家族办公室'  : 'Family Offices',
-              isZh ? '跨国企业'    : 'Multinational Enterprises',
-            ].map((label, i) => (
-              <div key={i} className="flex items-center gap-2 text-slate-500">
-                <div className="w-1.5 h-1.5 rounded-full bg-gold-400" aria-hidden="true"/>
-                <span className="text-sm font-medium">{label}</span>
-              </div>
-            ))}
+          <div className="text-center mb-8">
+            <p className="text-center text-xs text-slate-400 uppercase tracking-widest font-semibold mb-4">
+              {isZh ? '我们的客户' : 'Our Clients'}
+            </p>
           </div>
+          <SocialProofConvergence isZh={isZh} />
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════════ */}
+      {/* SECTION DIVIDER 2: Clients → Principle */}
+      {/* ═══════════════════════════════════════════ */}
+      <VenturiDivider variant="light-to-dark" id="divider-2" />
 
       {/* VENTURI PRINCIPLE ACCENT BAND */}
       <section
@@ -314,6 +317,11 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════════ */}
+      {/* SECTION DIVIDER 3: Principle → Services */}
+      {/* ═══════════════════════════════════════════ */}
+      <VenturiDivider variant="dark-to-light" id="divider-3" />
 
       {/* SERVICES — funnel convergence layout */}
       <section className="section-xl bg-cream-100">
@@ -409,6 +417,11 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════════ */}
+      {/* SECTION DIVIDER 4: Services → About */}
+      {/* ═══════════════════════════════════════════ */}
+      <VenturiDivider variant="light-to-dark" id="divider-4" />
 
       {/* ABOUT STRIP */}
       <section

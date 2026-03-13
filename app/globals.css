@@ -126,9 +126,26 @@ a {
 
   /* Premium button — primary */
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-7 py-3.5 bg-gold-500 text-navy-900 font-semibold text-sm tracking-wide rounded transition-all duration-250 ease-premium;
+    @apply inline-flex items-center gap-2 px-7 py-3.5 bg-gold-500 text-navy-900 font-semibold text-sm tracking-wide rounded transition-all duration-250 ease-premium relative overflow-hidden;
     box-shadow: 0 1px 0 rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.12);
   }
+  
+  /* Venturi breath SVG overlay */
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity;
+    pointer-events: none;
+  }
+  
+  .btn-primary:hover::before {
+    opacity: 1;
+  }
+  
   .btn-primary:hover {
     @apply bg-gold-400;
     box-shadow: 0 4px 16px rgba(201,169,97,0.3), 0 1px 0 rgba(0,0,0,0.12);
@@ -140,16 +157,48 @@ a {
 
   /* Premium button — outline on dark */
   .btn-outline-light {
-    @apply inline-flex items-center gap-2 px-7 py-3.5 border border-cream-300 border-opacity-40 text-cream-100 font-medium text-sm tracking-wide rounded transition-all duration-250 ease-premium;
+    @apply inline-flex items-center gap-2 px-7 py-3.5 border border-cream-300 border-opacity-40 text-cream-100 font-medium text-sm tracking-wide rounded transition-all duration-250 ease-premium relative overflow-hidden;
   }
+  
+  .btn-outline-light::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity;
+    pointer-events: none;
+  }
+  
+  .btn-outline-light:hover::before {
+    opacity: 1;
+  }
+  
   .btn-outline-light:hover {
     @apply border-opacity-70 bg-white bg-opacity-5;
   }
 
   /* Premium button — outline on light */
   .btn-outline-dark {
-    @apply inline-flex items-center gap-2 px-7 py-3.5 border border-navy-900 text-navy-900 font-medium text-sm tracking-wide rounded transition-all duration-250 ease-premium;
+    @apply inline-flex items-center gap-2 px-7 py-3.5 border border-navy-900 text-navy-900 font-medium text-sm tracking-wide rounded transition-all duration-250 ease-premium relative overflow-hidden;
   }
+  
+  .btn-outline-dark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(201, 169, 97, 0.08) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity;
+    pointer-events: none;
+  }
+  
+  .btn-outline-dark:hover::before {
+    opacity: 1;
+  }
+  
   .btn-outline-dark:hover {
     @apply bg-navy-900 text-cream-100;
   }
@@ -296,6 +345,214 @@ a {
 @keyframes lineGrow {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   VENTURI EFFECT ANIMATIONS — Pure CSS, GPU-accelerated
+═══════════════════════════════════════════════════════════════ */
+
+/* 1. NAV BAR THROAT LINE — Gold pulse on nav hover */
+@keyframes navThroatPulse {
+  0%   { stroke-dashoffset: 900px; opacity: 0.15; }
+  50%  { opacity: 1; }
+  100% { stroke-dashoffset: -500px; opacity: 0.15; }
+}
+
+.nav-throat-pulse {
+  opacity: 0.15;
+  transition: opacity 0.3s ease-out;
+  will-change: stroke-dashoffset, opacity;
+}
+
+/* Activate pulse on nav hover */
+nav:hover .nav-throat-pulse {
+  animation: navThroatPulse 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 1;
+}
+
+.nav-throat-dot {
+  transition: opacity 0.3s ease-out;
+}
+nav:hover .nav-throat-dot {
+  opacity: 0.5;
+}
+
+/* 2. SECTION DIVIDERS — Subtle scroll-triggered pulse */
+@keyframes dividerPulse {
+  0%   { stroke-dashoffset: 0; }
+  50%  { stroke-dashoffset: 20px; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.venturi-divider-pulse {
+  stroke-dasharray: 20, 180;
+  stroke-dashoffset: 0;
+  transition: all 0.5s ease-out;
+  will-change: stroke-dashoffset;
+}
+
+/* Activate on scroll (via Intersection Observer or paused by default) */
+.venturi-divider-svg.active .venturi-divider-pulse {
+  animation: dividerPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.venturi-divider-ring {
+  transition: opacity 0.4s ease-out;
+  will-change: opacity;
+}
+
+.venturi-divider-dot {
+  transition: opacity 0.4s ease-out;
+  will-change: opacity;
+}
+
+/* 3. CTA BUTTON BREATH — Converging arcs + glow on hover */
+@keyframes buttonArcInward {
+  0%   { opacity: 0.15; }
+  100% { opacity: 1; }
+}
+
+@keyframes buttonArcShrink {
+  0%   { d: path('M 10 20 Q 15 15 20 10 M 20 30 Q 15 25 10 20'); }
+  100% { d: path('M 15 20 Q 15 17 15 14 M 15 26 Q 15 23 15 20'); }
+}
+
+.cta-button-breath {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button-breath::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity;
+}
+
+.cta-button-breath:hover::after {
+  opacity: 1;
+  animation: buttonArcInward 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.cta-button-breath svg {
+  opacity: 0.15;
+  transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity;
+}
+
+.cta-button-breath:hover svg {
+  opacity: 1;
+  animation: buttonArcInward 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* 4. SOCIAL PROOF CONVERGENCE — Focal glow pulse (optional) */
+@keyframes focalPulse {
+  0%   { r: 52px; opacity: 0.5; }
+  50%  { r: 60px; opacity: 0.3; }
+  100% { r: 52px; opacity: 0.5; }
+}
+
+.social-proof-convergence ellipse {
+  will-change: r, opacity;
+}
+
+.social-proof-convergence circle[r="4"] {
+  will-change: opacity;
+}
+
+/* 5. METRICS GAUGES — Scroll-triggered arc fill */
+@keyframes gaugeArcFill {
+  from {
+    stroke-dashoffset: var(--gauge-filled, 0px);
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0px;
+    opacity: 1;
+  }
+}
+
+.gauge-fill-arc {
+  animation: gaugeArcFill 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: var(--gauge-delay, 0ms);
+  opacity: 0;
+  will-change: stroke-dashoffset, opacity;
+}
+
+@keyframes gaugeEndpointGlow {
+  0%   { r: 5px; opacity: 0; }
+  60%  { opacity: 1; }
+  100% { r: 5px; opacity: 1; }
+}
+
+.gauge-endpoint {
+  animation: gaugeEndpointGlow 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: var(--gauge-delay, 0ms);
+  opacity: 0;
+  will-change: r, opacity;
+}
+
+/* 6. VENTURI TIMELINE — Subtle flow glow at throat (optional active state) */
+@keyframes timelineThroatPulse {
+  0%   { r: 4px; opacity: 0.6; }
+  50%  { r: 6px; opacity: 0.9; }
+  100% { r: 4px; opacity: 0.6; }
+}
+
+.venturi-timeline circle[r="4"] {
+  will-change: r, opacity;
+}
+
+.venturi-timeline .active circle[r="4"] {
+  animation: timelineThroatPulse 2s ease-in-out infinite;
+}
+
+/* 7. MOBILE NAV REVEAL — Clip-path expand + staggered fade-in */
+@keyframes mobileNavExpand {
+  0%   { clip-path: inset(0 50% 0 50%); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes mobileNavItemFadeIn {
+  0%   { opacity: 0; transform: translateX(-8px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.mobile-nav-menu {
+  will-change: clip-path;
+  transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.mobile-nav-open {
+  animation: mobileNavExpand 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 1 !important;
+}
+
+.mobile-nav-closed {
+  animation: mobileNavExpand 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse forwards;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.mobile-nav-item {
+  animation: mobileNavItemFadeIn 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: calc(var(--nav-item-index, 0) * 0.05s + 0.15s);
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.mobile-nav-open .mobile-nav-item {
+  animation: mobileNavItemFadeIn 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: calc(var(--nav-item-index, 0) * 0.05s + 0.15s);
+}
+
+.mobile-nav-throat-line {
+  will-change: transform, opacity;
+  animation: mobileNavExpand 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0.5;
 }
 
 /* ─── Accessibility ─────────────────────────────────────────── */

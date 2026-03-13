@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useId } from 'react';
 import { Locale, getTranslation } from '@/lib/locales';
 
 interface HeaderProps {
@@ -14,6 +14,7 @@ export default function Header({ locale }: HeaderProps) {
   const t = (key: string) => getTranslation(locale, key);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const lineId = useId().replace(/:/g, '');
 
   const otherLocale = locale === 'en' ? 'zh' : 'en';
   const otherLocalePath = pathname.replace(`/${locale}`, `/${otherLocale}`);
@@ -32,6 +33,16 @@ export default function Header({ locale }: HeaderProps) {
 
   // Close menu on navigation
   useEffect(() => { setMenuOpen(false); }, [pathname]);
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
 
   const isActive = (href: string) =>
     href === `/${locale}` ? pathname === href : pathname.startsWith(href);
@@ -90,7 +101,7 @@ export default function Header({ locale }: HeaderProps) {
               {t('language-toggle')}
             </Link>
 
-            {/* About CTA instead of Contact */}
+            {/* About CTA */}
             <Link href={`/${locale}/about`} className="btn-primary text-sm">
               {t('nav.about')}
               <svg className="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -112,6 +123,7 @@ export default function Header({ locale }: HeaderProps) {
               className="w-10 h-10 flex items-center justify-center rounded-sm text-slate-700 hover:text-navy-900 hover:bg-slate-100 transition-all"
               aria-expanded={menuOpen}
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              aria-controls="mobile-nav-menu"
             >
               {menuOpen ? (
                 <svg className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -126,26 +138,89 @@ export default function Header({ locale }: HeaderProps) {
           </div>
         </div>
 
-        {/* ── Mobile Menu ──────────────────────────────────── */}
-        {menuOpen && (
-          <div className="md:hidden border-t border-slate-100 py-4">
-            <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`px-3 py-2.5 rounded text-sm font-medium transition-all ${
-                    isActive(item.href)
-                      ? 'bg-navy-900 text-cream-100'
-                      : 'text-slate-700 hover:bg-slate-50 hover:text-navy-900'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        )}
+        {/* ── Nav Bar Throat Line (desktop) ───────────────── */}
+        {/* SVG pinched underline — wide→narrow→wide, gold pulse on hover */}
+        <div className="hidden md:block h-[3px] -mx-5 sm:-mx-8 lg:-mx-10 relative overflow-hidden" aria-hidden="true">
+          <svg
+            viewBox="0 0 1200 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full absolute inset-0"
+            preserveAspectRatio="none"
+            style={{ height: '6px' }}
+          >
+            <defs>
+              <linearGradient id={`nt-rest-${lineId}`} x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stopColor="#0A0E27" stopOpacity="0.08" />
+                <stop offset="40%"  stopColor="#0A0E27" stopOpacity="0.12" />
+                <stop offset="50%"  stopColor="#0A0E27" stopOpacity="0.05" />
+                <stop offset="60%"  stopColor="#0A0E27" stopOpacity="0.12" />
+                <stop offset="100%" stopColor="#0A0E27" stopOpacity="0.08" />
+              </linearGradient>
+              <linearGradient id={`nt-gold-${lineId}`} x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stopColor="#f59e0b" stopOpacity="0" />
+                <stop offset="35%"  stopColor="#f59e0b" stopOpacity="0.5" />
+                <stop offset="50%"  stopColor="#f59e0b" stopOpacity="1" />
+                <stop offset="65%"  stopColor="#f59e0b" stopOpacity="0.5" />
+                <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+
+            {/* Base — pinched path at center */}
+            <path
+              d="M 0 3 Q 300 3 550 3 Q 580 3 600 3 Q 620 3 650 3 Q 900 3 1200 3"
+              stroke={`url(#nt-rest-${lineId})`}
+              strokeWidth="2"
+              className="nav-throat-base"
+            />
+
+            {/* Gold pulse — hidden at rest, animated on nav hover */}
+            <path
+              d="M 0 3 Q 300 3 550 3 Q 580 3 600 3 Q 620 3 650 3 Q 900 3 1200 3"
+              stroke={`url(#nt-gold-${lineId})`}
+              strokeWidth="1.5"
+              strokeDasharray="400 900"
+              strokeDashoffset="900"
+              className="nav-throat-pulse"
+            />
+
+            {/* Throat dot */}
+            <circle cx="600" cy="3" r="2" fill="#f59e0b" opacity="0.15" className="nav-throat-dot" />
+          </svg>
+        </div>
+      </div>
+
+      {/* ── Mobile Menu — Venturi Reveal ──────────────────── */}
+      <div
+        id="mobile-nav-menu"
+        className={`md:hidden mobile-nav-menu ${menuOpen ? 'mobile-nav-open' : 'mobile-nav-closed'}`}
+        aria-hidden={!menuOpen}
+      >
+        {/* Gold "throat" line — visible during animation */}
+        <div
+          className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 mobile-nav-throat-line"
+          aria-hidden="true"
+          style={{ background: 'linear-gradient(180deg, transparent, #f59e0b 30%, #f59e0b 70%, transparent)', zIndex: 0 }}
+        />
+
+        <div className="relative border-t border-slate-100 py-4 px-5">
+          <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
+            {navItems.map((item, i) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`mobile-nav-item px-3 py-2.5 rounded text-sm font-medium transition-all ${
+                  isActive(item.href)
+                    ? 'bg-navy-900 text-cream-100'
+                    : 'text-slate-700 hover:bg-slate-50 hover:text-navy-900'
+                }`}
+                style={{ '--nav-item-index': i } as React.CSSProperties}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
     </header>
   );

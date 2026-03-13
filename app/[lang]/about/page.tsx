@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { Locale, getTranslation } from '@/lib/locales';
 import type { Metadata } from 'next';
+import VenturiTimeline from '@/components/VenturiTimeline';
+import MetricGauge from '@/components/MetricGauge';
 
 interface AboutPageProps {
   params: Promise<{ lang: string }>;
@@ -134,21 +136,18 @@ export default async function AboutPage({ params }: AboutPageProps) {
               </div>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-6">
+            {/* Stats — Metrics Gauges */}
+            <div className="grid grid-cols-2 gap-8">
               {stats.map((stat, i) => (
-                <div
+                <MetricGauge
                   key={i}
-                  className="p-8 rounded-lg text-center"
-                  style={{ background: 'linear-gradient(135deg, #0B1626 0%, #0F1F38 100%)' }}
-                >
-                  <div className="font-serif font-bold text-gold-400 mb-2" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: 1, letterSpacing: '-0.02em' }}>
-                    {stat.value}
-                  </div>
-                  <p className="text-slate-400 text-xs tracking-wide font-medium uppercase">
-                    {stat.label}
-                  </p>
-                </div>
+                  value={stat.value}
+                  label={stat.label}
+                  fill={i === 0 ? 0.8 : i === 1 ? 1 : i === 2 ? 0.75 : 1}
+                  size={140}
+                  index={i}
+                  className="flex flex-col items-center"
+                />
               ))}
             </div>
           </div>
@@ -220,6 +219,26 @@ export default async function AboutPage({ params }: AboutPageProps) {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* PROCESS TIMELINE — Venturi Flow */}
+      <section className="section-xl" style={{ background: 'linear-gradient(160deg, #0B1626 0%, #0F1F38 100%)' }}>
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="text-center mb-14">
+            <span className="eyebrow">{isZh ? '我们的方法' : 'Our Approach'}</span>
+            <h2 className="font-serif font-semibold text-cream-100 mb-4" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', letterSpacing: '-0.015em' }}>
+              {isZh ? '从问题到突破' : 'Challenge to Breakthrough'}
+            </h2>
+            <span className="rule-gold-center" aria-hidden="true"/>
+            <p className="text-slate-400 max-w-2xl mx-auto mt-4 text-sm" style={{ lineHeight: '1.7' }}>
+              {isZh
+                ? '我们的方法论像一条Venturi管——汇聚多个学科的专业知识，在战略突破点压缩，然后专注执行，扩展价值。'
+                : 'Our methodology works like a Venturi pipe — converging multiple disciplines into strategic focus at the breakthrough point, then diverging focused execution to expand value.'}
+            </p>
+          </div>
+
+          <VenturiTimeline isZh={isZh} className="mt-8" />
         </div>
       </section>
 
