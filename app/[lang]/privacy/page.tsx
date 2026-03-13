@@ -90,8 +90,8 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
         <div className="mt-12 p-6 bg-yen-gray-bg rounded-lg border-l-4 border-yen-gold">
           <p className="text-sm text-yen-gray-dark">
             {isEn
-              ? 'Last updated: December 2024'
-              : '最后更新：2024年12月'}
+              ? 'Last updated: March 2026'
+              : '最后更新：2026年3月'}
           </p>
         </div>
       </div>

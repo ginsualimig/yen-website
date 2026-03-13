@@ -79,6 +79,9 @@ export const translations = {
     footer: {
       office: 'Guangzhou Office',
       address: 'Yuhai Tianhe City Tower\n208 Tianhe Road, Tianhe District\nGuangzhou, China',
+      companyName: 'Yenturi Investment Consulting',
+      companyNameCn: '广州岩氏投资咨询有限公司',
+      registrationNumber: '91440106MAEN9787X4',
       links: 'Company',
       services: 'Services',
       company: 'Company',
@@ -166,6 +169,9 @@ export const translations = {
     footer: {
       office: '广州办公室',
       address: '粤海天河城大厦\n天河区天河路208号\n中国广州',
+      companyName: 'Yenturi Investment Consulting',
+      companyNameCn: '广州岩氏投资咨询有限公司',
+      registrationNumber: '91440106MAEN9787X4',
       links: '公司',
       services: '服务',
       company: '公司',

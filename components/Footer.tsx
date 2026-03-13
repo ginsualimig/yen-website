@@ -84,8 +84,14 @@ export default function Footer({ locale }: FooterProps) {
             {/* Address */}
             <address className="not-italic">
               <p className="text-xs text-slate-500 uppercase tracking-widest font-semibold mb-3">{t('footer.office')}</p>
-              <p className="text-sm text-slate-400 whitespace-pre-line leading-relaxed">
+              <p className="text-sm text-slate-400 whitespace-pre-line leading-relaxed mb-6">
                 {t('footer.address')}
+              </p>
+              <p className="text-xs text-slate-600 leading-relaxed mb-1">
+                <span className="font-semibold text-slate-500">{isZh ? '公司名称' : 'Company Name'}:</span> {isZh ? t('footer.companyNameCn') : t('footer.companyName')}
+              </p>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                <span className="font-semibold text-slate-500">{isZh ? '统一社会信用代码' : 'Registration Number'}:</span> {t('footer.registrationNumber')}
               </p>
             </address>
           </div>
