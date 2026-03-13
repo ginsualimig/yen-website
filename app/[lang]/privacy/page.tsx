@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
   const title = locale === 'en' ? 'Privacy Policy' : '隐私政策';
   
   return {
-    title: `${title} | Yenturi Investment Consulting`,
+    title: `${title} | 广州岩氏投资咨询有限公司`,
     robots: { index: false },
   };
 }
@@ -37,8 +37,8 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
             </h2>
             <p>
               {isEn
-                ? 'At Yenturi Investment Consulting, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information.'
-                : '在俣投资顾问，我们致力于保护您的隐私。本隐私政策说明我们如何收集、使用和保护您的信息。'}
+                ? 'At 广州岩氏投资咨询有限公司 (Yenturi Investment Consulting), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information.'
+                : '广州岩氏投资咨询有限公司致力于保护您的隐私。本隐私政策说明我们如何收集、使用和保护您的信息。'}
             </p>
           </section>
 

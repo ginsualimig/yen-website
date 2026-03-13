@@ -89,7 +89,7 @@ export const translations = {
       sitemap: 'Sitemap',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
-      copyright: '© 2024 Yenturi Investment Consulting. All rights reserved.',
+      copyright: '© 2026 广州岩氏投资咨询有限公司。版权所有。',
     },
   },
 
@@ -179,7 +179,7 @@ export const translations = {
       sitemap: '网站地图',
       privacy: '隐私政策',
       terms: '服务条款',
-      copyright: '© 2024 Yenturi投资顾问。版权所有。',
+      copyright: '© 2026 广州岩氏投资咨询有限公司。版权所有。',
     },
   },
 };

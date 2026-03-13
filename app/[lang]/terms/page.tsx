@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: TermsPageProps): Promise<Meta
   const title = locale === 'en' ? 'Terms of Service' : '服务条款';
   
   return {
-    title: `${title} | Yenturi Investment Consulting`,
+    title: `${title} | 广州岩氏投资咨询有限公司`,
     robots: { index: false },
   };
 }
@@ -70,8 +70,8 @@ export default async function TermsPage({ params }: TermsPageProps) {
             </h2>
             <p>
               {isEn
-                ? 'In no event shall Yenturi Investment Consulting or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on our website.'
-                : '在任何情况下，俣投资顾问或其供应商都不对因使用或无法使用我们网站上的材料而产生的任何损害（包括但不限于数据或利润损失或业务中断）负责。'}
+                ? 'In no event shall 广州岩氏投资咨询有限公司 (Yenturi Investment Consulting) or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on our website.'
+                : '在任何情况下，广州岩氏投资咨询有限公司或其供应商都不对因使用或无法使用我们网站上的材料而产生的任何损害（包括但不限于数据或利润损失或业务中断）负责。'}
             </p>
           </section>
 
