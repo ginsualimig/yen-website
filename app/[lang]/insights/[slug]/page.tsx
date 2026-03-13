@@ -24,6 +24,16 @@ function getTitleFromId(id: string) {
   return id;
 }
 
+// Helper to get staggered article date based on index
+function getArticleDate(articleId: string): string {
+  const articleIndex = allExpandedArticles.findIndex((a: any) => a.id === articleId);
+  if (articleIndex === -1) return '2026-03-14';
+  
+  const baseDate = new Date(2026, 2, 14); // March 14, 2026
+  baseDate.setMonth(baseDate.getMonth() - articleIndex);
+  return baseDate.toISOString().split('T')[0]; // Return YYYY-MM-DD format
+}
+
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
   const { lang, slug } = await params;
   const locale = lang as Locale;
@@ -48,7 +58,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       description: description,
       type: 'article',
       url: `https://yenturi.com/${locale}/insights/${slug}`,
-      publishedTime: '2026-03-14',
+      publishedTime: getArticleDate(expandedArticle.id),
     },
   };
 }
@@ -121,13 +131,18 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
           {/* Article meta */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-slate-400 text-sm">
-            <time dateTime="2026-03-14">
-              {new Date('2026-03-14').toLocaleDateString(isZh ? 'zh-CN' : 'en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </time>
+            {(() => {
+              const articleDate = getArticleDate(expandedArticle.id);
+              return (
+                <time dateTime={articleDate}>
+                  {new Date(articleDate + 'T00:00:00').toLocaleDateString(isZh ? 'zh-CN' : 'en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </time>
+              );
+            })()}
             <span className="hidden sm:block text-slate-600">•</span>
             <span>{Math.ceil(JSON.stringify(expandedArticle).split(/\s+/).length / 200)} {isZh ? '分钟阅读' : 'min read'}</span>
             <span className="hidden sm:block text-slate-600">•</span>

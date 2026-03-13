@@ -36,8 +36,15 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
 
   // Use expanded articles (10 total) - skip the old articles array which is now redundant
   const mergedArticles = useMemo(() => {
+    // Helper to generate staggered dates (one article per month, going backwards)
+    const getArticleDate = (index: number): string => {
+      const baseDate = new Date(2026, 2, 14); // March 14, 2026
+      baseDate.setMonth(baseDate.getMonth() - index);
+      return baseDate.toISOString().split('T')[0]; // Return YYYY-MM-DD format
+    };
+
     // Map expanded articles to the Article interface
-    const expandedMapped = allExpandedArticles.map((article: any) => {
+    const expandedMapped = allExpandedArticles.map((article: any, index: number) => {
       // Map article IDs to regions and topics based on their titles/IDs
       let region: Region = 'china';
       let topics: Topic[] = ['policy', 'investment'];
@@ -118,7 +125,7 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
         regionLabelZh,
         topics,
         topicLabels,
-        publishedDate: '2026-03-14',
+        publishedDate: getArticleDate(index),
         author: 'Yenturi Research',
         readTime,
         contentEn: '',
