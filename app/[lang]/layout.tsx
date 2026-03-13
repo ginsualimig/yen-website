@@ -11,23 +11,20 @@ export function generateStaticParams() {
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
-  params: Promise<{
-    lang: string;
-  }>;
+  params: Promise<{ lang: string }>;
 }
 
 export async function generateMetadata({ params }: LocaleLayoutProps): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as Locale;
-  const isZh = locale === 'zh';
 
   return {
-    metadataBase: new URL('https://yen-consulting.vercel.app'),
+    metadataBase: new URL('https://yen-website.vercel.app'),
     alternates: {
-      canonical: `https://yen-consulting.vercel.app/${locale}`,
+      canonical: `https://yen-website.vercel.app/${locale}`,
       languages: {
-        en: 'https://yen-consulting.vercel.app/en',
-        'zh-Hans': 'https://yen-consulting.vercel.app/zh',
+        en: 'https://yen-website.vercel.app/en',
+        'zh-Hans': 'https://yen-website.vercel.app/zh',
       },
     },
   };
@@ -42,14 +39,20 @@ export default async function LocaleLayout({
   const htmlLang = locale === 'zh' ? 'zh-CN' : 'en';
 
   return (
-    <html lang={htmlLang}>
+    <html lang={htmlLang} className="scroll-smooth">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Preconnect for Google Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="flex flex-col min-h-screen bg-yen-gray-bg text-yen-gray-dark">
+      <body
+        className="flex flex-col min-h-screen antialiased"
+        style={{ backgroundColor: '#FDFCF9', color: '#212529' }}
+      >
         <Header locale={locale} />
-        <main className="flex-grow">
+        <main className="flex-grow" id="main-content" tabIndex={-1}>
           {children}
         </main>
         <Footer locale={locale} />

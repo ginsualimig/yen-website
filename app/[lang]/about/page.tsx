@@ -1,17 +1,15 @@
+import Link from 'next/link';
 import { Locale, getTranslation } from '@/lib/locales';
 import type { Metadata } from 'next';
 
 interface AboutPageProps {
-  params: Promise<{
-    lang: string;
-  }>;
+  params: Promise<{ lang: string }>;
 }
 
 export async function generateMetadata({ params }: AboutPageProps): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
-
   return {
     title: `${t('about.title')} | Yen Investment Consulting`,
     description: t('about.missionText'),
@@ -19,7 +17,7 @@ export async function generateMetadata({ params }: AboutPageProps): Promise<Meta
       title: `${t('about.title')} | Yen Investment Consulting`,
       description: t('about.missionText'),
       type: 'website',
-      url: `https://yen-consulting.vercel.app/${locale}/about`,
+      url: `https://yen-website.vercel.app/${locale}/about`,
     },
   };
 }
@@ -28,69 +26,133 @@ export default async function AboutPage({ params }: AboutPageProps) {
   const { lang } = await params;
   const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
+  const isZh = locale === 'zh';
+
+  const values = [
+    {
+      key: 'excellence',
+      label: isZh ? '卓越' : 'Excellence',
+      desc: t('about.excellence'),
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
+          <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      ),
+    },
+    {
+      key: 'integrity',
+      label: isZh ? '诚信' : 'Integrity',
+      desc: t('about.integrity'),
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
+          <path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      ),
+    },
+    {
+      key: 'expertise',
+      label: isZh ? '专业' : 'Expertise',
+      desc: t('about.expertise'),
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
+          <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      ),
+    },
+    {
+      key: 'innovation',
+      label: isZh ? '创新' : 'Innovation',
+      desc: t('about.innovation'),
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
+          <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      ),
+    },
+  ];
+
+  const stats = [
+    { value: '20+', label: isZh ? '年行业经验' : 'Years of Experience' },
+    { value: 'APAC', label: isZh ? '区域专业覆盖' : 'Regional Reach' },
+    { value: '6', label: isZh ? '核心服务领域' : 'Service Areas' },
+    { value: '100%', label: isZh ? '客户保密承诺' : 'Confidentiality' },
+  ];
 
   return (
-    <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-yen-navy to-yen-navy-light py-16 md:py-24 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('about.title')}</h1>
-          <p className="text-xl text-gray-200">
+    <div id="main-content">
+
+      {/* ── Page Hero ─────────────────────────────────────── */}
+      <section className="page-hero relative overflow-hidden" style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
+        {/* Decorative orb */}
+        <div
+          className="absolute -top-16 -right-16 w-[500px] h-[500px] rounded-full opacity-[0.05] pointer-events-none"
+          style={{ background: 'radial-gradient(circle, #C9A961 0%, transparent 70%)' }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-5xl mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="inline-block h-px w-8 bg-gold-500 opacity-60" aria-hidden="true"/>
+            <span className="text-gold-500 font-sans text-xs font-semibold uppercase tracking-[0.15em]">
+              {isZh ? '关于我们' : 'About Us'}
+            </span>
+          </div>
+          <h1 className="font-serif font-bold text-cream-100 mb-5 text-balance" style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', lineHeight: '1.1', letterSpacing: '-0.02em' }}>
+            {t('about.title')}
+          </h1>
+          <p className="text-slate-300 max-w-2xl" style={{ fontSize: '1.125rem', lineHeight: '1.8' }}>
             {t('about.missionText')}
           </p>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      {/* ── Mission & Vision ──────────────────────────────── */}
+      <section className="section-xl bg-cream-100">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+
             {/* Mission */}
-            <div className="bg-yen-gray-bg p-8 rounded-lg border-l-4 border-yen-gold">
-              <h2 className="text-2xl md:text-3xl font-bold text-yen-navy mb-4">
+            <div className="card-premium p-10">
+              <div className="service-icon text-gold-500 mb-6 w-12 h-12 flex items-center justify-center rounded-md" style={{ background: 'linear-gradient(135deg, rgba(201,169,97,0.12) 0%, rgba(201,169,97,0.06) 100%)' }}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
+                  <path d="M13 10V3L4 14h7v7l9-11h-7z" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h2 className="font-serif font-semibold text-navy-900 mb-4" style={{ fontSize: '1.5rem' }}>
                 {t('about.mission')}
               </h2>
-              <p className="text-yen-gray-dark text-lg">
-                {t('about.missionText')}
-              </p>
+              <div className="h-px bg-gold-400 w-8 mb-4 opacity-60" aria-hidden="true"/>
+              <p className="text-slate-600 leading-relaxed">{t('about.missionText')}</p>
             </div>
 
             {/* Vision */}
-            <div className="bg-yen-gray-bg p-8 rounded-lg border-l-4 border-yen-gold">
-              <h2 className="text-2xl md:text-3xl font-bold text-yen-navy mb-4">
+            <div className="card-premium p-10">
+              <div className="service-icon text-gold-500 mb-6 w-12 h-12 flex items-center justify-center rounded-md" style={{ background: 'linear-gradient(135deg, rgba(201,169,97,0.12) 0%, rgba(201,169,97,0.06) 100%)' }}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
+                  <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h2 className="font-serif font-semibold text-navy-900 mb-4" style={{ fontSize: '1.5rem' }}>
                 {t('about.vision')}
               </h2>
-              <p className="text-yen-gray-dark text-lg">
-                {t('about.visionText')}
-              </p>
+              <div className="h-px bg-gold-400 w-8 mb-4 opacity-60" aria-hidden="true"/>
+              <p className="text-slate-600 leading-relaxed">{t('about.visionText')}</p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Values Section */}
-      <section className="py-16 md:py-24 bg-yen-navy text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            {t('about.values')}
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { title: 'excellence', label: t('about.excellence') },
-              { title: 'integrity', label: t('about.integrity') },
-              { title: 'expertise', label: t('about.expertise') },
-              { title: 'innovation', label: t('about.innovation') },
-            ].map((value, index) => (
+          {/* Stats row */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {stats.map((stat, i) => (
               <div
-                key={value.title}
-                className="bg-yen-navy-light p-6 rounded-lg text-center hover:bg-gradient-to-br hover:from-yen-gold hover:to-yen-gold-light hover:text-yen-navy transition-all duration-300 group"
+                key={i}
+                className="p-6 rounded-lg text-center"
+                style={{ background: 'linear-gradient(135deg, #0B1626 0%, #0F1F38 100%)' }}
               >
-                <div className="text-4xl font-bold text-yen-gold mb-4 group-hover:text-yen-navy">
-                  {String(index + 1).padStart(2, '0')}
+                <div className="font-serif font-bold text-gold-400 mb-2" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: 1, letterSpacing: '-0.02em' }}>
+                  {stat.value}
                 </div>
-                <p className="text-lg font-semibold group-hover:text-yen-navy">
-                  {value.label}
+                <p className="text-slate-400 text-xs tracking-wide font-medium uppercase">
+                  {stat.label}
                 </p>
               </div>
             ))}
@@ -98,47 +160,134 @@ export default async function AboutPage({ params }: AboutPageProps) {
         </div>
       </section>
 
-      {/* APAC Focus */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-yen-navy mb-8 text-center">
-            Asia-Pacific Leadership
-          </h2>
-          <div className="bg-yen-gray-bg p-8 rounded-lg">
-            <p className="text-lg text-yen-gray-dark mb-6">
-              With deep expertise in the Asia-Pacific region, we provide strategic advisory services tailored to the unique opportunities and challenges of emerging and developed markets across the region. Our team combines international best practices with local market knowledge.
-            </p>
-            <p className="text-lg text-yen-gray-dark">
-              We are committed to supporting institutional investors, corporations, and entrepreneurs in achieving sustainable growth and value creation across APAC.
-            </p>
+      {/* ── Values ─────────────────────────────────────────── */}
+      <section
+        className="relative section-xl overflow-hidden"
+        style={{ background: 'linear-gradient(160deg, #0B1626 0%, #0F1F38 100%)' }}
+      >
+        <div
+          className="absolute top-0 right-0 w-96 h-96 opacity-[0.04] pointer-events-none"
+          style={{ background: 'radial-gradient(circle, #C9A961 0%, transparent 70%)' }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="text-center mb-14">
+            <span className="eyebrow">{isZh ? '我们的价值观' : 'Our Values'}</span>
+            <h2 className="font-serif font-semibold text-cream-100 mb-4" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', letterSpacing: '-0.015em' }}>
+              {t('about.values')}
+            </h2>
+            <span className="rule-gold-center" aria-hidden="true"/>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {values.map((value, i) => (
+              <div
+                key={value.key}
+                className="group p-8 rounded-lg border transition-all duration-350 ease-premium flex flex-col gap-4"
+                style={{ background: 'rgba(255,255,255,0.03)', borderColor: 'rgba(255,255,255,0.07)' }}
+              >
+                {/* Number */}
+                <div className="text-gold-500 font-serif font-bold opacity-30 text-4xl leading-none group-hover:opacity-60 transition-opacity">
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+                {/* Icon */}
+                <div className="text-gold-500">{value.icon}</div>
+                {/* Title */}
+                <h3 className="text-cream-100 font-semibold text-base">{value.label}</h3>
+                {/* Description */}
+                <p className="text-slate-400 text-sm leading-relaxed">{value.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Office Address */}
-      <section className="py-16 md:py-24 bg-yen-navy text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            {t('contact.address')}
-          </h2>
-          <p className="text-xl text-gray-200 mb-4">
-            {t('footer.office')}
-          </p>
-          <p className="text-lg text-gray-200 whitespace-pre-line font-semibold">
-            {t('footer.address')}
-          </p>
-          <div className="mt-8 flex flex-col gap-2">
-            <p className="text-gray-200">
-              <span className="font-semibold text-yen-gold">{t('contact.email')}:</span>{' '}
-              {t('footer.email')}
-            </p>
-            <p className="text-gray-200">
-              <span className="font-semibold text-yen-gold">{t('contact.phone')}:</span>{' '}
-              {t('footer.phone')}
-            </p>
+      {/* ── APAC Section ───────────────────────────────────── */}
+      <section className="section-xl" style={{ background: '#FAF8F3', borderTop: '1px solid #EDE7D8' }}>
+        <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <span className="eyebrow">{isZh ? '亚太专注' : 'APAC Focus'}</span>
+              <h2 className="section-heading text-navy-900 mb-4" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)' }}>
+                {isZh ? '亚太区域领导力' : 'Asia-Pacific Leadership'}
+              </h2>
+              <span className="rule-gold" aria-hidden="true"/>
+              <p className="text-slate-600 leading-relaxed mb-5" style={{ lineHeight: '1.8' }}>
+                {isZh
+                  ? '凭借对亚太地区的深厚专业知识，我们提供专为该地区新兴市场和成熟市场独特机遇和挑战量身定制的战略咨询服务。我们的团队将国际最佳实践与本地市场知识相结合。'
+                  : 'With deep expertise in the Asia-Pacific region, we provide strategic advisory services tailored to the unique opportunities and challenges of emerging and developed markets across the region. Our team combines international best practices with local market knowledge.'}
+              </p>
+              <p className="text-slate-600 leading-relaxed" style={{ lineHeight: '1.8' }}>
+                {isZh
+                  ? '我们致力于支持机构投资者、企业和企业家在亚太地区实现可持续增长和价值创造。'
+                  : 'We are committed to supporting institutional investors, corporations, and entrepreneurs in achieving sustainable growth and value creation across APAC.'}
+              </p>
+            </div>
+
+            {/* Regional indicators */}
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { region: isZh ? '中国大陆' : 'Mainland China', note: isZh ? '核心市场' : 'Core Market' },
+                { region: isZh ? '香港' : 'Hong Kong',        note: isZh ? '金融枢纽' : 'Financial Hub' },
+                { region: isZh ? '东南亚' : 'Southeast Asia',  note: isZh ? '增长市场' : 'Growth Markets' },
+                { region: isZh ? '大洋洲' : 'Australasia',     note: isZh ? '战略市场' : 'Strategic Markets' },
+              ].map((r, i) => (
+                <div
+                  key={i}
+                  className="card-premium p-6"
+                >
+                  <p className="font-semibold text-navy-900 text-sm mb-1">{r.region}</p>
+                  <p className="text-xs text-gold-600 font-medium tracking-wide">{r.note}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
-    </>
+
+      {/* ── Office & Contact ───────────────────────────────── */}
+      <section
+        className="section-xl"
+        style={{ background: 'linear-gradient(160deg, #060D1A 0%, #0B1626 100%)' }}
+      >
+        <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-10 text-center">
+          <span className="eyebrow">{isZh ? '联系我们' : 'Our Office'}</span>
+          <h2 className="font-serif font-semibold text-cream-100 mb-4" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', letterSpacing: '-0.015em' }}>
+            {t('contact.address')}
+          </h2>
+          <span className="rule-gold-center" aria-hidden="true"/>
+
+          <div className="mt-8 inline-block text-left bg-white bg-opacity-5 rounded-lg p-8 border" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+            <p className="text-sm text-gold-500 font-semibold uppercase tracking-widest mb-3">{t('footer.office')}</p>
+            <p className="text-slate-300 whitespace-pre-line leading-relaxed text-lg font-medium mb-6">
+              {t('footer.address')}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">{t('contact.email')}</p>
+                <a href={`mailto:${t('footer.email')}`} className="text-slate-300 hover:text-gold-400 transition-colors font-medium">
+                  {t('footer.email')}
+                </a>
+              </div>
+              <div>
+                <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">{t('contact.phone')}</p>
+                <a href={`tel:${t('footer.phone')}`} className="text-slate-300 hover:text-gold-400 transition-colors font-medium">
+                  {t('footer.phone')}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <Link href={`/${locale}/contact`} className="btn-primary">
+              {isZh ? '获取联系方式' : 'Get in Touch'}
+              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
