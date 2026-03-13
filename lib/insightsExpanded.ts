@@ -37,4 +37,3 @@ export interface ExpandedArticle {
 }
 
 export { default as allExpandedArticles } from './expanded/index';
-export type { ExpandedArticle };
