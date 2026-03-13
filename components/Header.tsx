@@ -64,7 +64,7 @@ export default function Header({ locale }: HeaderProps) {
                 className="font-serif font-semibold text-navy-900 tracking-tight"
                 style={{ fontSize: '1.0625rem', letterSpacing: '-0.01em' }}
               >
-                Yen
+                Yenturi
               </span>
               <span className="text-slate-500 font-sans" style={{ fontSize: '0.625rem', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
                 {locale === 'zh' ? '投资顾问' : 'Investment Consulting'}
