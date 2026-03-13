@@ -258,11 +258,11 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
-      {/* TRUSTED BY */}
+      {/* CLIENTS */}
       <section className="py-12 bg-cream-100" style={{ borderBottom: '1px solid #EDE7D8' }}>
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
           <p className="text-center text-xs text-slate-400 uppercase tracking-widest font-semibold mb-8">
-            {isZh ? '我们的服务对象' : 'Trusted by institutions across Asia-Pacific'}
+            {isZh ? '我们的客户' : 'Our Clients'}
           </p>
           <div className="flex flex-wrap justify-center gap-10 items-center">
             {[
