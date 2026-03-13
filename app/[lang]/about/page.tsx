@@ -11,10 +11,10 @@ export async function generateMetadata({ params }: AboutPageProps): Promise<Meta
   const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
   return {
-    title: `${t('about.title')} | Yen Investment Consulting`,
+    title: `${t('about.title')} | Yenturi Investment Consulting`,
     description: t('about.missionText'),
     openGraph: {
-      title: `${t('about.title')} | Yen Investment Consulting`,
+      title: `${t('about.title')} | Yenturi Investment Consulting`,
       description: t('about.missionText'),
       type: 'website',
       url: `https://yenturi.com/${locale}/about`,

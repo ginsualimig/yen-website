@@ -44,7 +44,7 @@ export default function Footer({ locale }: FooterProps) {
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link href={`/${locale}`} className="inline-flex items-center gap-3 group mb-6 block" aria-label="Yen Investment Consulting">
+            <Link href={`/${locale}`} className="inline-flex items-center gap-3 group mb-6 block" aria-label="Yenturi Investment Consulting">
               <div className="w-10 h-10 flex items-center justify-center rounded-sm bg-gold-500 flex-shrink-0">
                 <span className="text-navy-900 font-serif font-bold text-xl leading-none select-none">Y</span>
               </div>

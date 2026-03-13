@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Yen Investment Consulting | APAC Financial Advisory',
+  title: 'Yenturi Investment Consulting | APAC Financial Advisory',
   description: 'Leading investment consulting and financial advisory services across Asia-Pacific region',
   metadataBase: new URL('https://yen-consulting.vercel.app'),
   robots: {
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://yen-consulting.vercel.app',
-    siteName: 'Yen Investment Consulting',
-    title: 'Yen Investment Consulting | APAC Financial Advisory',
+    siteName: 'Yenturi Investment Consulting',
+    title: 'Yenturi Investment Consulting | APAC Financial Advisory',
     description: 'Leading investment consulting and financial advisory services',
   },
 };

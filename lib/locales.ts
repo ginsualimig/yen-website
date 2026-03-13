@@ -66,7 +66,7 @@ export const translations = {
 
     // About
     about: {
-      title: 'About Yen Investment Consulting',
+      title: 'About Yenturi Investment Consulting',
       mission: 'Mission',
       missionText: 'To provide world-class investment consulting and advisory services that drive sustainable growth and value creation across the Asia-Pacific region.',
       vision: 'Vision',
@@ -113,7 +113,7 @@ export const translations = {
       sitemap: 'Sitemap',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
-      copyright: '© 2024 Yen Investment Consulting. All rights reserved.',
+      copyright: '© 2024 Yenturi Investment Consulting. All rights reserved.',
     },
   },
 
@@ -180,7 +180,7 @@ export const translations = {
 
     // About
     about: {
-      title: '关于俣投资顾问',
+      title: '关于Yenturi投资顾问',
       mission: '使命',
       missionText: '为亚太地区的机构投资者和企业提供世界级的投资顾问和咨询服务，推动可持续增长和价值创造。',
       vision: '愿景',
@@ -227,7 +227,7 @@ export const translations = {
       sitemap: '网站地图',
       privacy: '隐私政策',
       terms: '服务条款',
-      copyright: '© 2024 俣投资顾问。版权所有。',
+      copyright: '© 2024 Yenturi投资顾问。版权所有。',
     },
   },
 };

@@ -31,10 +31,10 @@ export async function generateMetadata({ params }: ServiceDetailPageProps): Prom
   const t = (key: string) => getTranslation(locale, key);
   const title = t(`services.${service}.title`);
   return {
-    title: `${title} | Yen Investment Consulting`,
+    title: `${title} | Yenturi Investment Consulting`,
     description: t(`services.${service}.description`),
     openGraph: {
-      title: `${title} | Yen Investment Consulting`,
+      title: `${title} | Yenturi Investment Consulting`,
       description: t(`services.${service}.description`),
       type: 'website',
       url: `https://yenturi.com/${locale}/services/${service}`,

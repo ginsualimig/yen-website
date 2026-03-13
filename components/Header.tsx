@@ -54,7 +54,7 @@ export default function Header({ locale }: HeaderProps) {
           <Link
             href={`/${locale}`}
             className="flex items-center gap-3 flex-shrink-0 group"
-            aria-label="Yen Investment Consulting – Home"
+            aria-label="Yenturi Investment Consulting – Home"
           >
             {/* Monogram mark */}
             <div className="w-9 h-9 flex items-center justify-center rounded-sm bg-navy-900 transition-all duration-250 group-hover:bg-navy-800">
