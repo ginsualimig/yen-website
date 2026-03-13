@@ -12,7 +12,7 @@ export function generateStaticParams() {
 interface LocaleLayoutProps {
   children: React.ReactNode;
   params: Promise<{
-    lang: Locale;
+    lang: string;
   }>;
 }
 

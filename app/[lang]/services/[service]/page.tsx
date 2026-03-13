@@ -13,7 +13,7 @@ const serviceIds = [
 
 interface ServiceDetailPageProps {
   params: Promise<{
-    lang: Locale;
+    lang: string;
     service: string;
   }>;
 }

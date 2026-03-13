@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 interface PrivacyPageProps {
   params: Promise<{
-    lang: Locale;
+    lang: string;
   }>;
 }
 

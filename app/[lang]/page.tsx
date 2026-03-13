@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 interface HomePageProps {
   params: Promise<{
-    lang: Locale;
+    lang: string;
   }>;
 }
 
