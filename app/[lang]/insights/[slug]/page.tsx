@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Locale, getTranslation } from '@/lib/locales';
-import { articles } from '@/lib/insights';
+import { articles, topicLabels } from '@/lib/insights';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -86,10 +86,20 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </Link>
           </div>
 
-          {/* Region tag */}
-          <p className="text-xs uppercase tracking-widest font-semibold text-gold-400 mb-4">
-            {isZh ? article.regionLabelZh : article.regionLabelEn}
-          </p>
+          {/* Region & Topics */}
+          <div className="flex items-center gap-3 flex-wrap mb-4">
+            <p className="text-xs uppercase tracking-widest font-semibold text-gold-400">
+              {isZh ? article.regionLabelZh : article.regionLabelEn}
+            </p>
+            <span className="text-gold-400" aria-hidden="true">•</span>
+            <div className="flex gap-2">
+              {article.topics.map(topic => (
+                <span key={topic} className="text-xs bg-gold-400 bg-opacity-20 text-gold-300 px-2 py-1 rounded">
+                  {isZh ? topicLabels[topic].zh : topicLabels[topic].en}
+                </span>
+              ))}
+            </div>
+          </div>
 
           {/* Title */}
           <h1 className="font-serif font-bold text-cream-100 mb-5 text-balance" style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', lineHeight: '1.1', letterSpacing: '-0.02em' }}>
@@ -209,9 +219,18 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   className="group block"
                 >
                   <article className="card-premium p-8 flex flex-col h-full">
-                    <p className="text-xs uppercase tracking-widest font-semibold text-gold-600 mb-2">
-                      {isZh ? relatedArticle.regionLabelZh : relatedArticle.regionLabelEn}
-                    </p>
+                    <div className="flex items-center justify-between gap-3 mb-3">
+                      <p className="text-xs uppercase tracking-widest font-semibold text-gold-600">
+                        {isZh ? relatedArticle.regionLabelZh : relatedArticle.regionLabelEn}
+                      </p>
+                      <div className="flex gap-1">
+                        {relatedArticle.topics.slice(0, 2).map(topic => (
+                          <span key={topic} className="text-xs bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">
+                            {isZh ? topicLabels[topic].zh : topicLabels[topic].en}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                     <h3 className="font-serif font-semibold text-navy-900 mb-3 group-hover:text-gold-600 transition-colors duration-250 text-lg leading-tight flex-1">
                       {isZh ? relatedArticle.titleZh : relatedArticle.titleEn}
                     </h3>

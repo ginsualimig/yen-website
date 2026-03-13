@@ -1,3 +1,6 @@
+export type Region = 'china' | 'australia' | 'southeast-asia';
+export type Topic = 'policy' | 'trade' | 'investment' | 'technology' | 'markets' | 'infrastructure';
+
 export interface Article {
   id: string;
   slug: string;
@@ -5,15 +8,26 @@ export interface Article {
   titleZh: string;
   descriptionEn: string;
   descriptionZh: string;
-  region: 'china' | 'australia' | 'southeast-asia';
+  region: Region;
   regionLabelEn: string;
   regionLabelZh: string;
+  topics: Topic[];
+  topicLabels: Record<Topic, { en: string; zh: string }>;
   publishedDate: string;
   author: string;
   readTime: number;
   contentEn: string;
   contentZh: string;
 }
+
+export const topicLabels: Record<Topic, { en: string; zh: string }> = {
+  policy: { en: 'Policy', zh: '政策' },
+  trade: { en: 'Trade', zh: '贸易' },
+  investment: { en: 'Investment', zh: '投资' },
+  technology: { en: 'Technology', zh: '科技' },
+  markets: { en: 'Markets', zh: '市场' },
+  infrastructure: { en: 'Infrastructure', zh: '基础设施' },
+};
 
 export const articles: Article[] = [
   {
@@ -26,6 +40,8 @@ export const articles: Article[] = [
     region: 'china',
     regionLabelEn: 'China',
     regionLabelZh: '中国',
+    topics: ['policy', 'investment'],
+    topicLabels,
     publishedDate: '2026-03-10',
     author: 'Yenturi Research',
     readTime: 8,
@@ -95,6 +111,8 @@ Institutional players positioned to capitalize on these trends are seeing accele
     region: 'southeast-asia',
     regionLabelEn: 'Southeast Asia',
     regionLabelZh: '东南亚',
+    topics: ['trade', 'investment', 'infrastructure'],
+    topicLabels,
     publishedDate: '2026-02-28',
     author: 'Yenturi Research',
     readTime: 7,
@@ -166,6 +184,8 @@ ASEAN经济共同体框架不断深化：
     region: 'australia',
     regionLabelEn: 'Australia',
     regionLabelZh: '澳大利亚',
+    topics: ['policy', 'investment', 'technology'],
+    topicLabels,
     publishedDate: '2026-03-05',
     author: 'Yenturi Research',
     readTime: 8,
@@ -269,6 +289,8 @@ Successful institutional investors are:
     region: 'china',
     regionLabelEn: 'China',
     regionLabelZh: '中国',
+    topics: ['policy', 'technology', 'investment'],
+    topicLabels,
     publishedDate: '2026-02-15',
     author: 'Yenturi Research',
     readTime: 9,
@@ -358,6 +380,8 @@ The intersection of government support and foreign participation restrictions cr
     region: 'southeast-asia',
     regionLabelEn: 'Southeast Asia',
     regionLabelZh: '东南亚',
+    topics: ['markets', 'investment', 'technology'],
+    topicLabels,
     publishedDate: '2026-03-01',
     author: 'Yenturi Research',
     readTime: 7,
@@ -449,6 +473,8 @@ The next 12-24 months will likely see significant consolidation around 3-5 regio
     region: 'australia',
     regionLabelEn: 'Australia',
     regionLabelZh: '澳大利亚',
+    topics: ['trade', 'markets', 'investment'],
+    topicLabels,
     publishedDate: '2026-02-20',
     author: 'Yenturi Research',
     readTime: 8,
@@ -551,4 +577,338 @@ The next 3-5 years will likely see further acceleration in Australia's pivot awa
 
 未来3-5年可能进一步加速澳大利亚从中国集中度向多元化盟国合作的转变`
   },
+
+  {
+    id: '7',
+    slug: 'china-green-energy-transition-investment-policy',
+    titleEn: 'China\'s Green Energy Transition: Renewable Capacity and Investment Opportunities',
+    titleZh: '中国绿色能源转型：可再生能源容量与投资机遇',
+    descriptionEn: 'Analysis of China\'s aggressive renewable energy expansion, policy incentives for green tech, and market implications for international investors.',
+    descriptionZh: '分析中国可再生能源扩张计划、绿色技术政策激励和国际投资机遇。',
+    region: 'china',
+    regionLabelEn: 'China',
+    regionLabelZh: '中国',
+    topics: ['policy', 'investment', 'infrastructure'],
+    topicLabels,
+    publishedDate: '2026-02-10',
+    author: 'Yenturi Research',
+    readTime: 7,
+    contentEn: `China's renewable energy sector continues rapid expansion, driven by government policy and substantial capital allocation.
+
+## Capacity Expansion Targets
+
+The government has committed to significant renewable energy capacity growth:
+
+- **2026-2030 Targets**: 1.2 TW+ cumulative renewable capacity, requiring $350B+ in annual investment
+- **Offshore Wind**: Deep-water floating wind farms expanding rapidly, with 50+ GW under development
+- **Solar Manufacturing**: Downstream capacity constraints creating opportunities in module and inverter manufacturing
+
+## Policy Support Mechanisms
+
+- **Grid Interconnection**: Accelerated approval timelines for renewable projects with grid access
+- **Subsidy Programs**: Direct subsidies for offshore wind, floating solar, and green hydrogen projects
+- **Carbon Market**: Linked carbon pricing mechanisms incentivizing corporate renewables adoption
+
+## Investment Opportunities
+
+For institutional investors:
+- Project development in wind and solar with off-take agreements
+- Downstream manufacturing (inverters, battery storage, grid equipment)
+- Private transmission infrastructure supporting renewable integration
+- Green hydrogen production and applications
+
+Expected returns of 8-12% annually on long-term power purchase agreements, with government support enhancing credit quality.`,
+    contentZh: `中国可再生能源行业持续快速扩张，受政府政策和资本投入驱动。
+
+## 容量扩张目标
+
+政府承诺显著的可再生能源容量增长：
+
+- **2026-2030目标**：累计可再生容量超过1.2太瓦，需要年度投资350亿美元以上
+- **海上风电**：深水浮动风电场快速扩展，50多吉瓦在开发中
+- **太阳能制造**：下游产能约束为组件和逆变器制造创造机遇
+
+## 政策支持机制
+
+- **电网互联**：可再生项目电网接入的加速审批
+- **补贴计划**：海上风电、浮动太阳能和绿色氢气项目的直接补贴
+- **碳市场**：关联碳定价机制激励企业采用可再生能源
+
+## 投资机遇
+
+对机构投资者而言：
+- 风电和太阳能项目开发及电力购买协议
+- 下游制造（逆变器、电池储能、电网设备）
+- 支持可再生集成的私人输电基础设施
+- 绿色氢气生产和应用
+
+长期电力购买协议年回报率8-12%，政府支持提升信用质量`,
+  },
+
+  {
+    id: '8',
+    slug: 'southeast-asia-infrastructure-development-regional-connectivity',
+    titleEn: 'Southeast Asia\'s Infrastructure Drive: Regional Connectivity and Investment Horizons',
+    titleZh: '东南亚基础设施建设：区域互联互通与投资前景',
+    descriptionEn: 'Examination of major infrastructure projects across Southeast Asia, including transportation networks, digital infrastructure, and funding mechanisms.',
+    descriptionZh: '分析东南亚主要基础设施项目，包括交通、数字基础设施和融资机制。',
+    region: 'southeast-asia',
+    regionLabelEn: 'Southeast Asia',
+    regionLabelZh: '东南亚',
+    topics: ['infrastructure', 'investment', 'trade'],
+    topicLabels,
+    publishedDate: '2026-01-25',
+    author: 'Yenturi Research',
+    readTime: 8,
+    contentEn: `Southeast Asia's infrastructure development agenda is creating significant opportunities for institutional infrastructure investors.
+
+## Major Project Pipeline
+
+Key projects driving region-wide connectivity:
+
+- **Rail Networks**: Pan-ASEAN rail corridors (China-Laos-Thailand, Malaysia-Singapore) totaling 8,000+ km
+- **Port Development**: Mega-port expansion in Singapore, Vietnam, and Thailand to accommodate mega-ship traffic
+- **Digital Infrastructure**: 5G rollout and fiber optic backbone connecting major economic centers
+- **Industrial Parks**: 200+ new economic zones creating manufacturing and logistics hubs
+
+## Funding Mechanisms
+
+- **ADB & AIIB**: Concessional financing for priority projects
+- **PPP Structures**: Government guarantee frameworks improving credit quality for private investors
+- **Project Finance**: 15-20 year concession contracts providing stable cash flows
+
+## Investment Returns
+
+Infrastructure investors are capturing:
+- 6-8% IRRs on toll roads and ports with government revenue guarantees
+- 8-10% IRRs on telecommunications infrastructure with long-term service contracts
+- Strategic value from regional connectivity enabling trade flow optimization
+
+The infrastructure cycle is entering peak deployment phase, with 2026-2030 representing the highest investment period.`,
+    contentZh: `东南亚基础设施发展议程为机构基础设施投资者创造重大机遇。
+
+## 主要项目管道
+
+推动区域互联的关键项目：
+
+- **铁路网络**：泛ASEAN铁路走廊（中老泰、马新）总长8000公里以上
+- **港口开发**：新加坡、越南、泰国大型港口扩展以承载大型船舶
+- **数字基础设施**：5G推广和连接主要经济中心的光纤骨干网
+- **工业园区**：200多个新经济区创造制造和物流中心
+
+## 融资机制
+
+- **亚开行和亚投行**：优惠融资
+- **PPP结构**：政府担保框架改善私人投资者信用质量
+- **项目融资**：15-20年特许经营合同提供稳定现金流
+
+## 投资回报
+
+基础设施投资者获得：
+- 收费公路和港口内部收益率6-8%（政府收入担保）
+- 电信基础设施内部收益率8-10%（长期服务合同）
+- 区域互联的战略价值优化贸易流`
+  },
+
+  {
+    id: '9',
+    slug: 'australia-renewable-hydrogen-export-opportunity',
+    titleEn: 'Australia\'s Hydrogen Export Strategy: Green Hydrogen as a Strategic Export',
+    titleZh: '澳大利亚氢能出口战略：绿色氢能作为战略性出口',
+    descriptionEn: 'Analysis of Australia\'s emerging hydrogen export industry, production capacity development, and regional demand drivers.',
+    descriptionZh: '分析澳大利亚新兴氢能出口产业、生产能力开发和区域需求驱动。',
+    region: 'australia',
+    regionLabelEn: 'Australia',
+    regionLabelZh: '澳大利亚',
+    topics: ['investment', 'technology', 'infrastructure'],
+    topicLabels,
+    publishedDate: '2026-01-30',
+    author: 'Yenturi Research',
+    readTime: 7,
+    contentEn: `Australia is positioning itself as a major green hydrogen exporter, leveraging abundant renewable resources and established export infrastructure.
+
+## Hydrogen Production Roadmap
+
+Government targets for green hydrogen development:
+
+- **Electrolyzer Capacity**: 50+ GW by 2030 (up from current 5 GW), requiring $40B+ investment
+- **Renewable Power Supply**: Dedicated wind and solar farms to power electrolyzer facilities
+- **Export Infrastructure**: Port facilities, liquefaction technology, and shipping partnerships
+
+## Regional Demand Drivers
+
+- **Japan & South Korea**: Committed to hydrogen imports for industrial heating and power generation
+- **Singapore**: Emerging hub for hydrogen trade and refueling
+- **India**: Potential offtake through energy partnership programs
+
+## Investment Opportunities
+
+Institutional investors can participate through:
+- Electrolyzer manufacturing and project development
+- Renewable energy generation dedicated to hydrogen production
+- Export infrastructure (port terminals, liquefaction facilities)
+- Technology development (efficiency improvements, cost reduction)
+
+First-mover projects targeting 7-10% IRRs, with government subsidies and export contracts improving risk profiles.`,
+    contentZh: `澳大利亚正将自己定位为主要绿色氢能出口国，利用丰富的可再生资源和现有出口基础设施。
+
+## 氢气生产路线图
+
+绿色氢气发展的政府目标：
+
+- **电解槽容量**：到2030年达到50多吉瓦（从目前的5吉瓦增长），需要投资400亿美元以上
+- **可再生能源供应**：为电解槽设施专用的风电和太阳能农场
+- **出口基础设施**：港口设施、液化技术和航运合作
+
+## 区域需求驱动
+
+- **日本和韩国**：承诺进口氢能用于工业加热和发电
+- **新加坡**：氢能贸易和加油新兴中心
+- **印度**：通过能源伙伴关系计划的潜在采购
+
+## 投资机遇
+
+机构投资者可通过以下方式参与：
+- 电解槽制造和项目开发
+- 专用于氢气生产的可再生能源发电
+- 出口基础设施（港口码头、液化设施）
+- 技术开发（效率改进、成本降低）
+
+首批项目目标内部收益率7-10%，政府补贴和出口合同改善风险收益`
+  },
+
+  {
+    id: '10',
+    slug: 'china-consumption-stimulus-retail-market-recovery',
+    titleEn: 'China\'s Consumption Recovery: Stimulus Programs and Retail Market Dynamics',
+    titleZh: '中国消费恢复：刺激政策与零售市场动向',
+    descriptionEn: 'Analysis of China\'s stimulus measures to boost domestic consumption, retail sector recovery, and consumer spending patterns.',
+    descriptionZh: '分析中国提振消费的刺激政策、零售行业复苏和消费支出模式。',
+    region: 'china',
+    regionLabelEn: 'China',
+    regionLabelZh: '中国',
+    topics: ['policy', 'markets', 'investment'],
+    topicLabels,
+    publishedDate: '2026-01-15',
+    author: 'Yenturi Research',
+    readTime: 6,
+    contentEn: `China's consumer spending recovery is accelerating through targeted stimulus, creating opportunities in retail and consumer sectors.
+
+## Consumption Stimulus Measures
+
+Recent government initiatives driving consumer spending:
+
+- **Subsidy Programs**: Direct cash transfers and consumption vouchers for lower-income households
+- **Tax Incentives**: Reduced VAT on selected consumer goods and services
+- **Credit Expansion**: Favorable terms for consumer lending at preferential rates
+- **Platform Support**: Incentives for e-commerce and digital payment adoption
+
+## Retail Market Recovery Metrics
+
+- **YoY Growth**: Retail sales growth accelerating to 6-8% annually from 2-3% in prior years
+- **Urban vs Rural**: Rural consumption growing faster (9-11%) as policy targets underserved markets
+- **Online Channel**: Digital retail now 50%+ of total, with continued growth in livestream commerce
+
+## Investment Opportunities
+
+For institutional investors:
+- Consumer staples and discretionary companies with exposure to consumption recovery
+- E-commerce and digital payment platforms benefiting from adoption acceleration
+- Supply chain infrastructure supporting omnichannel retail
+- Consumer finance and fintech companies serving emerging consumers
+
+Valuations compressed vs 2021 levels, creating entry opportunities for long-term investors.`,
+    contentZh: `中国消费支出恢复通过定向刺激加速，为零售和消费行业创造机遇。
+
+## 消费刺激措施
+
+近期政府推动消费的举措：
+
+- **补贴计划**：低收入家庭的直接现金转移和消费券
+- **税收激励**：选定消费品和服务的增值税降低
+- **信贷扩张**：消费贷款的优惠条款
+- **平台支持**：电商和数字支付采用的激励
+
+## 零售市场复苏指标
+
+- **同比增长**：零售销售增长从之前的2-3%加速至6-8%
+- **城乡对比**：农村消费增速更快（9-11%）
+- **线上渠道**：数字零售现占比超50%，直播电商持续增长
+
+## 投资机遇
+
+对机构投资者而言：
+- 消费必需品和可选消费企业
+- 受益于采用加速的电商和数字支付平台
+- 支持全渠道零售的供应链基础设施
+- 为新兴消费者服务的消费金融和金融科技`
+  },
+
+  {
+    id: '11',
+    slug: 'southeast-asia-logistics-e-commerce-supply-chain',
+    titleEn: 'Southeast Asia\'s E-Commerce Logistics: Supply Chain Innovation and Investment',
+    titleZh: '东南亚电商物流：供应链创新与投资',
+    descriptionEn: 'Examination of logistics infrastructure development supporting Southeast Asia\'s booming e-commerce sector and regional trade growth.',
+    descriptionZh: '分析支持东南亚电商和区域贸易增长的物流基础设施发展。',
+    region: 'southeast-asia',
+    regionLabelEn: 'Southeast Asia',
+    regionLabelZh: '东南亚',
+    topics: ['infrastructure', 'technology', 'investment'],
+    topicLabels,
+    publishedDate: '2026-02-05',
+    author: 'Yenturi Research',
+    readTime: 7,
+    contentEn: `Southeast Asia's logistics sector is transforming to support explosive e-commerce growth, creating infrastructure investment opportunities.
+
+## Infrastructure Requirements
+
+E-commerce growth driving logistics investment needs:
+
+- **Warehouse Capacity**: 300+ million sq ft of new warehouse space needed by 2030
+- **Last-Mile Networks**: Expanded delivery networks serving urban and rural areas
+- **Tech Integration**: Automation, sorting technology, and visibility platforms
+- **Cold Chain**: Temperature-controlled infrastructure for fresh goods and pharmaceuticals
+
+## Market Growth Drivers
+
+- **E-Commerce GMV**: Regional e-commerce growing 20%+ annually, reaching $200B+ by 2027
+- **Cross-Border Trade**: ASEAN tariff harmonization driving intra-regional commerce
+- **Same-Day Delivery**: Competition driving investment in local fulfillment networks
+
+## Investment Returns
+
+Institutional investors capturing:
+- 8-10% IRRs on modern warehouse facilities with long-term logistics provider contracts
+- 10-12% IRRs on last-mile delivery network operators in high-density cities
+- Strategic value from supply chain optimization benefiting e-commerce customers
+
+The sector represents 7-10 year investment horizon with sustained growth drivers.`,
+    contentZh: `东南亚物流行业正在转变，以支持爆炸性电商增长，创造基础设施投资机遇。
+
+## 基础设施需求
+
+电商增长驱动物流投资需求：
+
+- **仓库容量**：2030年前需要新增3亿平方英尺仓库
+- **末端物流**：扩展的配送网络服务城市和农村
+- **技术集成**：自动化、分拣技术和可视性平台
+- **冷链**：鲜货和医药品的温度控制基础设施
+
+## 市场增长驱动力
+
+- **电商成交额**：区域电商年增长20%以上，到2027年达2000亿美元以上
+- **跨境贸易**：ASEAN关税协调驱动地区内贸易
+- **同日配送**：竞争驱动本地履约网络投资
+
+## 投资回报
+
+机构投资者获得：
+- 现代仓库设施内部收益率8-10%（与物流供应商长期合同）
+- 高密度城市末端配送网络运营商内部收益率10-12%
+- 供应链优化的战略价值`
+  },
 ];
+
+// Sort articles by date (newest first)
+articles.sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime());
