@@ -23,10 +23,6 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
 
   return {
     metadataBase: new URL('https://yen-consulting.vercel.app'),
-    languages: {
-      en: 'https://yen-consulting.vercel.app/en',
-      zh: 'https://yen-consulting.vercel.app/zh',
-    },
     alternates: {
       canonical: `https://yen-consulting.vercel.app/${locale}`,
       languages: {
