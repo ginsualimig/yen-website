@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/.next/'],
     },
-    sitemap: 'https://yen-consulting.vercel.app/sitemap.xml',
+    sitemap: 'https://yenturi.com/sitemap.xml',
   };
 }

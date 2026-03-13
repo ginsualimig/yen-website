@@ -169,9 +169,9 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
           <div className="text-center mb-14">
-            <span className="eyebrow">{isZh ? '我们的优势' : 'Why Choose Yen'}</span>
+            <span className="eyebrow">{isZh ? '我们的优势' : 'Why Yenturi'}</span>
             <h2 className="font-serif font-semibold text-cream-100 mb-4" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', letterSpacing: '-0.015em' }}>
-              {isZh ? '专业实力，值得信赖' : 'Institutional Expertise. Trusted Results.'}
+              {isZh ? '汇聚专业，加速动能' : 'Convergent Expertise. Accelerated Momentum.'}
             </h2>
             <span className="rule-gold-center" aria-hidden="true"/>
           </div>

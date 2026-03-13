@@ -87,7 +87,9 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <div id="main-content">
 
-      {/* HERO */}
+      {/* ═══════════════════════════════════════════
+          HERO — Venturi Effect Visual Language
+      ═══════════════════════════════════════════ */}
       <section
         className="relative min-h-[92vh] flex items-center overflow-hidden"
         style={{ background: 'linear-gradient(155deg, #060D1A 0%, #0B1626 45%, #0F1F38 75%, #0A1830 100%)' }}
@@ -97,7 +99,7 @@ export default async function HomePage({ params }: HomePageProps) {
             style={{ background: 'radial-gradient(circle, #C9A961 0%, transparent 70%)' }} />
           <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] rounded-full opacity-[0.04]"
             style={{ background: 'radial-gradient(circle, #1E3A6E 0%, transparent 70%)' }} />
-          <svg className="absolute inset-0 w-full h-full opacity-[0.035]" xmlns="http://www.w3.org/2000/svg">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.025]" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
                 <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#C9A961" strokeWidth="0.5"/>
@@ -105,8 +107,83 @@ export default async function HomePage({ params }: HomePageProps) {
             </defs>
             <rect width="100%" height="100%" fill="url(#grid)" />
           </svg>
+
+          {/* ═══ VENTURI TUBE SVG — the core visual metaphor ═══ */}
+          <svg viewBox="0 0 900 480" fill="none" xmlns="http://www.w3.org/2000/svg"
+            className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="vg-flow-a" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stopColor="#2A5298" stopOpacity="0" />
+                <stop offset="42%"  stopColor="#3B6EA8" stopOpacity="0.30" />
+                <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.48" />
+                <stop offset="58%"  stopColor="#3B6EA8" stopOpacity="0.20" />
+                <stop offset="100%" stopColor="#2A5298" stopOpacity="0" />
+              </linearGradient>
+              <linearGradient id="vg-flow-b" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stopColor="#1E3A6E" stopOpacity="0" />
+                <stop offset="44%"  stopColor="#2A5298" stopOpacity="0.22" />
+                <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.33" />
+                <stop offset="56%"  stopColor="#2A5298" stopOpacity="0.14" />
+                <stop offset="100%" stopColor="#1E3A6E" stopOpacity="0" />
+              </linearGradient>
+              <radialGradient id="vg-glow" cx="50%" cy="50%" r="10%">
+                <stop offset="0%"   stopColor="#C9A961" stopOpacity="0.38" />
+                <stop offset="100%" stopColor="#C9A961" stopOpacity="0" />
+              </radialGradient>
+              <linearGradient id="vg-wall" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stopColor="#C9A961" stopOpacity="0" />
+                <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.26" />
+                <stop offset="100%" stopColor="#C9A961" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+
+            {/* Upper converging flow lines */}
+            <path d="M-80 10  Q280 170 450 240 Q620 170 980 10"  stroke="url(#vg-flow-a)" strokeWidth="0.8" opacity="0.55"/>
+            <path d="M-80 40  Q290 178 450 240 Q610 178 980 40"  stroke="url(#vg-flow-b)" strokeWidth="0.7" opacity="0.48"/>
+            <path d="M-80 70  Q300 186 450 240 Q600 186 980 70"  stroke="url(#vg-flow-a)" strokeWidth="0.6" opacity="0.40"/>
+            <path d="M-80 100 Q310 194 450 240 Q590 194 980 100" stroke="url(#vg-flow-b)" strokeWidth="0.5" opacity="0.33"/>
+            <path d="M-80 130 Q320 202 450 240 Q580 202 980 130" stroke="url(#vg-flow-a)" strokeWidth="0.5" opacity="0.26"/>
+            <path d="M-80 160 Q335 210 450 240 Q565 210 980 160" stroke="url(#vg-flow-b)" strokeWidth="0.4" opacity="0.20"/>
+
+            {/* Lower diverging flow lines (expansion after throat) */}
+            <path d="M-80 470 Q280 310 450 240 Q620 310 980 470" stroke="url(#vg-flow-a)" strokeWidth="0.8" opacity="0.55"/>
+            <path d="M-80 440 Q290 302 450 240 Q610 302 980 440" stroke="url(#vg-flow-b)" strokeWidth="0.7" opacity="0.48"/>
+            <path d="M-80 410 Q300 294 450 240 Q600 294 980 410" stroke="url(#vg-flow-a)" strokeWidth="0.6" opacity="0.40"/>
+            <path d="M-80 380 Q310 286 450 240 Q590 286 980 380" stroke="url(#vg-flow-b)" strokeWidth="0.5" opacity="0.33"/>
+            <path d="M-80 350 Q320 278 450 240 Q580 278 980 350" stroke="url(#vg-flow-a)" strokeWidth="0.5" opacity="0.26"/>
+            <path d="M-80 320 Q335 270 450 240 Q565 270 980 320" stroke="url(#vg-flow-b)" strokeWidth="0.4" opacity="0.20"/>
+
+            {/* Tube boundary walls — gold shimmer */}
+            <path d="M-80 -20 Q220 140 450 222 Q680 140 980 -20" stroke="url(#vg-wall)" strokeWidth="1.3" opacity="0.65"/>
+            <path d="M-80 500 Q220 340 450 258 Q680 340 980 500" stroke="url(#vg-wall)" strokeWidth="1.3" opacity="0.65"/>
+
+            {/* Throat glow — pressure point highlighting */}
+            <ellipse cx="450" cy="240" rx="88" ry="25" fill="url(#vg-glow)" />
+
+            {/* Left converging arrows */}
+            <g opacity="0.48">
+              <polyline points="185,188 218,202 185,216" fill="none" stroke="#C9A961" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
+              <polyline points="145,173 183,189 145,205" fill="none" stroke="#C9A961" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" opacity="0.65"/>
+              <polyline points="185,272 218,258 185,244" fill="none" stroke="#C9A961" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
+              <polyline points="145,283 183,269 145,255" fill="none" stroke="#C9A961" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" opacity="0.65"/>
+            </g>
+
+            {/* Right expanding arrows */}
+            <g opacity="0.36">
+              <polyline points="715,188 682,202 715,216" fill="none" stroke="#C9A961" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
+              <polyline points="755,173 717,189 755,205" fill="none" stroke="#C9A961" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" opacity="0.65"/>
+              <polyline points="715,272 682,258 715,244" fill="none" stroke="#C9A961" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
+              <polyline points="755,283 717,269 755,255" fill="none" stroke="#C9A961" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" opacity="0.65"/>
+            </g>
+
+            {/* Throat accent — gold dot at convergence point */}
+            <circle cx="450" cy="240" r="3.5" fill="#C9A961" opacity="0.72"/>
+            <circle cx="450" cy="240" r="8"   fill="none" stroke="#C9A961" strokeWidth="0.9" opacity="0.33"/>
+            <circle cx="450" cy="240" r="15"  fill="none" stroke="#C9A961" strokeWidth="0.5" opacity="0.17"/>
+          </svg>
         </div>
 
+        {/* Hero content */}
         <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-24 md:py-36 w-full">
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-8">
@@ -159,6 +236,26 @@ export default async function HomePage({ params }: HomePageProps) {
             </div>
           </div>
         </div>
+
+        {/* Venturi principle watermark — bottom right */}
+        <div className="absolute bottom-8 right-8 hidden lg:flex items-center gap-3" style={{ opacity: 0.36 }} aria-hidden="true">
+          <svg viewBox="0 0 120 28" fill="none" width="110" height="24">
+            <defs>
+              <linearGradient id="vp-arr" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stopColor="#C9A961" stopOpacity="0.15"/>
+                <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.9"/>
+                <stop offset="100%" stopColor="#C9A961" stopOpacity="0.15"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 14 Q40 8 60 14 Q80 20 120 14"  stroke="url(#vp-arr)" strokeWidth="1.5" fill="none"/>
+            <path d="M0 10 Q40 5  60 10 Q80 15 120 10" stroke="url(#vp-arr)" strokeWidth="0.7" fill="none" opacity="0.5"/>
+            <path d="M0 18 Q40 11 60 18 Q80 25 120 18" stroke="url(#vp-arr)" strokeWidth="0.7" fill="none" opacity="0.5"/>
+            <polyline points="110,10 120,14 110,18" fill="none" stroke="#C9A961" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <span className="text-gold-500 font-sans" style={{ fontSize: '0.6rem', letterSpacing: '0.16em', textTransform: 'uppercase' }}>
+            {isZh ? '汇聚 · 加速 · 扩展' : 'Converge · Accelerate · Expand'}
+          </span>
+        </div>
       </section>
 
       {/* TRUSTED BY */}
@@ -170,10 +267,10 @@ export default async function HomePage({ params }: HomePageProps) {
           <div className="flex flex-wrap justify-center gap-10 items-center">
             {[
               isZh ? '机构投资者' : 'Institutional Investors',
-              isZh ? '上市公司' : 'Listed Corporations',
+              isZh ? '上市公司'    : 'Listed Corporations',
               isZh ? '私募股权基金' : 'Private Equity Funds',
-              isZh ? '家族办公室' : 'Family Offices',
-              isZh ? '跨国企业' : 'Multinational Enterprises',
+              isZh ? '家族办公室'  : 'Family Offices',
+              isZh ? '跨国企业'    : 'Multinational Enterprises',
             ].map((label, i) => (
               <div key={i} className="flex items-center gap-2 text-slate-500">
                 <div className="w-1.5 h-1.5 rounded-full bg-gold-400" aria-hidden="true"/>
@@ -184,7 +281,41 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* VENTURI PRINCIPLE ACCENT BAND */}
+      <section
+        className="relative py-8 overflow-hidden"
+        style={{ background: 'linear-gradient(90deg, #0A1422 0%, #0F1F38 50%, #0A1422 100%)' }}
+      >
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true"
+          style={{ background: 'radial-gradient(ellipse 60% 100% at 50% 50%, rgba(201,169,97,0.07) 0%, transparent 70%)' }} />
+        <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 text-center">
+            {[
+              {
+                label: isZh ? '汇聚专业' : 'Convergent Expertise',
+                sub:   isZh ? '六大专业领域协同运作' : 'Six disciplines, one integrated view',
+              },
+              {
+                label: isZh ? '加速回报' : 'Accelerated Returns',
+                sub:   isZh ? '将市场摩擦转化为战略动能' : 'Market friction into strategic momentum',
+              },
+              {
+                label: isZh ? '专注执行' : 'Disciplined Execution',
+                sub:   isZh ? '疏导机遇，精准落地' : 'Channeling opportunity to outcome',
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center gap-1">
+                <span className="text-gold-400 font-serif font-semibold" style={{ fontSize: '1rem' }}>
+                  {item.label}
+                </span>
+                <span className="text-slate-500 text-xs">{item.sub}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES — funnel convergence layout */}
       <section className="section-xl bg-cream-100">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
           <div className="text-center mb-16">
@@ -196,8 +327,54 @@ export default async function HomePage({ params }: HomePageProps) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((service) => (
+          {/* Top row — 3 cards (wide) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-2">
+            {services.slice(0, 3).map((service) => (
+              <Link key={service.id} href={`/${locale}/services/${service.id}`} className="group block">
+                <article className="service-card h-full">
+                  <div className="service-icon text-gold-500">
+                    {serviceIcons[service.id]}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-navy-900 mb-2 group-hover:text-gold-600 transition-colors duration-250">
+                      {service.title}
+                    </h3>
+                    <p className="text-slate-500 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2 text-gold-500 text-sm font-medium mt-2 opacity-0 group-hover:opacity-100 transition-all duration-250 translate-x-0 group-hover:translate-x-1">
+                    <span>{isZh ? '了解更多' : 'Learn more'}</span>
+                    <svg className="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                      <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
+
+          {/* Convergence visualizer — narrowing effect */}
+          <div className="relative h-6 mb-2" aria-hidden="true">
+            <svg viewBox="0 0 1000 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+              <defs>
+                <linearGradient id="funnel-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%"   stopColor="#C9A961" stopOpacity="0" />
+                  <stop offset="20%"  stopColor="#C9A961" stopOpacity="0.25" />
+                  <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.50" />
+                  <stop offset="80%"  stopColor="#C9A961" stopOpacity="0.25" />
+                  <stop offset="100%" stopColor="#C9A961" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <path d="M50 5 Q300 20 500 20 Q700 20 950 5"    stroke="url(#funnel-grad)" strokeWidth="1.5" />
+              <path d="M80 15 Q340 22 500 22 Q660 22 920 15"  stroke="url(#funnel-grad)" strokeWidth="0.8" opacity="0.6"/>
+              <circle cx="500" cy="21" r="2.5" fill="#C9A961" opacity="0.6"/>
+            </svg>
+          </div>
+
+          {/* Bottom row — 3 cards (narrower, forming funnel) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {services.slice(3, 6).map((service) => (
               <Link key={service.id} href={`/${locale}/services/${service.id}`} className="group block">
                 <article className="service-card h-full">
                   <div className="service-icon text-gold-500">
@@ -287,7 +464,7 @@ export default async function HomePage({ params }: HomePageProps) {
           <div className="text-center mb-12">
             <span className="eyebrow text-gold-600">{isZh ? '我们的优势' : 'Why Yenturi'}</span>
             <h2 className="section-heading text-navy-900 mb-4">
-              {isZh ? '深厚专业，值得信赖' : 'Institutional Expertise. Enduring Relationships.'}
+              {isZh ? '深厚专业，加速价值' : 'Institutional Expertise. Accelerated Value.'}
             </h2>
             <span className="rule-gold-center" aria-hidden="true" />
           </div>
@@ -323,7 +500,7 @@ export default async function HomePage({ params }: HomePageProps) {
                   : 'Nuanced understanding of APAC business ecosystems helps clients navigate complex cross-border opportunities and transactions.',
                 icon: (
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
-                    <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0110.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 ),
               },

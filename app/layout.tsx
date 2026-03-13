@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Yenturi Investment Consulting | APAC Financial Advisory',
   description: 'Leading investment consulting and financial advisory services across Asia-Pacific region',
-  metadataBase: new URL('https://yen-consulting.vercel.app'),
+  metadataBase: new URL('https://yenturi.com'),
   robots: {
     index: true,
     follow: true,
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://yen-consulting.vercel.app',
+    url: 'https://yenturi.com',
     siteName: 'Yenturi Investment Consulting',
     title: 'Yenturi Investment Consulting | APAC Financial Advisory',
     description: 'Leading investment consulting and financial advisory services',

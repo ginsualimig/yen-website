@@ -30,12 +30,34 @@ export default function Footer({ locale }: FooterProps) {
       className="relative bg-navy-900 text-cream-200 overflow-hidden"
       style={{ background: 'linear-gradient(160deg, #060D1A 0%, #0B1626 60%, #0F1F38 100%)' }}
     >
-      {/* Subtle top border accent */}
-      <div
-        className="h-px w-full"
-        style={{ background: 'linear-gradient(90deg, transparent 0%, rgba(201,169,97,0.4) 30%, rgba(201,169,97,0.6) 50%, rgba(201,169,97,0.4) 70%, transparent 100%)' }}
-        aria-hidden="true"
-      />
+      {/* ═══ Top flow accent — subtle Venturi flow pattern ═══ */}
+      <div className="relative h-px w-full" aria-hidden="true">
+        <svg viewBox="0 0 1200 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="footer-flow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%"   stopColor="#C9A961" stopOpacity="0" />
+              <stop offset="20%"  stopColor="#C9A961" stopOpacity="0.3" />
+              <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.55" />
+              <stop offset="80%"  stopColor="#C9A961" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#C9A961" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="footer-flow-b" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%"   stopColor="#3B6EA8" stopOpacity="0" />
+              <stop offset="30%"  stopColor="#3B6EA8" stopOpacity="0.25" />
+              <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.40" />
+              <stop offset="70%"  stopColor="#3B6EA8" stopOpacity="0.15" />
+              <stop offset="100%" stopColor="#3B6EA8" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          {/* Converging flow lines at footer entry */}
+          <path d="M0 30 Q300 25 600 30 Q900 25 1200 30" stroke="url(#footer-flow-grad)" strokeWidth="1.5" />
+          <path d="M0 40 Q350 35 600 32 Q850 35 1200 40" stroke="url(#footer-flow-b)" strokeWidth="0.8" opacity="0.7"/>
+          <path d="M0 50 Q400 40 600 35 Q800 40 1200 50" stroke="url(#footer-flow-b)" strokeWidth="0.6" opacity="0.5"/>
+          {/* Central pressure point accent */}
+          <circle cx="600" cy="32" r="2" fill="#C9A961" opacity="0.6"/>
+          <circle cx="600" cy="32" r="5" fill="none" stroke="#C9A961" strokeWidth="0.7" opacity="0.3"/>
+        </svg>
+      </div>
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
 

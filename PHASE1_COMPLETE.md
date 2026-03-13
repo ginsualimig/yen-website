@@ -24,7 +24,7 @@ The contact page now features **only essential information:**
    - Full address with proper formatting
 
 2. **Contact Email Placeholder**
-   - `contact@yen-consulting.com`
+   - `contact@yenturi.com`
    - Clickable mailto link
 
 3. **Map Embeds (Placeholders)**
@@ -102,7 +102,7 @@ CONTACT INFO SECTION
 ├─ LEFT COLUMN (Address + Hours)
 │  ├─ Guangzhou Office Address Block
 │  │  ├─ Full formatted address
-│  │  └─ contact@yen-consulting.com
+│  │  └─ contact@yenturi.com
 │  └─ Office Hours Block
 │     ├─ Mon-Fri: 09:00 AM - 6:00 PM (GMT+8)
 │     ├─ Sat-Sun: By appointment
@@ -128,7 +128,7 @@ CONTACT INFO SECTION
 ├─ 左列 (地址 + 时间)
 │  ├─ 广州办公室 Address Block
 │  │  ├─ 完整格式化地址
-│  │  └─ contact@yen-consulting.com
+│  │  └─ contact@yenturi.com
 │  └─ 办公时间 Block
 │     ├─ 周一至周五: 09:00 - 18:00 (GMT+8)
 │     ├─ 周六日: 按预约

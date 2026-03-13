@@ -1,6 +1,6 @@
-# Yen Investment Consulting Website
+# Yenturi Investment Consulting Website
 
-Professional institutional website for Yen Investment Consulting, a leading financial advisory and investment consulting firm specializing in the Asia-Pacific region.
+Professional institutional website for Yenturi Investment Consulting, a leading financial advisory and investment consulting firm specializing in the Asia-Pacific region. Designed with Venturi Effect physics principles for strategic capital acceleration across Asia-Pacific.
 
 ## 🌟 Features
 
@@ -184,8 +184,8 @@ export async function POST(request: Request) {
   
   try {
     await resend.emails.send({
-      from: 'Yen Contact <contact@yen-consulting.com>',
-      to: 'inquiries@yen-consulting.com',
+      from: 'Yenturi Contact <contact@yenturi.com>',
+      to: 'inquiries@yenturi.com',
       subject: `New Contact Form Submission from ${data.name}`,
       html: `<p>Name: ${data.name}</p>...`
     });
@@ -223,8 +223,8 @@ Ready to integrate JSON-LD schemas:
     __html: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Yen Investment Consulting",
-      "url": "https://yen-consulting.vercel.app",
+      "name": "Yenturi Investment Consulting",
+      "url": "https://yenturi.com",
       ...
     })
   }}
@@ -288,7 +288,7 @@ For optimal performance in China:
 Create a `.env.local` file for local development (never commit to git):
 
 ```
-NEXT_PUBLIC_SITE_URL=https://yen-consulting.vercel.app
+NEXT_PUBLIC_SITE_URL=https://yenturi.com
 NEXT_PUBLIC_GA_ID=your_google_analytics_id
 NEXT_PUBLIC_BAIDU_ID=your_baidu_analytics_id
 ```
@@ -389,12 +389,12 @@ Planned features for future releases:
 
 ## 📄 License
 
-MIT License - feel free to use as needed for Yen Investment Consulting.
+MIT License - feel free to use as needed for Yenturi Investment Consulting.
 
 ## 👤 Contact
 
 For questions about this website:
-- Email: contact@yen-consulting.com
+- Email: contact@yenturi.com
 - Phone: +86 20 XXXX XXXX
 - Office: Yuhai Tianhe City Tower, 208 Tianhe Road, Guangzhou, China
 
