@@ -5,9 +5,6 @@ export const locales: Locale[] = ['en', 'zh'];
 export const translations = {
   en: {
     // Common
-    home: 'Home',
-    about: 'About',
-    contact: 'Contact',
     language: 'Language',
     'language-toggle': '中文',
     
@@ -122,9 +119,6 @@ export const translations = {
 
   zh: {
     // Common
-    home: '首页',
-    about: '关于我们',
-    contact: '联系我们',
     language: '语言',
     'language-toggle': 'English',
     
