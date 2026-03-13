@@ -58,7 +58,7 @@ export default function Header({ locale }: HeaderProps) {
       <a href="#main-content" className="skip-link">Skip to main content</a>
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-        <div className="flex items-center justify-between h-[72px]">
+        <div className="flex items-center justify-between h-[60px]">
 
           {/* ── Logo ───────────────────────────────────────── */}
           <Link
@@ -68,7 +68,7 @@ export default function Header({ locale }: HeaderProps) {
           >
             <span
               className="font-serif font-semibold text-navy-900 tracking-tight"
-              style={{ fontSize: '1.125rem', letterSpacing: '-0.01em' }}
+              style={{ fontSize: '1.275rem', letterSpacing: '-0.01em' }}
             >
               Yenturi
             </span>
