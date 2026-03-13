@@ -58,7 +58,7 @@ export default function Header({ locale }: HeaderProps) {
       <a href="#main-content" className="skip-link">Skip to main content</a>
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-        <div className="flex items-center justify-between h-[60px]">
+        <div className="flex items-center justify-between h-[56px]">
 
           {/* ── Logo ───────────────────────────────────────── */}
           <Link
@@ -80,7 +80,7 @@ export default function Header({ locale }: HeaderProps) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`nav-link px-4 py-2 rounded-sm text-sm ${isActive(item.href) ? 'active text-navy-900' : ''}`}
+                className={`nav-link px-4 py-1.5 rounded-sm text-sm ${isActive(item.href) ? 'active text-navy-900' : ''}`}
               >
                 {item.label}
               </Link>

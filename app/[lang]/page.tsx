@@ -267,25 +267,6 @@ export default async function HomePage({ params }: HomePageProps) {
       {/* ═══════════════════════════════════════════ */}
       <VenturiDivider variant="dark-to-light" id="divider-1" />
 
-      {/* SOCIAL PROOF CONVERGENCE */}
-      <section className="section-lg bg-cream-100" style={{ paddingTop: '3rem' }}>
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-          <div className="text-center mb-8">
-            <p className="text-center text-xs text-slate-400 uppercase tracking-widest font-semibold mb-4">
-              {isZh ? '我们的客户' : 'Our Clients'}
-            </p>
-          </div>
-          <SocialProofConvergence isZh={isZh} />
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════ */}
-      {/* SECTION DIVIDER 2: Clients → Principle */}
-      {/* ═══════════════════════════════════════════ */}
-      <VenturiDivider variant="light-to-dark" id="divider-2" />
-
-      {/* VENTURI PRINCIPLE ACCENT BAND */}
-      <section
         className="relative py-8 overflow-hidden"
         style={{ background: 'linear-gradient(90deg, #0A1422 0%, #0F1F38 50%, #0A1422 100%)' }}
       >
