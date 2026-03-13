@@ -9,24 +9,40 @@ interface ArticlePageProps {
   params: Promise<{ lang: string; slug: string }>;
 }
 
+// Helper to get proper title from expanded article ID
+function getTitleFromId(id: string) {
+  if (id.includes('australia-renewable-hydrogen')) return 'Australia Green Hydrogen Export Strategy';
+  if (id.includes('australia-china-trade')) return 'Australia-China Trade Relations & Diversification';
+  if (id.includes('australia-foreign')) return 'Australia FDI Framework & Critical Minerals';
+  if (id.includes('fintech')) return 'Southeast Asia Fintech & Digital Economy';
+  if (id.includes('logistics')) return 'Southeast Asia E-Commerce Logistics & Warehousing';
+  if (id.includes('asean')) return 'Southeast Asia ASEAN Integration & Trade Opportunities';
+  if (id.includes('semiconductor') || id.includes('tech-policy')) return 'China Tech: Semiconductors & Artificial Intelligence';
+  if (id.includes('green-energy')) return 'China Green Energy Transition: Opportunities & Infrastructure';
+  if (id.includes('consumption')) return 'China Consumption Recovery: Policy & Market Dynamics';
+  if (id.includes('foreign-investment')) return 'China Foreign Investment Framework 2026';
+  return id;
+}
+
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
   const { lang, slug } = await params;
   const locale = lang as Locale;
   
   // Try expanded articles first
-  const expandedArticle = allExpandedArticles.find((a: any) => a.id === slug || a.id.includes(slug));
+  const expandedArticle = allExpandedArticles.find((a: any) => a.id === slug);
   const article = expandedArticle || articles.find(a => a.slug === slug);
 
-  if (!article) {
+  if (!article && !expandedArticle) {
     return { title: 'Article Not Found' };
   }
 
   const isZh = locale === 'zh';
+  
   const title = expandedArticle 
-    ? expandedArticle.id.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+    ? getTitleFromId(expandedArticle.id)
     : isZh ? (article as any).titleZh : (article as any).titleEn;
   const description = expandedArticle 
-    ? expandedArticle.executiveSummary?.substring(0, 200)
+    ? expandedArticle.executiveSummary?.substring(0, 200) || 'Research whitepaper'
     : isZh ? (article as any).descriptionZh : (article as any).descriptionEn;
 
   return {
@@ -62,32 +78,35 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const t = (key: string) => getTranslation(locale, key);
   const isZh = locale === 'zh';
 
-  // Try expanded articles first
-  const expandedArticle = allExpandedArticles.find((a: any) => a.id === slug || a.id.includes(slug));
+  // Try expanded articles first - match by exact ID or partial match
+  const expandedArticle = allExpandedArticles.find((a: any) => a.id === slug);
   
   // Fall back to old articles
   const article = expandedArticle || articles.find(a => a.slug === slug);
 
-  if (!article) {
+  if (!article && !expandedArticle) {
     notFound();
   }
 
   // Get related articles from the same region
-  const allArticles = [...allExpandedArticles.map((a: any) => ({
-    id: a.id,
-    slug: a.id,
-    region: article.region,
-    regionLabelEn: 'Region',
-    regionLabelZh: '地区',
-    topics: [],
-    descriptionEn: a.executiveSummary?.substring(0, 150),
-    descriptionZh: a.executiveSummary?.substring(0, 150),
-    titleEn: a.id.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-    titleZh: a.id
-  })), ...articles];
+  // Build a combined list of articles with all needed properties
+  const allArticlesForRelated = [
+    ...allExpandedArticles.map((a: any) => ({
+      id: a.id,
+      slug: a.id,
+      regionLabelEn: a.id.includes('australia') ? 'Australia' : a.id.includes('southeast') || a.id.includes('sea') || a.id.includes('asean') || a.id.includes('fintech') || a.id.includes('logistics') ? 'Southeast Asia' : 'China',
+      regionLabelZh: a.id.includes('australia') ? '澳大利亚' : a.id.includes('southeast') || a.id.includes('sea') || a.id.includes('asean') || a.id.includes('fintech') || a.id.includes('logistics') ? '东南亚' : '中国',
+      topics: a.id.includes('fintech') ? ['technology'] : a.id.includes('logistics') ? ['infrastructure'] : a.id.includes('hydrogen') ? ['infrastructure'] : ['policy'],
+      descriptionEn: a.executiveSummary?.substring(0, 150) || 'Research whitepaper',
+      descriptionZh: a.executiveSummary?.substring(0, 150) || 'Research whitepaper',
+      titleEn: getTitleFromId(a.id),
+      titleZh: getTitleFromId(a.id)
+    })),
+    ...articles
+  ];
   
-  const relatedArticles = allArticles
-    .filter((a: any) => a.id !== article.id)
+  const relatedArticles = allArticlesForRelated
+    .filter((a: any) => a.id !== (expandedArticle?.id || article?.id))
     .slice(0, 2);
 
   return (
@@ -114,23 +133,29 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
 
           {/* Region & Topics */}
-          <div className="flex items-center gap-3 flex-wrap mb-4">
-            <p className="text-xs uppercase tracking-widest font-semibold text-gold-400">
-              {isZh ? article.regionLabelZh : article.regionLabelEn}
-            </p>
-            <span className="text-gold-400" aria-hidden="true">•</span>
-            <div className="flex gap-2">
-              {article.topics.map(topic => (
-                <span key={topic} className="text-xs bg-gold-400 bg-opacity-20 text-gold-300 px-2 py-1 rounded">
-                  {isZh ? topicLabels[topic].zh : topicLabels[topic].en}
-                </span>
-              ))}
+          {!expandedArticle && (
+            <div className="flex items-center gap-3 flex-wrap mb-4">
+              <p className="text-xs uppercase tracking-widest font-semibold text-gold-400">
+                {isZh ? (article as any).regionLabelZh : (article as any).regionLabelEn}
+              </p>
+              <span className="text-gold-400" aria-hidden="true">•</span>
+              <div className="flex gap-2">
+                {(article as any).topics.map((topic: string) => (
+                  <span key={topic} className="text-xs bg-gold-400 bg-opacity-20 text-gold-300 px-2 py-1 rounded">
+                    {isZh ? topicLabels[topic as keyof typeof topicLabels].zh : topicLabels[topic as keyof typeof topicLabels].en}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Title */}
           <h1 className="font-serif font-bold text-cream-100 mb-5 text-balance" style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', lineHeight: '1.1', letterSpacing: '-0.02em' }}>
-            {isZh ? article.titleZh : article.titleEn}
+            {expandedArticle ? (
+              getTitleFromId(expandedArticle.id)
+            ) : (
+              isZh ? (article as any).titleZh : (article as any).titleEn
+            )}
           </h1>
 
           {/* Article meta */}
@@ -323,9 +348,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                         {isZh ? relatedArticle.regionLabelZh : relatedArticle.regionLabelEn}
                       </p>
                       <div className="flex gap-1">
-                        {relatedArticle.topics.slice(0, 2).map(topic => (
+                        {relatedArticle.topics && relatedArticle.topics.slice(0, 2).map((topic: string) => (
                           <span key={topic} className="text-xs bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">
-                            {isZh ? topicLabels[topic].zh : topicLabels[topic].en}
+                            {isZh ? topicLabels[topic as keyof typeof topicLabels]?.zh || topic : topicLabels[topic as keyof typeof topicLabels]?.en || topic}
                           </span>
                         ))}
                       </div>

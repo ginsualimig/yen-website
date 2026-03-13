@@ -43,6 +43,8 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
       let topics: Topic[] = ['policy', 'investment'];
       let regionLabelEn = 'China';
       let regionLabelZh = '中国';
+      let titleEn = '';
+      let titleZh = '';
 
       const id = article.id.toLowerCase();
       
@@ -51,30 +53,64 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
         regionLabelEn = 'Australia';
         regionLabelZh = '澳大利亚';
         topics = id.includes('hydrogen') ? ['infrastructure', 'investment'] : ['investment', 'trade'];
-      } else if (id.includes('southeast') || id.includes('sea') || id.includes('asean') || id.includes('fintech') || id.includes('logistics')) {
-        region = id.includes('vietnam') ? 'vietnam' : id.includes('thailand') ? 'thailand' : id.includes('indonesia') ? 'indonesia' : id.includes('singapore') ? 'singapore' : 'philippines';
+        
+        if (id.includes('hydrogen')) {
+          titleEn = 'Australia Green Hydrogen Export Strategy';
+          titleZh = '澳大利亚绿色氢气出口战略';
+        } else if (id.includes('trade')) {
+          titleEn = 'Australia-China Trade Relations & Diversification';
+          titleZh = '澳中贸易关系与多元化';
+        } else {
+          titleEn = 'Australia FDI Framework & Critical Minerals';
+          titleZh = '澳大利亚外资框架与关键矿物';
+        }
+      } else if (id.includes('southeast') || id.includes('sea') || id.includes('asean')) {
+        region = 'vietnam';
         regionLabelEn = 'Southeast Asia';
         regionLabelZh = '东南亚';
-        topics = id.includes('fintech') ? ['technology', 'investment'] : id.includes('logistics') ? ['infrastructure', 'investment'] : ['trade', 'investment'];
+        
+        if (id.includes('fintech')) {
+          topics = ['technology', 'investment', 'markets'];
+          titleEn = 'Southeast Asia Fintech & Digital Economy';
+          titleZh = '东南亚金融科技与数字经济';
+          region = 'singapore';
+        } else if (id.includes('logistics')) {
+          topics = ['infrastructure', 'investment', 'markets'];
+          titleEn = 'Southeast Asia E-Commerce Logistics & Warehousing';
+          titleZh = '东南亚电商物流与仓储';
+          region = 'indonesia';
+        } else if (id.includes('asean')) {
+          topics = ['trade', 'investment', 'markets'];
+          titleEn = 'Southeast Asia ASEAN Integration & Trade Opportunities';
+          titleZh = '东盟一体化与贸易机遇';
+        }
       } else if (id.includes('tech') || id.includes('semiconductor')) {
-        topics = ['technology', 'investment'];
+        topics = ['technology', 'investment', 'policy'];
+        titleEn = 'China Tech: Semiconductors & Artificial Intelligence';
+        titleZh = '中国科技：半导体与人工智能';
       } else if (id.includes('green')) {
-        topics = ['infrastructure', 'investment'];
+        topics = ['infrastructure', 'investment', 'markets'];
+        titleEn = 'China Green Energy Transition: Opportunities & Infrastructure';
+        titleZh = '中国绿色能源转型：机遇与基础设施';
       } else if (id.includes('consumption')) {
         topics = ['markets', 'investment'];
+        titleEn = 'China Consumption Recovery: Policy & Market Dynamics';
+        titleZh = '中国消费复苏：政策与市场动力';
+      } else if (id.includes('fdi') || id.includes('foreign-investment')) {
+        topics = ['policy', 'investment'];
+        titleEn = 'China Foreign Investment Framework 2026';
+        titleZh = '中国外资框架2026';
       }
 
-      const wordCount = JSON.stringify(article).split(/\s+/).length;
+      const contentStr = JSON.stringify(article);
+      const wordCount = contentStr.split(/\s+/).length;
       const readTime = Math.ceil(wordCount / 200);
 
       return {
         id: article.id,
         slug: article.id,
-        titleEn: article.id
-          .split('-')
-          .map((w: string) => w.charAt(0).toUpperCase() + w.slice(1))
-          .join(' '),
-        titleZh: article.id, // Fallback - ideally would have proper Chinese titles
+        titleEn: titleEn || article.id.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+        titleZh: titleZh || article.id,
         descriptionEn: article.executiveSummary?.substring(0, 200) || 'Research whitepaper',
         descriptionZh: article.executiveSummary?.substring(0, 200) || 'Research whitepaper',
         region,

@@ -55,11 +55,11 @@ The January 2026 iteration of China's market-access Negative List represents the
 
 **Key Data Points:**
 
-- **Negative List restricted items reduced from 117 to 106 (January 2026)**: 
-- **17 sub-sectors opened to foreign majority or wholly-owned ownership for the first time**: 
-- **Private pension fund sector projected at RMB 2.1 trillion AUM by 2030**: 
-- **Borderline conditional-approval timelines**: 9–14 months
-- **Inbound FDI 2025**: USD 163 billion (+9.4% year-on-year)
+- Negative List restricted items reduced from 117 to 106 (January 2026)
+- 17 sub-sectors opened to foreign majority or wholly-owned ownership for the first time
+- Private pension fund sector projected at RMB 2.1 trillion AUM by 2030
+- Borderline conditional-approval timelines: 9–14 months
+- Inbound FDI 2025: USD 163 billion (+9.4% year-on-year)
 
 ### National Security Review Expansion
 
@@ -67,10 +67,10 @@ The NDRC and MOFCOM jointly expanded the scope of the Security Review Mechanism 
 
 **Key Data Points:**
 
-- **SRM filing threshold lowered from 25% to 10% in sensitive sectors (Q3 2025)**: 
-- **Formal SRM Phase I review period**: 30 working days
-- **Maximum review extensions**: 3 additional 30-day periods (90 days total)
-- **Complex multi-agency reviews observed taking up to 11 months**: 
+- SRM filing threshold lowered from 25% to 10% in sensitive sectors (Q3 2025)
+- Formal SRM Phase I review period: 30 working days
+- Maximum review extensions: 3 additional 30-day periods (90 days total)
+- Complex multi-agency reviews observed taking up to 11 months
 
 ### Cross-Border Data Compliance Obligations
 
@@ -78,10 +78,10 @@ The 2025 Regulations on Promoting and Regulating Cross-Border Data Flows, effect
 
 **Key Data Points:**
 
-- **Annual data compliance cost for mid-size fund**: RMB 800K–1.5M
-- **Standard CAC security assessment**: 45 working days
-- **SME expedited channel**: 20 working days
-- **Assessment certificates valid for 2 years before renewal**: 
+- Annual data compliance cost for mid-size fund: RMB 800K–1.5M
+- Standard CAC security assessment: 45 working days
+- SME expedited channel: 20 working days
+- Assessment certificates valid for 2 years before renewal
 
 ## Sector Opportunity Matrix
 
@@ -91,10 +91,10 @@ Advanced manufacturing remains China's highest-conviction investment priority un
 
 **Key Data Points:**
 
-- **Target**: 70% domestic production of core industrial components by 2030
-- **Preferential CIT rate**: 15% vs. standard 25% for qualifying high-tech FIEs
-- **National Industrial Cluster grants**: avg. RMB 50M per qualifying project
-- **Yangtze River Delta greenfield FDI approvals**: +34% YoY in 2025
+- Target: 70% domestic production of core industrial components by 2030
+- Preferential CIT rate: 15% vs. standard 25% for qualifying high-tech FIEs
+- National Industrial Cluster grants: avg. RMB 50M per qualifying project
+- Yangtze River Delta greenfield FDI approvals: +34% YoY in 2025
 
 ### Green Energy & Climate Technology
 
@@ -102,11 +102,11 @@ China's carbon neutrality (2060) and peak-emissions (2030) commitments have gene
 
 **Key Data Points:**
 
-- **Offshore wind 2026 capital deployment**: USD 42 billion; 28 GW under construction
-- **CDB Green Credit Window rate**: Loan Prime Rate minus 60 basis points
-- **Offshore wind JV project-level IRRs**: 9–11% under 20-year PPA guarantees
-- **Battery co-location mandate**: 20% of installed capacity from January 2026
-- **Grid-scale battery annual procurement opportunity**: USD 8 billion
+- Offshore wind 2026 capital deployment: USD 42 billion; 28 GW under construction
+- CDB Green Credit Window rate: Loan Prime Rate minus 60 basis points
+- Offshore wind JV project-level IRRs: 9–11% under 20-year PPA guarantees
+- Battery co-location mandate: 20% of installed capacity from January 2026
+- Grid-scale battery annual procurement opportunity: USD 8 billion
 
 ### Life Sciences & Elder Care
 
@@ -114,11 +114,11 @@ Demographic pressure—China's population aged 65 and above reached 216 million 
 
 **Key Data Points:**
 
-- **Population aged 65+**: 216 million in 2025 (15.3% of total)
-- **Wholly foreign-owned hospitals**: now permitted in 9 pilot cities as of 2025
-- **Drug time-to-market reduced from avg. 5.8 years to 2.9 years (NMPA Global Data Acceptance)**: 
-- **Private elder care market by 2030**: RMB 12 trillion (USD 1.65T)
-- **Current institutional elder care capacity**: only 37% of estimated national demand
+- Population aged 65+: 216 million in 2025 (15.3% of total)
+- Wholly foreign-owned hospitals: now permitted in 9 pilot cities as of 2025
+- Drug time-to-market reduced from avg. 5.8 years to 2.9 years (NMPA Global Data Acceptance)
+- Private elder care market by 2030: RMB 12 trillion (USD 1.65T)
+- Current institutional elder care capacity: only 37% of estimated national demand
 
 ## Free Trade Zone Architecture
 
@@ -128,9 +128,9 @@ The Hainan Free Trade Port (HFTP) operates under a bespoke legal framework disti
 
 **Key Data Points:**
 
-- **HFTP financial services minimum registered capital**: 40% lower than Shanghai equivalents
-- **Enterprise income tax cap in HFTP**: 15% for encouraged industries
-- **Zero-tariff on qualifying imported goods**: effective January 2025
+- HFTP financial services minimum registered capital: 40% lower than Shanghai equivalents
+- Enterprise income tax cap in HFTP: 15% for encouraged industries
+- Zero-tariff on qualifying imported goods: effective January 2025
 
 ### Shanghai Lingang & National FTZ Network
 
@@ -138,9 +138,9 @@ The Shanghai Pilot Free Trade Zone Lingang New Area introduced a QFLP programme 
 
 **Key Data Points:**
 
-- **QFLP expansion in SHFTZ Lingang**: unlocks estimated USD 15B in fund-formation demand
-- **Inter-zone customs documentation burden**: reduced ~60% since June 2025
-- **4 FTZs with distinct sectoral mandates**: Shanghai (finance), Guangzhou (manufacturing), Shenzhen (fintech), Beijing (AI)
+- QFLP expansion in SHFTZ Lingang: unlocks estimated USD 15B in fund-formation demand
+- Inter-zone customs documentation burden: reduced ~60% since June 2025
+- 4 FTZs with distinct sectoral mandates: Shanghai (finance), Guangzhou (manufacturing), Shenzhen (fintech), Beijing (AI)
 
 ## Deal Structuring & Risk Management
 
@@ -150,8 +150,8 @@ The optimal investment structure varies by sector risk profile. WFOEs dominate m
 
 **Key Data Points:**
 
-- **Dividend withholding tax**: 10% standard vs. 5% via DTA-optimised FTZ holding structure
-- **Most tax-efficient holding jurisdictions**: Singapore, Hong Kong, Netherlands
+- Dividend withholding tax: 10% standard vs. 5% via DTA-optimised FTZ holding structure
+- Most tax-efficient holding jurisdictions: Singapore, Hong Kong, Netherlands
 
 ### Key Risks & Mitigation Strategies
 
@@ -159,9 +159,9 @@ Three structural risks dominate the China FDI landscape in 2026. First, regulato
 
 **Key Data Points:**
 
-- **Capital repatriation via FTZ structures**: avg. 15–20 business days (2025) vs. 30–45 (2023)
-- **Sector diversification across 3+ policy pillars**: recommended minimum risk mitigation
-- **Political risk insurance available**: Sinosure (domestic) and MIGA (multilateral)
+- Capital repatriation via FTZ structures: avg. 15–20 business days (2025) vs. 30–45 (2023)
+- Sector diversification across 3+ policy pillars: recommended minimum risk mitigation
+- Political risk insurance available: Sinosure (domestic) and MIGA (multilateral)
 
 ## References
 
@@ -184,11 +184,11 @@ The January 2026 iteration of China's market-access Negative List represents the
 
 **关键数据：**
 
-- **Negative List restricted items reduced from 117 to 106 (January 2026)**：
-- **17 sub-sectors opened to foreign majority or wholly-owned ownership for the first time**：
-- **Private pension fund sector projected at RMB 2.1 trillion AUM by 2030**：
-- **Borderline conditional-approval timelines**：9–14 months
-- **Inbound FDI 2025**：USD 163 billion (+9.4% year-on-year)
+- Negative List restricted items reduced from 117 to 106 (January 2026)
+- 17 sub-sectors opened to foreign majority or wholly-owned ownership for the first time
+- Private pension fund sector projected at RMB 2.1 trillion AUM by 2030
+- Borderline conditional-approval timelines: 9–14 months
+- Inbound FDI 2025: USD 163 billion (+9.4% year-on-year)
 
 ### National Security Review Expansion
 
@@ -196,10 +196,10 @@ The NDRC and MOFCOM jointly expanded the scope of the Security Review Mechanism 
 
 **关键数据：**
 
-- **SRM filing threshold lowered from 25% to 10% in sensitive sectors (Q3 2025)**：
-- **Formal SRM Phase I review period**：30 working days
-- **Maximum review extensions**：3 additional 30-day periods (90 days total)
-- **Complex multi-agency reviews observed taking up to 11 months**：
+- SRM filing threshold lowered from 25% to 10% in sensitive sectors (Q3 2025)
+- Formal SRM Phase I review period: 30 working days
+- Maximum review extensions: 3 additional 30-day periods (90 days total)
+- Complex multi-agency reviews observed taking up to 11 months
 
 ### Cross-Border Data Compliance Obligations
 
@@ -207,10 +207,10 @@ The 2025 Regulations on Promoting and Regulating Cross-Border Data Flows, effect
 
 **关键数据：**
 
-- **Annual data compliance cost for mid-size fund**：RMB 800K–1.5M
-- **Standard CAC security assessment**：45 working days
-- **SME expedited channel**：20 working days
-- **Assessment certificates valid for 2 years before renewal**：
+- Annual data compliance cost for mid-size fund: RMB 800K–1.5M
+- Standard CAC security assessment: 45 working days
+- SME expedited channel: 20 working days
+- Assessment certificates valid for 2 years before renewal
 
 ## Sector Opportunity Matrix
 
@@ -220,10 +220,10 @@ Advanced manufacturing remains China's highest-conviction investment priority un
 
 **关键数据：**
 
-- **Target**：70% domestic production of core industrial components by 2030
-- **Preferential CIT rate**：15% vs. standard 25% for qualifying high-tech FIEs
-- **National Industrial Cluster grants**：avg. RMB 50M per qualifying project
-- **Yangtze River Delta greenfield FDI approvals**：+34% YoY in 2025
+- Target: 70% domestic production of core industrial components by 2030
+- Preferential CIT rate: 15% vs. standard 25% for qualifying high-tech FIEs
+- National Industrial Cluster grants: avg. RMB 50M per qualifying project
+- Yangtze River Delta greenfield FDI approvals: +34% YoY in 2025
 
 ### Green Energy & Climate Technology
 
@@ -231,11 +231,11 @@ China's carbon neutrality (2060) and peak-emissions (2030) commitments have gene
 
 **关键数据：**
 
-- **Offshore wind 2026 capital deployment**：USD 42 billion; 28 GW under construction
-- **CDB Green Credit Window rate**：Loan Prime Rate minus 60 basis points
-- **Offshore wind JV project-level IRRs**：9–11% under 20-year PPA guarantees
-- **Battery co-location mandate**：20% of installed capacity from January 2026
-- **Grid-scale battery annual procurement opportunity**：USD 8 billion
+- Offshore wind 2026 capital deployment: USD 42 billion; 28 GW under construction
+- CDB Green Credit Window rate: Loan Prime Rate minus 60 basis points
+- Offshore wind JV project-level IRRs: 9–11% under 20-year PPA guarantees
+- Battery co-location mandate: 20% of installed capacity from January 2026
+- Grid-scale battery annual procurement opportunity: USD 8 billion
 
 ### Life Sciences & Elder Care
 
@@ -243,11 +243,11 @@ Demographic pressure—China's population aged 65 and above reached 216 million 
 
 **关键数据：**
 
-- **Population aged 65+**：216 million in 2025 (15.3% of total)
-- **Wholly foreign-owned hospitals**：now permitted in 9 pilot cities as of 2025
-- **Drug time-to-market reduced from avg. 5.8 years to 2.9 years (NMPA Global Data Acceptance)**：
-- **Private elder care market by 2030**：RMB 12 trillion (USD 1.65T)
-- **Current institutional elder care capacity**：only 37% of estimated national demand
+- Population aged 65+: 216 million in 2025 (15.3% of total)
+- Wholly foreign-owned hospitals: now permitted in 9 pilot cities as of 2025
+- Drug time-to-market reduced from avg. 5.8 years to 2.9 years (NMPA Global Data Acceptance)
+- Private elder care market by 2030: RMB 12 trillion (USD 1.65T)
+- Current institutional elder care capacity: only 37% of estimated national demand
 
 ## Free Trade Zone Architecture
 
@@ -257,9 +257,9 @@ The Hainan Free Trade Port (HFTP) operates under a bespoke legal framework disti
 
 **关键数据：**
 
-- **HFTP financial services minimum registered capital**：40% lower than Shanghai equivalents
-- **Enterprise income tax cap in HFTP**：15% for encouraged industries
-- **Zero-tariff on qualifying imported goods**：effective January 2025
+- HFTP financial services minimum registered capital: 40% lower than Shanghai equivalents
+- Enterprise income tax cap in HFTP: 15% for encouraged industries
+- Zero-tariff on qualifying imported goods: effective January 2025
 
 ### Shanghai Lingang & National FTZ Network
 
@@ -267,9 +267,9 @@ The Shanghai Pilot Free Trade Zone Lingang New Area introduced a QFLP programme 
 
 **关键数据：**
 
-- **QFLP expansion in SHFTZ Lingang**：unlocks estimated USD 15B in fund-formation demand
-- **Inter-zone customs documentation burden**：reduced ~60% since June 2025
-- **4 FTZs with distinct sectoral mandates**：Shanghai (finance), Guangzhou (manufacturing), Shenzhen (fintech), Beijing (AI)
+- QFLP expansion in SHFTZ Lingang: unlocks estimated USD 15B in fund-formation demand
+- Inter-zone customs documentation burden: reduced ~60% since June 2025
+- 4 FTZs with distinct sectoral mandates: Shanghai (finance), Guangzhou (manufacturing), Shenzhen (fintech), Beijing (AI)
 
 ## Deal Structuring & Risk Management
 
@@ -279,8 +279,8 @@ The optimal investment structure varies by sector risk profile. WFOEs dominate m
 
 **关键数据：**
 
-- **Dividend withholding tax**：10% standard vs. 5% via DTA-optimised FTZ holding structure
-- **Most tax-efficient holding jurisdictions**：Singapore, Hong Kong, Netherlands
+- Dividend withholding tax: 10% standard vs. 5% via DTA-optimised FTZ holding structure
+- Most tax-efficient holding jurisdictions: Singapore, Hong Kong, Netherlands
 
 ### Key Risks & Mitigation Strategies
 
@@ -288,9 +288,9 @@ Three structural risks dominate the China FDI landscape in 2026. First, regulato
 
 **关键数据：**
 
-- **Capital repatriation via FTZ structures**：avg. 15–20 business days (2025) vs. 30–45 (2023)
-- **Sector diversification across 3+ policy pillars**：recommended minimum risk mitigation
-- **Political risk insurance available**：Sinosure (domestic) and MIGA (multilateral)
+- Capital repatriation via FTZ structures: avg. 15–20 business days (2025) vs. 30–45 (2023)
+- Sector diversification across 3+ policy pillars: recommended minimum risk mitigation
+- Political risk insurance available: Sinosure (domestic) and MIGA (multilateral)
 
 ## 参考文献
 
@@ -329,12 +329,12 @@ The National Integrated Circuit Industry Investment Fund Phase III, established 
 
 **Key Data Points:**
 
-- **Big Fund III registered capital**: RMB 344 billion (launched October 2024)
-- **Big Fund I (2014)**: RMB 138.7B; Big Fund II (2019): RMB 204.2B; cumulative total: RMB 687B
-- **Ministry of Finance shareholding in Big Fund III**: 17.2%
-- **Target**: 80% domestic supply of 28nm+ process equipment by 2027
-- **Target**: 40% domestic supply of sub-28nm equipment by 2030
-- **Implied domestic equipment procurement wave**: RMB 280B+ over plan period
+- Big Fund III registered capital: RMB 344 billion (launched October 2024)
+- Big Fund I (2014): RMB 138.7B; Big Fund II (2019): RMB 204.2B; cumulative total: RMB 687B
+- Ministry of Finance shareholding in Big Fund III: 17.2%
+- Target: 80% domestic supply of 28nm+ process equipment by 2027
+- Target: 40% domestic supply of sub-28nm equipment by 2030
+- Implied domestic equipment procurement wave: RMB 280B+ over plan period
 
 ### Domestic Fabrication Progress & Technology Trajectory
 
@@ -342,10 +342,10 @@ China's leading foundry, SMIC, has made significant process-node advances despit
 
 **Key Data Points:**
 
-- **SMIC N+2 node yield rate**: 62% in Q4 2025 (up from 38% in Q4 2023)
-- **TSMC industry yield benchmark**: 75–80%
-- **Domestic foundry capacity expansion**: 1.8M 300mm WEU/month by 2027 (+87% vs 2024)
-- **SMIC N+2 volume production commenced**: Q4 2025
+- SMIC N+2 node yield rate: 62% in Q4 2025 (up from 38% in Q4 2023)
+- TSMC industry yield benchmark: 75–80%
+- Domestic foundry capacity expansion: 1.8M 300mm WEU/month by 2027 (+87% vs 2024)
+- SMIC N+2 volume production commenced: Q4 2025
 
 ### EDA, Materials & Equipment Localisation
 
@@ -353,10 +353,10 @@ Electronic Design Automation software remains the most critical chokepoint in Ch
 
 **Key Data Points:**
 
-- **Global EDA market**: big-three vendors hold ~87% share (2024)
-- **Domestic EDA market share (Empyrean + Primarius)**: 9% in 2025, up from 3% in 2022
-- **Advanced node specialty chemicals import dependency**: 68%
-- **Materials Localisation Initiative subsidy**: 25–35% on domestic-content procurement
+- Global EDA market: big-three vendors hold ~87% share (2024)
+- Domestic EDA market share (Empyrean + Primarius): 9% in 2025, up from 3% in 2022
+- Advanced node specialty chemicals import dependency: 68%
+- Materials Localisation Initiative subsidy: 25–35% on domestic-content procurement
 
 ## AI Governance Framework
 
@@ -366,11 +366,11 @@ The Interim Measures for the Administration of Generative Artificial Intelligenc
 
 **Key Data Points:**
 
-- **Generative AI registration threshold**: 10,000+ mainland China registered users
-- **Domestic LLM registration timeline**: avg. 11–14 weeks
-- **Foreign model registration via licensed entity**: avg. 18–22 weeks
-- **47 AI products held CAC approval as of January 2026**: 
-- **Content safety benchmark**: 150 evaluation criteria, updated quarterly
+- Generative AI registration threshold: 10,000+ mainland China registered users
+- Domestic LLM registration timeline: avg. 11–14 weeks
+- Foreign model registration via licensed entity: avg. 18–22 weeks
+- 47 AI products held CAC approval as of January 2026
+- Content safety benchmark: 150 evaluation criteria, updated quarterly
 
 ### Foreign Participation Rules & Equity Caps
 
@@ -378,10 +378,10 @@ The 2024 AI Industry Guidance restricts non-Chinese entities to a maximum 49% eq
 
 **Key Data Points:**
 
-- **Foreign equity cap in LLM training / foundation model companies**: 49%
-- **AI data centre capacity addition 2025–2027**: 8.5 million GPU equivalents
-- **AI data centre capex requirement 2025–2027**: USD 67 billion
-- **No equity cap applies to infrastructure layer (data centres, cooling, networking)**: 
+- Foreign equity cap in LLM training / foundation model companies: 49%
+- AI data centre capacity addition 2025–2027: 8.5 million GPU equivalents
+- AI data centre capex requirement 2025–2027: USD 67 billion
+- No equity cap applies to infrastructure layer (data centres, cooling, networking)
 
 ### National AI Computing Infrastructure Plan
 
@@ -389,11 +389,11 @@ The National AI Computing Infrastructure Plan, issued jointly by MIIT and NDRC i
 
 **Key Data Points:**
 
-- **National AI computing target**: 300 EFLOPS by 2027 (from 75 EFLOPS at end-2024, +300%)
-- **Capital grant**: up to 20% of qualifying hardware spend, capped at RMB 150M per project
-- **AI Industrial Park power pricing**: 15% below standard industrial rate
-- **Huawei Ascend 910B vs. NVIDIA H100**: 65–72% benchmark performance (up from 55% in early 2025)
-- **Tier-2 city data centre power**: RMB 0.28–0.35/kWh vs. RMB 0.58–0.72/kWh coastal
+- National AI computing target: 300 EFLOPS by 2027 (from 75 EFLOPS at end-2024, +300%)
+- Capital grant: up to 20% of qualifying hardware spend, capped at RMB 150M per project
+- AI Industrial Park power pricing: 15% below standard industrial rate
+- Huawei Ascend 910B vs. NVIDIA H100: 65–72% benchmark performance (up from 55% in early 2025)
+- Tier-2 city data centre power: RMB 0.28–0.35/kWh vs. RMB 0.58–0.72/kWh coastal
 
 ## Investment Opportunities & Structuring
 
@@ -403,9 +403,9 @@ Institutional investors with China technology mandates are concentrating exposur
 
 **Key Data Points:**
 
-- **AI infrastructure project IRRs**: 14–19% unlevered on 10–15 year structures
-- **Domestic semiconductor equipment makers**: 35–55x forward earnings (25–40% CAGR expected 2025–2028)
-- **Foreign minority stake permissible in AI application verticals**: up to 49%
+- AI infrastructure project IRRs: 14–19% unlevered on 10–15 year structures
+- Domestic semiconductor equipment makers: 35–55x forward earnings (25–40% CAGR expected 2025–2028)
+- Foreign minority stake permissible in AI application verticals: up to 49%
 
 ### Risk Framework & Mitigation
 
@@ -413,9 +413,9 @@ The principal risks for China technology investors in 2026 are export-control es
 
 **Key Data Points:**
 
-- **U.S. BIS October 2024 rule**: closed A:5 exception, banning NVIDIA H100/H200 and AMD MI300X sales to China
-- **Portfolio diversification across 4+ policy categories**: recommended minimum for tech investors
-- **CIPS network**: preferred mechanism for RMB intercompany transfers, faster than SWIFT for China routes
+- U.S. BIS October 2024 rule: closed A:5 exception, banning NVIDIA H100/H200 and AMD MI300X sales to China
+- Portfolio diversification across 4+ policy categories: recommended minimum for tech investors
+- CIPS network: preferred mechanism for RMB intercompany transfers, faster than SWIFT for China routes
 
 ## Competitive Landscape & Geopolitical Context
 
@@ -425,9 +425,12 @@ The U.S.-China technology rivalry has bifurcated global capital markets into par
 
 **Key Data Points:**
 
-- **s domestic semiconductor market**: USD 198 billion in 2025 (34% of global demand)",
-- **,**: 
-- **,**: 
+- s domestic semiconductor market: USD 198 billion in 2025 (34% of global demand)",
+            
+- ,
+            
+- ,
+            
 
 ### Policy Outlook Through 2028
 
@@ -435,9 +438,9 @@ The regulatory trajectory for China's technology sector through 2028 is characte
 
 **Key Data Points:**
 
-- **15th Five-Year Plan (2026–2030)**: formal adoption expected March 2026 NPC session
-- **Semiconductors and AI expected to be reclassified as "core national security industries"**: 
-- **ASEAN tech supply chain integration**: accelerating as hedge against Western decoupling
+- 15th Five-Year Plan (2026–2030): formal adoption expected March 2026 NPC session
+- Semiconductors and AI expected to be reclassified as "core national security industries"
+- ASEAN tech supply chain integration: accelerating as hedge against Western decoupling
 
 ## References
 
@@ -459,12 +462,12 @@ The National Integrated Circuit Industry Investment Fund Phase III, established 
 
 **关键数据：**
 
-- **Big Fund III registered capital**：RMB 344 billion (launched October 2024)
-- **Big Fund I (2014)**：RMB 138.7B; Big Fund II (2019): RMB 204.2B; cumulative total: RMB 687B
-- **Ministry of Finance shareholding in Big Fund III**：17.2%
-- **Target**：80% domestic supply of 28nm+ process equipment by 2027
-- **Target**：40% domestic supply of sub-28nm equipment by 2030
-- **Implied domestic equipment procurement wave**：RMB 280B+ over plan period
+- Big Fund III registered capital: RMB 344 billion (launched October 2024)
+- Big Fund I (2014): RMB 138.7B; Big Fund II (2019): RMB 204.2B; cumulative total: RMB 687B
+- Ministry of Finance shareholding in Big Fund III: 17.2%
+- Target: 80% domestic supply of 28nm+ process equipment by 2027
+- Target: 40% domestic supply of sub-28nm equipment by 2030
+- Implied domestic equipment procurement wave: RMB 280B+ over plan period
 
 ### Domestic Fabrication Progress & Technology Trajectory
 
@@ -472,10 +475,10 @@ China's leading foundry, SMIC, has made significant process-node advances despit
 
 **关键数据：**
 
-- **SMIC N+2 node yield rate**：62% in Q4 2025 (up from 38% in Q4 2023)
-- **TSMC industry yield benchmark**：75–80%
-- **Domestic foundry capacity expansion**：1.8M 300mm WEU/month by 2027 (+87% vs 2024)
-- **SMIC N+2 volume production commenced**：Q4 2025
+- SMIC N+2 node yield rate: 62% in Q4 2025 (up from 38% in Q4 2023)
+- TSMC industry yield benchmark: 75–80%
+- Domestic foundry capacity expansion: 1.8M 300mm WEU/month by 2027 (+87% vs 2024)
+- SMIC N+2 volume production commenced: Q4 2025
 
 ### EDA, Materials & Equipment Localisation
 
@@ -483,10 +486,10 @@ Electronic Design Automation software remains the most critical chokepoint in Ch
 
 **关键数据：**
 
-- **Global EDA market**：big-three vendors hold ~87% share (2024)
-- **Domestic EDA market share (Empyrean + Primarius)**：9% in 2025, up from 3% in 2022
-- **Advanced node specialty chemicals import dependency**：68%
-- **Materials Localisation Initiative subsidy**：25–35% on domestic-content procurement
+- Global EDA market: big-three vendors hold ~87% share (2024)
+- Domestic EDA market share (Empyrean + Primarius): 9% in 2025, up from 3% in 2022
+- Advanced node specialty chemicals import dependency: 68%
+- Materials Localisation Initiative subsidy: 25–35% on domestic-content procurement
 
 ## AI Governance Framework
 
@@ -496,11 +499,11 @@ The Interim Measures for the Administration of Generative Artificial Intelligenc
 
 **关键数据：**
 
-- **Generative AI registration threshold**：10,000+ mainland China registered users
-- **Domestic LLM registration timeline**：avg. 11–14 weeks
-- **Foreign model registration via licensed entity**：avg. 18–22 weeks
-- **47 AI products held CAC approval as of January 2026**：
-- **Content safety benchmark**：150 evaluation criteria, updated quarterly
+- Generative AI registration threshold: 10,000+ mainland China registered users
+- Domestic LLM registration timeline: avg. 11–14 weeks
+- Foreign model registration via licensed entity: avg. 18–22 weeks
+- 47 AI products held CAC approval as of January 2026
+- Content safety benchmark: 150 evaluation criteria, updated quarterly
 
 ### Foreign Participation Rules & Equity Caps
 
@@ -508,10 +511,10 @@ The 2024 AI Industry Guidance restricts non-Chinese entities to a maximum 49% eq
 
 **关键数据：**
 
-- **Foreign equity cap in LLM training / foundation model companies**：49%
-- **AI data centre capacity addition 2025–2027**：8.5 million GPU equivalents
-- **AI data centre capex requirement 2025–2027**：USD 67 billion
-- **No equity cap applies to infrastructure layer (data centres, cooling, networking)**：
+- Foreign equity cap in LLM training / foundation model companies: 49%
+- AI data centre capacity addition 2025–2027: 8.5 million GPU equivalents
+- AI data centre capex requirement 2025–2027: USD 67 billion
+- No equity cap applies to infrastructure layer (data centres, cooling, networking)
 
 ### National AI Computing Infrastructure Plan
 
@@ -519,11 +522,11 @@ The National AI Computing Infrastructure Plan, issued jointly by MIIT and NDRC i
 
 **关键数据：**
 
-- **National AI computing target**：300 EFLOPS by 2027 (from 75 EFLOPS at end-2024, +300%)
-- **Capital grant**：up to 20% of qualifying hardware spend, capped at RMB 150M per project
-- **AI Industrial Park power pricing**：15% below standard industrial rate
-- **Huawei Ascend 910B vs. NVIDIA H100**：65–72% benchmark performance (up from 55% in early 2025)
-- **Tier-2 city data centre power**：RMB 0.28–0.35/kWh vs. RMB 0.58–0.72/kWh coastal
+- National AI computing target: 300 EFLOPS by 2027 (from 75 EFLOPS at end-2024, +300%)
+- Capital grant: up to 20% of qualifying hardware spend, capped at RMB 150M per project
+- AI Industrial Park power pricing: 15% below standard industrial rate
+- Huawei Ascend 910B vs. NVIDIA H100: 65–72% benchmark performance (up from 55% in early 2025)
+- Tier-2 city data centre power: RMB 0.28–0.35/kWh vs. RMB 0.58–0.72/kWh coastal
 
 ## Investment Opportunities & Structuring
 
@@ -533,9 +536,9 @@ Institutional investors with China technology mandates are concentrating exposur
 
 **关键数据：**
 
-- **AI infrastructure project IRRs**：14–19% unlevered on 10–15 year structures
-- **Domestic semiconductor equipment makers**：35–55x forward earnings (25–40% CAGR expected 2025–2028)
-- **Foreign minority stake permissible in AI application verticals**：up to 49%
+- AI infrastructure project IRRs: 14–19% unlevered on 10–15 year structures
+- Domestic semiconductor equipment makers: 35–55x forward earnings (25–40% CAGR expected 2025–2028)
+- Foreign minority stake permissible in AI application verticals: up to 49%
 
 ### Risk Framework & Mitigation
 
@@ -543,9 +546,9 @@ The principal risks for China technology investors in 2026 are export-control es
 
 **关键数据：**
 
-- **U.S. BIS October 2024 rule**：closed A:5 exception, banning NVIDIA H100/H200 and AMD MI300X sales to China
-- **Portfolio diversification across 4+ policy categories**：recommended minimum for tech investors
-- **CIPS network**：preferred mechanism for RMB intercompany transfers, faster than SWIFT for China routes
+- U.S. BIS October 2024 rule: closed A:5 exception, banning NVIDIA H100/H200 and AMD MI300X sales to China
+- Portfolio diversification across 4+ policy categories: recommended minimum for tech investors
+- CIPS network: preferred mechanism for RMB intercompany transfers, faster than SWIFT for China routes
 
 ## Competitive Landscape & Geopolitical Context
 
@@ -555,9 +558,12 @@ The U.S.-China technology rivalry has bifurcated global capital markets into par
 
 **关键数据：**
 
-- **s domestic semiconductor market**：USD 198 billion in 2025 (34% of global demand)",
-- **,**：
-- **,**：
+- s domestic semiconductor market: USD 198 billion in 2025 (34% of global demand)",
+            
+- ,
+            
+- ,
+            
 
 ### Policy Outlook Through 2028
 
@@ -565,9 +571,9 @@ The regulatory trajectory for China's technology sector through 2028 is characte
 
 **关键数据：**
 
-- **15th Five-Year Plan (2026–2030)**：formal adoption expected March 2026 NPC session
-- **Semiconductors and AI expected to be reclassified as "core national security industries"**：
-- **ASEAN tech supply chain integration**：accelerating as hedge against Western decoupling
+- 15th Five-Year Plan (2026–2030): formal adoption expected March 2026 NPC session
+- Semiconductors and AI expected to be reclassified as "core national security industries"
+- ASEAN tech supply chain integration: accelerating as hedge against Western decoupling
 
 ## 参考文献
 
@@ -605,13 +611,13 @@ China's commitment to achieve carbon neutrality by 2060 and peak greenhouse gas 
 
 **Key Data Points:**
 
-- **Total renewable capacity by end-2025**: 1,847 GW (52.8% of total installed capacity)
-- **14th FYP (2021–2025) solar deployment**: 130 GW (vs. target 120 GW)
-- **14th FYP (2021–2025) wind deployment**: 208 GW (vs. target 190 GW)
-- **15th FYP (2026–2030) projected solar deployment**: 550–600 GW
-- **15th FYP (2026–2030) projected wind deployment**: 450–500 GW
-- **China Carbon Market cumulative trading volume**: RMB 87 billion (USD 12B) through end-2025
-- **Carbon credit price range**: RMB 50–85/tonne (current); projected RMB 120–150/tonne by 2030
+- Total renewable capacity by end-2025: 1,847 GW (52.8% of total installed capacity)
+- 14th FYP (2021–2025) solar deployment: 130 GW (vs. target 120 GW)
+- 14th FYP (2021–2025) wind deployment: 208 GW (vs. target 190 GW)
+- 15th FYP (2026–2030) projected solar deployment: 550–600 GW
+- 15th FYP (2026–2030) projected wind deployment: 450–500 GW
+- China Carbon Market cumulative trading volume: RMB 87 billion (USD 12B) through end-2025
+- Carbon credit price range: RMB 50–85/tonne (current); projected RMB 120–150/tonne by 2030
 
 ### Government Capital Allocation & Fiscal Incentives
 
@@ -619,12 +625,12 @@ The government is supporting renewable energy expansion through multiple fiscal 
 
 **Key Data Points:**
 
-- **CDB Green Credit annual deployment**: USD 75–85 billion to renewable/grid/storage projects
-- **CDB Green Credit Window rate**: Loan Prime Rate minus 60 basis points
-- **Provincial government capital grant support**: 15–25% of total project cost
-- **Grid connection timeline in priority regions**: 60–90 days (vs. 6–9 months standard)
-- **Solar project cost reduction 2022–2025**: 28–40% decline (RMB 4.2–5.1M/MW to RMB 3.0–3.8M/MW)
-- **Onshore wind cost reduction 2022–2025**: 20–24% decline (RMB 8.5–10.2M/MW to RMB 6.8–8.2M/MW)
+- CDB Green Credit annual deployment: USD 75–85 billion to renewable/grid/storage projects
+- CDB Green Credit Window rate: Loan Prime Rate minus 60 basis points
+- Provincial government capital grant support: 15–25% of total project cost
+- Grid connection timeline in priority regions: 60–90 days (vs. 6–9 months standard)
+- Solar project cost reduction 2022–2025: 28–40% decline (RMB 4.2–5.1M/MW to RMB 3.0–3.8M/MW)
+- Onshore wind cost reduction 2022–2025: 20–24% decline (RMB 8.5–10.2M/MW to RMB 6.8–8.2M/MW)
 
 ## Offshore Wind & Solar Technology Deployment
 
@@ -634,14 +640,14 @@ Offshore wind is the highest-priority renewable technology in China's energy tra
 
 **Key Data Points:**
 
-- **Offshore wind target by 2030**: 200 GW cumulative (from 54 GW at end-2025)
-- **Capital expenditure for offshore wind 2026**: USD 42 billion
-- **New capacity under construction or final permitting**: 28 GW
-- **Floating wind capacity (operational + advanced development)**: 8 GW
-- **Floating wind capacity target by 2028**: 25+ GW
-- **Typical offshore wind PPA pricing**: RMB 0.42–0.55/kWh (20-year guarantee)
-- **Offshore wind project-level IRRs**: 8–11% under current PPA terms
-- **Offshore wind supply chain comparables valuation**: 18–24x forward EBITDA (vs. 12–15x onshore)
+- Offshore wind target by 2030: 200 GW cumulative (from 54 GW at end-2025)
+- Capital expenditure for offshore wind 2026: USD 42 billion
+- New capacity under construction or final permitting: 28 GW
+- Floating wind capacity (operational + advanced development): 8 GW
+- Floating wind capacity target by 2028: 25+ GW
+- Typical offshore wind PPA pricing: RMB 0.42–0.55/kWh (20-year guarantee)
+- Offshore wind project-level IRRs: 8–11% under current PPA terms
+- Offshore wind supply chain comparables valuation: 18–24x forward EBITDA (vs. 12–15x onshore)
 
 ### Solar Expansion: Utility Scale, Industrial Rooftop & Floating
 
@@ -649,15 +655,15 @@ Solar capacity deployment exceeded all historical precedents in 2025, with 90 GW
 
 **Key Data Points:**
 
-- **Solar capacity deployed in 2025**: 90 GW (largest single-year addition on record)
-- **15th FYP solar deployment target**: 550–600 GW cumulative (2026–2030)
-- **Implied annual solar deployment average 2026–2030**: 110–120 GW
-- **Capital expenditure for solar 2026–2030**: USD 90–100 billion annually
-- **Silicon wafer cost reduction since 2022**: 34%
-- **Crystalline silicon cell cost reduction since 2022**: 42%
-- **Inverter cost reduction since 2022**: 38%
-- **Solar LCOE in optimal geographies**: RMB 0.22–0.30/kWh (USD 0.03–0.04/kWh)
-- **Coal generation LCOE**: RMB 0.25–0.35/kWh (cost competitiveness point)
+- Solar capacity deployed in 2025: 90 GW (largest single-year addition on record)
+- 15th FYP solar deployment target: 550–600 GW cumulative (2026–2030)
+- Implied annual solar deployment average 2026–2030: 110–120 GW
+- Capital expenditure for solar 2026–2030: USD 90–100 billion annually
+- Silicon wafer cost reduction since 2022: 34%
+- Crystalline silicon cell cost reduction since 2022: 42%
+- Inverter cost reduction since 2022: 38%
+- Solar LCOE in optimal geographies: RMB 0.22–0.30/kWh (USD 0.03–0.04/kWh)
+- Coal generation LCOE: RMB 0.25–0.35/kWh (cost competitiveness point)
 
 ## Energy Storage & Grid Integration
 
@@ -667,14 +673,14 @@ The grid-scale battery energy storage system (BESS) segment has emerged as the f
 
 **Key Data Points:**
 
-- **Energy storage co-location mandate**: 20% of new renewable capacity from January 2026
-- **Projected BESS deployment 2026–2030**: 80–100 GW annually
-- **Cumulative BESS deployment 2026–2030**: 400–500 GW
-- **Lithium-ion battery cost reduction since 2010**: 89% (USD 1,160/kWh to USD 130/kWh in 2025)
-- **Battery cost trajectory to USD 100/kWh**: expected by 2028
-- **4-hour BESS project with 100 MW solar capex**: USD 65–75 million
-- **Standalone BESS project IRRs**: 6–8%; integrated renewable + storage IRRs: 11–14%
-- **Annual BESS procurement opportunity from storage mandate**: USD 8 billion
+- Energy storage co-location mandate: 20% of new renewable capacity from January 2026
+- Projected BESS deployment 2026–2030: 80–100 GW annually
+- Cumulative BESS deployment 2026–2030: 400–500 GW
+- Lithium-ion battery cost reduction since 2010: 89% (USD 1,160/kWh to USD 130/kWh in 2025)
+- Battery cost trajectory to USD 100/kWh: expected by 2028
+- 4-hour BESS project with 100 MW solar capex: USD 65–75 million
+- Standalone BESS project IRRs: 6–8%; integrated renewable + storage IRRs: 11–14%
+- Annual BESS procurement opportunity from storage mandate: USD 8 billion
 
 ### Grid Modernisation & Transmission Infrastructure
 
@@ -682,11 +688,11 @@ China's electrical grid requires substantial modernisation to accommodate the pr
 
 **Key Data Points:**
 
-- **Grid infrastructure upgrade capex requirement 2025–2030**: USD 120–140 billion
-- **New high-voltage DC transmission capacity deployment by 2030**: 100 GW
-- **HVDC share of total transmission investment**: ~30%
-- **Transmission technology project-level IRRs on concession structures**: 7–10%
-- **Emerging demand response and VPP services annual market**: USD 3–4 billion
+- Grid infrastructure upgrade capex requirement 2025–2030: USD 120–140 billion
+- New high-voltage DC transmission capacity deployment by 2030: 100 GW
+- HVDC share of total transmission investment: ~30%
+- Transmission technology project-level IRRs on concession structures: 7–10%
+- Emerging demand response and VPP services annual market: USD 3–4 billion
 
 ## Green Hydrogen & Alternative Energy Pathways
 
@@ -696,13 +702,13 @@ Green hydrogen—produced through water electrolysis powered by renewable electr
 
 **Key Data Points:**
 
-- **Green hydrogen production target by 2030**: 10 million tonnes per year
-- **Dedicated renewable capacity for hydrogen**: 80–100 GW (USD 35–45B capex)
-- **Global electrolyser manufacturing capacity**: China 15 GW, Europe 8 GW, N. America 2 GW (2025)
-- **Current electrolyser system cost**: USD 800–1,200/kW
-- **Electrolyser system cost target by 2030**: USD 400–600/kW
-- **Current fuel cell vehicles on road in China**: 8,000 FCVs
-- **Government FCV target by 2030**: 50,000 FCVs
+- Green hydrogen production target by 2030: 10 million tonnes per year
+- Dedicated renewable capacity for hydrogen: 80–100 GW (USD 35–45B capex)
+- Global electrolyser manufacturing capacity: China 15 GW, Europe 8 GW, N. America 2 GW (2025)
+- Current electrolyser system cost: USD 800–1,200/kW
+- Electrolyser system cost target by 2030: USD 400–600/kW
+- Current fuel cell vehicles on road in China: 8,000 FCVs
+- Government FCV target by 2030: 50,000 FCVs
 
 ## Investment Structuring & Risk Factors
 
@@ -712,13 +718,13 @@ Renewable energy project participation for foreign institutional investors in Ch
 
 **Key Data Points:**
 
-- **Typical foreign investor equity stake in renewable projects**: 20–50%
-- **Project revenue visibility**: 15–25 year PPA terms
-- **Utility solar unlevered project IRRs**: 6–8%
-- **Offshore wind unlevered project IRRs**: 8–11%
-- **Renewable + storage optimised portfolio IRRs**: 10–13%
-- **Infrastructure debt yields on senior debt**: 5–7% (12–18 year terms)
-- **Mezzanine equity-like instrument target returns**: 9–12%
+- Typical foreign investor equity stake in renewable projects: 20–50%
+- Project revenue visibility: 15–25 year PPA terms
+- Utility solar unlevered project IRRs: 6–8%
+- Offshore wind unlevered project IRRs: 8–11%
+- Renewable + storage optimised portfolio IRRs: 10–13%
+- Infrastructure debt yields on senior debt: 5–7% (12–18 year terms)
+- Mezzanine equity-like instrument target returns: 9–12%
 
 ### Key Risks & Policy Sensitivity
 
@@ -726,11 +732,11 @@ Renewable energy investments in China are subject to policy and regulatory risks
 
 **Key Data Points:**
 
-- **PPA and subsidy policy adjustment cycle**: 1–2 years typical
-- **Grid connection delay risk in congested regions**: material downside
-- **Curtailment risk in oversupplied grids**: 5–15% nameplate capacity loss potential
-- **Natural hedge mitigation**: RMB revenue + RMB cost matching
-- **Political risk insurance available**: via Sinosure and multilateral providers
+- PPA and subsidy policy adjustment cycle: 1–2 years typical
+- Grid connection delay risk in congested regions: material downside
+- Curtailment risk in oversupplied grids: 5–15% nameplate capacity loss potential
+- Natural hedge mitigation: RMB revenue + RMB cost matching
+- Political risk insurance available: via Sinosure and multilateral providers
 
 ## References
 
@@ -754,13 +760,13 @@ China's commitment to achieve carbon neutrality by 2060 and peak greenhouse gas 
 
 **关键数据：**
 
-- **Total renewable capacity by end-2025**：1,847 GW (52.8% of total installed capacity)
-- **14th FYP (2021–2025) solar deployment**：130 GW (vs. target 120 GW)
-- **14th FYP (2021–2025) wind deployment**：208 GW (vs. target 190 GW)
-- **15th FYP (2026–2030) projected solar deployment**：550–600 GW
-- **15th FYP (2026–2030) projected wind deployment**：450–500 GW
-- **China Carbon Market cumulative trading volume**：RMB 87 billion (USD 12B) through end-2025
-- **Carbon credit price range**：RMB 50–85/tonne (current); projected RMB 120–150/tonne by 2030
+- Total renewable capacity by end-2025: 1,847 GW (52.8% of total installed capacity)
+- 14th FYP (2021–2025) solar deployment: 130 GW (vs. target 120 GW)
+- 14th FYP (2021–2025) wind deployment: 208 GW (vs. target 190 GW)
+- 15th FYP (2026–2030) projected solar deployment: 550–600 GW
+- 15th FYP (2026–2030) projected wind deployment: 450–500 GW
+- China Carbon Market cumulative trading volume: RMB 87 billion (USD 12B) through end-2025
+- Carbon credit price range: RMB 50–85/tonne (current); projected RMB 120–150/tonne by 2030
 
 ### Government Capital Allocation & Fiscal Incentives
 
@@ -768,12 +774,12 @@ The government is supporting renewable energy expansion through multiple fiscal 
 
 **关键数据：**
 
-- **CDB Green Credit annual deployment**：USD 75–85 billion to renewable/grid/storage projects
-- **CDB Green Credit Window rate**：Loan Prime Rate minus 60 basis points
-- **Provincial government capital grant support**：15–25% of total project cost
-- **Grid connection timeline in priority regions**：60–90 days (vs. 6–9 months standard)
-- **Solar project cost reduction 2022–2025**：28–40% decline (RMB 4.2–5.1M/MW to RMB 3.0–3.8M/MW)
-- **Onshore wind cost reduction 2022–2025**：20–24% decline (RMB 8.5–10.2M/MW to RMB 6.8–8.2M/MW)
+- CDB Green Credit annual deployment: USD 75–85 billion to renewable/grid/storage projects
+- CDB Green Credit Window rate: Loan Prime Rate minus 60 basis points
+- Provincial government capital grant support: 15–25% of total project cost
+- Grid connection timeline in priority regions: 60–90 days (vs. 6–9 months standard)
+- Solar project cost reduction 2022–2025: 28–40% decline (RMB 4.2–5.1M/MW to RMB 3.0–3.8M/MW)
+- Onshore wind cost reduction 2022–2025: 20–24% decline (RMB 8.5–10.2M/MW to RMB 6.8–8.2M/MW)
 
 ## Offshore Wind & Solar Technology Deployment
 
@@ -783,14 +789,14 @@ Offshore wind is the highest-priority renewable technology in China's energy tra
 
 **关键数据：**
 
-- **Offshore wind target by 2030**：200 GW cumulative (from 54 GW at end-2025)
-- **Capital expenditure for offshore wind 2026**：USD 42 billion
-- **New capacity under construction or final permitting**：28 GW
-- **Floating wind capacity (operational + advanced development)**：8 GW
-- **Floating wind capacity target by 2028**：25+ GW
-- **Typical offshore wind PPA pricing**：RMB 0.42–0.55/kWh (20-year guarantee)
-- **Offshore wind project-level IRRs**：8–11% under current PPA terms
-- **Offshore wind supply chain comparables valuation**：18–24x forward EBITDA (vs. 12–15x onshore)
+- Offshore wind target by 2030: 200 GW cumulative (from 54 GW at end-2025)
+- Capital expenditure for offshore wind 2026: USD 42 billion
+- New capacity under construction or final permitting: 28 GW
+- Floating wind capacity (operational + advanced development): 8 GW
+- Floating wind capacity target by 2028: 25+ GW
+- Typical offshore wind PPA pricing: RMB 0.42–0.55/kWh (20-year guarantee)
+- Offshore wind project-level IRRs: 8–11% under current PPA terms
+- Offshore wind supply chain comparables valuation: 18–24x forward EBITDA (vs. 12–15x onshore)
 
 ### Solar Expansion: Utility Scale, Industrial Rooftop & Floating
 
@@ -798,15 +804,15 @@ Solar capacity deployment exceeded all historical precedents in 2025, with 90 GW
 
 **关键数据：**
 
-- **Solar capacity deployed in 2025**：90 GW (largest single-year addition on record)
-- **15th FYP solar deployment target**：550–600 GW cumulative (2026–2030)
-- **Implied annual solar deployment average 2026–2030**：110–120 GW
-- **Capital expenditure for solar 2026–2030**：USD 90–100 billion annually
-- **Silicon wafer cost reduction since 2022**：34%
-- **Crystalline silicon cell cost reduction since 2022**：42%
-- **Inverter cost reduction since 2022**：38%
-- **Solar LCOE in optimal geographies**：RMB 0.22–0.30/kWh (USD 0.03–0.04/kWh)
-- **Coal generation LCOE**：RMB 0.25–0.35/kWh (cost competitiveness point)
+- Solar capacity deployed in 2025: 90 GW (largest single-year addition on record)
+- 15th FYP solar deployment target: 550–600 GW cumulative (2026–2030)
+- Implied annual solar deployment average 2026–2030: 110–120 GW
+- Capital expenditure for solar 2026–2030: USD 90–100 billion annually
+- Silicon wafer cost reduction since 2022: 34%
+- Crystalline silicon cell cost reduction since 2022: 42%
+- Inverter cost reduction since 2022: 38%
+- Solar LCOE in optimal geographies: RMB 0.22–0.30/kWh (USD 0.03–0.04/kWh)
+- Coal generation LCOE: RMB 0.25–0.35/kWh (cost competitiveness point)
 
 ## Energy Storage & Grid Integration
 
@@ -816,14 +822,14 @@ The grid-scale battery energy storage system (BESS) segment has emerged as the f
 
 **关键数据：**
 
-- **Energy storage co-location mandate**：20% of new renewable capacity from January 2026
-- **Projected BESS deployment 2026–2030**：80–100 GW annually
-- **Cumulative BESS deployment 2026–2030**：400–500 GW
-- **Lithium-ion battery cost reduction since 2010**：89% (USD 1,160/kWh to USD 130/kWh in 2025)
-- **Battery cost trajectory to USD 100/kWh**：expected by 2028
-- **4-hour BESS project with 100 MW solar capex**：USD 65–75 million
-- **Standalone BESS project IRRs**：6–8%; integrated renewable + storage IRRs: 11–14%
-- **Annual BESS procurement opportunity from storage mandate**：USD 8 billion
+- Energy storage co-location mandate: 20% of new renewable capacity from January 2026
+- Projected BESS deployment 2026–2030: 80–100 GW annually
+- Cumulative BESS deployment 2026–2030: 400–500 GW
+- Lithium-ion battery cost reduction since 2010: 89% (USD 1,160/kWh to USD 130/kWh in 2025)
+- Battery cost trajectory to USD 100/kWh: expected by 2028
+- 4-hour BESS project with 100 MW solar capex: USD 65–75 million
+- Standalone BESS project IRRs: 6–8%; integrated renewable + storage IRRs: 11–14%
+- Annual BESS procurement opportunity from storage mandate: USD 8 billion
 
 ### Grid Modernisation & Transmission Infrastructure
 
@@ -831,11 +837,11 @@ China's electrical grid requires substantial modernisation to accommodate the pr
 
 **关键数据：**
 
-- **Grid infrastructure upgrade capex requirement 2025–2030**：USD 120–140 billion
-- **New high-voltage DC transmission capacity deployment by 2030**：100 GW
-- **HVDC share of total transmission investment**：~30%
-- **Transmission technology project-level IRRs on concession structures**：7–10%
-- **Emerging demand response and VPP services annual market**：USD 3–4 billion
+- Grid infrastructure upgrade capex requirement 2025–2030: USD 120–140 billion
+- New high-voltage DC transmission capacity deployment by 2030: 100 GW
+- HVDC share of total transmission investment: ~30%
+- Transmission technology project-level IRRs on concession structures: 7–10%
+- Emerging demand response and VPP services annual market: USD 3–4 billion
 
 ## Green Hydrogen & Alternative Energy Pathways
 
@@ -845,13 +851,13 @@ Green hydrogen—produced through water electrolysis powered by renewable electr
 
 **关键数据：**
 
-- **Green hydrogen production target by 2030**：10 million tonnes per year
-- **Dedicated renewable capacity for hydrogen**：80–100 GW (USD 35–45B capex)
-- **Global electrolyser manufacturing capacity**：China 15 GW, Europe 8 GW, N. America 2 GW (2025)
-- **Current electrolyser system cost**：USD 800–1,200/kW
-- **Electrolyser system cost target by 2030**：USD 400–600/kW
-- **Current fuel cell vehicles on road in China**：8,000 FCVs
-- **Government FCV target by 2030**：50,000 FCVs
+- Green hydrogen production target by 2030: 10 million tonnes per year
+- Dedicated renewable capacity for hydrogen: 80–100 GW (USD 35–45B capex)
+- Global electrolyser manufacturing capacity: China 15 GW, Europe 8 GW, N. America 2 GW (2025)
+- Current electrolyser system cost: USD 800–1,200/kW
+- Electrolyser system cost target by 2030: USD 400–600/kW
+- Current fuel cell vehicles on road in China: 8,000 FCVs
+- Government FCV target by 2030: 50,000 FCVs
 
 ## Investment Structuring & Risk Factors
 
@@ -861,13 +867,13 @@ Renewable energy project participation for foreign institutional investors in Ch
 
 **关键数据：**
 
-- **Typical foreign investor equity stake in renewable projects**：20–50%
-- **Project revenue visibility**：15–25 year PPA terms
-- **Utility solar unlevered project IRRs**：6–8%
-- **Offshore wind unlevered project IRRs**：8–11%
-- **Renewable + storage optimised portfolio IRRs**：10–13%
-- **Infrastructure debt yields on senior debt**：5–7% (12–18 year terms)
-- **Mezzanine equity-like instrument target returns**：9–12%
+- Typical foreign investor equity stake in renewable projects: 20–50%
+- Project revenue visibility: 15–25 year PPA terms
+- Utility solar unlevered project IRRs: 6–8%
+- Offshore wind unlevered project IRRs: 8–11%
+- Renewable + storage optimised portfolio IRRs: 10–13%
+- Infrastructure debt yields on senior debt: 5–7% (12–18 year terms)
+- Mezzanine equity-like instrument target returns: 9–12%
 
 ### Key Risks & Policy Sensitivity
 
@@ -875,11 +881,11 @@ Renewable energy investments in China are subject to policy and regulatory risks
 
 **关键数据：**
 
-- **PPA and subsidy policy adjustment cycle**：1–2 years typical
-- **Grid connection delay risk in congested regions**：material downside
-- **Curtailment risk in oversupplied grids**：5–15% nameplate capacity loss potential
-- **Natural hedge mitigation**：RMB revenue + RMB cost matching
-- **Political risk insurance available**：via Sinosure and multilateral providers
+- PPA and subsidy policy adjustment cycle: 1–2 years typical
+- Grid connection delay risk in congested regions: material downside
+- Curtailment risk in oversupplied grids: 5–15% nameplate capacity loss potential
+- Natural hedge mitigation: RMB revenue + RMB cost matching
+- Political risk insurance available: via Sinosure and multilateral providers
 
 ## 参考文献
 
@@ -919,14 +925,14 @@ The government has deployed an unprecedented scale of direct fiscal transfers an
 
 **Key Data Points:**
 
-- **Central government direct transfers 2024–2025**: RMB 1.2 trillion (USD 165B)
-- **Direct cash transfers component**: RMB 480 billion
-- **Essential goods subsidies component**: RMB 320 billion
-- **Low-income wage top-ups component**: RMB 400 billion
-- **Local government consumption voucher deployment**: RMB 1.4 trillion
-- **Vouchers as % of local government discretionary spend**: 12–18% in participating cities
-- **Marginal propensity to consume (MPC) for stimulus recipients**: 0.58–0.72
-- **Historical generic fiscal stimulus MPC**: 0.35–0.45
+- Central government direct transfers 2024–2025: RMB 1.2 trillion (USD 165B)
+- Direct cash transfers component: RMB 480 billion
+- Essential goods subsidies component: RMB 320 billion
+- Low-income wage top-ups component: RMB 400 billion
+- Local government consumption voucher deployment: RMB 1.4 trillion
+- Vouchers as % of local government discretionary spend: 12–18% in participating cities
+- Marginal propensity to consume (MPC) for stimulus recipients: 0.58–0.72
+- Historical generic fiscal stimulus MPC: 0.35–0.45
 
 ### Monetary Support & Consumer Lending Incentives
 
@@ -934,12 +940,12 @@ The People's Bank of China (PBOC) has implemented targeted monetary easing speci
 
 **Key Data Points:**
 
-- **Loan Prime Rate reduction for personal consumption**: 200 basis points (to 3.2–4.1%)
-- **Pre-2024 consumer loan rates**: 5.2–6.1%
-- **Additional subsidy reduction in effective rates via Consumer Credit Expansion Programme**: 100–150 bps
-- **Outstanding consumer loans 2025**: RMB 18.4 trillion (USD 2.52T)
-- **Consumer lending growth 2025**: 8.7% YoY
-- **New personal lending allocated to tier-2/3 cities and rural areas**: 45% (vs. 30% in 2022)
+- Loan Prime Rate reduction for personal consumption: 200 basis points (to 3.2–4.1%)
+- Pre-2024 consumer loan rates: 5.2–6.1%
+- Additional subsidy reduction in effective rates via Consumer Credit Expansion Programme: 100–150 bps
+- Outstanding consumer loans 2025: RMB 18.4 trillion (USD 2.52T)
+- Consumer lending growth 2025: 8.7% YoY
+- New personal lending allocated to tier-2/3 cities and rural areas: 45% (vs. 30% in 2022)
 
 ## Retail Market Recovery & Channel Dynamics
 
@@ -949,14 +955,14 @@ Total social retail sales (the broadest measure of Chinese consumer spending) co
 
 **Key Data Points:**
 
-- **Retail sales growth 2022**: -1.8%; 2023: -1.2%; 2024: +5.8%; 2025: +6.2–6.8%
-- **Government target retail growth 2026**: 5.5%+
-- **Urban retail sales growth 2025**: 7.2%
-- **Rural retail sales growth 2025**: 9.8%
-- **Discretionary categories growth**: 8–12% annually
-- **Essential goods growth**: 3–4% annually
-- **Online/digital channel share of total retail**: 50.2% (up from 40% in 2021)
-- **Incremental consumption unlocked by stimulus 2024–2025**: RMB 2.1 trillion (USD 290B)
+- Retail sales growth 2022: -1.8%; 2023: -1.2%; 2024: +5.8%; 2025: +6.2–6.8%
+- Government target retail growth 2026: 5.5%+
+- Urban retail sales growth 2025: 7.2%
+- Rural retail sales growth 2025: 9.8%
+- Discretionary categories growth: 8–12% annually
+- Essential goods growth: 3–4% annually
+- Online/digital channel share of total retail: 50.2% (up from 40% in 2021)
+- Incremental consumption unlocked by stimulus 2024–2025: RMB 2.1 trillion (USD 290B)
 
 ### E-Commerce & Livestream Commerce Acceleration
 
@@ -964,14 +970,14 @@ Digital and online retail channels have emerged as the primary driver of consump
 
 **Key Data Points:**
 
-- **Livestream e-commerce growth**: 28–32% annually
-- **Livestream commerce share of online retail**: 8–10%
-- **Traditional e-commerce growth**: 8–12% annually (market maturation)
-- **Kuaishou livestream GMV growth 2025**: 45%+
-- **Mobile e-commerce share of total online GMV**: 88% (vs. 75% in 2020)
-- **Cross-border e-commerce growth**: 35–40% annually
-- **Same-day/next-day delivery availability**: 85% of urban population (vs. 55% in 2020)
-- **Logistics cost reduction since 2022**: 22%
+- Livestream e-commerce growth: 28–32% annually
+- Livestream commerce share of online retail: 8–10%
+- Traditional e-commerce growth: 8–12% annually (market maturation)
+- Kuaishou livestream GMV growth 2025: 45%+
+- Mobile e-commerce share of total online GMV: 88% (vs. 75% in 2020)
+- Cross-border e-commerce growth: 35–40% annually
+- Same-day/next-day delivery availability: 85% of urban population (vs. 55% in 2020)
+- Logistics cost reduction since 2022: 22%
 
 ## Consumer Confidence & Income Trajectory
 
@@ -981,12 +987,12 @@ Household income recovery has been the critical enabling factor for consumption 
 
 **Key Data Points:**
 
-- **Urban employee real wage growth 2024**: 5.2%; 2025 est.: 4.8–5.4%
-- **Manufacturing and services wage growth**: 6–8% annually
-- **Government/SOE employee wage growth**: 2–3% annually
-- **Rural migrant worker income growth 2024**: 7.1%; 2025: 6.8%
-- **Youth unemployment (ages 16–24)**: 20.8% (January 2026)
-- **Government target per-capita real income growth 2026**: 4.0–4.5%
+- Urban employee real wage growth 2024: 5.2%; 2025 est.: 4.8–5.4%
+- Manufacturing and services wage growth: 6–8% annually
+- Government/SOE employee wage growth: 2–3% annually
+- Rural migrant worker income growth 2024: 7.1%; 2025: 6.8%
+- Youth unemployment (ages 16–24): 20.8% (January 2026)
+- Government target per-capita real income growth 2026: 4.0–4.5%
 
 ## Investment Opportunities & Risk Factors
 
@@ -996,15 +1002,15 @@ Institutional investors seeking exposure to China's consumption recovery are foc
 
 **Key Data Points:**
 
-- **Rural/tier-2–3 consumer staples revenue growth**: 6–10% organic
-- **Consumer staples EBIT margins**: 15–20%
-- **Publicly listed dairy company (example) earnings growth**: 12–18% (2024–2025)
-- **Consumer staples public company multiples**: 18–24x forward P/E
-- **Consumer discretionary revenue growth**: 10–15%
-- **Consumer discretionary valuation multiples**: 25–40x forward P/E
-- **E-commerce enabler revenue growth**: 20–35% annually
-- **E-commerce enabler valuation multiples**: 40–70x forward P/E (pure-plays), 20–35x (mature platforms)
-- **Median Series B/C investment in consumer tech**: USD 30–50M (up 40% vs. 2022–2023)
+- Rural/tier-2–3 consumer staples revenue growth: 6–10% organic
+- Consumer staples EBIT margins: 15–20%
+- Publicly listed dairy company (example) earnings growth: 12–18% (2024–2025)
+- Consumer staples public company multiples: 18–24x forward P/E
+- Consumer discretionary revenue growth: 10–15%
+- Consumer discretionary valuation multiples: 25–40x forward P/E
+- E-commerce enabler revenue growth: 20–35% annually
+- E-commerce enabler valuation multiples: 40–70x forward P/E (pure-plays), 20–35x (mature platforms)
+- Median Series B/C investment in consumer tech: USD 30–50M (up 40% vs. 2022–2023)
 
 ### Risks & Policy Dependence
 
@@ -1012,8 +1018,8 @@ Consumption-focused investments in China are subject to two primary risk categor
 
 **Key Data Points:**
 
-- **Stimulus-dependent consumption modulation range**: 6–7% growth (with support) to 2–3% (if withdrawn)
-- **Historical stimulus withdrawal deceleration cycle**: 18–24 months (precedent 2011–2015)
+- Stimulus-dependent consumption modulation range: 6–7% growth (with support) to 2–3% (if withdrawn)
+- Historical stimulus withdrawal deceleration cycle: 18–24 months (precedent 2011–2015)
 
 ## References
 
@@ -1036,14 +1042,14 @@ The government has deployed an unprecedented scale of direct fiscal transfers an
 
 **关键数据：**
 
-- **Central government direct transfers 2024–2025**：RMB 1.2 trillion (USD 165B)
-- **Direct cash transfers component**：RMB 480 billion
-- **Essential goods subsidies component**：RMB 320 billion
-- **Low-income wage top-ups component**：RMB 400 billion
-- **Local government consumption voucher deployment**：RMB 1.4 trillion
-- **Vouchers as % of local government discretionary spend**：12–18% in participating cities
-- **Marginal propensity to consume (MPC) for stimulus recipients**：0.58–0.72
-- **Historical generic fiscal stimulus MPC**：0.35–0.45
+- Central government direct transfers 2024–2025: RMB 1.2 trillion (USD 165B)
+- Direct cash transfers component: RMB 480 billion
+- Essential goods subsidies component: RMB 320 billion
+- Low-income wage top-ups component: RMB 400 billion
+- Local government consumption voucher deployment: RMB 1.4 trillion
+- Vouchers as % of local government discretionary spend: 12–18% in participating cities
+- Marginal propensity to consume (MPC) for stimulus recipients: 0.58–0.72
+- Historical generic fiscal stimulus MPC: 0.35–0.45
 
 ### Monetary Support & Consumer Lending Incentives
 
@@ -1051,12 +1057,12 @@ The People's Bank of China (PBOC) has implemented targeted monetary easing speci
 
 **关键数据：**
 
-- **Loan Prime Rate reduction for personal consumption**：200 basis points (to 3.2–4.1%)
-- **Pre-2024 consumer loan rates**：5.2–6.1%
-- **Additional subsidy reduction in effective rates via Consumer Credit Expansion Programme**：100–150 bps
-- **Outstanding consumer loans 2025**：RMB 18.4 trillion (USD 2.52T)
-- **Consumer lending growth 2025**：8.7% YoY
-- **New personal lending allocated to tier-2/3 cities and rural areas**：45% (vs. 30% in 2022)
+- Loan Prime Rate reduction for personal consumption: 200 basis points (to 3.2–4.1%)
+- Pre-2024 consumer loan rates: 5.2–6.1%
+- Additional subsidy reduction in effective rates via Consumer Credit Expansion Programme: 100–150 bps
+- Outstanding consumer loans 2025: RMB 18.4 trillion (USD 2.52T)
+- Consumer lending growth 2025: 8.7% YoY
+- New personal lending allocated to tier-2/3 cities and rural areas: 45% (vs. 30% in 2022)
 
 ## Retail Market Recovery & Channel Dynamics
 
@@ -1066,14 +1072,14 @@ Total social retail sales (the broadest measure of Chinese consumer spending) co
 
 **关键数据：**
 
-- **Retail sales growth 2022**：-1.8%; 2023: -1.2%; 2024: +5.8%; 2025: +6.2–6.8%
-- **Government target retail growth 2026**：5.5%+
-- **Urban retail sales growth 2025**：7.2%
-- **Rural retail sales growth 2025**：9.8%
-- **Discretionary categories growth**：8–12% annually
-- **Essential goods growth**：3–4% annually
-- **Online/digital channel share of total retail**：50.2% (up from 40% in 2021)
-- **Incremental consumption unlocked by stimulus 2024–2025**：RMB 2.1 trillion (USD 290B)
+- Retail sales growth 2022: -1.8%; 2023: -1.2%; 2024: +5.8%; 2025: +6.2–6.8%
+- Government target retail growth 2026: 5.5%+
+- Urban retail sales growth 2025: 7.2%
+- Rural retail sales growth 2025: 9.8%
+- Discretionary categories growth: 8–12% annually
+- Essential goods growth: 3–4% annually
+- Online/digital channel share of total retail: 50.2% (up from 40% in 2021)
+- Incremental consumption unlocked by stimulus 2024–2025: RMB 2.1 trillion (USD 290B)
 
 ### E-Commerce & Livestream Commerce Acceleration
 
@@ -1081,14 +1087,14 @@ Digital and online retail channels have emerged as the primary driver of consump
 
 **关键数据：**
 
-- **Livestream e-commerce growth**：28–32% annually
-- **Livestream commerce share of online retail**：8–10%
-- **Traditional e-commerce growth**：8–12% annually (market maturation)
-- **Kuaishou livestream GMV growth 2025**：45%+
-- **Mobile e-commerce share of total online GMV**：88% (vs. 75% in 2020)
-- **Cross-border e-commerce growth**：35–40% annually
-- **Same-day/next-day delivery availability**：85% of urban population (vs. 55% in 2020)
-- **Logistics cost reduction since 2022**：22%
+- Livestream e-commerce growth: 28–32% annually
+- Livestream commerce share of online retail: 8–10%
+- Traditional e-commerce growth: 8–12% annually (market maturation)
+- Kuaishou livestream GMV growth 2025: 45%+
+- Mobile e-commerce share of total online GMV: 88% (vs. 75% in 2020)
+- Cross-border e-commerce growth: 35–40% annually
+- Same-day/next-day delivery availability: 85% of urban population (vs. 55% in 2020)
+- Logistics cost reduction since 2022: 22%
 
 ## Consumer Confidence & Income Trajectory
 
@@ -1098,12 +1104,12 @@ Household income recovery has been the critical enabling factor for consumption 
 
 **关键数据：**
 
-- **Urban employee real wage growth 2024**：5.2%; 2025 est.: 4.8–5.4%
-- **Manufacturing and services wage growth**：6–8% annually
-- **Government/SOE employee wage growth**：2–3% annually
-- **Rural migrant worker income growth 2024**：7.1%; 2025: 6.8%
-- **Youth unemployment (ages 16–24)**：20.8% (January 2026)
-- **Government target per-capita real income growth 2026**：4.0–4.5%
+- Urban employee real wage growth 2024: 5.2%; 2025 est.: 4.8–5.4%
+- Manufacturing and services wage growth: 6–8% annually
+- Government/SOE employee wage growth: 2–3% annually
+- Rural migrant worker income growth 2024: 7.1%; 2025: 6.8%
+- Youth unemployment (ages 16–24): 20.8% (January 2026)
+- Government target per-capita real income growth 2026: 4.0–4.5%
 
 ## Investment Opportunities & Risk Factors
 
@@ -1113,15 +1119,15 @@ Institutional investors seeking exposure to China's consumption recovery are foc
 
 **关键数据：**
 
-- **Rural/tier-2–3 consumer staples revenue growth**：6–10% organic
-- **Consumer staples EBIT margins**：15–20%
-- **Publicly listed dairy company (example) earnings growth**：12–18% (2024–2025)
-- **Consumer staples public company multiples**：18–24x forward P/E
-- **Consumer discretionary revenue growth**：10–15%
-- **Consumer discretionary valuation multiples**：25–40x forward P/E
-- **E-commerce enabler revenue growth**：20–35% annually
-- **E-commerce enabler valuation multiples**：40–70x forward P/E (pure-plays), 20–35x (mature platforms)
-- **Median Series B/C investment in consumer tech**：USD 30–50M (up 40% vs. 2022–2023)
+- Rural/tier-2–3 consumer staples revenue growth: 6–10% organic
+- Consumer staples EBIT margins: 15–20%
+- Publicly listed dairy company (example) earnings growth: 12–18% (2024–2025)
+- Consumer staples public company multiples: 18–24x forward P/E
+- Consumer discretionary revenue growth: 10–15%
+- Consumer discretionary valuation multiples: 25–40x forward P/E
+- E-commerce enabler revenue growth: 20–35% annually
+- E-commerce enabler valuation multiples: 40–70x forward P/E (pure-plays), 20–35x (mature platforms)
+- Median Series B/C investment in consumer tech: USD 30–50M (up 40% vs. 2022–2023)
 
 ### Risks & Policy Dependence
 
@@ -1129,8 +1135,8 @@ Consumption-focused investments in China are subject to two primary risk categor
 
 **关键数据：**
 
-- **Stimulus-dependent consumption modulation range**：6–7% growth (with support) to 2–3% (if withdrawn)
-- **Historical stimulus withdrawal deceleration cycle**：18–24 months (precedent 2011–2015)
+- Stimulus-dependent consumption modulation range: 6–7% growth (with support) to 2–3% (if withdrawn)
+- Historical stimulus withdrawal deceleration cycle: 18–24 months (precedent 2011–2015)
 
 ## 参考文献
 
@@ -1169,12 +1175,12 @@ The ASEAN Economic Community (AEC), formally established in 2015 and deepened th
 
 **Key Data Points:**
 
-- **ASEAN intra-regional average tariff rate**: 1.5% (down from 8–12% in 2015)
-- **Intra-ASEAN trade 2025**: USD 330 billion (+11.2% YoY)
-- **RCEP zero-tariff coverage**: 90% of traded goods
-- **Companies reporting landed cost reduction via ASEAN diversification**: 12–18% savings
-- **Tariff-driven cost savings in ASEAN diversification**: 8–12%
-- **Labor cost differential ASEAN vs. China coastal**: 3–6% advantage
+- ASEAN intra-regional average tariff rate: 1.5% (down from 8–12% in 2015)
+- Intra-ASEAN trade 2025: USD 330 billion (+11.2% YoY)
+- RCEP zero-tariff coverage: 90% of traded goods
+- Companies reporting landed cost reduction via ASEAN diversification: 12–18% savings
+- Tariff-driven cost savings in ASEAN diversification: 8–12%
+- Labor cost differential ASEAN vs. China coastal: 3–6% advantage
 
 ### FDI Flows & Manufacturing Reshoring
 
@@ -1182,16 +1188,16 @@ Foreign direct investment into ASEAN has accelerated dramatically as multination
 
 **Key Data Points:**
 
-- **Total ASEAN FDI inflows 2025**: USD 210 billion (+18% YoY)
-- **Manufacturing FDI component 2025**: USD 87 billion
-- **Vietnam manufacturing FDI 2025**: USD 28 billion
-- **Thailand manufacturing FDI 2025**: USD 19 billion
-- **Indonesia manufacturing FDI 2025**: USD 15 billion
-- **Electronics and semiconductors manufacturing FDI**: USD 22B
-- **Automotive and components manufacturing FDI**: USD 18B
-- **Manufacturing platform IRRs in ASEAN**: 16–24% (vs. 8–14% in China)
-- **Revenue CAGR expectations (2025–2030)**: 12–18% in ASEAN vs. 4–7% in China
-- **Capex intensity**: ASEAN requires 25–35% lower capex per unit output vs. China greenfield
+- Total ASEAN FDI inflows 2025: USD 210 billion (+18% YoY)
+- Manufacturing FDI component 2025: USD 87 billion
+- Vietnam manufacturing FDI 2025: USD 28 billion
+- Thailand manufacturing FDI 2025: USD 19 billion
+- Indonesia manufacturing FDI 2025: USD 15 billion
+- Electronics and semiconductors manufacturing FDI: USD 22B
+- Automotive and components manufacturing FDI: USD 18B
+- Manufacturing platform IRRs in ASEAN: 16–24% (vs. 8–14% in China)
+- Revenue CAGR expectations (2025–2030): 12–18% in ASEAN vs. 4–7% in China
+- Capex intensity: ASEAN requires 25–35% lower capex per unit output vs. China greenfield
 
 ## Supply Chain Reconfiguration & Value Chain Integration
 
@@ -1201,11 +1207,11 @@ Companies completing supply chain reconfiguration into ASEAN are simultaneously 
 
 **Key Data Points:**
 
-- **Logistics cost reduction via vertical integration**: 5–8%
-- **Material cost savings via regional ASEAN sourcing**: 18–22% in semiconductor materials
-- **EBIT margin improvement for Malaysian SAT companies**: 28–32% (up from 22–25% in 2022)
-- **Regional procurement share in automotive supply chains**: 68% (up from 42% in 2020)
-- **Tariff savings via CEPT regional sourcing**: 8–15% vs. non-ASEAN imports
+- Logistics cost reduction via vertical integration: 5–8%
+- Material cost savings via regional ASEAN sourcing: 18–22% in semiconductor materials
+- EBIT margin improvement for Malaysian SAT companies: 28–32% (up from 22–25% in 2022)
+- Regional procurement share in automotive supply chains: 68% (up from 42% in 2020)
+- Tariff savings via CEPT regional sourcing: 8–15% vs. non-ASEAN imports
 
 ### Regional Hub Development & Consolidation
 
@@ -1213,11 +1219,11 @@ Multinational corporations are explicitly establishing ASEAN-regional hub struct
 
 **Key Data Points:**
 
-- **Cost reduction from regional hub consolidation**: 12–16% vs. standalone country operations
-- **Cross-border M&A 2025**: USD 52 billion
-- **Domestic ASEAN consolidation M&A**: 62% of total deal value (up from 28% in 2019)
-- **Transaction multiples for regional consolidators**: 12–16x EBITDA
-- **Developed-market comparable multiples**: 16–20x EBITDA
+- Cost reduction from regional hub consolidation: 12–16% vs. standalone country operations
+- Cross-border M&A 2025: USD 52 billion
+- Domestic ASEAN consolidation M&A: 62% of total deal value (up from 28% in 2019)
+- Transaction multiples for regional consolidators: 12–16x EBITDA
+- Developed-market comparable multiples: 16–20x EBITDA
 
 ## Investment Opportunities & Geographic Prioritisation
 
@@ -1227,15 +1233,15 @@ Vietnam and Thailand are the two highest-conviction geographies for institutiona
 
 **Key Data Points:**
 
-- **Vietnam manufacturing labor costs**: USD 220–280/month
-- **Thailand manufacturing labor costs**: USD 350–450/month
-- **Indonesia manufacturing labor costs**: USD 280–380/month
-- **Vietnam FDI tax holiday period**: 10–15% on export processing zones
-- **Vietnam foreign-invested manufacturing revenue growth**: 15–18% CAGR
-- **Vietnam EBIT margin expansion**: 200–300 bps annually
-- **Thailand automotive production share in ASEAN**: 22%
-- **Thailand automotive EBIT margins**: 34–38%
-- **Thailand electronics EBIT margins**: 30–34%
+- Vietnam manufacturing labor costs: USD 220–280/month
+- Thailand manufacturing labor costs: USD 350–450/month
+- Indonesia manufacturing labor costs: USD 280–380/month
+- Vietnam FDI tax holiday period: 10–15% on export processing zones
+- Vietnam foreign-invested manufacturing revenue growth: 15–18% CAGR
+- Vietnam EBIT margin expansion: 200–300 bps annually
+- Thailand automotive production share in ASEAN: 22%
+- Thailand automotive EBIT margins: 34–38%
+- Thailand electronics EBIT margins: 30–34%
 
 ### Investment Returns & Exit Dynamics
 
@@ -1243,14 +1249,14 @@ Institutional investors completing manufacturing platform investments in ASEAN o
 
 **Key Data Points:**
 
-- **Unlevered IRRs for ASEAN manufacturing platforms**: 16–24% (vs. 8–14% China, 10–15% developed markets)
-- **Revenue growth in platform companies**: 12–18% annually
-- **EBIT margin expansion**: 250–350 basis points
-- **Entry multiples**: 8–10x EBITDA; exit multiples: 12–16x EBITDA
-- **Strategic buyer valuations**: 14–18x EBITDA
-- **Infrastructure/diversified buyer valuations**: 12–15x EBITDA
-- **PE-backed manufacturing exits in 2024–2025**: 24% of portfolio (up from 16% in 2022–2023)
-- **Median hold period for ASEAN manufacturing**: 4.5–5.5 years
+- Unlevered IRRs for ASEAN manufacturing platforms: 16–24% (vs. 8–14% China, 10–15% developed markets)
+- Revenue growth in platform companies: 12–18% annually
+- EBIT margin expansion: 250–350 basis points
+- Entry multiples: 8–10x EBITDA; exit multiples: 12–16x EBITDA
+- Strategic buyer valuations: 14–18x EBITDA
+- Infrastructure/diversified buyer valuations: 12–15x EBITDA
+- PE-backed manufacturing exits in 2024–2025: 24% of portfolio (up from 16% in 2022–2023)
+- Median hold period for ASEAN manufacturing: 4.5–5.5 years
 
 ## References
 
@@ -1274,12 +1280,12 @@ The ASEAN Economic Community (AEC), formally established in 2015 and deepened th
 
 **关键数据：**
 
-- **ASEAN intra-regional average tariff rate**：1.5% (down from 8–12% in 2015)
-- **Intra-ASEAN trade 2025**：USD 330 billion (+11.2% YoY)
-- **RCEP zero-tariff coverage**：90% of traded goods
-- **Companies reporting landed cost reduction via ASEAN diversification**：12–18% savings
-- **Tariff-driven cost savings in ASEAN diversification**：8–12%
-- **Labor cost differential ASEAN vs. China coastal**：3–6% advantage
+- ASEAN intra-regional average tariff rate: 1.5% (down from 8–12% in 2015)
+- Intra-ASEAN trade 2025: USD 330 billion (+11.2% YoY)
+- RCEP zero-tariff coverage: 90% of traded goods
+- Companies reporting landed cost reduction via ASEAN diversification: 12–18% savings
+- Tariff-driven cost savings in ASEAN diversification: 8–12%
+- Labor cost differential ASEAN vs. China coastal: 3–6% advantage
 
 ### FDI Flows & Manufacturing Reshoring
 
@@ -1287,16 +1293,16 @@ Foreign direct investment into ASEAN has accelerated dramatically as multination
 
 **关键数据：**
 
-- **Total ASEAN FDI inflows 2025**：USD 210 billion (+18% YoY)
-- **Manufacturing FDI component 2025**：USD 87 billion
-- **Vietnam manufacturing FDI 2025**：USD 28 billion
-- **Thailand manufacturing FDI 2025**：USD 19 billion
-- **Indonesia manufacturing FDI 2025**：USD 15 billion
-- **Electronics and semiconductors manufacturing FDI**：USD 22B
-- **Automotive and components manufacturing FDI**：USD 18B
-- **Manufacturing platform IRRs in ASEAN**：16–24% (vs. 8–14% in China)
-- **Revenue CAGR expectations (2025–2030)**：12–18% in ASEAN vs. 4–7% in China
-- **Capex intensity**：ASEAN requires 25–35% lower capex per unit output vs. China greenfield
+- Total ASEAN FDI inflows 2025: USD 210 billion (+18% YoY)
+- Manufacturing FDI component 2025: USD 87 billion
+- Vietnam manufacturing FDI 2025: USD 28 billion
+- Thailand manufacturing FDI 2025: USD 19 billion
+- Indonesia manufacturing FDI 2025: USD 15 billion
+- Electronics and semiconductors manufacturing FDI: USD 22B
+- Automotive and components manufacturing FDI: USD 18B
+- Manufacturing platform IRRs in ASEAN: 16–24% (vs. 8–14% in China)
+- Revenue CAGR expectations (2025–2030): 12–18% in ASEAN vs. 4–7% in China
+- Capex intensity: ASEAN requires 25–35% lower capex per unit output vs. China greenfield
 
 ## Supply Chain Reconfiguration & Value Chain Integration
 
@@ -1306,11 +1312,11 @@ Companies completing supply chain reconfiguration into ASEAN are simultaneously 
 
 **关键数据：**
 
-- **Logistics cost reduction via vertical integration**：5–8%
-- **Material cost savings via regional ASEAN sourcing**：18–22% in semiconductor materials
-- **EBIT margin improvement for Malaysian SAT companies**：28–32% (up from 22–25% in 2022)
-- **Regional procurement share in automotive supply chains**：68% (up from 42% in 2020)
-- **Tariff savings via CEPT regional sourcing**：8–15% vs. non-ASEAN imports
+- Logistics cost reduction via vertical integration: 5–8%
+- Material cost savings via regional ASEAN sourcing: 18–22% in semiconductor materials
+- EBIT margin improvement for Malaysian SAT companies: 28–32% (up from 22–25% in 2022)
+- Regional procurement share in automotive supply chains: 68% (up from 42% in 2020)
+- Tariff savings via CEPT regional sourcing: 8–15% vs. non-ASEAN imports
 
 ### Regional Hub Development & Consolidation
 
@@ -1318,11 +1324,11 @@ Multinational corporations are explicitly establishing ASEAN-regional hub struct
 
 **关键数据：**
 
-- **Cost reduction from regional hub consolidation**：12–16% vs. standalone country operations
-- **Cross-border M&A 2025**：USD 52 billion
-- **Domestic ASEAN consolidation M&A**：62% of total deal value (up from 28% in 2019)
-- **Transaction multiples for regional consolidators**：12–16x EBITDA
-- **Developed-market comparable multiples**：16–20x EBITDA
+- Cost reduction from regional hub consolidation: 12–16% vs. standalone country operations
+- Cross-border M&A 2025: USD 52 billion
+- Domestic ASEAN consolidation M&A: 62% of total deal value (up from 28% in 2019)
+- Transaction multiples for regional consolidators: 12–16x EBITDA
+- Developed-market comparable multiples: 16–20x EBITDA
 
 ## Investment Opportunities & Geographic Prioritisation
 
@@ -1332,15 +1338,15 @@ Vietnam and Thailand are the two highest-conviction geographies for institutiona
 
 **关键数据：**
 
-- **Vietnam manufacturing labor costs**：USD 220–280/month
-- **Thailand manufacturing labor costs**：USD 350–450/month
-- **Indonesia manufacturing labor costs**：USD 280–380/month
-- **Vietnam FDI tax holiday period**：10–15% on export processing zones
-- **Vietnam foreign-invested manufacturing revenue growth**：15–18% CAGR
-- **Vietnam EBIT margin expansion**：200–300 bps annually
-- **Thailand automotive production share in ASEAN**：22%
-- **Thailand automotive EBIT margins**：34–38%
-- **Thailand electronics EBIT margins**：30–34%
+- Vietnam manufacturing labor costs: USD 220–280/month
+- Thailand manufacturing labor costs: USD 350–450/month
+- Indonesia manufacturing labor costs: USD 280–380/month
+- Vietnam FDI tax holiday period: 10–15% on export processing zones
+- Vietnam foreign-invested manufacturing revenue growth: 15–18% CAGR
+- Vietnam EBIT margin expansion: 200–300 bps annually
+- Thailand automotive production share in ASEAN: 22%
+- Thailand automotive EBIT margins: 34–38%
+- Thailand electronics EBIT margins: 30–34%
 
 ### Investment Returns & Exit Dynamics
 
@@ -1348,14 +1354,14 @@ Institutional investors completing manufacturing platform investments in ASEAN o
 
 **关键数据：**
 
-- **Unlevered IRRs for ASEAN manufacturing platforms**：16–24% (vs. 8–14% China, 10–15% developed markets)
-- **Revenue growth in platform companies**：12–18% annually
-- **EBIT margin expansion**：250–350 basis points
-- **Entry multiples**：8–10x EBITDA; exit multiples: 12–16x EBITDA
-- **Strategic buyer valuations**：14–18x EBITDA
-- **Infrastructure/diversified buyer valuations**：12–15x EBITDA
-- **PE-backed manufacturing exits in 2024–2025**：24% of portfolio (up from 16% in 2022–2023)
-- **Median hold period for ASEAN manufacturing**：4.5–5.5 years
+- Unlevered IRRs for ASEAN manufacturing platforms: 16–24% (vs. 8–14% China, 10–15% developed markets)
+- Revenue growth in platform companies: 12–18% annually
+- EBIT margin expansion: 250–350 basis points
+- Entry multiples: 8–10x EBITDA; exit multiples: 12–16x EBITDA
+- Strategic buyer valuations: 14–18x EBITDA
+- Infrastructure/diversified buyer valuations: 12–15x EBITDA
+- PE-backed manufacturing exits in 2024–2025: 24% of portfolio (up from 16% in 2022–2023)
+- Median hold period for ASEAN manufacturing: 4.5–5.5 years
 
 ## 参考文献
 
@@ -1395,14 +1401,14 @@ Southeast Asia's fintech sector has transitioned from hyper-growth speculation p
 
 **Key Data Points:**
 
-- **Peak venture capital deployment into ASEAN fintech**: USD 12.3B in 2021
-- **Fintech VC deployment 2025**: USD 8.2B (-33% from peak)
-- **Unicorn cohort peak (2021)**: 37 companies; current (March 2026): 31 companies
-- **Median EBITDA margins (unicorn cohort) 2021**: 5–12%; 2025: 18–28%
-- **Late-stage fintech transaction multiples 2021**: 15–25x revenue; 2025: 6–9x revenue
-- **Developed-market fintech comparable multiples**: 8–12x revenue
-- **Grab Financial trading multiple**: 6.2x forward revenue
-- **PayMaya (Philippines) trading multiple**: 5.8x revenue
+- Peak venture capital deployment into ASEAN fintech: USD 12.3B in 2021
+- Fintech VC deployment 2025: USD 8.2B (-33% from peak)
+- Unicorn cohort peak (2021): 37 companies; current (March 2026): 31 companies
+- Median EBITDA margins (unicorn cohort) 2021: 5–12%; 2025: 18–28%
+- Late-stage fintech transaction multiples 2021: 15–25x revenue; 2025: 6–9x revenue
+- Developed-market fintech comparable multiples: 8–12x revenue
+- Grab Financial trading multiple: 6.2x forward revenue
+- PayMaya (Philippines) trading multiple: 5.8x revenue
 
 ### Regulatory Harmonisation & Cross-Border Framework
 
@@ -1410,13 +1416,13 @@ Regulatory convergence across Southeast Asian fintech regimes is accelerating, w
 
 **Key Data Points:**
 
-- **Singapore MAS regulatory sandbox participants**: 156 active (as of 2025)
-- **Bilateral regulatory cooperation frameworks signed**: Indonesia, Philippines, Thailand, Vietnam (2024–2025)
-- **Target harmonisation deadline for licensing and KYC standards**: end-2026
-- **Cost reduction from regulatory harmonisation**: 25–35% of operating expenses for 3+ country operations
-- **ASEAN Real-Time Payment Gateway**: operational 2025, 6-country coverage
-- **Payment settlement time improvement**: 24–48 hours down to <5 minutes
-- **Cross-border payment volume increase from RTPG**: 40–50%
+- Singapore MAS regulatory sandbox participants: 156 active (as of 2025)
+- Bilateral regulatory cooperation frameworks signed: Indonesia, Philippines, Thailand, Vietnam (2024–2025)
+- Target harmonisation deadline for licensing and KYC standards: end-2026
+- Cost reduction from regulatory harmonisation: 25–35% of operating expenses for 3+ country operations
+- ASEAN Real-Time Payment Gateway: operational 2025, 6-country coverage
+- Payment settlement time improvement: 24–48 hours down to <5 minutes
+- Cross-border payment volume increase from RTPG: 40–50%
 
 ## Fintech Sub-Sector Opportunities
 
@@ -1426,15 +1432,15 @@ Late-stage fintech platforms in Southeast Asia are consolidating around a smalle
 
 **Key Data Points:**
 
-- **Top 3 fintech platforms concentration**: 38% of cumulative VC deployment
-- **Minority stake valuation multiple**: 6–8x EBITDA
-- **Projected IRRs on minority stakes**: 14–18%
-- **Payment processor valuation multiple**: 5–6x revenue
-- **BNPL platform valuation multiple**: 6–8x revenue
-- **Lending platform valuation multiple**: 4–6x revenue
-- **BNPL annual growth rates**: 45–55%
-- **BNPL customer acquisition cost reduction 2022–2025**: 30–40%
-- **BNPL payback period improvement**: 18–24 months to 12–16 months
+- Top 3 fintech platforms concentration: 38% of cumulative VC deployment
+- Minority stake valuation multiple: 6–8x EBITDA
+- Projected IRRs on minority stakes: 14–18%
+- Payment processor valuation multiple: 5–6x revenue
+- BNPL platform valuation multiple: 6–8x revenue
+- Lending platform valuation multiple: 4–6x revenue
+- BNPL annual growth rates: 45–55%
+- BNPL customer acquisition cost reduction 2022–2025: 30–40%
+- BNPL payback period improvement: 18–24 months to 12–16 months
 
 ### Vertical Fintech & Embedded Finance
 
@@ -1442,14 +1448,14 @@ Vertical-specific fintech applications—financial services embedded within non-
 
 **Key Data Points:**
 
-- **E-commerce embedded lending growth**: 60–70% annually
-- **E-commerce embedded lending penetration**: 12–18% of transaction volume (up from 5–7% in 2022)
-- **Logistics embedded lending growth**: 70–85% annually
-- **Logistics embedded lending penetration**: 8–15% of volumes
-- **Vertical fintech CAC vs. general-purpose**: 70–80% lower
-- **Vertical fintech churn reduction vs. general-purpose**: 50–60% lower
-- **Vertical fintech revenue per customer**: 2–3x higher
-- **Vertical fintech platform valuation multiple**: 8–12x revenue
+- E-commerce embedded lending growth: 60–70% annually
+- E-commerce embedded lending penetration: 12–18% of transaction volume (up from 5–7% in 2022)
+- Logistics embedded lending growth: 70–85% annually
+- Logistics embedded lending penetration: 8–15% of volumes
+- Vertical fintech CAC vs. general-purpose: 70–80% lower
+- Vertical fintech churn reduction vs. general-purpose: 50–60% lower
+- Vertical fintech revenue per customer: 2–3x higher
+- Vertical fintech platform valuation multiple: 8–12x revenue
 
 ## Investment Opportunities & Risk Framework
 
@@ -1459,14 +1465,14 @@ Institutional investors in Southeast Asian fintech have recently demonstrated st
 
 **Key Data Points:**
 
-- **Median unlevered IRRs for fintech platforms (Series B-exit)**: 18–22%
-- **Revenue growth for platform investments**: 35–55% annually
-- **EBIT margin expansion**: 400–600 basis points
-- **Entry multiples**: 4–6x EBITDA; exit multiples: 8–12x EBITDA
-- **Strategic acquirer valuations**: 9–14x EBITDA
-- **Infrastructure/diversified investor valuations**: 7–10x EBITDA
-- **Fintech exits in 2024–2025**: 18% of portfolio (up from 9% in 2022–2023)
-- **Median hold period for fintech investments**: 4–5 years
+- Median unlevered IRRs for fintech platforms (Series B-exit): 18–22%
+- Revenue growth for platform investments: 35–55% annually
+- EBIT margin expansion: 400–600 basis points
+- Entry multiples: 4–6x EBITDA; exit multiples: 8–12x EBITDA
+- Strategic acquirer valuations: 9–14x EBITDA
+- Infrastructure/diversified investor valuations: 7–10x EBITDA
+- Fintech exits in 2024–2025: 18% of portfolio (up from 9% in 2022–2023)
+- Median hold period for fintech investments: 4–5 years
 
 ### Key Risks & Mitigation
 
@@ -1474,8 +1480,8 @@ Fintech investments in Southeast Asia face two primary risk categories requiring
 
 **Key Data Points:**
 
-- **Fintech regulatory maturity**: Singapore and Thailand (established), Indonesia and Philippines (developing)
-- **Regulatory risk mitigation via portfolio diversification**: recommended across 3+ regulatory regimes
+- Fintech regulatory maturity: Singapore and Thailand (established), Indonesia and Philippines (developing)
+- Regulatory risk mitigation via portfolio diversification: recommended across 3+ regulatory regimes
 
 ## References
 
@@ -1499,14 +1505,14 @@ Southeast Asia's fintech sector has transitioned from hyper-growth speculation p
 
 **关键数据：**
 
-- **Peak venture capital deployment into ASEAN fintech**：USD 12.3B in 2021
-- **Fintech VC deployment 2025**：USD 8.2B (-33% from peak)
-- **Unicorn cohort peak (2021)**：37 companies; current (March 2026): 31 companies
-- **Median EBITDA margins (unicorn cohort) 2021**：5–12%; 2025: 18–28%
-- **Late-stage fintech transaction multiples 2021**：15–25x revenue; 2025: 6–9x revenue
-- **Developed-market fintech comparable multiples**：8–12x revenue
-- **Grab Financial trading multiple**：6.2x forward revenue
-- **PayMaya (Philippines) trading multiple**：5.8x revenue
+- Peak venture capital deployment into ASEAN fintech: USD 12.3B in 2021
+- Fintech VC deployment 2025: USD 8.2B (-33% from peak)
+- Unicorn cohort peak (2021): 37 companies; current (March 2026): 31 companies
+- Median EBITDA margins (unicorn cohort) 2021: 5–12%; 2025: 18–28%
+- Late-stage fintech transaction multiples 2021: 15–25x revenue; 2025: 6–9x revenue
+- Developed-market fintech comparable multiples: 8–12x revenue
+- Grab Financial trading multiple: 6.2x forward revenue
+- PayMaya (Philippines) trading multiple: 5.8x revenue
 
 ### Regulatory Harmonisation & Cross-Border Framework
 
@@ -1514,13 +1520,13 @@ Regulatory convergence across Southeast Asian fintech regimes is accelerating, w
 
 **关键数据：**
 
-- **Singapore MAS regulatory sandbox participants**：156 active (as of 2025)
-- **Bilateral regulatory cooperation frameworks signed**：Indonesia, Philippines, Thailand, Vietnam (2024–2025)
-- **Target harmonisation deadline for licensing and KYC standards**：end-2026
-- **Cost reduction from regulatory harmonisation**：25–35% of operating expenses for 3+ country operations
-- **ASEAN Real-Time Payment Gateway**：operational 2025, 6-country coverage
-- **Payment settlement time improvement**：24–48 hours down to <5 minutes
-- **Cross-border payment volume increase from RTPG**：40–50%
+- Singapore MAS regulatory sandbox participants: 156 active (as of 2025)
+- Bilateral regulatory cooperation frameworks signed: Indonesia, Philippines, Thailand, Vietnam (2024–2025)
+- Target harmonisation deadline for licensing and KYC standards: end-2026
+- Cost reduction from regulatory harmonisation: 25–35% of operating expenses for 3+ country operations
+- ASEAN Real-Time Payment Gateway: operational 2025, 6-country coverage
+- Payment settlement time improvement: 24–48 hours down to <5 minutes
+- Cross-border payment volume increase from RTPG: 40–50%
 
 ## Fintech Sub-Sector Opportunities
 
@@ -1530,15 +1536,15 @@ Late-stage fintech platforms in Southeast Asia are consolidating around a smalle
 
 **关键数据：**
 
-- **Top 3 fintech platforms concentration**：38% of cumulative VC deployment
-- **Minority stake valuation multiple**：6–8x EBITDA
-- **Projected IRRs on minority stakes**：14–18%
-- **Payment processor valuation multiple**：5–6x revenue
-- **BNPL platform valuation multiple**：6–8x revenue
-- **Lending platform valuation multiple**：4–6x revenue
-- **BNPL annual growth rates**：45–55%
-- **BNPL customer acquisition cost reduction 2022–2025**：30–40%
-- **BNPL payback period improvement**：18–24 months to 12–16 months
+- Top 3 fintech platforms concentration: 38% of cumulative VC deployment
+- Minority stake valuation multiple: 6–8x EBITDA
+- Projected IRRs on minority stakes: 14–18%
+- Payment processor valuation multiple: 5–6x revenue
+- BNPL platform valuation multiple: 6–8x revenue
+- Lending platform valuation multiple: 4–6x revenue
+- BNPL annual growth rates: 45–55%
+- BNPL customer acquisition cost reduction 2022–2025: 30–40%
+- BNPL payback period improvement: 18–24 months to 12–16 months
 
 ### Vertical Fintech & Embedded Finance
 
@@ -1546,14 +1552,14 @@ Vertical-specific fintech applications—financial services embedded within non-
 
 **关键数据：**
 
-- **E-commerce embedded lending growth**：60–70% annually
-- **E-commerce embedded lending penetration**：12–18% of transaction volume (up from 5–7% in 2022)
-- **Logistics embedded lending growth**：70–85% annually
-- **Logistics embedded lending penetration**：8–15% of volumes
-- **Vertical fintech CAC vs. general-purpose**：70–80% lower
-- **Vertical fintech churn reduction vs. general-purpose**：50–60% lower
-- **Vertical fintech revenue per customer**：2–3x higher
-- **Vertical fintech platform valuation multiple**：8–12x revenue
+- E-commerce embedded lending growth: 60–70% annually
+- E-commerce embedded lending penetration: 12–18% of transaction volume (up from 5–7% in 2022)
+- Logistics embedded lending growth: 70–85% annually
+- Logistics embedded lending penetration: 8–15% of volumes
+- Vertical fintech CAC vs. general-purpose: 70–80% lower
+- Vertical fintech churn reduction vs. general-purpose: 50–60% lower
+- Vertical fintech revenue per customer: 2–3x higher
+- Vertical fintech platform valuation multiple: 8–12x revenue
 
 ## Investment Opportunities & Risk Framework
 
@@ -1563,14 +1569,14 @@ Institutional investors in Southeast Asian fintech have recently demonstrated st
 
 **关键数据：**
 
-- **Median unlevered IRRs for fintech platforms (Series B-exit)**：18–22%
-- **Revenue growth for platform investments**：35–55% annually
-- **EBIT margin expansion**：400–600 basis points
-- **Entry multiples**：4–6x EBITDA; exit multiples: 8–12x EBITDA
-- **Strategic acquirer valuations**：9–14x EBITDA
-- **Infrastructure/diversified investor valuations**：7–10x EBITDA
-- **Fintech exits in 2024–2025**：18% of portfolio (up from 9% in 2022–2023)
-- **Median hold period for fintech investments**：4–5 years
+- Median unlevered IRRs for fintech platforms (Series B-exit): 18–22%
+- Revenue growth for platform investments: 35–55% annually
+- EBIT margin expansion: 400–600 basis points
+- Entry multiples: 4–6x EBITDA; exit multiples: 8–12x EBITDA
+- Strategic acquirer valuations: 9–14x EBITDA
+- Infrastructure/diversified investor valuations: 7–10x EBITDA
+- Fintech exits in 2024–2025: 18% of portfolio (up from 9% in 2022–2023)
+- Median hold period for fintech investments: 4–5 years
 
 ### Key Risks & Mitigation
 
@@ -1578,8 +1584,8 @@ Fintech investments in Southeast Asia face two primary risk categories requiring
 
 **关键数据：**
 
-- **Fintech regulatory maturity**：Singapore and Thailand (established), Indonesia and Philippines (developing)
-- **Regulatory risk mitigation via portfolio diversification**：recommended across 3+ regulatory regimes
+- Fintech regulatory maturity: Singapore and Thailand (established), Indonesia and Philippines (developing)
+- Regulatory risk mitigation via portfolio diversification: recommended across 3+ regulatory regimes
 
 ## 参考文献
 
@@ -1619,14 +1625,14 @@ Southeast Asian e-commerce GMV reached USD 212 billion in 2025, up from USD 115 
 
 **Key Data Points:**
 
-- **Southeast Asian e-commerce GMV 2025**: USD 212 billion
-- **E-commerce growth rate**: 18–22% annually (vs. global 10–12%)
-- **GMV growth 2020–2025**: 85% cumulative increase
-- **Internet penetration**: 85% of population (up from 60% in 2018)
-- **Smartphone-based e-commerce users**: 78% of population (up from 55% in 2018)
-- **Digital payment penetration in e-commerce**: 89% of transactions (up from 45% in 2018)
-- **Cross-border e-commerce growth**: 35–40% annually
-- **Vietnam e-commerce GMV 2025**: USD 68B; Indonesia: USD 62B; Thailand: USD 48B
+- Southeast Asian e-commerce GMV 2025: USD 212 billion
+- E-commerce growth rate: 18–22% annually (vs. global 10–12%)
+- GMV growth 2020–2025: 85% cumulative increase
+- Internet penetration: 85% of population (up from 60% in 2018)
+- Smartphone-based e-commerce users: 78% of population (up from 55% in 2018)
+- Digital payment penetration in e-commerce: 89% of transactions (up from 45% in 2018)
+- Cross-border e-commerce growth: 35–40% annually
+- Vietnam e-commerce GMV 2025: USD 68B; Indonesia: USD 62B; Thailand: USD 48B
 
 ### Logistics Infrastructure Gap & Capital Requirements
 
@@ -1634,16 +1640,16 @@ Despite rapid e-commerce growth, Southeast Asia faces a material infrastructure 
 
 **Key Data Points:**
 
-- **Current SEA industrial/logistics capacity**: ~380 million sq ft
-- **Required additional capacity by 2030**: 320–360 million sq ft
-- **Total capital requirement 2025–2030**: USD 180–220 billion
-- **Implied annual capex**: USD 36–44 billion
-- **Modern facility market penetration**: 12–15% of total regional demand
-- **Legacy facility market share**: 85–88% of regional demand
-- **Modern facility annual rent**: USD 6–9/sq ft (120–180% premium over legacy)
-- **Legacy facility annual rent**: USD 3–4/sq ft
-- **Modern facility occupancy rates**: 94–97%
-- **Lease duration for modern facilities**: 8–12 years
+- Current SEA industrial/logistics capacity: ~380 million sq ft
+- Required additional capacity by 2030: 320–360 million sq ft
+- Total capital requirement 2025–2030: USD 180–220 billion
+- Implied annual capex: USD 36–44 billion
+- Modern facility market penetration: 12–15% of total regional demand
+- Legacy facility market share: 85–88% of regional demand
+- Modern facility annual rent: USD 6–9/sq ft (120–180% premium over legacy)
+- Legacy facility annual rent: USD 3–4/sq ft
+- Modern facility occupancy rates: 94–97%
+- Lease duration for modern facilities: 8–12 years
 
 ## Last-Mile Delivery Networks & Operational Technology
 
@@ -1653,14 +1659,14 @@ Last-mile delivery—the final step of physical delivery from logistics hub to e
 
 **Key Data Points:**
 
-- **Same-day/next-day delivery availability**: 72% of urban population (up from 28% in 2020)
-- **City-level network capex (3–5M population)**: USD 25–40 million
-- **Cumulative 3PL capex in last-mile 2018–2025**: USD 8–12 billion
-- **Current annual last-mile capex**: USD 2–2.5 billion
-- **Metro delivery fees**: USD 1.2–2.1 per delivery (down from USD 3–4.5 in 2018)
-- **Last-mile CAC reduction 2022–2025**: 40–50%
-- **Payback period for last-mile networks**: 14–18 months (improved from 20–26 months)
-- **Average metro delivery time**: 1.2–1.8 days (down from 2–3 days in 2018)
+- Same-day/next-day delivery availability: 72% of urban population (up from 28% in 2020)
+- City-level network capex (3–5M population): USD 25–40 million
+- Cumulative 3PL capex in last-mile 2018–2025: USD 8–12 billion
+- Current annual last-mile capex: USD 2–2.5 billion
+- Metro delivery fees: USD 1.2–2.1 per delivery (down from USD 3–4.5 in 2018)
+- Last-mile CAC reduction 2022–2025: 40–50%
+- Payback period for last-mile networks: 14–18 months (improved from 20–26 months)
+- Average metro delivery time: 1.2–1.8 days (down from 2–3 days in 2018)
 
 ### Logistics Technology & Automation Investment
 
@@ -1668,13 +1674,13 @@ Logistics technology and automation—including warehouse management systems (WM
 
 **Key Data Points:**
 
-- **Automated warehouse installations in SEA**: ~2,500 (up from ~400 in 2018)
-- **Automated warehouse penetration**: 18–22% of total capacity
-- **Automated warehouse cost reduction**: 30–40% vs. manual operations
-- **Automated warehouse throughput improvement**: 25–35% vs. manual
-- **Autonomous delivery feasibility**: 8–15% of parcels in pilot programmes
-- **Route optimisation efficiency gain**: 20–28% improvement in parcels/driver/day
-- **Tech-enabled 3PL valuation multiple**: 8–12x revenue
+- Automated warehouse installations in SEA: ~2,500 (up from ~400 in 2018)
+- Automated warehouse penetration: 18–22% of total capacity
+- Automated warehouse cost reduction: 30–40% vs. manual operations
+- Automated warehouse throughput improvement: 25–35% vs. manual
+- Autonomous delivery feasibility: 8–15% of parcels in pilot programmes
+- Route optimisation efficiency gain: 20–28% improvement in parcels/driver/day
+- Tech-enabled 3PL valuation multiple: 8–12x revenue
 
 ## Investment Opportunities & Returns
 
@@ -1684,14 +1690,14 @@ Institutional infrastructure investors are capturing strong returns through ware
 
 **Key Data Points:**
 
-- **Stabilised warehouse cap rates in SEA**: 5.5–7.0% (vs. 4.5–5.5% in developed markets)
-- **USD 50M stabilised warehouse NOI at 6.2% cap rate**: USD 3.1M annually
-- **Stabilised warehouse unlevered IRR**: 6–10% base case
-- **Stabilised warehouse levered IRR (60% LTV)**: 10–14%
-- **Annual rent growth assumption**: 4–6%
-- **Terminal cap rate compression**: 50–75 basis points
-- **Greenfield warehouse development unlevered IRRs**: 12–16%
-- **Greenfield development timeline**: 5–7 years to stabilised hold
+- Stabilised warehouse cap rates in SEA: 5.5–7.0% (vs. 4.5–5.5% in developed markets)
+- USD 50M stabilised warehouse NOI at 6.2% cap rate: USD 3.1M annually
+- Stabilised warehouse unlevered IRR: 6–10% base case
+- Stabilised warehouse levered IRR (60% LTV): 10–14%
+- Annual rent growth assumption: 4–6%
+- Terminal cap rate compression: 50–75 basis points
+- Greenfield warehouse development unlevered IRRs: 12–16%
+- Greenfield development timeline: 5–7 years to stabilised hold
 
 ### Last-Mile Network & Technology Investment
 
@@ -1699,14 +1705,14 @@ Last-mile delivery networks and logistics technology platforms are experiencing 
 
 **Key Data Points:**
 
-- **Tech-enabled 3PL/last-mile Series B/C valuation**: 8–12x revenue
-- **Series D/E valuation**: 10–14x revenue
-- **Revenue growth for scaling networks**: 45–65% annually
-- **EBIT margin expansion**: negative pre-profitability to 8–15% positive post-scale
-- **Unlevered IRRs for minority last-mile stakes**: 16–22% recent average
-- **Exit multiples**: 12–16x revenue (up from 8–10x entry)
-- **Median hold period for last-mile networks**: 4–6 years
-- **Secondary market exit rate for minority stakes**: 22% in 2024–2025 (up from 8% in 2021–2022)
+- Tech-enabled 3PL/last-mile Series B/C valuation: 8–12x revenue
+- Series D/E valuation: 10–14x revenue
+- Revenue growth for scaling networks: 45–65% annually
+- EBIT margin expansion: negative pre-profitability to 8–15% positive post-scale
+- Unlevered IRRs for minority last-mile stakes: 16–22% recent average
+- Exit multiples: 12–16x revenue (up from 8–10x entry)
+- Median hold period for last-mile networks: 4–6 years
+- Secondary market exit rate for minority stakes: 22% in 2024–2025 (up from 8% in 2021–2022)
 
 ## References
 
@@ -1730,14 +1736,14 @@ Southeast Asian e-commerce GMV reached USD 212 billion in 2025, up from USD 115 
 
 **关键数据：**
 
-- **Southeast Asian e-commerce GMV 2025**：USD 212 billion
-- **E-commerce growth rate**：18–22% annually (vs. global 10–12%)
-- **GMV growth 2020–2025**：85% cumulative increase
-- **Internet penetration**：85% of population (up from 60% in 2018)
-- **Smartphone-based e-commerce users**：78% of population (up from 55% in 2018)
-- **Digital payment penetration in e-commerce**：89% of transactions (up from 45% in 2018)
-- **Cross-border e-commerce growth**：35–40% annually
-- **Vietnam e-commerce GMV 2025**：USD 68B; Indonesia: USD 62B; Thailand: USD 48B
+- Southeast Asian e-commerce GMV 2025: USD 212 billion
+- E-commerce growth rate: 18–22% annually (vs. global 10–12%)
+- GMV growth 2020–2025: 85% cumulative increase
+- Internet penetration: 85% of population (up from 60% in 2018)
+- Smartphone-based e-commerce users: 78% of population (up from 55% in 2018)
+- Digital payment penetration in e-commerce: 89% of transactions (up from 45% in 2018)
+- Cross-border e-commerce growth: 35–40% annually
+- Vietnam e-commerce GMV 2025: USD 68B; Indonesia: USD 62B; Thailand: USD 48B
 
 ### Logistics Infrastructure Gap & Capital Requirements
 
@@ -1745,16 +1751,16 @@ Despite rapid e-commerce growth, Southeast Asia faces a material infrastructure 
 
 **关键数据：**
 
-- **Current SEA industrial/logistics capacity**：~380 million sq ft
-- **Required additional capacity by 2030**：320–360 million sq ft
-- **Total capital requirement 2025–2030**：USD 180–220 billion
-- **Implied annual capex**：USD 36–44 billion
-- **Modern facility market penetration**：12–15% of total regional demand
-- **Legacy facility market share**：85–88% of regional demand
-- **Modern facility annual rent**：USD 6–9/sq ft (120–180% premium over legacy)
-- **Legacy facility annual rent**：USD 3–4/sq ft
-- **Modern facility occupancy rates**：94–97%
-- **Lease duration for modern facilities**：8–12 years
+- Current SEA industrial/logistics capacity: ~380 million sq ft
+- Required additional capacity by 2030: 320–360 million sq ft
+- Total capital requirement 2025–2030: USD 180–220 billion
+- Implied annual capex: USD 36–44 billion
+- Modern facility market penetration: 12–15% of total regional demand
+- Legacy facility market share: 85–88% of regional demand
+- Modern facility annual rent: USD 6–9/sq ft (120–180% premium over legacy)
+- Legacy facility annual rent: USD 3–4/sq ft
+- Modern facility occupancy rates: 94–97%
+- Lease duration for modern facilities: 8–12 years
 
 ## Last-Mile Delivery Networks & Operational Technology
 
@@ -1764,14 +1770,14 @@ Last-mile delivery—the final step of physical delivery from logistics hub to e
 
 **关键数据：**
 
-- **Same-day/next-day delivery availability**：72% of urban population (up from 28% in 2020)
-- **City-level network capex (3–5M population)**：USD 25–40 million
-- **Cumulative 3PL capex in last-mile 2018–2025**：USD 8–12 billion
-- **Current annual last-mile capex**：USD 2–2.5 billion
-- **Metro delivery fees**：USD 1.2–2.1 per delivery (down from USD 3–4.5 in 2018)
-- **Last-mile CAC reduction 2022–2025**：40–50%
-- **Payback period for last-mile networks**：14–18 months (improved from 20–26 months)
-- **Average metro delivery time**：1.2–1.8 days (down from 2–3 days in 2018)
+- Same-day/next-day delivery availability: 72% of urban population (up from 28% in 2020)
+- City-level network capex (3–5M population): USD 25–40 million
+- Cumulative 3PL capex in last-mile 2018–2025: USD 8–12 billion
+- Current annual last-mile capex: USD 2–2.5 billion
+- Metro delivery fees: USD 1.2–2.1 per delivery (down from USD 3–4.5 in 2018)
+- Last-mile CAC reduction 2022–2025: 40–50%
+- Payback period for last-mile networks: 14–18 months (improved from 20–26 months)
+- Average metro delivery time: 1.2–1.8 days (down from 2–3 days in 2018)
 
 ### Logistics Technology & Automation Investment
 
@@ -1779,13 +1785,13 @@ Logistics technology and automation—including warehouse management systems (WM
 
 **关键数据：**
 
-- **Automated warehouse installations in SEA**：~2,500 (up from ~400 in 2018)
-- **Automated warehouse penetration**：18–22% of total capacity
-- **Automated warehouse cost reduction**：30–40% vs. manual operations
-- **Automated warehouse throughput improvement**：25–35% vs. manual
-- **Autonomous delivery feasibility**：8–15% of parcels in pilot programmes
-- **Route optimisation efficiency gain**：20–28% improvement in parcels/driver/day
-- **Tech-enabled 3PL valuation multiple**：8–12x revenue
+- Automated warehouse installations in SEA: ~2,500 (up from ~400 in 2018)
+- Automated warehouse penetration: 18–22% of total capacity
+- Automated warehouse cost reduction: 30–40% vs. manual operations
+- Automated warehouse throughput improvement: 25–35% vs. manual
+- Autonomous delivery feasibility: 8–15% of parcels in pilot programmes
+- Route optimisation efficiency gain: 20–28% improvement in parcels/driver/day
+- Tech-enabled 3PL valuation multiple: 8–12x revenue
 
 ## Investment Opportunities & Returns
 
@@ -1795,14 +1801,14 @@ Institutional infrastructure investors are capturing strong returns through ware
 
 **关键数据：**
 
-- **Stabilised warehouse cap rates in SEA**：5.5–7.0% (vs. 4.5–5.5% in developed markets)
-- **USD 50M stabilised warehouse NOI at 6.2% cap rate**：USD 3.1M annually
-- **Stabilised warehouse unlevered IRR**：6–10% base case
-- **Stabilised warehouse levered IRR (60% LTV)**：10–14%
-- **Annual rent growth assumption**：4–6%
-- **Terminal cap rate compression**：50–75 basis points
-- **Greenfield warehouse development unlevered IRRs**：12–16%
-- **Greenfield development timeline**：5–7 years to stabilised hold
+- Stabilised warehouse cap rates in SEA: 5.5–7.0% (vs. 4.5–5.5% in developed markets)
+- USD 50M stabilised warehouse NOI at 6.2% cap rate: USD 3.1M annually
+- Stabilised warehouse unlevered IRR: 6–10% base case
+- Stabilised warehouse levered IRR (60% LTV): 10–14%
+- Annual rent growth assumption: 4–6%
+- Terminal cap rate compression: 50–75 basis points
+- Greenfield warehouse development unlevered IRRs: 12–16%
+- Greenfield development timeline: 5–7 years to stabilised hold
 
 ### Last-Mile Network & Technology Investment
 
@@ -1810,14 +1816,14 @@ Last-mile delivery networks and logistics technology platforms are experiencing 
 
 **关键数据：**
 
-- **Tech-enabled 3PL/last-mile Series B/C valuation**：8–12x revenue
-- **Series D/E valuation**：10–14x revenue
-- **Revenue growth for scaling networks**：45–65% annually
-- **EBIT margin expansion**：negative pre-profitability to 8–15% positive post-scale
-- **Unlevered IRRs for minority last-mile stakes**：16–22% recent average
-- **Exit multiples**：12–16x revenue (up from 8–10x entry)
-- **Median hold period for last-mile networks**：4–6 years
-- **Secondary market exit rate for minority stakes**：22% in 2024–2025 (up from 8% in 2021–2022)
+- Tech-enabled 3PL/last-mile Series B/C valuation: 8–12x revenue
+- Series D/E valuation: 10–14x revenue
+- Revenue growth for scaling networks: 45–65% annually
+- EBIT margin expansion: negative pre-profitability to 8–15% positive post-scale
+- Unlevered IRRs for minority last-mile stakes: 16–22% recent average
+- Exit multiples: 12–16x revenue (up from 8–10x entry)
+- Median hold period for last-mile networks: 4–6 years
+- Secondary market exit rate for minority stakes: 22% in 2024–2025 (up from 8% in 2021–2022)
 
 ## 参考文献
 
@@ -1857,11 +1863,11 @@ The Foreign Investment Review Board, Australia's primary mechanism for national-
 
 **Key Data Points:**
 
-- **FIRB mandatory review threshold**: AUD 60 million (lowered from AUD 275M in January 2024)
-- **Standard transaction approval timeline**: 60–90 days (up from 30–45 days pre-2024)
-- **Complex/heightened review timeline**: 120–180 days
-- **Expanded critical infrastructure definition**: includes data centres, agricultural land (>10ha), telecom networks, minerals processing
-- **Allied investor approval acceleration**: 15–25 days faster than non-Allied comparables
+- FIRB mandatory review threshold: AUD 60 million (lowered from AUD 275M in January 2024)
+- Standard transaction approval timeline: 60–90 days (up from 30–45 days pre-2024)
+- Complex/heightened review timeline: 120–180 days
+- Expanded critical infrastructure definition: includes data centres, agricultural land (>10ha), telecom networks, minerals processing
+- Allied investor approval acceleration: 15–25 days faster than non-Allied comparables
 
 ### Sectoral Framework & Investment Approval Profile
 
@@ -1869,12 +1875,12 @@ FIRB operates within an explicit sectoral framework that differentiates between 
 
 **Key Data Points:**
 
-- **Green Light Sector FIRB timeline**: 30–45 days
-- **Amber Light Sector FIRB timeline**: 90–150 days
-- **Red Light Sector FIRB timeline**: 180–240+ days or implicit rejection
-- **Government grants for renewable energy**: 10–25% of capex
-- **Government grants for advanced manufacturing**: 15–20% of capex
-- **Allied investor timeline advantage vs. non-Allied**: 15–25 days faster in most sectors
+- Green Light Sector FIRB timeline: 30–45 days
+- Amber Light Sector FIRB timeline: 90–150 days
+- Red Light Sector FIRB timeline: 180–240+ days or implicit rejection
+- Government grants for renewable energy: 10–25% of capex
+- Government grants for advanced manufacturing: 15–20% of capex
+- Allied investor timeline advantage vs. non-Allied: 15–25 days faster in most sectors
 
 ## Critical Minerals & Strategic Sector Opportunity
 
@@ -1884,18 +1890,18 @@ Australia's position as the world's largest lithium producer (25% of global outp
 
 **Key Data Points:**
 
-- **Australia global lithium production share**: 25% of global output
-- **Domestic lithium processing**: only 20–22% processed locally; 78% exported raw
-- **Lithium processing government grants**: AUD 100–250M per qualifying facility
-- **Government power pricing discount**: 15–20% in energy-rich states
-- **Local content workforce targets**: 45–55%
-- **20,000-tonne lithium processing facility capex**: AUD 300–500M
-- **Lithium EBIT margins**: 35–45% at current prices
-- **Australian rare earth processing capacity utilisation**: 30–35%
-- **Global rare earth processing concentration**: China 85%
-- **Rare earth processing facility capex**: AUD 400–600M
-- **Rare earth government grants**: AUD 80–120M
-- **Critical minerals processing unlevered IRRs**: 14–20%
+- Australia global lithium production share: 25% of global output
+- Domestic lithium processing: only 20–22% processed locally; 78% exported raw
+- Lithium processing government grants: AUD 100–250M per qualifying facility
+- Government power pricing discount: 15–20% in energy-rich states
+- Local content workforce targets: 45–55%
+- 20,000-tonne lithium processing facility capex: AUD 300–500M
+- Lithium EBIT margins: 35–45% at current prices
+- Australian rare earth processing capacity utilisation: 30–35%
+- Global rare earth processing concentration: China 85%
+- Rare earth processing facility capex: AUD 400–600M
+- Rare earth government grants: AUD 80–120M
+- Critical minerals processing unlevered IRRs: 14–20%
 
 ### Allied Investor Advantage & Five Eyes Integration
 
@@ -1903,9 +1909,9 @@ Allied investors—particularly from US, UK, Canada, and New Zealand—benefit f
 
 **Key Data Points:**
 
-- **Allied investor FIRB approval timeline**: 30–45 days (vs. 120–180 for non-Allied)
-- **Timeline acceleration advantage**: 12–18 month project acceleration
-- **U.S. Inflation Reduction Act supply-chain credits**: potential 10–15% cost reduction for US-bound lithium
+- Allied investor FIRB approval timeline: 30–45 days (vs. 120–180 for non-Allied)
+- Timeline acceleration advantage: 12–18 month project acceleration
+- U.S. Inflation Reduction Act supply-chain credits: potential 10–15% cost reduction for US-bound lithium
 
 ## Renewable Energy & Green Technology Priority
 
@@ -1915,15 +1921,15 @@ Renewable energy remains the highest-priority investment sector in Australia's n
 
 **Key Data Points:**
 
-- **Renewable energy generation target by 2030**: 82% (from 30% in 2024)
-- **Total capex requirement through 2030**: AUD 400–500 billion
-- **FIRB exemption threshold for renewable projects**: AUD 250M
-- **Government grants for renewable projects**: 10–25% of capex
-- **Clean Energy Finance Corporation financing discount**: 100–150 bps below market
-- **Utility solar project-level IRRs**: 7–9% under PPA terms
-- **Wind project-level IRRs**: 8–11% under PPA terms
-- **Offshore wind target by 2035**: 15 GW
-- **Early offshore wind project valuation**: 8–10x EBITDA, implying 10–13% IRRs
+- Renewable energy generation target by 2030: 82% (from 30% in 2024)
+- Total capex requirement through 2030: AUD 400–500 billion
+- FIRB exemption threshold for renewable projects: AUD 250M
+- Government grants for renewable projects: 10–25% of capex
+- Clean Energy Finance Corporation financing discount: 100–150 bps below market
+- Utility solar project-level IRRs: 7–9% under PPA terms
+- Wind project-level IRRs: 8–11% under PPA terms
+- Offshore wind target by 2035: 15 GW
+- Early offshore wind project valuation: 8–10x EBITDA, implying 10–13% IRRs
 
 ## Deal Structuring & Risk Management
 
@@ -1933,11 +1939,11 @@ Institutional investors navigating Australia's complex FIRB framework employ sev
 
 **Key Data Points:**
 
-- **FIRB approval timeline for Allied investors**: 30–45 days
-- **FIRB approval timeline for non-Allied investors**: 120–180 days
-- **Joint venture structure beneficial for non-Allied investors**: 49% foreign / 51% local-Allied
-- **Pre-approval costs (legal, consulting, government relations)**: AUD 1–3M for 100M+ transactions
-- **Government grant access timelines**: 60–90 days additional
+- FIRB approval timeline for Allied investors: 30–45 days
+- FIRB approval timeline for non-Allied investors: 120–180 days
+- Joint venture structure beneficial for non-Allied investors: 49% foreign / 51% local-Allied
+- Pre-approval costs (legal, consulting, government relations): AUD 1–3M for 100M+ transactions
+- Government grant access timelines: 60–90 days additional
 
 ## References
 
@@ -1961,11 +1967,11 @@ The Foreign Investment Review Board, Australia's primary mechanism for national-
 
 **关键数据：**
 
-- **FIRB mandatory review threshold**：AUD 60 million (lowered from AUD 275M in January 2024)
-- **Standard transaction approval timeline**：60–90 days (up from 30–45 days pre-2024)
-- **Complex/heightened review timeline**：120–180 days
-- **Expanded critical infrastructure definition**：includes data centres, agricultural land (>10ha), telecom networks, minerals processing
-- **Allied investor approval acceleration**：15–25 days faster than non-Allied comparables
+- FIRB mandatory review threshold: AUD 60 million (lowered from AUD 275M in January 2024)
+- Standard transaction approval timeline: 60–90 days (up from 30–45 days pre-2024)
+- Complex/heightened review timeline: 120–180 days
+- Expanded critical infrastructure definition: includes data centres, agricultural land (>10ha), telecom networks, minerals processing
+- Allied investor approval acceleration: 15–25 days faster than non-Allied comparables
 
 ### Sectoral Framework & Investment Approval Profile
 
@@ -1973,12 +1979,12 @@ FIRB operates within an explicit sectoral framework that differentiates between 
 
 **关键数据：**
 
-- **Green Light Sector FIRB timeline**：30–45 days
-- **Amber Light Sector FIRB timeline**：90–150 days
-- **Red Light Sector FIRB timeline**：180–240+ days or implicit rejection
-- **Government grants for renewable energy**：10–25% of capex
-- **Government grants for advanced manufacturing**：15–20% of capex
-- **Allied investor timeline advantage vs. non-Allied**：15–25 days faster in most sectors
+- Green Light Sector FIRB timeline: 30–45 days
+- Amber Light Sector FIRB timeline: 90–150 days
+- Red Light Sector FIRB timeline: 180–240+ days or implicit rejection
+- Government grants for renewable energy: 10–25% of capex
+- Government grants for advanced manufacturing: 15–20% of capex
+- Allied investor timeline advantage vs. non-Allied: 15–25 days faster in most sectors
 
 ## Critical Minerals & Strategic Sector Opportunity
 
@@ -1988,18 +1994,18 @@ Australia's position as the world's largest lithium producer (25% of global outp
 
 **关键数据：**
 
-- **Australia global lithium production share**：25% of global output
-- **Domestic lithium processing**：only 20–22% processed locally; 78% exported raw
-- **Lithium processing government grants**：AUD 100–250M per qualifying facility
-- **Government power pricing discount**：15–20% in energy-rich states
-- **Local content workforce targets**：45–55%
-- **20,000-tonne lithium processing facility capex**：AUD 300–500M
-- **Lithium EBIT margins**：35–45% at current prices
-- **Australian rare earth processing capacity utilisation**：30–35%
-- **Global rare earth processing concentration**：China 85%
-- **Rare earth processing facility capex**：AUD 400–600M
-- **Rare earth government grants**：AUD 80–120M
-- **Critical minerals processing unlevered IRRs**：14–20%
+- Australia global lithium production share: 25% of global output
+- Domestic lithium processing: only 20–22% processed locally; 78% exported raw
+- Lithium processing government grants: AUD 100–250M per qualifying facility
+- Government power pricing discount: 15–20% in energy-rich states
+- Local content workforce targets: 45–55%
+- 20,000-tonne lithium processing facility capex: AUD 300–500M
+- Lithium EBIT margins: 35–45% at current prices
+- Australian rare earth processing capacity utilisation: 30–35%
+- Global rare earth processing concentration: China 85%
+- Rare earth processing facility capex: AUD 400–600M
+- Rare earth government grants: AUD 80–120M
+- Critical minerals processing unlevered IRRs: 14–20%
 
 ### Allied Investor Advantage & Five Eyes Integration
 
@@ -2007,9 +2013,9 @@ Allied investors—particularly from US, UK, Canada, and New Zealand—benefit f
 
 **关键数据：**
 
-- **Allied investor FIRB approval timeline**：30–45 days (vs. 120–180 for non-Allied)
-- **Timeline acceleration advantage**：12–18 month project acceleration
-- **U.S. Inflation Reduction Act supply-chain credits**：potential 10–15% cost reduction for US-bound lithium
+- Allied investor FIRB approval timeline: 30–45 days (vs. 120–180 for non-Allied)
+- Timeline acceleration advantage: 12–18 month project acceleration
+- U.S. Inflation Reduction Act supply-chain credits: potential 10–15% cost reduction for US-bound lithium
 
 ## Renewable Energy & Green Technology Priority
 
@@ -2019,15 +2025,15 @@ Renewable energy remains the highest-priority investment sector in Australia's n
 
 **关键数据：**
 
-- **Renewable energy generation target by 2030**：82% (from 30% in 2024)
-- **Total capex requirement through 2030**：AUD 400–500 billion
-- **FIRB exemption threshold for renewable projects**：AUD 250M
-- **Government grants for renewable projects**：10–25% of capex
-- **Clean Energy Finance Corporation financing discount**：100–150 bps below market
-- **Utility solar project-level IRRs**：7–9% under PPA terms
-- **Wind project-level IRRs**：8–11% under PPA terms
-- **Offshore wind target by 2035**：15 GW
-- **Early offshore wind project valuation**：8–10x EBITDA, implying 10–13% IRRs
+- Renewable energy generation target by 2030: 82% (from 30% in 2024)
+- Total capex requirement through 2030: AUD 400–500 billion
+- FIRB exemption threshold for renewable projects: AUD 250M
+- Government grants for renewable projects: 10–25% of capex
+- Clean Energy Finance Corporation financing discount: 100–150 bps below market
+- Utility solar project-level IRRs: 7–9% under PPA terms
+- Wind project-level IRRs: 8–11% under PPA terms
+- Offshore wind target by 2035: 15 GW
+- Early offshore wind project valuation: 8–10x EBITDA, implying 10–13% IRRs
 
 ## Deal Structuring & Risk Management
 
@@ -2037,11 +2043,11 @@ Institutional investors navigating Australia's complex FIRB framework employ sev
 
 **关键数据：**
 
-- **FIRB approval timeline for Allied investors**：30–45 days
-- **FIRB approval timeline for non-Allied investors**：120–180 days
-- **Joint venture structure beneficial for non-Allied investors**：49% foreign / 51% local-Allied
-- **Pre-approval costs (legal, consulting, government relations)**：AUD 1–3M for 100M+ transactions
-- **Government grant access timelines**：60–90 days additional
+- FIRB approval timeline for Allied investors: 30–45 days
+- FIRB approval timeline for non-Allied investors: 120–180 days
+- Joint venture structure beneficial for non-Allied investors: 49% foreign / 51% local-Allied
+- Pre-approval costs (legal, consulting, government relations): AUD 1–3M for 100M+ transactions
+- Government grant access timelines: 60–90 days additional
 
 ## 参考文献
 
@@ -2081,16 +2087,16 @@ Australia-China bilateral trade underwent significant contraction in 2020–2023
 
 **Key Data Points:**
 
-- **China share of Australian exports**: 38% (2020) to 28% (2025); -10 percentage point decline
-- **ASEAN export share**: 12% (2020) to 19% (2025); +7 point growth
-- **Japan/South Korea combined export share**: 8% (2020) to 14% (2025); +6 point growth
-- **Wine export volumes**: AUD 45M/month (early 2025) vs. AUD 85–95M pre-2020 peak
-- **Wine market share in China**: Chinese domestic now 22–28% (vs. 12–15% pre-2020)
-- **Barley exports**: AUD 120M annually 2025 vs. AUD 180M pre-2020 peak
-- **Estimated annual export value lost to China concentration decline**: AUD 16–18B
-- **ASEAN offset growth**: AUD 14–15B
-- **Japan/South Korea offset growth**: AUD 8–10B
-- **Commodity/resource products share of Australia-China trade**: 85% (down from 92%)
+- China share of Australian exports: 38% (2020) to 28% (2025); -10 percentage point decline
+- ASEAN export share: 12% (2020) to 19% (2025); +7 point growth
+- Japan/South Korea combined export share: 8% (2020) to 14% (2025); +6 point growth
+- Wine export volumes: AUD 45M/month (early 2025) vs. AUD 85–95M pre-2020 peak
+- Wine market share in China: Chinese domestic now 22–28% (vs. 12–15% pre-2020)
+- Barley exports: AUD 120M annually 2025 vs. AUD 180M pre-2020 peak
+- Estimated annual export value lost to China concentration decline: AUD 16–18B
+- ASEAN offset growth: AUD 14–15B
+- Japan/South Korea offset growth: AUD 8–10B
+- Commodity/resource products share of Australia-China trade: 85% (down from 92%)
 
 ### Export Diversification Strategy & New Market Integration
 
@@ -2098,11 +2104,11 @@ Australian government and private sector strategy over 2023–2025 has explicitl
 
 **Key Data Points:**
 
-- **Australia-Japan bilateral trade growth 2024**: +28% YoY
-- **Australia-South Korea FTA**: completed 2024, 15% average tariff reduction
-- **Australia-ASEAN bilateral trade 2024**: AUD 35B; target 2030: AUD 50B (+43% growth)
-- **Fortescue Metals downstream investment**: USD 2B+ in Japan and South Korea
-- **Valuation premium for China-diversified companies**: 15–25% vs. China-focused peers
+- Australia-Japan bilateral trade growth 2024: +28% YoY
+- Australia-South Korea FTA: completed 2024, 15% average tariff reduction
+- Australia-ASEAN bilateral trade 2024: AUD 35B; target 2030: AUD 50B (+43% growth)
+- Fortescue Metals downstream investment: USD 2B+ in Japan and South Korea
+- Valuation premium for China-diversified companies: 15–25% vs. China-focused peers
 
 ## Sector-Specific Diversification Opportunities
 
@@ -2112,14 +2118,14 @@ Australia's mining companies represent the highest-conviction investment opportu
 
 **Key Data Points:**
 
-- **Fortescue DRI/steel manufacturing capex**: AUD 10 billion
-- **DRI carbon intensity vs. blast furnace steel**: 30–40% lower
-- **Commodity mining value capture**: 15–20% of value chain
-- **DRI steel manufacturing value capture**: 35–45% of value chain
-- **Downstream mining company revenue growth**: 18–25% vs. 4–8% commodity export
-- **EBIT margin expansion from downstream integration**: 400–600 basis points
-- **Mining company valuation multiple**: 8–10x EBITDA (commodities) vs. 12–15x (integrated)
-- **Government grants for processing facilities**: AUD 80–250M per facility
+- Fortescue DRI/steel manufacturing capex: AUD 10 billion
+- DRI carbon intensity vs. blast furnace steel: 30–40% lower
+- Commodity mining value capture: 15–20% of value chain
+- DRI steel manufacturing value capture: 35–45% of value chain
+- Downstream mining company revenue growth: 18–25% vs. 4–8% commodity export
+- EBIT margin expansion from downstream integration: 400–600 basis points
+- Mining company valuation multiple: 8–10x EBITDA (commodities) vs. 12–15x (integrated)
+- Government grants for processing facilities: AUD 80–250M per facility
 
 ### Technology & Defence-Adjacent Opportunities
 
@@ -2127,11 +2133,11 @@ Australia's technology and defence technology sectors are benefiting from explic
 
 **Key Data Points:**
 
-- **AUKUS partnership capex 2024–2040**: AUD 12.7 billion
-- **Submarine manufacturing partnership investment**: USD 500M+
-- **Quad-aligned tech company revenue growth**: 30–40% CAGR for government contracts
-- **Defence tech valuation multiples**: 15–25x revenue (vs. 8–12x commercial tech)
-- **Recent institutional investor IRRs in Australian defence tech**: 18–28%
+- AUKUS partnership capex 2024–2040: AUD 12.7 billion
+- Submarine manufacturing partnership investment: USD 500M+
+- Quad-aligned tech company revenue growth: 30–40% CAGR for government contracts
+- Defence tech valuation multiples: 15–25x revenue (vs. 8–12x commercial tech)
+- Recent institutional investor IRRs in Australian defence tech: 18–28%
 
 ## Investment Framework & Risk Management
 
@@ -2141,10 +2147,10 @@ Institutional investors constructing portfolios around Australia's China realign
 
 **Key Data Points:**
 
-- **China revenue concentration target**: reduction from 35–40% to 20–25% (3–5 year horizon)
-- **ASEAN/Japan/Korea revenue growth target**: 25–35% CAGR
-- **Downstream product revenue growth target**: 15–20% to 35–45% (3–5 year)
-- **Valuation premium for successful China diversification**: 15–25% vs. peers
+- China revenue concentration target: reduction from 35–40% to 20–25% (3–5 year horizon)
+- ASEAN/Japan/Korea revenue growth target: 25–35% CAGR
+- Downstream product revenue growth target: 15–20% to 35–45% (3–5 year)
+- Valuation premium for successful China diversification: 15–25% vs. peers
 
 ### Geopolitical & China Sentiment Risk
 
@@ -2152,9 +2158,9 @@ Australian investments remain exposed to residual China sentiment and geopolitic
 
 **Key Data Points:**
 
-- **China trade restriction downside scenario**: 15–25% company valuation impact
-- **Baseline expectation**: China trade recovery to 85–90% of 2020 peak by 2028
-- **Long-term structural China export share**: 28–32% (vs. 38% pre-2020 baseline)
+- China trade restriction downside scenario: 15–25% company valuation impact
+- Baseline expectation: China trade recovery to 85–90% of 2020 peak by 2028
+- Long-term structural China export share: 28–32% (vs. 38% pre-2020 baseline)
 
 ## References
 
@@ -2166,6 +2172,7 @@ Australian investments remain exposed to residual China sentiment and geopolitic
 6. Department of Defence (2024). "AUKUS Partnership Framework and Technology Collaboration Priorities." DoD, Canberra.
 7. Fortescue Metals Group (2024). "Investor Presentation: Direct Reduced Iron and Downstream Integration Strategy." FMG Investor Relations.
 8. Baker McKenzie (2024). "Australia Trade Agreements and Bilateral Arrangements Update." Baker McKenzie, Sydney.
+9. Centre for Policy Development (2024). "Australia's Economic Realignment: Opportunities and Risks in Global Geopolitics." CPD, Sydney.
 10. Macquarie Group Research (2025). "Australian Resources Sector: Value Chain Reconfiguration and Investment Opportunities." Macquarie Research, Sydney.`,
     contentZh: `Australia's economic relationship with China has undergone a historic realignment in 2023–2025, driven by geopolitical tensions, supply chain diversification imperatives, and Australia's deliberate pivot toward aligned multilateral partnerships (Quad, AUKUS). Bilateral trade volumes have stabilised but remain 25–30% below 2020 peak levels, with China's share of Australian exports declining from 38% (2020) to 28% (2025) while ASEAN share increased from 12% to 19% and Japan/South Korea combined increased from 8% to 14%. Despite normalisation of wine and barley export flows in late 2024, Chinese demand remains constrained by domestic substitution (local wine production, domestic barley sourcing) and geopolitical friction. This realignment is driving a structural shift in Australian economic strategy: primary sector companies are diversifying export destinations, investing in downstream value-add (processing, refining, advanced manufacturing), and forming partnerships with allied nations (US, Japan, South Korea) for supply chain integration. The investment opportunity set centres on: (1) companies demonstrating successful China diversification with expanded market access in Japan, South Korea, and ASEAN, (2) mining and resources companies moving downstream into refining and advanced materials manufacturing, and (3) technology and defence-adjacent companies benefiting from Quad and AUKUS partnership frameworks. Institutional investors focusing on Australian companies with proven China diversification are capturing 15–22% IRRs through multiple expansion (valuation premiums for reduced concentration risk) and earnings growth from new market penetration. The Australia-China relationship normalisation is durable rather than transformative; investors should expect moderate trade recovery but permanent structural shift toward allied partnerships and supply chain diversification.
 
@@ -2177,16 +2184,16 @@ Australia-China bilateral trade underwent significant contraction in 2020–2023
 
 **关键数据：**
 
-- **China share of Australian exports**：38% (2020) to 28% (2025); -10 percentage point decline
-- **ASEAN export share**：12% (2020) to 19% (2025); +7 point growth
-- **Japan/South Korea combined export share**：8% (2020) to 14% (2025); +6 point growth
-- **Wine export volumes**：AUD 45M/month (early 2025) vs. AUD 85–95M pre-2020 peak
-- **Wine market share in China**：Chinese domestic now 22–28% (vs. 12–15% pre-2020)
-- **Barley exports**：AUD 120M annually 2025 vs. AUD 180M pre-2020 peak
-- **Estimated annual export value lost to China concentration decline**：AUD 16–18B
-- **ASEAN offset growth**：AUD 14–15B
-- **Japan/South Korea offset growth**：AUD 8–10B
-- **Commodity/resource products share of Australia-China trade**：85% (down from 92%)
+- China share of Australian exports: 38% (2020) to 28% (2025); -10 percentage point decline
+- ASEAN export share: 12% (2020) to 19% (2025); +7 point growth
+- Japan/South Korea combined export share: 8% (2020) to 14% (2025); +6 point growth
+- Wine export volumes: AUD 45M/month (early 2025) vs. AUD 85–95M pre-2020 peak
+- Wine market share in China: Chinese domestic now 22–28% (vs. 12–15% pre-2020)
+- Barley exports: AUD 120M annually 2025 vs. AUD 180M pre-2020 peak
+- Estimated annual export value lost to China concentration decline: AUD 16–18B
+- ASEAN offset growth: AUD 14–15B
+- Japan/South Korea offset growth: AUD 8–10B
+- Commodity/resource products share of Australia-China trade: 85% (down from 92%)
 
 ### Export Diversification Strategy & New Market Integration
 
@@ -2194,11 +2201,11 @@ Australian government and private sector strategy over 2023–2025 has explicitl
 
 **关键数据：**
 
-- **Australia-Japan bilateral trade growth 2024**：+28% YoY
-- **Australia-South Korea FTA**：completed 2024, 15% average tariff reduction
-- **Australia-ASEAN bilateral trade 2024**：AUD 35B; target 2030: AUD 50B (+43% growth)
-- **Fortescue Metals downstream investment**：USD 2B+ in Japan and South Korea
-- **Valuation premium for China-diversified companies**：15–25% vs. China-focused peers
+- Australia-Japan bilateral trade growth 2024: +28% YoY
+- Australia-South Korea FTA: completed 2024, 15% average tariff reduction
+- Australia-ASEAN bilateral trade 2024: AUD 35B; target 2030: AUD 50B (+43% growth)
+- Fortescue Metals downstream investment: USD 2B+ in Japan and South Korea
+- Valuation premium for China-diversified companies: 15–25% vs. China-focused peers
 
 ## Sector-Specific Diversification Opportunities
 
@@ -2208,14 +2215,14 @@ Australia's mining companies represent the highest-conviction investment opportu
 
 **关键数据：**
 
-- **Fortescue DRI/steel manufacturing capex**：AUD 10 billion
-- **DRI carbon intensity vs. blast furnace steel**：30–40% lower
-- **Commodity mining value capture**：15–20% of value chain
-- **DRI steel manufacturing value capture**：35–45% of value chain
-- **Downstream mining company revenue growth**：18–25% vs. 4–8% commodity export
-- **EBIT margin expansion from downstream integration**：400–600 basis points
-- **Mining company valuation multiple**：8–10x EBITDA (commodities) vs. 12–15x (integrated)
-- **Government grants for processing facilities**：AUD 80–250M per facility
+- Fortescue DRI/steel manufacturing capex: AUD 10 billion
+- DRI carbon intensity vs. blast furnace steel: 30–40% lower
+- Commodity mining value capture: 15–20% of value chain
+- DRI steel manufacturing value capture: 35–45% of value chain
+- Downstream mining company revenue growth: 18–25% vs. 4–8% commodity export
+- EBIT margin expansion from downstream integration: 400–600 basis points
+- Mining company valuation multiple: 8–10x EBITDA (commodities) vs. 12–15x (integrated)
+- Government grants for processing facilities: AUD 80–250M per facility
 
 ### Technology & Defence-Adjacent Opportunities
 
@@ -2223,11 +2230,11 @@ Australia's technology and defence technology sectors are benefiting from explic
 
 **关键数据：**
 
-- **AUKUS partnership capex 2024–2040**：AUD 12.7 billion
-- **Submarine manufacturing partnership investment**：USD 500M+
-- **Quad-aligned tech company revenue growth**：30–40% CAGR for government contracts
-- **Defence tech valuation multiples**：15–25x revenue (vs. 8–12x commercial tech)
-- **Recent institutional investor IRRs in Australian defence tech**：18–28%
+- AUKUS partnership capex 2024–2040: AUD 12.7 billion
+- Submarine manufacturing partnership investment: USD 500M+
+- Quad-aligned tech company revenue growth: 30–40% CAGR for government contracts
+- Defence tech valuation multiples: 15–25x revenue (vs. 8–12x commercial tech)
+- Recent institutional investor IRRs in Australian defence tech: 18–28%
 
 ## Investment Framework & Risk Management
 
@@ -2237,10 +2244,10 @@ Institutional investors constructing portfolios around Australia's China realign
 
 **关键数据：**
 
-- **China revenue concentration target**：reduction from 35–40% to 20–25% (3–5 year horizon)
-- **ASEAN/Japan/Korea revenue growth target**：25–35% CAGR
-- **Downstream product revenue growth target**：15–20% to 35–45% (3–5 year)
-- **Valuation premium for successful China diversification**：15–25% vs. peers
+- China revenue concentration target: reduction from 35–40% to 20–25% (3–5 year horizon)
+- ASEAN/Japan/Korea revenue growth target: 25–35% CAGR
+- Downstream product revenue growth target: 15–20% to 35–45% (3–5 year)
+- Valuation premium for successful China diversification: 15–25% vs. peers
 
 ### Geopolitical & China Sentiment Risk
 
@@ -2248,9 +2255,9 @@ Australian investments remain exposed to residual China sentiment and geopolitic
 
 **关键数据：**
 
-- **China trade restriction downside scenario**：15–25% company valuation impact
-- **Baseline expectation**：China trade recovery to 85–90% of 2020 peak by 2028
-- **Long-term structural China export share**：28–32% (vs. 38% pre-2020 baseline)
+- China trade restriction downside scenario: 15–25% company valuation impact
+- Baseline expectation: China trade recovery to 85–90% of 2020 peak by 2028
+- Long-term structural China export share: 28–32% (vs. 38% pre-2020 baseline)
 
 ## 参考文献
 
@@ -2262,6 +2269,7 @@ Australian investments remain exposed to residual China sentiment and geopolitic
 6. Department of Defence (2024). "AUKUS Partnership Framework and Technology Collaboration Priorities." DoD, Canberra.
 7. Fortescue Metals Group (2024). "Investor Presentation: Direct Reduced Iron and Downstream Integration Strategy." FMG Investor Relations.
 8. Baker McKenzie (2024). "Australia Trade Agreements and Bilateral Arrangements Update." Baker McKenzie, Sydney.
+9. Centre for Policy Development (2024). "Australia's Economic Realignment: Opportunities and Risks in Global Geopolitics." CPD, Sydney.
 10. Macquarie Group Research (2025). "Australian Resources Sector: Value Chain Reconfiguration and Investment Opportunities." Macquarie Research, Sydney.`,
   },
   {
@@ -2289,16 +2297,16 @@ Green hydrogen is produced through water electrolysis powered by renewable elect
 
 **Key Data Points:**
 
-- **Current electrolyser capital cost globally**: USD 800–1,200/kW
-- **Electrolyser capex target by 2030**: USD 400–600/kW (40–50% reduction)
-- **Current Australia LCOH**: USD 3.0–3.8/kg (at plant)
-- **Delivered LCOH to Asia**: USD 4.5–5.5/kg (including liquefaction and shipping)
-- **Conventional hydrogen LCOH**: USD 1.5–2.0/kg (natural gas) or USD 1.2–1.8/kg (coal)
-- **Target LCOH by 2030**: USD 1.8–2.2/kg (at plant), USD 3.0–3.5/kg (delivered)
-- **System efficiency (electricity to hydrogen)**: 65–72%
-- **Liquefaction cost**: AUD 600–800/tonne
-- **Shipping cost (10,000+ tonne cargo)**: USD 350–500/tonne
-- **Renewable electricity cost in Australia**: USD 30–50/MWh (among world\\
+- Current electrolyser capital cost globally: USD 800–1,200/kW
+- Electrolyser capex target by 2030: USD 400–600/kW (40–50% reduction)
+- Current Australia LCOH: USD 3.0–3.8/kg (at plant)
+- Delivered LCOH to Asia: USD 4.5–5.5/kg (including liquefaction and shipping)
+- Conventional hydrogen LCOH: USD 1.5–2.0/kg (natural gas) or USD 1.2–1.8/kg (coal)
+- Target LCOH by 2030: USD 1.8–2.2/kg (at plant), USD 3.0–3.5/kg (delivered)
+- System efficiency (electricity to hydrogen): 65–72%
+- Liquefaction cost: AUD 600–800/tonne
+- Shipping cost (10,000+ tonne cargo): USD 350–500/tonne
+- Renewable electricity cost in Australia: USD 30–50/MWh (among world's cheapest)
 
 ### Regional Demand Drivers & Long-Term Contracts
 
@@ -2306,14 +2314,14 @@ Asian demand for hydrogen is driven by three concurrent factors: (1) decarbonisa
 
 **Key Data Points:**
 
-- **Japan hydrogen demand target 2030**: 3 million tonnes annually
-- **Japan hydrogen electricity generation target 2030**: 3% of total; 2050: 10%
-- **South Korea hydrogen target 2035**: 5 million tonnes in industrial heating (30% of coal displacement)
-- **India hydrogen target 2030**: 5 million tonnes (production + imports)
-- **Long-term hydrogen purchase agreement (HPA) duration**: 15–20 years
-- **Current HPA pricing**: USD 3.50–5.00/kg
-- **Projected HPA pricing by 2030**: USD 2.50–3.50/kg
-- **Project financing coverage**: banks lend 70–80% of capex against HPA revenue
+- Japan hydrogen demand target 2030: 3 million tonnes annually
+- Japan hydrogen electricity generation target 2030: 3% of total; 2050: 10%
+- South Korea hydrogen target 2035: 5 million tonnes in industrial heating (30% of coal displacement)
+- India hydrogen target 2030: 5 million tonnes (production + imports)
+- Long-term hydrogen purchase agreement (HPA) duration: 15–20 years
+- Current HPA pricing: USD 3.50–5.00/kg
+- Projected HPA pricing by 2030: USD 2.50–3.50/kg
+- Project financing coverage: banks lend 70–80% of capex against HPA revenue
 
 ## Major Project Pipeline & Investment Opportunities
 
@@ -2323,16 +2331,16 @@ The Asian Renewable Energy Hub (AREH) represents the largest announced hydrogen 
 
 **Key Data Points:**
 
-- **AREH project electrolyser capacity**: 9 GW (powered by 15 GW renewables)
-- **AREH hydrogen/ammonia production target**: 1.8 million tonnes annually
-- **AREH estimated capex**: USD 36 billion
-- **AREH production timeline**: first hydrogen 2027–2028; full capacity 2032–2033
-- **Fortescue Green Hydrogen capex**: AUD 8.9 billion (USD 6.0B)
-- **Fortescue GH production target**: 2 million tonnes annually by 2030
-- **Fortescue GH offtake secured**: 60–70% of production
-- **Queensland hydrogen projects combined capacity**: 5 GW electrolyser
-- **Typical equity position size**: USD 200M–500M (15–25% minority stake)
-- **Mezzanine financing target returns**: 9–12%
+- AREH project electrolyser capacity: 9 GW (powered by 15 GW renewables)
+- AREH hydrogen/ammonia production target: 1.8 million tonnes annually
+- AREH estimated capex: USD 36 billion
+- AREH production timeline: first hydrogen 2027–2028; full capacity 2032–2033
+- Fortescue Green Hydrogen capex: AUD 8.9 billion (USD 6.0B)
+- Fortescue GH production target: 2 million tonnes annually by 2030
+- Fortescue GH offtake secured: 60–70% of production
+- Queensland hydrogen projects combined capacity: 5 GW electrolyser
+- Typical equity position size: USD 200M–500M (15–25% minority stake)
+- Mezzanine financing target returns: 9–12%
 
 ### Technology Partnerships & Global Supply Chain
 
@@ -2340,9 +2348,9 @@ Australian hydrogen projects are benefiting from partnerships with global electr
 
 **Key Data Points:**
 
-- **Typical electrolyser technology partner**: Siemens Energy, ACWA Power, Neom technology
-- **Renewable PPA pricing**: USD 30–50/MWh for 20–25 year terms
-- **Renewable infrastructure fund acquisition model**: post-stabilisation acquisition for developer equity recycling
+- Typical electrolyser technology partner: Siemens Energy, ACWA Power, Neom technology
+- Renewable PPA pricing: USD 30–50/MWh for 20–25 year terms
+- Renewable infrastructure fund acquisition model: post-stabilisation acquisition for developer equity recycling
 
 ## Investment Returns & Risk Framework
 
@@ -2352,16 +2360,16 @@ Stabilised hydrogen project economics deliver 10–15% unlevered IRRs based on c
 
 **Key Data Points:**
 
-- **Stabilised hydrogen project unlevered IRRs**: 10–15%
-- **Hydrogen price sensitivity**: USD 0.50/kg change = 200–250 bps IRR impact
-- **Electricity cost sensitivity**: AUD 10/MWh change = 150–180 bps IRR impact
-- **Electrolyser capex sensitivity**: USD 100/kW change = 100–120 bps IRR impact
-- **Typical project financing**: 70% debt, 30% equity
-- **Project-level debt borrowing cost**: 5.0% typical (based on HPA-backed financing)
-- **Levered equity IRRs with 70% financing**: 15–22%
-- **Debt service coverage requirement**: 1.5x minimum
-- **Project stabilisation timeline**: 3–5 years post-FID (including construction)
-- **Typical infrastructure fund cap rate on stabilised renewable capacity**: 5–7%
+- Stabilised hydrogen project unlevered IRRs: 10–15%
+- Hydrogen price sensitivity: USD 0.50/kg change = 200–250 bps IRR impact
+- Electricity cost sensitivity: AUD 10/MWh change = 150–180 bps IRR impact
+- Electrolyser capex sensitivity: USD 100/kW change = 100–120 bps IRR impact
+- Typical project financing: 70% debt, 30% equity
+- Project-level debt borrowing cost: 5.0% typical (based on HPA-backed financing)
+- Levered equity IRRs with 70% financing: 15–22%
+- Debt service coverage requirement: 1.5x minimum
+- Project stabilisation timeline: 3–5 years post-FID (including construction)
+- Typical infrastructure fund cap rate on stabilised renewable capacity: 5–7%
 
 ### Key Risks & Mitigation Strategies
 
@@ -2369,14 +2377,15 @@ Hydrogen project risks include technology maturation risk (electrolyser cost and
 
 **Key Data Points:**
 
-- **Typical HPA counterparty credit rating**: Investment-grade (A- minimum)
-- **Long-term HPA duration providing offtaker risk mitigation**: 15–20 years
-- **Government offtake guarantee availability**: varies by jurisdiction; explicit in some cases
-- **Project FID to first revenue timeline**: 48–60 months typical
-- **Risk mitigation through geographic diversification**: recommend 3+ offtaker regions
+- Typical HPA counterparty credit rating: Investment-grade (A- minimum)
+- Long-term HPA duration providing offtaker risk mitigation: 15–20 years
+- Government offtake guarantee availability: varies by jurisdiction; explicit in some cases
+- Project FID to first revenue timeline: 48–60 months typical
+- Risk mitigation through geographic diversification: recommend 3+ offtaker regions
 
 ## References
 
+1. Australian Department of Climate Change, Energy and Environments (2025). "Australia's Hydrogen Export Strategy and Government Support Programmes." DCCEEW, Canberra.
 2. CSIRO (2025). "Green Hydrogen Production in Australia: Technology Roadmap and Cost Projections." CSIRO Energy Centre, Melbourne.
 3. International Energy Agency (2025). "Global Hydrogen Review 2025: Market Demand and Production Economics." IEA, Paris.
 4. Goldman Sachs Australia (2025). "Australian Green Hydrogen: Investment Thesis and Project Valuation." Goldman Sachs Research, Sydney.
@@ -2396,16 +2405,16 @@ Green hydrogen is produced through water electrolysis powered by renewable elect
 
 **关键数据：**
 
-- **Current electrolyser capital cost globally**：USD 800–1,200/kW
-- **Electrolyser capex target by 2030**：USD 400–600/kW (40–50% reduction)
-- **Current Australia LCOH**：USD 3.0–3.8/kg (at plant)
-- **Delivered LCOH to Asia**：USD 4.5–5.5/kg (including liquefaction and shipping)
-- **Conventional hydrogen LCOH**：USD 1.5–2.0/kg (natural gas) or USD 1.2–1.8/kg (coal)
-- **Target LCOH by 2030**：USD 1.8–2.2/kg (at plant), USD 3.0–3.5/kg (delivered)
-- **System efficiency (electricity to hydrogen)**：65–72%
-- **Liquefaction cost**：AUD 600–800/tonne
-- **Shipping cost (10,000+ tonne cargo)**：USD 350–500/tonne
-- **Renewable electricity cost in Australia**：USD 30–50/MWh (among world\\
+- Current electrolyser capital cost globally: USD 800–1,200/kW
+- Electrolyser capex target by 2030: USD 400–600/kW (40–50% reduction)
+- Current Australia LCOH: USD 3.0–3.8/kg (at plant)
+- Delivered LCOH to Asia: USD 4.5–5.5/kg (including liquefaction and shipping)
+- Conventional hydrogen LCOH: USD 1.5–2.0/kg (natural gas) or USD 1.2–1.8/kg (coal)
+- Target LCOH by 2030: USD 1.8–2.2/kg (at plant), USD 3.0–3.5/kg (delivered)
+- System efficiency (electricity to hydrogen): 65–72%
+- Liquefaction cost: AUD 600–800/tonne
+- Shipping cost (10,000+ tonne cargo): USD 350–500/tonne
+- Renewable electricity cost in Australia: USD 30–50/MWh (among world's cheapest)
 
 ### Regional Demand Drivers & Long-Term Contracts
 
@@ -2413,14 +2422,14 @@ Asian demand for hydrogen is driven by three concurrent factors: (1) decarbonisa
 
 **关键数据：**
 
-- **Japan hydrogen demand target 2030**：3 million tonnes annually
-- **Japan hydrogen electricity generation target 2030**：3% of total; 2050: 10%
-- **South Korea hydrogen target 2035**：5 million tonnes in industrial heating (30% of coal displacement)
-- **India hydrogen target 2030**：5 million tonnes (production + imports)
-- **Long-term hydrogen purchase agreement (HPA) duration**：15–20 years
-- **Current HPA pricing**：USD 3.50–5.00/kg
-- **Projected HPA pricing by 2030**：USD 2.50–3.50/kg
-- **Project financing coverage**：banks lend 70–80% of capex against HPA revenue
+- Japan hydrogen demand target 2030: 3 million tonnes annually
+- Japan hydrogen electricity generation target 2030: 3% of total; 2050: 10%
+- South Korea hydrogen target 2035: 5 million tonnes in industrial heating (30% of coal displacement)
+- India hydrogen target 2030: 5 million tonnes (production + imports)
+- Long-term hydrogen purchase agreement (HPA) duration: 15–20 years
+- Current HPA pricing: USD 3.50–5.00/kg
+- Projected HPA pricing by 2030: USD 2.50–3.50/kg
+- Project financing coverage: banks lend 70–80% of capex against HPA revenue
 
 ## Major Project Pipeline & Investment Opportunities
 
@@ -2430,16 +2439,16 @@ The Asian Renewable Energy Hub (AREH) represents the largest announced hydrogen 
 
 **关键数据：**
 
-- **AREH project electrolyser capacity**：9 GW (powered by 15 GW renewables)
-- **AREH hydrogen/ammonia production target**：1.8 million tonnes annually
-- **AREH estimated capex**：USD 36 billion
-- **AREH production timeline**：first hydrogen 2027–2028; full capacity 2032–2033
-- **Fortescue Green Hydrogen capex**：AUD 8.9 billion (USD 6.0B)
-- **Fortescue GH production target**：2 million tonnes annually by 2030
-- **Fortescue GH offtake secured**：60–70% of production
-- **Queensland hydrogen projects combined capacity**：5 GW electrolyser
-- **Typical equity position size**：USD 200M–500M (15–25% minority stake)
-- **Mezzanine financing target returns**：9–12%
+- AREH project electrolyser capacity: 9 GW (powered by 15 GW renewables)
+- AREH hydrogen/ammonia production target: 1.8 million tonnes annually
+- AREH estimated capex: USD 36 billion
+- AREH production timeline: first hydrogen 2027–2028; full capacity 2032–2033
+- Fortescue Green Hydrogen capex: AUD 8.9 billion (USD 6.0B)
+- Fortescue GH production target: 2 million tonnes annually by 2030
+- Fortescue GH offtake secured: 60–70% of production
+- Queensland hydrogen projects combined capacity: 5 GW electrolyser
+- Typical equity position size: USD 200M–500M (15–25% minority stake)
+- Mezzanine financing target returns: 9–12%
 
 ### Technology Partnerships & Global Supply Chain
 
@@ -2447,9 +2456,9 @@ Australian hydrogen projects are benefiting from partnerships with global electr
 
 **关键数据：**
 
-- **Typical electrolyser technology partner**：Siemens Energy, ACWA Power, Neom technology
-- **Renewable PPA pricing**：USD 30–50/MWh for 20–25 year terms
-- **Renewable infrastructure fund acquisition model**：post-stabilisation acquisition for developer equity recycling
+- Typical electrolyser technology partner: Siemens Energy, ACWA Power, Neom technology
+- Renewable PPA pricing: USD 30–50/MWh for 20–25 year terms
+- Renewable infrastructure fund acquisition model: post-stabilisation acquisition for developer equity recycling
 
 ## Investment Returns & Risk Framework
 
@@ -2459,16 +2468,16 @@ Stabilised hydrogen project economics deliver 10–15% unlevered IRRs based on c
 
 **关键数据：**
 
-- **Stabilised hydrogen project unlevered IRRs**：10–15%
-- **Hydrogen price sensitivity**：USD 0.50/kg change = 200–250 bps IRR impact
-- **Electricity cost sensitivity**：AUD 10/MWh change = 150–180 bps IRR impact
-- **Electrolyser capex sensitivity**：USD 100/kW change = 100–120 bps IRR impact
-- **Typical project financing**：70% debt, 30% equity
-- **Project-level debt borrowing cost**：5.0% typical (based on HPA-backed financing)
-- **Levered equity IRRs with 70% financing**：15–22%
-- **Debt service coverage requirement**：1.5x minimum
-- **Project stabilisation timeline**：3–5 years post-FID (including construction)
-- **Typical infrastructure fund cap rate on stabilised renewable capacity**：5–7%
+- Stabilised hydrogen project unlevered IRRs: 10–15%
+- Hydrogen price sensitivity: USD 0.50/kg change = 200–250 bps IRR impact
+- Electricity cost sensitivity: AUD 10/MWh change = 150–180 bps IRR impact
+- Electrolyser capex sensitivity: USD 100/kW change = 100–120 bps IRR impact
+- Typical project financing: 70% debt, 30% equity
+- Project-level debt borrowing cost: 5.0% typical (based on HPA-backed financing)
+- Levered equity IRRs with 70% financing: 15–22%
+- Debt service coverage requirement: 1.5x minimum
+- Project stabilisation timeline: 3–5 years post-FID (including construction)
+- Typical infrastructure fund cap rate on stabilised renewable capacity: 5–7%
 
 ### Key Risks & Mitigation Strategies
 
@@ -2476,14 +2485,15 @@ Hydrogen project risks include technology maturation risk (electrolyser cost and
 
 **关键数据：**
 
-- **Typical HPA counterparty credit rating**：Investment-grade (A- minimum)
-- **Long-term HPA duration providing offtaker risk mitigation**：15–20 years
-- **Government offtake guarantee availability**：varies by jurisdiction; explicit in some cases
-- **Project FID to first revenue timeline**：48–60 months typical
-- **Risk mitigation through geographic diversification**：recommend 3+ offtaker regions
+- Typical HPA counterparty credit rating: Investment-grade (A- minimum)
+- Long-term HPA duration providing offtaker risk mitigation: 15–20 years
+- Government offtake guarantee availability: varies by jurisdiction; explicit in some cases
+- Project FID to first revenue timeline: 48–60 months typical
+- Risk mitigation through geographic diversification: recommend 3+ offtaker regions
 
 ## 参考文献
 
+1. Australian Department of Climate Change, Energy and Environments (2025). "Australia's Hydrogen Export Strategy and Government Support Programmes." DCCEEW, Canberra.
 2. CSIRO (2025). "Green Hydrogen Production in Australia: Technology Roadmap and Cost Projections." CSIRO Energy Centre, Melbourne.
 3. International Energy Agency (2025). "Global Hydrogen Review 2025: Market Demand and Production Economics." IEA, Paris.
 4. Goldman Sachs Australia (2025). "Australian Green Hydrogen: Investment Thesis and Project Valuation." Goldman Sachs Research, Sydney.
