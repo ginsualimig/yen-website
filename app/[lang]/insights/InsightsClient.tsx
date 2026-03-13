@@ -160,57 +160,42 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
 
   return (
     <>
-      {/* FILTER CONTROLS */}
-      <div className="mb-12">
-        {/* Region Filters — Grouped by Geographic Area */}
-        <div className="mb-8">
-          <h3 className="text-sm font-semibold uppercase tracking-widest text-navy-900 mb-4">
-            {isZhLocale ? '按地区筛选' : 'Filter by Region'}
-          </h3>
-          
-          {/* Group regions by geographic area */}
-          {Array.from(new Set(regions.map(r => r.group))).map(group => (
-            <div key={group} className="mb-4">
-              <p className="text-xs text-slate-500 font-semibold uppercase tracking-widest mb-2">{group}</p>
-              <div className="flex flex-wrap gap-2">
-                {regions.filter(r => r.group === group).map(region => (
-                  <button
-                    key={region.key}
-                    onClick={() => toggleRegion(region.key)}
-                    className={`px-3 py-1.5 rounded text-xs font-medium transition-all duration-250 ${
-                      selectedRegions.has(region.key)
-                        ? 'bg-navy-900 text-cream-100'
-                        : 'bg-white border border-slate-200 text-navy-900 hover:border-navy-900'
-                    }`}
-                  >
-                    {isZhLocale ? region.labelZh : region.labelEn}
-                  </button>
-                ))}
-              </div>
-            </div>
+      {/* FILTER CONTROLS — Compact */}
+      <div className="mb-8 space-y-3">
+        {/* Regions & Topics on one line */}
+        <div className="flex flex-wrap items-center gap-2">
+          {/* Region Pills */}
+          {regions.map(region => (
+            <button
+              key={region.key}
+              onClick={() => toggleRegion(region.key)}
+              className={`px-2.5 py-1 rounded text-xs font-medium transition-all duration-250 whitespace-nowrap ${
+                selectedRegions.has(region.key)
+                  ? 'bg-navy-900 text-cream-100'
+                  : 'bg-slate-100 border border-slate-300 text-navy-900 hover:border-navy-900'
+              }`}
+              title={region.group}
+            >
+              {isZhLocale ? region.labelZh : region.labelEn}
+            </button>
           ))}
         </div>
 
-        {/* Topic Filters */}
-        <div>
-          <h3 className="text-sm font-semibold uppercase tracking-widest text-navy-900 mb-4">
-            {isZhLocale ? '按主题筛选' : 'Filter by Topic'}
-          </h3>
-          <div className="flex flex-wrap gap-3">
-            {topics.map(topic => (
-              <button
-                key={topic.key}
-                onClick={() => toggleTopic(topic.key)}
-                className={`px-4 py-2 rounded text-sm font-medium transition-all duration-250 ${
-                  selectedTopics.has(topic.key)
-                    ? 'bg-gold-500 text-navy-900'
-                    : 'bg-white border border-slate-200 text-navy-900 hover:border-gold-500'
-                }`}
-              >
-                {isZhLocale ? topic.labelZh : topic.labelEn}
-              </button>
-            ))}
-          </div>
+        {/* Topics on second row */}
+        <div className="flex flex-wrap items-center gap-2">
+          {topics.map(topic => (
+            <button
+              key={topic.key}
+              onClick={() => toggleTopic(topic.key)}
+              className={`px-2.5 py-1 rounded text-xs font-medium transition-all duration-250 ${
+                selectedTopics.has(topic.key)
+                  ? 'bg-gold-500 text-navy-900'
+                  : 'bg-slate-100 border border-slate-300 text-navy-900 hover:border-gold-500'
+              }`}
+            >
+              {isZhLocale ? topic.labelZh : topic.labelEn}
+            </button>
+          ))}
         </div>
       </div>
 
