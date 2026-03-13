@@ -66,13 +66,8 @@ export default function Footer({ locale }: FooterProps) {
 
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <Link href={`/${locale}`} className="inline-flex items-center gap-3 group mb-6 block" aria-label="Yenturi Investment Consulting">
-              <div className="flex flex-col leading-none">
-                <span className="font-serif font-semibold text-cream-100 tracking-tight" style={{ fontSize: '1.0625rem' }}>Yenturi</span>
-                <span className="text-gold-500 font-sans" style={{ fontSize: '0.6rem', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-                  {isZh ? '投资顾问' : 'Investment Consulting'}
-                </span>
-              </div>
+            <Link href={`/${locale}`} className="inline-flex items-center gap-3 group mb-6 block" aria-label="Yenturi">
+              <span className="font-serif font-semibold text-cream-100 tracking-tight" style={{ fontSize: '1.0625rem' }}>Yenturi</span>
             </Link>
 
             <p className="text-sm text-slate-400 leading-relaxed mb-8 max-w-[320px]">

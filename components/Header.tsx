@@ -53,19 +53,14 @@ export default function Header({ locale }: HeaderProps) {
           <Link
             href={`/${locale}`}
             className="flex items-center gap-3 flex-shrink-0 group"
-            aria-label="Yenturi Investment Consulting – Home"
+            aria-label="Yenturi – Home"
           >
-            <div className="flex flex-col leading-none">
-              <span
-                className="font-serif font-semibold text-navy-900 tracking-tight"
-                style={{ fontSize: '1.0625rem', letterSpacing: '-0.01em' }}
-              >
-                Yenturi
-              </span>
-              <span className="text-slate-500 font-sans" style={{ fontSize: '0.625rem', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-                {locale === 'zh' ? '投资顾问' : 'Investment Consulting'}
-              </span>
-            </div>
+            <span
+              className="font-serif font-semibold text-navy-900 tracking-tight"
+              style={{ fontSize: '1.0625rem', letterSpacing: '-0.01em' }}
+            >
+              Yenturi
+            </span>
           </Link>
 
           {/* ── Desktop Nav ────────────────────────────────── */}
