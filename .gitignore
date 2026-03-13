@@ -4,7 +4,6 @@ npm-debug.log
 npm-error.log
 yarn-error.log
 pnpm-error.log
-package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
