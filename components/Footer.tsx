@@ -8,13 +8,7 @@ interface FooterProps {
 export default function Footer({ locale }: FooterProps) {
   const t = (key: string) => getTranslation(locale, key);
   const year = new Date().getFullYear();
-
-  const navLinks = [
-    { href: `/${locale}`,           label: t('nav.home') },
-    { href: `/${locale}/about`,     label: t('nav.about') },
-    { href: `/${locale}/services`,  label: t('nav.services') },
-    { href: `/${locale}/contact`,   label: t('nav.contact') },
-  ];
+  const isZh = locale === 'zh';
 
   const serviceLinks = [
     { href: `/${locale}/services/mna`,                 label: t('services.mna.title') },
@@ -23,6 +17,12 @@ export default function Footer({ locale }: FooterProps) {
     { href: `/${locale}/services/direct-investment`,   label: t('services.direct-investment.title') },
     { href: `/${locale}/services/business-management`, label: t('services.business-management.title') },
     { href: `/${locale}/services/research-reports`,    label: t('services.research-reports.title') },
+  ];
+
+  const companyLinks = [
+    { href: `/${locale}`,          label: t('nav.home') },
+    { href: `/${locale}/about`,    label: t('nav.about') },
+    { href: `/${locale}/services`, label: t('nav.services') },
   ];
 
   return (
@@ -43,7 +43,7 @@ export default function Footer({ locale }: FooterProps) {
         <div className="pt-16 pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
 
           {/* Brand column */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <Link href={`/${locale}`} className="inline-flex items-center gap-3 group mb-6 block" aria-label="Yenturi Investment Consulting">
               <div className="w-10 h-10 flex items-center justify-center rounded-sm bg-gold-500 flex-shrink-0">
                 <span className="text-navy-900 font-serif font-bold text-xl leading-none select-none">Y</span>
@@ -51,13 +51,15 @@ export default function Footer({ locale }: FooterProps) {
               <div className="flex flex-col leading-none">
                 <span className="font-serif font-semibold text-cream-100 tracking-tight" style={{ fontSize: '1.0625rem' }}>Yen</span>
                 <span className="text-gold-500 font-sans" style={{ fontSize: '0.6rem', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-                  {locale === 'zh' ? '投资顾问' : 'Investment Consulting'}
+                  {isZh ? '投资顾问' : 'Investment Consulting'}
                 </span>
               </div>
             </Link>
 
-            <p className="text-sm text-slate-400 leading-relaxed mb-6 max-w-[260px]">
-              {t('hero.description')}
+            <p className="text-sm text-slate-400 leading-relaxed mb-8 max-w-[320px]">
+              {isZh
+                ? '专业的亚太地区投资顾问和并购咨询公司，服务机构投资者和企业客户。'
+                : 'Institutional investment consulting and M&A advisory firm serving investors and corporations across the Asia-Pacific region.'}
             </p>
 
             {/* Address */}
@@ -69,46 +71,13 @@ export default function Footer({ locale }: FooterProps) {
             </address>
           </div>
 
-          {/* Contact column */}
+          {/* Company links column */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-5">
-              {locale === 'zh' ? '联系方式' : 'Contact'}
-            </h4>
-            <ul className="space-y-4">
-              <li>
-                <p className="text-xs text-slate-500 mb-0.5">{t('contact.email')}</p>
-                <a
-                  href={`mailto:${t('footer.email')}`}
-                  className="text-sm text-slate-300 hover:text-gold-400 transition-colors duration-250 font-medium"
-                >
-                  {t('footer.email')}
-                </a>
-              </li>
-              <li>
-                <p className="text-xs text-slate-500 mb-0.5">{t('contact.phone')}</p>
-                <a
-                  href={`tel:${t('footer.phone')}`}
-                  className="text-sm text-slate-300 hover:text-gold-400 transition-colors duration-250 font-medium"
-                >
-                  {t('footer.phone')}
-                </a>
-              </li>
-              <li>
-                <p className="text-xs text-slate-500 mb-0.5">{locale === 'zh' ? '工作时间' : 'Hours'}</p>
-                <p className="text-sm text-slate-400">
-                  {locale === 'zh' ? '周一至周五 09:00–18:00 (GMT+8)' : 'Mon–Fri 09:00–18:00 GMT+8'}
-                </p>
-              </li>
-            </ul>
-          </div>
-
-          {/* Navigation column */}
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-5">
-              {t('footer.links')}
+              {isZh ? '公司' : 'Company'}
             </h4>
             <ul className="space-y-3">
-              {navLinks.map((link) => (
+              {companyLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

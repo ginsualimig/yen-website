@@ -89,7 +89,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
   return (
     <div id="main-content">
 
-      {/* ── Page Hero ─────────────────────────────────────── */}
+      {/* PAGE HERO */}
       <section className="page-hero relative overflow-hidden" style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
         <div
           className="absolute -top-16 -right-16 w-[500px] h-[500px] rounded-full opacity-[0.05] pointer-events-none"
@@ -112,7 +112,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
         </div>
       </section>
 
-      {/* ── Services Grid ─────────────────────────────────── */}
+      {/* SERVICES GRID */}
       <section className="section-xl bg-cream-100">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -121,9 +121,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                 <article
                   className="h-full bg-white border border-slate-200 rounded-lg p-8 flex flex-col gap-5 transition-all duration-350 ease-premium cursor-pointer"
                   style={{ boxShadow: '0 1px 4px rgba(11,22,38,0.05)' }}
-                  onMouseEnter={undefined}
                 >
-                  {/* Service number + icon row */}
                   <div className="flex items-start justify-between">
                     <div
                       className="w-14 h-14 flex items-center justify-center rounded-md text-gold-500 flex-shrink-0 transition-all duration-350 group-hover:scale-105"
@@ -136,7 +134,6 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                     </span>
                   </div>
 
-                  {/* Title */}
                   <div>
                     <h3 className="text-navy-900 mb-2 group-hover:text-gold-600 transition-colors duration-250">
                       {service.title}
@@ -144,12 +141,10 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                     <div className="h-px bg-gold-400 w-6 opacity-0 group-hover:opacity-60 group-hover:w-12 transition-all duration-350" aria-hidden="true"/>
                   </div>
 
-                  {/* Description */}
                   <p className="text-slate-500 text-sm leading-relaxed flex-1">
                     {service.description}
                   </p>
 
-                  {/* Footer link */}
                   <div className="flex items-center gap-2 text-gold-500 text-sm font-medium">
                     <span>{isZh ? '了解详情' : 'View details'}</span>
                     <svg
@@ -167,7 +162,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
         </div>
       </section>
 
-      {/* ── Why Choose Us ─────────────────────────────────── */}
+      {/* WHY CHOOSE US */}
       <section
         className="section-xl"
         style={{ background: 'linear-gradient(160deg, #0B1626 0%, #0F1F38 100%)' }}
@@ -231,21 +226,27 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
         </div>
       </section>
 
-      {/* ── CTA ───────────────────────────────────────────── */}
+      {/* CLOSING — no contact CTA, just a statement */}
       <section className="section-lg bg-cream-100" style={{ borderTop: '1px solid #EDE7D8' }}>
         <div className="max-w-3xl mx-auto px-5 sm:px-8 lg:px-10 text-center">
-          <span className="eyebrow text-gold-600">{isZh ? '开始合作' : 'Start a Conversation'}</span>
-          <h2 className="section-heading text-navy-900 mb-4">{t('contact.title')}</h2>
+          <span className="eyebrow text-gold-600">{isZh ? '我们的方式' : 'Our Approach'}</span>
+          <h2 className="section-heading text-navy-900 mb-4">
+            {isZh ? '我们通过关系开展工作' : 'We Work Through Relationships'}
+          </h2>
           <span className="rule-gold-center" aria-hidden="true"/>
-          <p className="text-slate-600 mt-4 mb-10 max-w-xl mx-auto" style={{ lineHeight: '1.75' }}>
-            {t('contact.subtitle')}
+          <p className="text-slate-600 mt-4 max-w-xl mx-auto" style={{ lineHeight: '1.75' }}>
+            {isZh
+              ? '我们与机构投资者和企业的合作关系建立在信任和相互尊重的基础之上。我们通过现有网络中的个人介绍和推荐了解新合作伙伴。'
+              : 'Our relationships with institutional investors and corporations are founded on trust and mutual respect. We are introduced to new partners through personal referrals within our existing network.'}
           </p>
-          <Link href={`/${locale}/contact`} className="btn-primary">
-            {isZh ? '联系我们' : 'Get in Touch'}
-            <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-              <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </Link>
+          <div className="mt-8">
+            <Link href={`/${locale}/about`} className="btn-outline-dark">
+              {isZh ? '了解我们的故事' : 'Learn About Us'}
+              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </Link>
+          </div>
         </div>
       </section>
     </div>

@@ -48,8 +48,8 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
             </h2>
             <p>
               {isEn
-                ? 'We collect information you voluntarily provide, such as name, email, phone number, and company details through our contact form and services.'
-                : '我们收集您通过联系表格和服务自愿提供的信息，如姓名、电子邮件、电话号码和公司详情。'}
+                ? 'We may collect information voluntarily provided during the course of our advisory engagements and professional relationships, including name and company details.'
+                : '我们可能会收集在顾问服务和专业关系过程中自愿提供的信息，包括姓名和公司详情。'}
             </p>
           </section>
 
@@ -59,8 +59,8 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
             </h2>
             <p>
               {isEn
-                ? 'We use the information to respond to inquiries, provide services, and improve our website experience.'
-                : '我们使用这些信息来回复询问、提供服务和改进网站体验。'}
+                ? 'We use information to deliver advisory services, maintain professional relationships, and fulfil our obligations to clients.'
+                : '我们使用信息来提供顾问服务、维护专业关系并履行对客户的义务。'}
             </p>
           </section>
 
@@ -77,12 +77,12 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
 
           <section>
             <h2 className="text-2xl font-bold text-yen-navy mt-8 mb-4">
-              {isEn ? 'Contact Us' : '联系我们'}
+              {isEn ? 'Enquiries' : '查询'}
             </h2>
             <p>
               {isEn
-                ? 'If you have questions about this Privacy Policy, please contact us at contact@yen-consulting.com'
-                : '如果您对本隐私政策有任何疑问，请与我们联系：contact@yen-consulting.com'}
+                ? 'If you have questions about this Privacy Policy, please reach out through your existing relationship manager or referral contact.'
+                : '如果您对本隐私政策有任何疑问，请通过您现有的关系经理或介绍人联系我们。'}
             </p>
           </section>
         </div>

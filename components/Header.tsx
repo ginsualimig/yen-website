@@ -22,7 +22,6 @@ export default function Header({ locale }: HeaderProps) {
     { href: `/${locale}`,          label: t('nav.home') },
     { href: `/${locale}/about`,    label: t('nav.about') },
     { href: `/${locale}/services`, label: t('nav.services') },
-    { href: `/${locale}/contact`,  label: t('nav.contact') },
   ];
 
   useEffect(() => {
@@ -100,9 +99,9 @@ export default function Header({ locale }: HeaderProps) {
               {t('language-toggle')}
             </Link>
 
-            {/* CTA Button */}
-            <Link href={`/${locale}/contact`} className="btn-primary text-sm">
-              {t('nav.contact')}
+            {/* About CTA instead of Contact */}
+            <Link href={`/${locale}/about`} className="btn-primary text-sm">
+              {t('nav.about')}
               <svg className="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
@@ -153,14 +152,6 @@ export default function Header({ locale }: HeaderProps) {
                   {item.label}
                 </Link>
               ))}
-              <div className="mt-3 pt-3 border-t border-slate-100">
-                <Link
-                  href={`/${locale}/contact`}
-                  className="btn-primary w-full justify-center"
-                >
-                  {t('nav.contact')}
-                </Link>
-              </div>
             </nav>
           </div>
         )}

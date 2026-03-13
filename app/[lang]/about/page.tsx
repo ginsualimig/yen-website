@@ -81,9 +81,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
   return (
     <div id="main-content">
 
-      {/* ── Page Hero ─────────────────────────────────────── */}
+      {/* PAGE HERO */}
       <section className="page-hero relative overflow-hidden" style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
-        {/* Decorative orb */}
         <div
           className="absolute -top-16 -right-16 w-[500px] h-[500px] rounded-full opacity-[0.05] pointer-events-none"
           style={{ background: 'radial-gradient(circle, #C9A961 0%, transparent 70%)' }}
@@ -105,12 +104,57 @@ export default async function AboutPage({ params }: AboutPageProps) {
         </div>
       </section>
 
-      {/* ── Mission & Vision ──────────────────────────────── */}
+      {/* OUR STORY */}
       <section className="section-xl bg-cream-100">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
 
-            {/* Mission */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-16">
+            <div>
+              <span className="eyebrow">{isZh ? '我们的故事' : 'Our Story'}</span>
+              <h2 className="section-heading text-navy-900 mb-4" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)' }}>
+                {isZh ? '植根亚太的专业历程' : 'Built on Decades of APAC Experience'}
+              </h2>
+              <span className="rule-gold" aria-hidden="true"/>
+              <div className="space-y-4 mt-4">
+                <p className="text-slate-600 leading-relaxed" style={{ lineHeight: '1.8' }}>
+                  {isZh
+                    ? 'Yenturi投资顾问是一家专注于亚太地区的机构级投资咨询和并购顾问公司。我们的团队在整个亚太地区的并购、直接投资、业务整合和企业转型领域积累了数十年的专业经验。'
+                    : 'Yenturi Investment Consulting is an institutional-grade investment advisory and M&A advisory firm focused on the Asia-Pacific region. Our team has built decades of specialized experience across M&A, direct investment, business consolidation, and corporate transformation throughout APAC.'}
+                </p>
+                <p className="text-slate-600 leading-relaxed" style={{ lineHeight: '1.8' }}>
+                  {isZh
+                    ? '我们的业务建立在深厚的人际关系网络之上。我们的客户——机构投资者、上市公司、私募股权基金和家族办公室——通过个人介绍和推荐了解我们。这种以关系为先的模式，确保我们与真正理解并欣赏我们工作方式的合作伙伴共事。'
+                    : 'Our business is built on deep relationship networks. Our clients — institutional investors, listed corporations, private equity funds, and family offices — come to us through personal introduction and referral. This relationship-first model ensures we work with partners who genuinely understand and value our approach.'}
+                </p>
+                <p className="text-slate-600 leading-relaxed" style={{ lineHeight: '1.8' }}>
+                  {isZh
+                    ? '我们在中国内地、香港和更广泛的亚太地区拥有深厚的本地市场知识，并将其与国际最佳实践相结合，为客户创造持久价值。'
+                    : 'We combine deep local market knowledge across Mainland China, Hong Kong, and the broader Asia-Pacific region with international best practices to create enduring value for our clients.'}
+                </p>
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 gap-6">
+              {stats.map((stat, i) => (
+                <div
+                  key={i}
+                  className="p-8 rounded-lg text-center"
+                  style={{ background: 'linear-gradient(135deg, #0B1626 0%, #0F1F38 100%)' }}
+                >
+                  <div className="font-serif font-bold text-gold-400 mb-2" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: 1, letterSpacing: '-0.02em' }}>
+                    {stat.value}
+                  </div>
+                  <p className="text-slate-400 text-xs tracking-wide font-medium uppercase">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Mission & Vision */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="card-premium p-10">
               <div className="service-icon text-gold-500 mb-6 w-12 h-12 flex items-center justify-center rounded-md" style={{ background: 'linear-gradient(135deg, rgba(201,169,97,0.12) 0%, rgba(201,169,97,0.06) 100%)' }}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
@@ -124,7 +168,6 @@ export default async function AboutPage({ params }: AboutPageProps) {
               <p className="text-slate-600 leading-relaxed">{t('about.missionText')}</p>
             </div>
 
-            {/* Vision */}
             <div className="card-premium p-10">
               <div className="service-icon text-gold-500 mb-6 w-12 h-12 flex items-center justify-center rounded-md" style={{ background: 'linear-gradient(135deg, rgba(201,169,97,0.12) 0%, rgba(201,169,97,0.06) 100%)' }}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
@@ -139,28 +182,10 @@ export default async function AboutPage({ params }: AboutPageProps) {
               <p className="text-slate-600 leading-relaxed">{t('about.visionText')}</p>
             </div>
           </div>
-
-          {/* Stats row */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map((stat, i) => (
-              <div
-                key={i}
-                className="p-6 rounded-lg text-center"
-                style={{ background: 'linear-gradient(135deg, #0B1626 0%, #0F1F38 100%)' }}
-              >
-                <div className="font-serif font-bold text-gold-400 mb-2" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: 1, letterSpacing: '-0.02em' }}>
-                  {stat.value}
-                </div>
-                <p className="text-slate-400 text-xs tracking-wide font-medium uppercase">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* ── Values ─────────────────────────────────────────── */}
+      {/* VALUES */}
       <section
         className="relative section-xl overflow-hidden"
         style={{ background: 'linear-gradient(160deg, #0B1626 0%, #0F1F38 100%)' }}
@@ -186,15 +211,11 @@ export default async function AboutPage({ params }: AboutPageProps) {
                 className="group p-8 rounded-lg border transition-all duration-350 ease-premium flex flex-col gap-4"
                 style={{ background: 'rgba(255,255,255,0.03)', borderColor: 'rgba(255,255,255,0.07)' }}
               >
-                {/* Number */}
                 <div className="text-gold-500 font-serif font-bold opacity-30 text-4xl leading-none group-hover:opacity-60 transition-opacity">
                   {String(i + 1).padStart(2, '0')}
                 </div>
-                {/* Icon */}
                 <div className="text-gold-500">{value.icon}</div>
-                {/* Title */}
                 <h3 className="text-cream-100 font-semibold text-base">{value.label}</h3>
-                {/* Description */}
                 <p className="text-slate-400 text-sm leading-relaxed">{value.desc}</p>
               </div>
             ))}
@@ -202,7 +223,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
         </div>
       </section>
 
-      {/* ── APAC Section ───────────────────────────────────── */}
+      {/* APAC FOCUS */}
       <section className="section-xl" style={{ background: '#FAF8F3', borderTop: '1px solid #EDE7D8' }}>
         <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -212,9 +233,9 @@ export default async function AboutPage({ params }: AboutPageProps) {
                 {isZh ? '亚太区域领导力' : 'Asia-Pacific Leadership'}
               </h2>
               <span className="rule-gold" aria-hidden="true"/>
-              <p className="text-slate-600 leading-relaxed mb-5" style={{ lineHeight: '1.8' }}>
+              <p className="text-slate-600 leading-relaxed mb-5 mt-4" style={{ lineHeight: '1.8' }}>
                 {isZh
-                  ? '凭借对亚太地区的深厚专业知识，我们提供专为该地区新兴市场和成熟市场独特机遇和挑战量身定制的战略咨询服务。我们的团队将国际最佳实践与本地市场知识相结合。'
+                  ? '凭借对亚太地区的深厚专业知识，我们提供专为该地区新兴市场和成熟市场独特机遇与挑战量身定制的战略咨询服务。我们的团队将国际最佳实践与本地市场知识相结合。'
                   : 'With deep expertise in the Asia-Pacific region, we provide strategic advisory services tailored to the unique opportunities and challenges of emerging and developed markets across the region. Our team combines international best practices with local market knowledge.'}
               </p>
               <p className="text-slate-600 leading-relaxed" style={{ lineHeight: '1.8' }}>
@@ -224,7 +245,6 @@ export default async function AboutPage({ params }: AboutPageProps) {
               </p>
             </div>
 
-            {/* Regional indicators */}
             <div className="grid grid-cols-2 gap-4">
               {[
                 { region: isZh ? '中国大陆' : 'Mainland China', note: isZh ? '核心市场' : 'Core Market' },
@@ -232,10 +252,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
                 { region: isZh ? '东南亚' : 'Southeast Asia',  note: isZh ? '增长市场' : 'Growth Markets' },
                 { region: isZh ? '大洋洲' : 'Australasia',     note: isZh ? '战略市场' : 'Strategic Markets' },
               ].map((r, i) => (
-                <div
-                  key={i}
-                  className="card-premium p-6"
-                >
+                <div key={i} className="card-premium p-6">
                   <p className="font-semibold text-navy-900 text-sm mb-1">{r.region}</p>
                   <p className="text-xs text-gold-600 font-medium tracking-wide">{r.note}</p>
                 </div>
@@ -245,47 +262,30 @@ export default async function AboutPage({ params }: AboutPageProps) {
         </div>
       </section>
 
-      {/* ── Office & Contact ───────────────────────────────── */}
+      {/* OFFICE — Address only, no contact form, no email/phone CTAs */}
       <section
         className="section-xl"
         style={{ background: 'linear-gradient(160deg, #060D1A 0%, #0B1626 100%)' }}
       >
         <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-10 text-center">
-          <span className="eyebrow">{isZh ? '联系我们' : 'Our Office'}</span>
+          <span className="eyebrow">{isZh ? '我们的位置' : 'Our Office'}</span>
           <h2 className="font-serif font-semibold text-cream-100 mb-4" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', letterSpacing: '-0.015em' }}>
-            {t('contact.address')}
+            {isZh ? '广州办公室' : 'Guangzhou Office'}
           </h2>
           <span className="rule-gold-center" aria-hidden="true"/>
 
           <div className="mt-8 inline-block text-left bg-white bg-opacity-5 rounded-lg p-8 border" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
             <p className="text-sm text-gold-500 font-semibold uppercase tracking-widest mb-3">{t('footer.office')}</p>
-            <p className="text-slate-300 whitespace-pre-line leading-relaxed text-lg font-medium mb-6">
+            <p className="text-slate-300 whitespace-pre-line leading-relaxed text-lg font-medium">
               {t('footer.address')}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-              <div>
-                <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">{t('contact.email')}</p>
-                <a href={`mailto:${t('footer.email')}`} className="text-slate-300 hover:text-gold-400 transition-colors font-medium">
-                  {t('footer.email')}
-                </a>
-              </div>
-              <div>
-                <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">{t('contact.phone')}</p>
-                <a href={`tel:${t('footer.phone')}`} className="text-slate-300 hover:text-gold-400 transition-colors font-medium">
-                  {t('footer.phone')}
-                </a>
-              </div>
-            </div>
           </div>
 
-          <div className="mt-10">
-            <Link href={`/${locale}/contact`} className="btn-primary">
-              {isZh ? '获取联系方式' : 'Get in Touch'}
-              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
-          </div>
+          <p className="mt-8 text-slate-500 text-sm max-w-md mx-auto" style={{ lineHeight: '1.75' }}>
+            {isZh
+              ? '我们通过个人介绍和推荐与新合作伙伴建立关系。'
+              : 'We establish new relationships through personal introduction and referral.'}
+          </p>
         </div>
       </section>
     </div>

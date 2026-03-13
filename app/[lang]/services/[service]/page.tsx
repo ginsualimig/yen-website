@@ -435,24 +435,24 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
         </div>
       </section>
 
-      {/* ── CTA ───────────────────────────────────────────── */}
+      {/* ── Closing Statement — no contact CTA ─────────────── */}
       <section
         className="section-lg"
         style={{ background: 'linear-gradient(160deg, #060D1A 0%, #0B1626 100%)' }}
       >
         <div className="max-w-3xl mx-auto px-5 sm:px-8 lg:px-10 text-center">
-          <span className="eyebrow">{isZh ? '开始合作' : 'Let\'s Talk'}</span>
+          <span className="eyebrow">{isZh ? '我们的方式' : 'Our Approach'}</span>
           <h2 className="font-serif font-semibold text-cream-100 mb-4" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', letterSpacing: '-0.015em' }}>
-            {t('contact.title')}
+            {isZh ? '以关系为本的顾问服务' : 'Relationship-First Advisory'}
           </h2>
           <span className="rule-gold-center" aria-hidden="true"/>
-          <p className="text-slate-400 mt-4 mb-10 max-w-xl mx-auto" style={{ lineHeight: '1.75' }}>
+          <p className="text-slate-400 mt-4 mb-8 max-w-xl mx-auto" style={{ lineHeight: '1.75' }}>
             {isZh
-              ? `让我们探讨${t(`${serviceKey}.title`)}如何为您的发展目标赋能。`
-              : `Let us explore how ${t(`${serviceKey}.title`)} can accelerate your growth objectives.`}
+              ? `我们通过既有人脉网络中的个人介绍和推荐，与机构客户在${t(`${serviceKey}.title`)}领域开展合作。`
+              : `Our team engages with institutional clients on ${t(`${serviceKey}.title`)} through personal introductions within our established network.`}
           </p>
-          <Link href={`/${locale}/contact`} className="btn-primary">
-            {isZh ? '联系我们' : 'Contact Us'}
+          <Link href={`/${locale}/services`} className="btn-outline-light">
+            {isZh ? '探索所有服务' : 'Explore All Services'}
             <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>

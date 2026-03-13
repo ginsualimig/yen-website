@@ -1,12 +1,12 @@
 import { MetadataRoute } from 'next';
 
-const baseUrl = 'https://yen-consulting.vercel.app';
+const baseUrl = 'https://yenturi.com';
 const locales = ['en', 'zh'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [];
 
-  const pages = ['', 'about', 'services', 'contact', 'privacy', 'terms'];
+  const pages = ['', 'about', 'services', 'privacy', 'terms'];
   
   locales.forEach((locale) => {
     pages.forEach((page) => {
