@@ -17,46 +17,46 @@ export const translations = {
 
     // Hero
     hero: {
-      title: 'Trusted Advisory Across Asia-Pacific',
-      subtitle: 'Yenturi works with institutional investors and corporations on complex M&A, investment, and business transformation engagements across the Asia-Pacific region.',
+      title: 'Accelerating Capital Flow Across Asia-Pacific',
+      subtitle: 'Where market friction meets strategic momentum. Yenturi channels opportunity through disciplined execution — convergent expertise, accelerated returns.',
       cta: 'Explore Our Services',
-      description: 'Institutional investment consulting and M&A advisory across Asia-Pacific.',
+      description: 'Institutional investment consulting and M&A advisory across Asia-Pacific. We accelerate capital flow through convergent expertise.',
     },
 
     // Services
     services: {
-      title: 'Our Services',
-      subtitle: 'Comprehensive investment and business advisory across the Asia-Pacific region, built on decades of experience and deep market knowledge.',
+      title: 'Channeling Opportunity',
+      subtitle: 'Six convergent disciplines. One accelerated outcome. We narrow complexity into executable strategy across the full investment lifecycle.',
       overview: 'View All Services',
       
       'mna': {
         title: 'M&A Advisory',
-        short: 'Expert guidance on mergers and acquisitions',
+        short: 'Accelerating deal flow across borders',
         description: 'Strategic guidance on mergers, acquisitions, and corporate restructuring across the Asia-Pacific region. We bring decades of experience in cross-border transactions, deal structuring, and post-merger integration to deliver measurable outcomes for our clients.',
       },
       'business-improvement': {
         title: 'Business Improvement',
-        short: 'Operational excellence and efficiency gains',
+        short: 'Converting friction into operational velocity',
         description: 'Enhance operational performance, streamline processes, and unlock value through systematic improvement programs. Our team combines proven methodologies with deep APAC market knowledge to drive sustainable performance gains.',
       },
       'rollup-strategy': {
         title: 'Roll-Up Strategy',
-        short: 'Consolidation and market dominance',
+        short: 'Concentrating fragmented markets into leaders',
         description: 'Strategic consolidation of fragmented markets to create industry leaders and maximize shareholder value. We identify platform opportunities, structure acquisitions, and guide integration to build dominant market positions across Asia-Pacific.',
       },
       'direct-investment': {
         title: 'Direct Investment',
-        short: 'Direct investment opportunities',
+        short: 'Channeling capital to high-velocity opportunities',
         description: 'Identify and execute direct investment opportunities with strong growth potential in emerging and developed markets across Asia-Pacific. We bring proprietary deal flow, rigorous analysis, and hands-on portfolio management to create long-term value.',
       },
       'business-management': {
         title: 'Business Management',
-        short: 'Management advisory and optimization',
+        short: 'Directing momentum through organizational clarity',
         description: 'Transform business management practices and drive organizational excellence through proven frameworks. We work alongside leadership teams to align strategy, strengthen governance, and build the capabilities required to compete and win.',
       },
       'research-reports': {
         title: 'Research & Reports',
-        short: 'Market insights and analysis',
+        short: 'Intelligence that accelerates decision-making',
         description: 'In-depth market research, industry analysis, and actionable intelligence for strategic decision-making. Our research combines primary field work with rigorous quantitative analysis to deliver insights that inform major investment and business decisions.',
       },
     },
@@ -65,7 +65,7 @@ export const translations = {
     about: {
       title: 'About Yenturi Investment Consulting',
       mission: 'Mission',
-      missionText: 'To deliver exceptional investment advisory and business consulting services that create enduring value for institutional investors and corporations across the Asia-Pacific region.',
+      missionText: 'We accelerate capital flow and business transformation across the Asia-Pacific region — channeling institutional expertise through disciplined execution to create enduring value for our clients.',
       vision: 'Vision',
       visionText: 'To be the most trusted investment advisory partner for institutions and corporations navigating the complexity and opportunity of the Asia-Pacific markets.',
       values: 'Our Values',
@@ -104,46 +104,46 @@ export const translations = {
 
     // Hero
     hero: {
-      title: '亚太地区值得信赖的投资顾问',
-      subtitle: 'Yenturi与机构投资者和企业合作，在亚太地区开展复杂的并购、投资及业务转型项目。',
+      title: '加速亚太资本流动',
+      subtitle: '市场摩擦与战略动能的交汇处。Yenturi以专注执行疏导机遇——汇聚专业，加速回报。',
       cta: '探索我们的服务',
-      description: '亚太地区专业投资咨询和并购顾问服务。',
+      description: '亚太地区专业投资咨询和并购顾问服务，汇聚专业，加速资本流动。',
     },
 
     // Services
     services: {
-      title: '我们的服务',
-      subtitle: '依托数十年经验和深厚市场知识，为亚太地区提供全面的投资与商业咨询。',
+      title: '疏导机遇',
+      subtitle: '六大汇聚专业。一个加速成果。我们将复杂性收窄为可执行战略，贯穿投资全周期。',
       overview: '查看全部服务',
       
       'mna': {
         title: 'M&A 顾问',
-        short: '并购和收购的专业指导',
+        short: '加速跨境并购流程',
         description: '在亚太地区提供并购、收购和公司重组的战略指导。我们在跨境交易、交易结构设计和并购后整合方面拥有数十年经验，为客户创造可衡量的成果。',
       },
       'business-improvement': {
         title: '业务改进',
-        short: '运营卓越和效率提升',
+        short: '将摩擦转化为运营动能',
         description: '通过系统的改进计划，提升运营绩效，优化流程，释放价值。我们的团队将经过验证的方法论与深厚的亚太市场知识相结合，推动可持续的绩效提升。',
       },
       'rollup-strategy': {
         title: '整合战略',
-        short: '市场整合和市场主导',
+        short: '将分散市场集中为行业领导者',
         description: '通过战略性整合碎片化市场，打造行业领导者，实现股东价值最大化。我们识别平台机会，构建收购策略，引导整合过程，在亚太地区建立主导市场地位。',
       },
       'direct-investment': {
         title: '直接投资',
-        short: '直接投资机会',
+        short: '将资本引导至高速增长机会',
         description: '识别和执行亚太地区新兴市场和成熟市场中具有强劲增长潜力的直接投资机会。我们带来专有的交易流、严格的分析和动手的投资组合管理，创造长期价值。',
       },
       'business-management': {
         title: '业务管理',
-        short: '管理咨询和优化',
+        short: '以组织清晰度引导增长动能',
         description: '通过成熟的框架，转变业务管理实践，推动组织卓越。我们与领导团队并肩合作，对齐战略、强化治理，构建竞争所需的能力。',
       },
       'research-reports': {
         title: '研究与报告',
-        short: '市场洞察和分析',
+        short: '加速决策的市场情报',
         description: '深入的市场研究、行业分析和可行性洞察，支持战略决策。我们的研究将一手调研与严格的定量分析相结合，为重大投资和商业决策提供参考。',
       },
     },
@@ -152,7 +152,7 @@ export const translations = {
     about: {
       title: '关于Yenturi投资顾问',
       mission: '使命',
-      missionText: '为亚太地区的机构投资者和企业提供卓越的投资顾问和商业咨询服务，创造持久价值。',
+      missionText: '我们加速亚太地区的资本流动与业务转型——通过专注执行疏导机构专业知识，为客户创造持久价值。',
       vision: '愿景',
       visionText: '成为机构投资者和企业在应对亚太市场复杂性与机遇时最值得信赖的投资顾问合作伙伴。',
       values: '我们的价值观',
