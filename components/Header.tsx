@@ -68,7 +68,7 @@ export default function Header({ locale }: HeaderProps) {
           >
             <span
               className="font-serif font-semibold text-navy-900 tracking-tight"
-              style={{ fontSize: '1.275rem', letterSpacing: '-0.01em' }}
+              style={{ fontSize: '1.125rem', letterSpacing: '-0.01em' }}
             >
               Yenturi
             </span>
