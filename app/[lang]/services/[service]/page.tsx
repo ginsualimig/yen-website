@@ -286,7 +286,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
             href={`/${locale}/contact`}
             className="inline-block px-8 py-3 bg-yen-navy text-white rounded-lg font-semibold hover:bg-yen-gray-dark transition-colors"
           >
-            {t('contact.form.submit')}
+            {locale === 'en' ? 'Contact Us' : '联系我们'}
           </Link>
         </div>
       </section>

@@ -187,7 +187,7 @@ export default async function HomePage({ params }: HomePageProps) {
             href={`/${locale}/contact`}
             className="inline-block px-8 py-3 bg-yen-navy text-white rounded-lg font-semibold hover:bg-yen-gray-dark transition-colors"
           >
-            {t('contact.form.submit')}
+            {locale === 'en' ? 'Learn More' : '了解更多'}
           </Link>
         </div>
       </section>

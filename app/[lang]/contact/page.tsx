@@ -1,4 +1,3 @@
-import ContactForm from '@/components/ContactForm';
 import { Locale, getTranslation } from '@/lib/locales';
 import type { Metadata } from 'next';
 
@@ -42,67 +41,33 @@ export default async function ContactPage({ params }: ContactPageProps) {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Information Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Form */}
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-yen-navy mb-8">
-                Send us a Message
-              </h2>
-              <ContactForm locale={locale} />
-            </div>
-
-            {/* Contact Info */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Office Address */}
             <div className="space-y-8">
-              {/* Address */}
               <div>
-                <h3 className="text-xl font-bold text-yen-navy mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-yen-navy mb-6">
                   {t('contact.address')}
-                </h3>
-                <div className="bg-yen-gray-bg p-6 rounded-lg border-l-4 border-yen-gold">
-                  <p className="text-yen-gray-dark whitespace-pre-line font-semibold mb-4">
+                </h2>
+                <div className="bg-yen-gray-bg p-8 rounded-lg border-l-4 border-yen-gold">
+                  <p className="text-2xl font-semibold text-yen-navy mb-4">
+                    {locale === 'en' ? 'Guangzhou Office' : '广州办公室'}
+                  </p>
+                  <p className="text-lg text-yen-gray-dark whitespace-pre-line mb-6 leading-relaxed">
                     {t('footer.address')}
                   </p>
-                </div>
-              </div>
-
-              {/* Contact Details */}
-              <div>
-                <h3 className="text-xl font-bold text-yen-navy mb-4">Contact Details</h3>
-                <div className="space-y-4">
-                  <div className="bg-yen-gray-bg p-4 rounded-lg">
-                    <p className="text-sm text-gray-500 mb-1">{t('contact.email')}</p>
-                    <a
-                      href="mailto:contact@yen-consulting.com"
-                      className="text-lg font-semibold text-yen-navy hover:text-yen-gold transition-colors"
-                    >
-                      {t('footer.email')}
-                    </a>
-                  </div>
-                  <div className="bg-yen-gray-bg p-4 rounded-lg">
-                    <p className="text-sm text-gray-500 mb-1">{t('contact.phone')}</p>
-                    <a
-                      href="tel:+8620"
-                      className="text-lg font-semibold text-yen-navy hover:text-yen-gold transition-colors"
-                    >
-                      {t('footer.phone')}
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Map Placeholder */}
-              <div>
-                <h3 className="text-xl font-bold text-yen-navy mb-4">Location</h3>
-                <div className="bg-yen-gray-bg p-6 rounded-lg h-64 flex items-center justify-center border-2 border-dashed border-yen-gold border-opacity-30">
-                  <div className="text-center">
-                    <p className="text-yen-navy font-semibold mb-2">📍 Guangzhou Office</p>
-                    <p className="text-sm text-yen-gray-dark">
-                      Interactive map coming soon<br />
-                      (Google Maps + Baidu Maps)
-                    </p>
+                  <div className="space-y-3">
+                    <div>
+                      <p className="text-sm text-gray-500 mb-1">{t('contact.email')}</p>
+                      <a
+                        href="mailto:contact@yen-consulting.com"
+                        className="text-lg font-semibold text-yen-navy hover:text-yen-gold transition-colors"
+                      >
+                        {t('footer.email')}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -112,20 +77,59 @@ export default async function ContactPage({ params }: ContactPageProps) {
                 <h3 className="text-xl font-bold text-yen-navy mb-4">
                   {locale === 'en' ? 'Office Hours' : '办公时间'}
                 </h3>
-                <div className="bg-yen-navy text-white p-6 rounded-lg">
-                  <div className="space-y-2 text-sm">
-                    <p>
-                      <span className="font-semibold">{locale === 'en' ? 'Monday - Friday' : '周一至周五'}:</span>{' '}
-                      09:00 - 18:00
-                    </p>
-                    <p>
-                      <span className="font-semibold">{locale === 'en' ? 'Saturday & Sunday' : '周六日'}:</span>{' '}
-                      {locale === 'en' ? 'By appointment' : '按预约'}
-                    </p>
-                    <p className="text-gray-300 mt-4">
+                <div className="bg-yen-navy text-white p-6 rounded-lg space-y-3">
+                  <div>
+                    <p className="font-semibold">{locale === 'en' ? 'Monday - Friday' : '周一至周五'}</p>
+                    <p className="text-gray-300">09:00 AM - 6:00 PM (GMT+8)</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold">{locale === 'en' ? 'Saturday & Sunday' : '周六日'}</p>
+                    <p className="text-gray-300">{locale === 'en' ? 'By appointment' : '按预约'}</p>
+                  </div>
+                  <div className="border-t border-gray-600 pt-3 mt-3">
+                    <p className="text-sm text-gray-300">
                       {locale === 'en'
-                        ? 'We respond to inquiries within 24 business hours.'
-                        : '我们将在24个工作小时内回复您的询问。'}
+                        ? '📧 We respond to emails within 24 business hours'
+                        : '📧 我们将在24个工作小时内回复邮件'}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Map Section */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-yen-navy mb-6">
+                {locale === 'en' ? 'Location' : '位置'}
+              </h2>
+              
+              {/* Google Maps Placeholder */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold text-yen-navy mb-3">Google Maps</h3>
+                <div className="bg-yen-gray-bg rounded-lg h-80 flex items-center justify-center border-2 border-dashed border-yen-gold border-opacity-30">
+                  <div className="text-center">
+                    <p className="text-4xl mb-2">📍</p>
+                    <p className="text-yen-navy font-semibold">Google Maps Embed</p>
+                    <p className="text-sm text-yen-gray-dark mt-2">
+                      {locale === 'en'
+                        ? 'Interactive map will be embedded here'
+                        : '互动地图将嵌入此处'}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Baidu Maps Placeholder */}
+              <div>
+                <h3 className="text-lg font-semibold text-yen-navy mb-3">百度地图 (Baidu Maps)</h3>
+                <div className="bg-yen-gray-bg rounded-lg h-80 flex items-center justify-center border-2 border-dashed border-yen-gold border-opacity-30">
+                  <div className="text-center">
+                    <p className="text-4xl mb-2">🗺️</p>
+                    <p className="text-yen-navy font-semibold">百度地图 Embed</p>
+                    <p className="text-sm text-yen-gray-dark mt-2">
+                      {locale === 'en'
+                        ? 'China-optimized map for local access'
+                        : '中国优化地图，方便本地访问'}
                     </p>
                   </div>
                 </div>
@@ -135,36 +139,37 @@ export default async function ContactPage({ params }: ContactPageProps) {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* Quick Info Section */}
       <section className="py-16 md:py-24 bg-yen-gray-bg">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-yen-navy mb-12 text-center">
-            {locale === 'en' ? 'Frequently Asked Questions' : '常见问题'}
-          </h2>
-          <div className="space-y-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                q: locale === 'en' ? 'What is your response time?' : '您的响应时间是多少？',
-                a: locale === 'en'
-                  ? 'We typically respond to inquiries within 24 business hours.'
-                  : '我们通常在24个工作小时内回复。',
+                icon: '🌍',
+                title: locale === 'en' ? 'Global Reach' : '全球覆盖',
+                desc: locale === 'en'
+                  ? 'Serving clients across Asia-Pacific'
+                  : '为亚太地区客户服务'
               },
               {
-                q: locale === 'en' ? 'Do you offer remote consultations?' : '您是否提供远程咨询？',
-                a: locale === 'en'
-                  ? 'Yes, we offer both in-person and remote consultation services.'
-                  : '是的，我们提供线上和线下两种咨询服务。',
+                icon: '💼',
+                title: locale === 'en' ? 'Expert Team' : '专家团队',
+                desc: locale === 'en'
+                  ? 'Decades of combined experience'
+                  : '多年行业经验'
               },
               {
-                q: locale === 'en' ? 'What markets do you serve?' : '您为哪些市场提供服务？',
-                a: locale === 'en'
-                  ? 'We specialize in Asia-Pacific markets with particular expertise in China, Southeast Asia, and emerging markets.'
-                  : '我们专注于亚太市场，特别是中国、东南亚和新兴市场。',
+                icon: '📧',
+                title: locale === 'en' ? 'Quick Response' : '快速响应',
+                desc: locale === 'en'
+                  ? '24-hour response time'
+                  : '24小时内回复'
               },
-            ].map((faq, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg border-l-4 border-yen-gold">
-                <h3 className="text-lg font-semibold text-yen-navy mb-3">{faq.q}</h3>
-                <p className="text-yen-gray-dark">{faq.a}</p>
+            ].map((item, index) => (
+              <div key={index} className="text-center p-6">
+                <div className="text-5xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-semibold text-yen-navy mb-2">{item.title}</h3>
+                <p className="text-yen-gray-dark">{item.desc}</p>
               </div>
             ))}
           </div>
