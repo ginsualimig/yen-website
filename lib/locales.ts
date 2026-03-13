@@ -7,7 +7,6 @@ export const translations = {
     // Common
     home: 'Home',
     about: 'About',
-    services: 'Services',
     contact: 'Contact',
     language: 'Language',
     'language-toggle': '中文',
@@ -125,7 +124,6 @@ export const translations = {
     // Common
     home: '首页',
     about: '关于我们',
-    services: '服务',
     contact: '联系我们',
     language: '语言',
     'language-toggle': 'English',
