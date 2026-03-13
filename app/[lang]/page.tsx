@@ -164,40 +164,71 @@ export default async function HomePage({ params }: HomePageProps) {
             {/* Throat glow — pressure point highlighting */}
             <ellipse cx="450" cy="240" rx="88" ry="25" fill="url(#vg-glow)" />
 
-            {/* Animated pressure wave pulse */}
-            <circle cx="450" cy="240" r="15" fill="none" stroke="#C9A961" strokeWidth="1.5" opacity="0.3" style={{ animation: 'venturiThroatPulse 3s ease-in-out infinite' }}/>
+            {/* Animated pressure wave pulse (enhanced) */}
+            <circle cx="450" cy="240" r="16" fill="none" stroke="#C9A961" strokeWidth="1.3" opacity="0.35" style={{ animation: 'venturiThroatPulse 2.4s cubic-bezier(0.34, 1.56, 0.64, 1) infinite' }}/>
+            <circle cx="450" cy="240" r="28" fill="none" stroke="#3B6EA8" strokeWidth="0.9" opacity="0.2" style={{ animation: 'venturiThroatPulse 2.4s cubic-bezier(0.34, 1.56, 0.64, 1) infinite', animationDelay: '0.15s' }}/>
 
-            {/* Animated flowing particles — upper converging paths */}
+            {/* Animated flowing particles — upper converging paths (enhanced) */}
+            <g opacity="0.8">
+              <animateMotion path="M -80 10 Q 280 170 450 240 Q 620 170 980 10" dur="3.2s" repeatCount="indefinite">
+                <circle r="3" fill="#C9A961"/>
+              </animateMotion>
+            </g>
+            <g opacity="0.75">
+              <animateMotion path="M -80 40 Q 290 178 450 240 Q 610 178 980 40" dur="3.5s" repeatCount="indefinite" begin="0.2s">
+                <circle r="2.8" fill="#C9A961"/>
+              </animateMotion>
+            </g>
             <g opacity="0.7">
-              <animateMotion path="M -80 10 Q 280 170 450 240 Q 620 170 980 10" dur="4s" repeatCount="indefinite">
+              <animateMotion path="M -80 70 Q 300 186 450 240 Q 600 186 980 70" dur="3.8s" repeatCount="indefinite" begin="0.4s">
+                <circle r="2.6" fill="#C9A961"/>
+              </animateMotion>
+            </g>
+            <g opacity="0.65">
+              <animateMotion path="M -80 25 Q 285 174 450 240 Q 615 174 980 25" dur="3.3s" repeatCount="indefinite" begin="0.15s">
+                <circle r="2.7" fill="#D4B896"/>
+              </animateMotion>
+            </g>
+            <g opacity="0.7">
+              <animateMotion path="M -80 55 Q 295 182 450 240 Q 605 182 980 55" dur="3.6s" repeatCount="indefinite" begin="0.35s">
                 <circle r="2.5" fill="#C9A961"/>
               </animateMotion>
             </g>
             <g opacity="0.6">
-              <animateMotion path="M -80 40 Q 290 178 450 240 Q 610 178 980 40" dur="4.5s" repeatCount="indefinite" begin="0.3s">
-                <circle r="2.5" fill="#C9A961"/>
-              </animateMotion>
-            </g>
-            <g opacity="0.5">
-              <animateMotion path="M -80 70 Q 300 186 450 240 Q 600 186 980 70" dur="5s" repeatCount="indefinite" begin="0.6s">
-                <circle r="2.5" fill="#C9A961"/>
+              <animateMotion path="M -80 85 Q 305 190 450 240 Q 595 190 980 85" dur="3.9s" repeatCount="indefinite" begin="0.55s">
+                <circle r="2.4" fill="#D4B896"/>
               </animateMotion>
             </g>
 
-            {/* Animated flowing particles — lower diverging paths */}
+            {/* Animated flowing particles — lower diverging paths (enhanced) */}
+            <g opacity="0.8">
+              <animateMotion path="M -80 470 Q 280 310 450 240 Q 620 310 980 470" dur="3.2s" repeatCount="indefinite">
+                <circle r="3" fill="#C9A961"/>
+              </animateMotion>
+            </g>
+            <g opacity="0.75">
+              <animateMotion path="M -80 440 Q 290 302 450 240 Q 610 302 980 440" dur="3.5s" repeatCount="indefinite" begin="0.2s">
+                <circle r="2.8" fill="#C9A961"/>
+              </animateMotion>
+            </g>
             <g opacity="0.7">
-              <animateMotion path="M -80 470 Q 280 310 450 240 Q 620 310 980 470" dur="4s" repeatCount="indefinite">
+              <animateMotion path="M -80 410 Q 300 294 450 240 Q 600 294 980 410" dur="3.8s" repeatCount="indefinite" begin="0.4s">
+                <circle r="2.6" fill="#C9A961"/>
+              </animateMotion>
+            </g>
+            <g opacity="0.65">
+              <animateMotion path="M -80 455 Q 285 306 450 240 Q 615 306 980 455" dur="3.3s" repeatCount="indefinite" begin="0.15s">
+                <circle r="2.7" fill="#D4B896"/>
+              </animateMotion>
+            </g>
+            <g opacity="0.7">
+              <animateMotion path="M -80 425 Q 295 298 450 240 Q 605 298 980 425" dur="3.6s" repeatCount="indefinite" begin="0.35s">
                 <circle r="2.5" fill="#C9A961"/>
               </animateMotion>
             </g>
             <g opacity="0.6">
-              <animateMotion path="M -80 440 Q 290 302 450 240 Q 610 302 980 440" dur="4.5s" repeatCount="indefinite" begin="0.3s">
-                <circle r="2.5" fill="#C9A961"/>
-              </animateMotion>
-            </g>
-            <g opacity="0.5">
-              <animateMotion path="M -80 410 Q 300 294 450 240 Q 600 294 980 410" dur="5s" repeatCount="indefinite" begin="0.6s">
-                <circle r="2.5" fill="#C9A961"/>
+              <animateMotion path="M -80 395 Q 305 286 450 240 Q 595 286 980 395" dur="3.9s" repeatCount="indefinite" begin="0.55s">
+                <circle r="2.4" fill="#D4B896"/>
               </animateMotion>
             </g>
 
