@@ -19,12 +19,12 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
   const locale = lang as Locale;
 
   return {
-    metadataBase: new URL('https://yen-website.vercel.app'),
+    metadataBase: new URL('https://yenturi.com'),
     alternates: {
-      canonical: `https://yen-website.vercel.app/${locale}`,
+      canonical: `https://yenturi.com/${locale}`,
       languages: {
-        en: 'https://yen-website.vercel.app/en',
-        'zh-Hans': 'https://yen-website.vercel.app/zh',
+        en: 'https://yenturi.com/en',
+        'zh-Hans': 'https://yenturi.com/zh',
       },
     },
   };

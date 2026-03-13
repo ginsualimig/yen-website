@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: ServicesPageProps): Promise<M
       title: `${t('services.title')} | Yen Investment Consulting`,
       description: t('services.subtitle'),
       type: 'website',
-      url: `https://yen-website.vercel.app/${locale}/services`,
+      url: `https://yenturi.com/${locale}/services`,
     },
   };
 }
