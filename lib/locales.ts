@@ -18,8 +18,8 @@ export const translations = {
     // Hero
     hero: {
       title: 'Institutional Advisory',
-      subtitle: 'Across Asia-Pacific. We advise institutional investors, corporations, and family offices on capital deployment, business transformation, and market opportunity.',
-      cta: 'Our Services',
+      subtitle: 'Across Asia-Pacific. We advise institutional investors, corporations, and family offices on capital deployment, business transformation, and market strategy.',
+      cta: 'Services',
       description: 'Institutional advisory services across Asia-Pacific.',
     },
 
@@ -108,8 +108,8 @@ export const translations = {
     // Hero
     hero: {
       title: '机构咨询服务',
-      subtitle: '亚太地区。我们为机构投资者、上市公司及家族办公室提供资本配置、业务转型及市场机遇方面的顾问服务。',
-      cta: '我们的服务',
+      subtitle: '亚太地区。我们为机构投资者、上市公司及家族办公室提供资本配置、业务转型及市场战略方面的顾问服务。',
+      cta: '服务',
       description: '亚太地区机构咨询服务。',
     },
 
