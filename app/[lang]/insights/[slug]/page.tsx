@@ -88,7 +88,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   }));
   
   const relatedArticles = allArticlesForRelated
-    .filter((a: any) => a.id !== (expandedArticle?.id || article?.id))
+    .filter((a: any) => a.id !== expandedArticle.id)
     .slice(0, 2);
 
   return (
