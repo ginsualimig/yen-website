@@ -36,10 +36,18 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
 
   // Use expanded articles (10 total) - skip the old articles array which is now redundant
   const mergedArticles = useMemo(() => {
-    // Helper to generate staggered dates (one article per month, going backwards)
+    // Helper to generate staggered dates (one article per month, going backwards, with organic day variation)
     const getArticleDate = (index: number): string => {
-      const baseDate = new Date(2026, 2, 14); // March 14, 2026
+      const baseDate = new Date(2026, 2, 1); // Start from beginning of March 2026
       baseDate.setMonth(baseDate.getMonth() - index);
+      
+      // Generate organic-looking day of month based on article index
+      // Uses index to create pseudo-random but deterministic variation
+      const daysInMonth = new Date(baseDate.getFullYear(), baseDate.getMonth() + 1, 0).getDate();
+      const dayVariation = [5, 12, 8, 19, 3, 15, 11, 24, 7, 18]; // Pre-set organic-looking days
+      const day = Math.min(dayVariation[index] || 14, daysInMonth); // Use pre-set day or fallback
+      
+      baseDate.setDate(day);
       return baseDate.toISOString().split('T')[0]; // Return YYYY-MM-DD format
     };
 

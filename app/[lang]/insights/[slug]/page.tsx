@@ -24,14 +24,21 @@ function getTitleFromId(id: string) {
   return id;
 }
 
-// Helper to get staggered article date based on index
+// Helper to get staggered article date with organic day variation
 function getArticleDate(articleId: string): string {
   const articleIndex = allExpandedArticles.findIndex((a: any) => a.id === articleId);
   if (articleIndex === -1) return '2026-03-14';
   
-  const baseDate = new Date(2026, 2, 14); // March 14, 2026
+  const baseDate = new Date(2026, 2, 1); // Start from beginning of March 2026
   baseDate.setMonth(baseDate.getMonth() - articleIndex);
-  return baseDate.toISOString().split('T')[0]; // Return YYYY-MM-DD format
+  
+  // Generate organic-looking day of month based on article index
+  const daysInMonth = new Date(baseDate.getFullYear(), baseDate.getMonth() + 1, 0).getDate();
+  const dayVariation = [5, 12, 8, 19, 3, 15, 11, 24, 7, 18]; // Pre-set organic-looking days
+  const day = Math.min(dayVariation[articleIndex] || 14, daysInMonth);
+  
+  baseDate.setDate(day);
+  return baseDate.toISOString().split('T')[0];
 }
 
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
