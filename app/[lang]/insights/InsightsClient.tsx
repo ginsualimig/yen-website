@@ -13,10 +13,15 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
   const [selectedRegions, setSelectedRegions] = useState<Set<Region>>(new Set());
   const [selectedTopics, setSelectedTopics] = useState<Set<Topic>>(new Set());
 
-  const regions: { key: Region; labelEn: string; labelZh: string }[] = [
-    { key: 'china', labelEn: 'China', labelZh: '中国' },
-    { key: 'southeast-asia', labelEn: 'Southeast Asia', labelZh: '东南亚' },
-    { key: 'australia', labelEn: 'Australia', labelZh: '澳大利亚' },
+  const regions: { key: Region; labelEn: string; labelZh: string; group?: string }[] = [
+    { key: 'china', labelEn: 'China', labelZh: '中国', group: 'East Asia' },
+    { key: 'australia', labelEn: 'Australia', labelZh: '澳大利亚', group: 'Oceania' },
+    // Southeast Asia
+    { key: 'vietnam', labelEn: 'Vietnam', labelZh: '越南', group: 'Southeast Asia' },
+    { key: 'thailand', labelEn: 'Thailand', labelZh: '泰国', group: 'Southeast Asia' },
+    { key: 'indonesia', labelEn: 'Indonesia', labelZh: '印尼', group: 'Southeast Asia' },
+    { key: 'singapore', labelEn: 'Singapore', labelZh: '新加坡', group: 'Southeast Asia' },
+    { key: 'philippines', labelEn: 'Philippines', labelZh: '菲律宾', group: 'Southeast Asia' },
   ];
 
   const topics: { key: Topic; labelEn: string; labelZh: string }[] = [
@@ -61,26 +66,33 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
     <>
       {/* FILTER CONTROLS */}
       <div className="mb-12">
-        {/* Region Filters */}
+        {/* Region Filters — Grouped by Geographic Area */}
         <div className="mb-8">
           <h3 className="text-sm font-semibold uppercase tracking-widest text-navy-900 mb-4">
             {isZhLocale ? '按地区筛选' : 'Filter by Region'}
           </h3>
-          <div className="flex flex-wrap gap-3">
-            {regions.map(region => (
-              <button
-                key={region.key}
-                onClick={() => toggleRegion(region.key)}
-                className={`px-4 py-2 rounded text-sm font-medium transition-all duration-250 ${
-                  selectedRegions.has(region.key)
-                    ? 'bg-navy-900 text-cream-100'
-                    : 'bg-white border border-slate-200 text-navy-900 hover:border-navy-900'
-                }`}
-              >
-                {isZhLocale ? region.labelZh : region.labelEn}
-              </button>
-            ))}
-          </div>
+          
+          {/* Group regions by geographic area */}
+          {Array.from(new Set(regions.map(r => r.group))).map(group => (
+            <div key={group} className="mb-4">
+              <p className="text-xs text-slate-500 font-semibold uppercase tracking-widest mb-2">{group}</p>
+              <div className="flex flex-wrap gap-2">
+                {regions.filter(r => r.group === group).map(region => (
+                  <button
+                    key={region.key}
+                    onClick={() => toggleRegion(region.key)}
+                    className={`px-3 py-1.5 rounded text-xs font-medium transition-all duration-250 ${
+                      selectedRegions.has(region.key)
+                        ? 'bg-navy-900 text-cream-100'
+                        : 'bg-white border border-slate-200 text-navy-900 hover:border-navy-900'
+                    }`}
+                  >
+                    {isZhLocale ? region.labelZh : region.labelEn}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Topic Filters */}
