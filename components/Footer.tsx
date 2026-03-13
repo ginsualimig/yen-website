@@ -23,7 +23,6 @@ export default function Footer({ locale }: FooterProps) {
     { href: `/${locale}`,           label: t('nav.home') },
     { href: `/${locale}/about`,     label: t('nav.about') },
     { href: `/${locale}/services`,  label: t('nav.services') },
-    { href: `/${locale}/contact`,   label: t('nav.contact') },
   ];
 
   return (

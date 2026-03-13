@@ -126,8 +126,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
                 </p>
                 <p className="text-slate-600 leading-relaxed" style={{ lineHeight: '1.8' }}>
                   {isZh
-                    ? '我们的业务建立在深厚的人际关系网络之上。我们的客户——机构投资者、上市公司、私募股权基金和家族办公室——通过个人介绍和推荐了解我们。这种以关系为先的模式，确保我们与真正理解并欣赏我们工作方式的合作伙伴共事。'
-                    : 'Our business is built on deep relationship networks. Our clients — institutional investors, listed corporations, private equity funds, and family offices — come to us through personal introduction and referral. This relationship-first model ensures we work with partners who genuinely understand and value our approach.'}
+                    ? '我们的工作建立在对亚太地区复杂金融生态的深刻理解之上。我们为机构投资者、上市公司、私募股权基金和家族办公室提供量身定制的战略建议，帮助他们把握跨境投资、业务整合和市场扩展的机遇。'
+                    : 'Our work is built on a deep understanding of the complex financial ecosystems across Asia-Pacific. We provide tailored strategic advice to institutional investors, listed corporations, private equity funds, and family offices, helping them navigate cross-border investment, business consolidation, and market expansion opportunities.'}
                 </p>
                 <p className="text-slate-600 leading-relaxed" style={{ lineHeight: '1.8' }}>
                   {isZh
@@ -311,11 +311,6 @@ export default async function AboutPage({ params }: AboutPageProps) {
             </div>
           </div>
 
-          <p className="mt-8 text-slate-500 text-sm max-w-md mx-auto" style={{ lineHeight: '1.75' }}>
-            {isZh
-              ? '我们通过个人介绍和推荐与新合作伙伴建立关系。'
-              : 'We establish new relationships through personal introduction and referral.'}
-          </p>
         </div>
       </section>
 

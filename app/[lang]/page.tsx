@@ -427,8 +427,8 @@ export default async function HomePage({ params }: HomePageProps) {
               </p>
               <p className="text-slate-400 leading-relaxed mb-8" style={{ fontSize: '0.9375rem', lineHeight: '1.8' }}>
                 {isZh
-                  ? '我们通过深厚的人脉关系网络，为机构投资者和企业提供专业服务。我们的客户通过介绍和推荐了解我们——这正是我们业务运营的方式。'
-                  : 'We serve institutional investors and corporations through deep relationship networks built over decades. Our clients come to us through introductions and referrals — that is how we work.'}
+                  ? '我们为亚太地区的机构投资者和企业提供深度策略咨询。我们的工作专注于资本配置、业务转型和市场战略。'
+                  : 'We provide strategic advisory for institutional investors and corporations across Asia-Pacific. Our work focuses on capital deployment, business transformation, and market strategy.'}
               </p>
               <Link href={`/${locale}/about`} className="btn-primary">
                 {isZh ? '了解我们的故事' : 'Our Story'}
@@ -479,10 +479,10 @@ export default async function HomePage({ params }: HomePageProps) {
                 ),
               },
               {
-                title: isZh ? '以关系为本' : 'Relationship-Driven',
+                title: isZh ? '完整性与透明' : 'Integrity & Clarity',
                 desc: isZh
-                  ? '我们的业务建立在长期信任之上。每一个合作关系都源于真诚的介绍和推荐。'
-                  : 'Our business is built on long-term trust and mutual respect. Every engagement begins through genuine introduction and referral.',
+                  ? '直接坦诚的建议，透明的沟通。我们优先考虑客户利益。'
+                  : 'Direct counsel and transparent communication. We prioritize client interests above all else.',
                 icon: (
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
                     <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" strokeLinecap="round" strokeLinejoin="round"/>
