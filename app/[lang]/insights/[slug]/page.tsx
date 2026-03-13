@@ -54,17 +54,10 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
 }
 
 export async function generateStaticParams() {
-  const expandedParams = allExpandedArticles.map((a: any) => [
+  return allExpandedArticles.map((a: any) => [
     { slug: a.id, lang: 'en' },
     { slug: a.id, lang: 'zh' }
   ]).flat();
-  
-  const oldParams = articles.map(article => [
-    { slug: article.slug, lang: 'en' },
-    { slug: article.slug, lang: 'zh' }
-  ]).flat();
-  
-  return [...expandedParams, ...oldParams];
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
