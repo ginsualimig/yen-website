@@ -2,13 +2,14 @@ import { Locale, getTranslation } from '@/lib/locales';
 import type { Metadata } from 'next';
 
 interface TermsPageProps {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
-export function generateMetadata({ params }: TermsPageProps): Metadata {
-  const locale = params.lang as Locale;
+export async function generateMetadata({ params }: TermsPageProps): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const title = locale === 'en' ? 'Terms of Service' : '服务条款';
   
   return {
@@ -17,8 +18,9 @@ export function generateMetadata({ params }: TermsPageProps): Metadata {
   };
 }
 
-export default function TermsPage({ params }: TermsPageProps) {
-  const locale = params.lang as Locale;
+export default async function TermsPage({ params }: TermsPageProps) {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const isEn = locale === 'en';
 
   return (

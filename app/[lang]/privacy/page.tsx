@@ -2,13 +2,14 @@ import { Locale, getTranslation } from '@/lib/locales';
 import type { Metadata } from 'next';
 
 interface PrivacyPageProps {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
-export function generateMetadata({ params }: PrivacyPageProps): Metadata {
-  const locale = params.lang as Locale;
+export async function generateMetadata({ params }: PrivacyPageProps): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const title = locale === 'en' ? 'Privacy Policy' : '隐私政策';
   
   return {
@@ -17,8 +18,9 @@ export function generateMetadata({ params }: PrivacyPageProps): Metadata {
   };
 }
 
-export default function PrivacyPage({ params }: PrivacyPageProps) {
-  const locale = params.lang as Locale;
+export default async function PrivacyPage({ params }: PrivacyPageProps) {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const isEn = locale === 'en';
 
   return (

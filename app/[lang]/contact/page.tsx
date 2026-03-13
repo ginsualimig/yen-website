@@ -3,13 +3,14 @@ import { Locale, getTranslation } from '@/lib/locales';
 import type { Metadata } from 'next';
 
 interface ContactPageProps {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
-export function generateMetadata({ params }: ContactPageProps): Metadata {
-  const locale = params.lang as Locale;
+export async function generateMetadata({ params }: ContactPageProps): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
 
   return {
@@ -24,8 +25,9 @@ export function generateMetadata({ params }: ContactPageProps): Metadata {
   };
 }
 
-export default function ContactPage({ params }: ContactPageProps) {
-  const locale = params.lang as Locale;
+export default async function ContactPage({ params }: ContactPageProps) {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
 
   return (

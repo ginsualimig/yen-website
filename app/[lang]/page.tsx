@@ -3,13 +3,14 @@ import { Locale, getTranslation } from '@/lib/locales';
 import type { Metadata } from 'next';
 
 interface HomePageProps {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
-export function generateMetadata({ params }: HomePageProps): Metadata {
-  const locale = params.lang as Locale;
+export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
   const isZh = locale === 'zh';
 
@@ -25,8 +26,9 @@ export function generateMetadata({ params }: HomePageProps): Metadata {
   };
 }
 
-export default function HomePage({ params }: HomePageProps) {
-  const locale = params.lang as Locale;
+export default async function HomePage({ params }: HomePageProps) {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
 
   const services = [

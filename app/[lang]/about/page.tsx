@@ -2,13 +2,14 @@ import { Locale, getTranslation } from '@/lib/locales';
 import type { Metadata } from 'next';
 
 interface AboutPageProps {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
-export function generateMetadata({ params }: AboutPageProps): Metadata {
-  const locale = params.lang as Locale;
+export async function generateMetadata({ params }: AboutPageProps): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
 
   return {
@@ -23,8 +24,9 @@ export function generateMetadata({ params }: AboutPageProps): Metadata {
   };
 }
 
-export default function AboutPage({ params }: AboutPageProps) {
-  const locale = params.lang as Locale;
+export default async function AboutPage({ params }: AboutPageProps) {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
 
   return (

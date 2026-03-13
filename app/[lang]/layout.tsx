@@ -11,13 +11,14 @@ export function generateStaticParams() {
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
-export function generateMetadata({ params }: LocaleLayoutProps): Metadata {
-  const locale = params.lang as Locale;
+export async function generateMetadata({ params }: LocaleLayoutProps): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const isZh = locale === 'zh';
 
   return {
@@ -36,11 +37,12 @@ export function generateMetadata({ params }: LocaleLayoutProps): Metadata {
   };
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: LocaleLayoutProps) {
-  const locale = params.lang as Locale;
+  const { lang } = await params;
+  const locale = lang as Locale;
   const htmlLang = locale === 'zh' ? 'zh-CN' : 'en';
 
   return (

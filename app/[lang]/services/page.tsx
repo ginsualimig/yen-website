@@ -3,13 +3,14 @@ import { Locale, getTranslation } from '@/lib/locales';
 import type { Metadata } from 'next';
 
 interface ServicesPageProps {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
-export function generateMetadata({ params }: ServicesPageProps): Metadata {
-  const locale = params.lang as Locale;
+export async function generateMetadata({ params }: ServicesPageProps): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
 
   return {
@@ -24,8 +25,9 @@ export function generateMetadata({ params }: ServicesPageProps): Metadata {
   };
 }
 
-export default function ServicesPage({ params }: ServicesPageProps) {
-  const locale = params.lang as Locale;
+export default async function ServicesPage({ params }: ServicesPageProps) {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
 
   const services = [

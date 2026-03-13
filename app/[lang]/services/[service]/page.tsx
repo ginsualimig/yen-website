@@ -12,14 +12,17 @@ const serviceIds = [
 ];
 
 interface ServiceDetailPageProps {
-  params: {
+  params: Promise<{
     lang: Locale;
     service: string;
-  };
+  }>;
 }
 
 export function generateStaticParams() {
-  const params: ServiceDetailPageProps['params'][] = [];
+  const params: Array<{
+    lang: string;
+    service: string;
+  }> = [];
   
   locales.forEach((locale) => {
     serviceIds.forEach((service) => {
@@ -33,10 +36,11 @@ export function generateStaticParams() {
   return params;
 }
 
-export function generateMetadata({ params }: ServiceDetailPageProps): Metadata {
-  const locale = params.lang as Locale;
+export async function generateMetadata({ params }: ServiceDetailPageProps): Promise<Metadata> {
+  const { lang, service } = await params;
+  const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
-  const serviceKey = `services.${params.service}` as const;
+  const serviceKey = `services.${service}` as const;
   const title = t(`${serviceKey}.title`);
 
   return {
@@ -51,10 +55,11 @@ export function generateMetadata({ params }: ServiceDetailPageProps): Metadata {
   };
 }
 
-export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
-  const locale = params.lang as Locale;
+export default async function ServiceDetailPage({ params }: ServiceDetailPageProps) {
+  const { lang, service } = await params;
+  const locale = lang as Locale;
   const t = (key: string) => getTranslation(locale, key);
-  const serviceKey = `services.${params.service}` as const;
+  const serviceKey = `services.${service}` as const;
 
   const serviceDetails: Record<string, {
     benefits: string[];
