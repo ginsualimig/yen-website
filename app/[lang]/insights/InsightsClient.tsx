@@ -36,22 +36,27 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
 
   // Use expanded articles (10 total) - skip the old articles array which is now redundant
   const mergedArticles = useMemo(() => {
-    // Helper to generate staggered dates (one article per month, going backwards, with organic day variation)
-    const getArticleDate = (index: number): string => {
-      const baseDate = new Date(2026, 2, 1); // Start from beginning of March 2026
-      baseDate.setMonth(baseDate.getMonth() - index);
+    // Shuffled order that mixes regions and aligns with article content dates
+    // Order: Australia FDI, SEA ASEAN, SEA Logistics, China Green, SEA Fintech, Australia Trade, China Consumption, Australia Hydrogen, China Tech, China FDI
+    // Original indices: 7, 4, 6, 2, 5, 8, 3, 9, 1, 0
+    const shuffledIndices = [7, 4, 6, 2, 5, 8, 3, 9, 1, 0];
+    const dayVariation = [18, 7, 24, 11, 15, 3, 19, 8, 12, 5]; // Corresponding days for shuffled order
+
+    // Helper to generate staggered dates with proper chronological alignment
+    const getArticleDate = (originalIndex: number): string => {
+      // Find position in shuffled array to get the date
+      const positionInShuffled = shuffledIndices.indexOf(originalIndex);
+      const baseDate = new Date(2025, 5, 1); // Start from June 2025
+      baseDate.setMonth(baseDate.getMonth() + positionInShuffled);
       
-      // Generate organic-looking day of month based on article index
-      // Uses index to create pseudo-random but deterministic variation
       const daysInMonth = new Date(baseDate.getFullYear(), baseDate.getMonth() + 1, 0).getDate();
-      const dayVariation = [5, 12, 8, 19, 3, 15, 11, 24, 7, 18]; // Pre-set organic-looking days
-      const day = Math.min(dayVariation[index] || 14, daysInMonth); // Use pre-set day or fallback
+      const day = Math.min(dayVariation[positionInShuffled] || 14, daysInMonth);
       
       baseDate.setDate(day);
-      return baseDate.toISOString().split('T')[0]; // Return YYYY-MM-DD format
+      return baseDate.toISOString().split('T')[0];
     };
 
-    // Map expanded articles to the Article interface
+    // Map expanded articles to the Article interface in shuffled order
     const expandedMapped = allExpandedArticles.map((article: any, index: number) => {
       // Map article IDs to regions and topics based on their titles/IDs
       let region: Region = 'china';
@@ -141,8 +146,8 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
       };
     });
 
-    // Only return expanded articles (no duplicates from old articles array)
-    return expandedMapped;
+    // Sort by publishedDate (newest first) to display in chronological order
+    return expandedMapped.sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime());
   }, []);
 
   // Filter articles

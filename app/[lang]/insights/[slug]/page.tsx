@@ -24,18 +24,21 @@ function getTitleFromId(id: string) {
   return id;
 }
 
-// Helper to get staggered article date with organic day variation
+// Helper to get article date with chronological alignment
 function getArticleDate(articleId: string): string {
   const articleIndex = allExpandedArticles.findIndex((a: any) => a.id === articleId);
-  if (articleIndex === -1) return '2026-03-14';
+  if (articleIndex === -1) return '2025-06-18';
   
-  const baseDate = new Date(2026, 2, 1); // Start from beginning of March 2026
-  baseDate.setMonth(baseDate.getMonth() - articleIndex);
+  // Shuffled order that mixes regions and aligns with article content dates
+  const shuffledIndices = [7, 4, 6, 2, 5, 8, 3, 9, 1, 0];
+  const dayVariation = [18, 7, 24, 11, 15, 3, 19, 8, 12, 5];
   
-  // Generate organic-looking day of month based on article index
+  const positionInShuffled = shuffledIndices.indexOf(articleIndex);
+  const baseDate = new Date(2025, 5, 1); // Start from June 2025
+  baseDate.setMonth(baseDate.getMonth() + positionInShuffled);
+  
   const daysInMonth = new Date(baseDate.getFullYear(), baseDate.getMonth() + 1, 0).getDate();
-  const dayVariation = [5, 12, 8, 19, 3, 15, 11, 24, 7, 18]; // Pre-set organic-looking days
-  const day = Math.min(dayVariation[articleIndex] || 14, daysInMonth);
+  const day = Math.min(dayVariation[positionInShuffled] || 14, daysInMonth);
   
   baseDate.setDate(day);
   return baseDate.toISOString().split('T')[0];
