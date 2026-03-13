@@ -267,6 +267,8 @@ export default async function HomePage({ params }: HomePageProps) {
       {/* ═══════════════════════════════════════════ */}
       <VenturiDivider variant="dark-to-light" id="divider-1" />
 
+      {/* VENTURI PRINCIPLE ACCENT BAND */}
+      <section
         className="relative py-8 overflow-hidden"
         style={{ background: 'linear-gradient(90deg, #0A1422 0%, #0F1F38 50%, #0A1422 100%)' }}
       >
