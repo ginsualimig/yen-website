@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       description: description,
       type: 'article',
       url: `https://yenturi.com/${locale}/insights/${slug}`,
-      publishedTime: article.publishedDate,
+      publishedTime: expandedArticle ? '2026-03-14' : (article as any).publishedDate,
     },
   };
 }
