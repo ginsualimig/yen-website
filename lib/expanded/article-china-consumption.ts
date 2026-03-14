@@ -117,7 +117,7 @@ const article: ExpandedArticle = {
   references: [
     { number: 1, author: 'National Bureau of Statistics, PRC', year: 2026, title: 'China Social Retail Sales and Consumption Data: Annual Report 2025', source: 'NBS, Beijing' },
     { number: 2, author: 'Ministry of Finance, PRC', year: 2025, title: 'Fiscal Transfer and Consumption Stimulus Programmes 2024–2025', source: 'MOF, Beijing' },
-    { number: 3, author: "People's Bank of China", year: 2025, title: 'Monetary Policy Guidelines and Consumer Lending Support Measures', source: 'PBOC, Beijing' },
+    { number: 3, author: 'People\u2019s Bank of China', year: 2025, title: 'Monetary Policy Guidelines and Consumer Lending Support Measures', source: 'PBOC, Beijing' },
     { number: 4, author: 'iResearch Consulting', year: 2025, title: 'China E-Commerce and Livestream Commerce Market Analysis 2025', source: 'iResearch, Beijing' },
     { number: 5, author: 'Goldman Sachs Asia Research', year: 2025, title: 'China Consumption Recovery: Policy Drivers and Investment Implications', source: 'Goldman Sachs, Hong Kong' },
     { number: 6, author: 'McKinsey Greater China', year: 2025, title: 'Chinese Consumer Behavior Post-Pandemic: Trends and Spending Patterns', source: 'McKinsey, Shanghai' },
