@@ -275,13 +275,15 @@ export default async function HomePage({ params }: HomePageProps) {
                 fill="none" stroke="url(#tube-gradient)" strokeWidth="0.5" opacity="0.6"/>
             </svg>
 
-            {/* Left inlet particles (wide spacing, slow) */}
+            {/* Left inlet particles — top particle converges down */}
             <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-75 shadow-lg" 
-              style={{ left: '8%', top: '35%', animation: 'venturiSideFlow 3.5s ease-in-out infinite' }}></div>
+              style={{ animation: 'venturiSideFlowTop 3.5s ease-in-out infinite' }}></div>
+            {/* Middle particle goes straight through */}
             <div className="absolute w-1.5 h-1.5 rounded-full bg-[#D4B896] opacity-70 shadow-lg" 
-              style={{ left: '8%', top: '50%', animation: 'venturiSideFlow 3.5s ease-in-out infinite', animationDelay: '0.3s' }}></div>
+              style={{ animation: 'venturiSideFlow 3.5s ease-in-out infinite', animationDelay: '0.3s' }}></div>
+            {/* Bottom particle converges up */}
             <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-75 shadow-lg" 
-              style={{ left: '8%', top: '65%', animation: 'venturiSideFlow 3.5s ease-in-out infinite', animationDelay: '0.6s' }}></div>
+              style={{ animation: 'venturiSideFlowBottom 3.5s ease-in-out infinite', animationDelay: '0.6s' }}></div>
             
             {/* Throat particles (tight spacing, bright, fast) */}
             <div className="absolute w-2.5 h-2.5 rounded-full bg-[#C9A961] opacity-95 shadow-lg" 
@@ -289,13 +291,15 @@ export default async function HomePage({ params }: HomePageProps) {
             <div className="absolute w-2 h-2 rounded-full bg-[#D4B896] opacity-90 shadow-lg" 
               style={{ left: '48%', top: '55%', animation: 'venturiSideFlowThroat 2.2s ease-in-out infinite', animationDelay: '0.45s', filter: 'drop-shadow(0 0 6px rgba(201,169,97,0.8))' }}></div>
             
-            {/* Right outlet particles (wide spacing again, slowing down) */}
+            {/* Right outlet particles — top particle diverges up */}
             <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-75 shadow-lg" 
-              style={{ right: '8%', top: '35%', animation: 'venturiSideFlowExit 3.5s ease-in-out infinite', animationDelay: '0.2s' }}></div>
+              style={{ animation: 'venturiSideFlowExitTop 3.5s ease-in-out infinite', animationDelay: '0.2s' }}></div>
+            {/* Middle particle exits straight */}
             <div className="absolute w-1.5 h-1.5 rounded-full bg-[#D4B896] opacity-70 shadow-lg" 
-              style={{ right: '8%', top: '50%', animation: 'venturiSideFlowExit 3.5s ease-in-out infinite', animationDelay: '0.5s' }}></div>
+              style={{ animation: 'venturiSideFlowExit 3.5s ease-in-out infinite', animationDelay: '0.5s' }}></div>
+            {/* Bottom particle diverges down */}
             <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-75 shadow-lg" 
-              style={{ right: '8%', top: '65%', animation: 'venturiSideFlowExit 3.5s ease-in-out infinite', animationDelay: '0.8s' }}></div>
+              style={{ animation: 'venturiSideFlowExitBottom 3.5s ease-in-out infinite', animationDelay: '0.8s' }}></div>
 
             {/* Throat pressure glow */}
             <div className="absolute w-24 h-16 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-transparent via-[#C9A961] to-transparent opacity-20 blur-2xl"

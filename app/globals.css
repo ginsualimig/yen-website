@@ -870,10 +870,11 @@ nav:hover .nav-throat-dot {
 
 /* Mobile Venturi animations — SIDE VIEW: left inlet → narrow throat → right outlet */
 
-/* Inlet flow: particles enter wide, spaced out, moving left-to-right */
+/* Middle flow: straight through path */
 @keyframes venturiSideFlow {
   0% {
     left: 8%;
+    top: 50%;
     opacity: 0;
     filter: blur(0.5px);
   }
@@ -893,6 +894,71 @@ nav:hover .nav-throat-dot {
   }
   100% {
     left: 92%;
+    top: 50%;
+    opacity: 0;
+    filter: blur(0.5px);
+  }
+}
+
+/* Top particle converges down toward center */
+@keyframes venturiSideFlowTop {
+  0% {
+    left: 8%;
+    top: 30%;
+    opacity: 0;
+    filter: blur(0.5px);
+  }
+  10% {
+    opacity: 0.75;
+    filter: blur(0.3px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
+  }
+  25% {
+    left: 30%;
+    top: 42%;
+    opacity: 0.8;
+    filter: blur(0.2px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
+  }
+  48% {
+    left: 47%;
+    top: 48%;
+    opacity: 0.85;
+    filter: blur(0.1px) drop-shadow(0 0 4px rgba(201,169,97,0.6));
+  }
+  100% {
+    left: 92%;
+    top: 52%;
+    opacity: 0;
+    filter: blur(0.5px);
+  }
+}
+
+/* Bottom particle converges up toward center */
+@keyframes venturiSideFlowBottom {
+  0% {
+    left: 8%;
+    top: 70%;
+    opacity: 0;
+    filter: blur(0.5px);
+  }
+  10% {
+    opacity: 0.75;
+    filter: blur(0.3px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
+  }
+  25% {
+    left: 30%;
+    top: 58%;
+    opacity: 0.8;
+    filter: blur(0.2px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
+  }
+  48% {
+    left: 47%;
+    top: 52%;
+    opacity: 0.85;
+    filter: blur(0.1px) drop-shadow(0 0 4px rgba(201,169,97,0.6));
+  }
+  100% {
+    left: 92%;
+    top: 48%;
     opacity: 0;
     filter: blur(0.5px);
   }
@@ -902,31 +968,37 @@ nav:hover .nav-throat-dot {
 @keyframes venturiSideFlowThroat {
   0% {
     left: 15%;
+    top: 50%;
     opacity: 0;
     filter: blur(0.5px);
   }
   15% {
     left: 40%;
+    top: 50%;
     opacity: 0.85;
     filter: blur(0.2px) drop-shadow(0 0 4px rgba(201,169,97,0.6));
   }
   40% {
     left: 48%;
+    top: 50%;
     opacity: 0.95;
     filter: blur(0px) drop-shadow(0 0 6px rgba(201,169,97,0.85)) drop-shadow(0 0 12px rgba(59,110,168,0.4));
   }
   65% {
     left: 52%;
+    top: 50%;
     opacity: 0.95;
     filter: blur(0px) drop-shadow(0 0 6px rgba(201,169,97,0.85)) drop-shadow(0 0 12px rgba(59,110,168,0.4));
   }
   85% {
     left: 60%;
+    top: 50%;
     opacity: 0.85;
     filter: blur(0.2px) drop-shadow(0 0 4px rgba(201,169,97,0.6));
   }
   100% {
     left: 85%;
+    top: 50%;
     opacity: 0;
     filter: blur(0.5px);
   }
@@ -935,27 +1007,100 @@ nav:hover .nav-throat-dot {
 /* Exit flow: particles slow down, spread out again */
 @keyframes venturiSideFlowExit {
   0% {
-    right: 85%;
+    left: 52%;
+    top: 50%;
     opacity: 0;
     filter: blur(0.5px);
   }
   15% {
-    right: 60%;
+    left: 60%;
+    top: 50%;
     opacity: 0.85;
     filter: blur(0.2px) drop-shadow(0 0 4px rgba(201,169,97,0.5));
   }
   50% {
-    right: 30%;
+    left: 70%;
+    top: 50%;
     opacity: 0.80;
     filter: blur(0.3px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
   }
   90% {
-    right: 8%;
+    left: 92%;
+    top: 50%;
     opacity: 0.75;
     filter: blur(0.4px) drop-shadow(0 0 2px rgba(201,169,97,0.4));
   }
   100% {
-    right: 8%;
+    left: 92%;
+    top: 50%;
+    opacity: 0;
+    filter: blur(0.5px);
+  }
+}
+
+/* Exit top particle diverges up away from center */
+@keyframes venturiSideFlowExitTop {
+  0% {
+    left: 52%;
+    top: 50%;
+    opacity: 0;
+    filter: blur(0.5px);
+  }
+  15% {
+    left: 60%;
+    top: 48%;
+    opacity: 0.85;
+    filter: blur(0.2px) drop-shadow(0 0 4px rgba(201,169,97,0.5));
+  }
+  50% {
+    left: 70%;
+    top: 40%;
+    opacity: 0.80;
+    filter: blur(0.3px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
+  }
+  90% {
+    left: 92%;
+    top: 30%;
+    opacity: 0.75;
+    filter: blur(0.4px) drop-shadow(0 0 2px rgba(201,169,97,0.4));
+  }
+  100% {
+    left: 92%;
+    top: 30%;
+    opacity: 0;
+    filter: blur(0.5px);
+  }
+}
+
+/* Exit bottom particle diverges down away from center */
+@keyframes venturiSideFlowExitBottom {
+  0% {
+    left: 52%;
+    top: 50%;
+    opacity: 0;
+    filter: blur(0.5px);
+  }
+  15% {
+    left: 60%;
+    top: 52%;
+    opacity: 0.85;
+    filter: blur(0.2px) drop-shadow(0 0 4px rgba(201,169,97,0.5));
+  }
+  50% {
+    left: 70%;
+    top: 60%;
+    opacity: 0.80;
+    filter: blur(0.3px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
+  }
+  90% {
+    left: 92%;
+    top: 70%;
+    opacity: 0.75;
+    filter: blur(0.4px) drop-shadow(0 0 2px rgba(201,169,97,0.4));
+  }
+  100% {
+    left: 92%;
+    top: 70%;
     opacity: 0;
     filter: blur(0.5px);
   }
