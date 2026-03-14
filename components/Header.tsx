@@ -60,7 +60,7 @@ export default function Header({ locale }: HeaderProps) {
       <a href="#main-content" className="skip-link">Skip to main content</a>
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-        <div className="flex items-center justify-between h-[56px]">
+        <div className="flex items-center justify-between h-[64px]">
 
           {/* ── Logo ───────────────────────────────────────── */}
           <Link
@@ -69,10 +69,13 @@ export default function Header({ locale }: HeaderProps) {
             aria-label="Yenturi – Home"
           >
             <span
-              className="font-serif font-semibold text-navy-900 tracking-tight"
-              style={{ fontSize: '1.275rem', letterSpacing: '-0.01em' }}
+              className="font-serif font-bold text-navy-900 tracking-tight"
+              style={{ fontSize: '1.4rem', letterSpacing: '-0.015em' }}
             >
               Yenturi
+            </span>
+            <span className="hidden sm:inline-block text-[0.6rem] text-slate-400 uppercase tracking-[0.18em] font-sans font-medium border-l border-slate-200 pl-3 ml-0.5">
+              {isZh ? '亚太咨询' : 'Advisory'}
             </span>
           </Link>
 
@@ -82,7 +85,7 @@ export default function Header({ locale }: HeaderProps) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`nav-link px-4 py-1.5 rounded-sm text-sm ${isActive(item.href) ? 'active text-navy-900' : ''}`}
+                className={`nav-link px-4 py-2 rounded-sm text-[0.8125rem] ${isActive(item.href) ? 'active text-navy-900' : ''}`}
               >
                 {item.label}
               </Link>

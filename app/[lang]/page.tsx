@@ -382,79 +382,75 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════ */}
-      {/* SECTION DIVIDER 1: Hero → Clients/Social Proof */}
-      {/* ═══════════════════════════════════════════ */}
-      <VenturiDivider variant="dark-to-light" id="divider-1" />
-
-      {/* VENTURI PRINCIPLE ACCENT BAND */}
+      {/* Venturi Principle Strip — elegant transition from hero to content */}
       <section
-        className="relative py-8 overflow-hidden"
-        style={{ background: 'linear-gradient(90deg, #0A1422 0%, #0F1F38 50%, #0A1422 100%)' }}
+        className="relative py-12 md:py-14 overflow-hidden"
+        style={{ background: 'linear-gradient(180deg, #060D1A 0%, #0B1626 40%, #0F1F38 100%)' }}
       >
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true"
-          style={{ background: 'radial-gradient(ellipse 60% 100% at 50% 50%, rgba(201,169,97,0.07) 0%, transparent 70%)' }} />
-        <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 text-center">
+          style={{ background: 'radial-gradient(ellipse 50% 120% at 50% 50%, rgba(201,169,97,0.05) 0%, transparent 70%)' }} />
+        <div className="relative max-w-5xl mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4">
             {[
               {
-                label: isZh ? '汇聚专业' : 'Convergent Expertise',
+                label: isZh ? '汇聚专业' : 'Converge',
                 sub:   isZh ? '六大专业领域协同运作' : 'Six disciplines, one integrated view',
               },
               {
-                label: isZh ? '加速回报' : 'Accelerated Returns',
+                label: isZh ? '加速回报' : 'Accelerate',
                 sub:   isZh ? '将市场摩擦转化为战略动能' : 'Market friction into strategic momentum',
               },
               {
-                label: isZh ? '专注执行' : 'Disciplined Execution',
+                label: isZh ? '精准执行' : 'Expand',
                 sub:   isZh ? '疏导机遇，精准落地' : 'Channeling opportunity to outcome',
               },
             ].map((item, i) => (
-              <div key={i} className="flex flex-col items-center gap-1">
-                <span className="text-gold-400 font-serif font-semibold" style={{ fontSize: '1rem' }}>
+              <div key={i} className="flex flex-col items-center text-center gap-2 relative">
+                <span className="text-gold-400 font-serif font-semibold text-lg tracking-tight">
                   {item.label}
                 </span>
-                <span className="text-slate-500 text-xs">{item.sub}</span>
+                <span className="text-slate-500 text-xs leading-relaxed max-w-[200px]">{item.sub}</span>
+                {i < 2 && (
+                  <span className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-8 bg-gradient-to-b from-transparent via-gold-500/20 to-transparent" aria-hidden="true" />
+                )}
               </div>
             ))}
           </div>
         </div>
+        {/* Bottom gold line transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-gold-line opacity-20" aria-hidden="true" />
       </section>
 
-      {/* ═══════════════════════════════════════════ */}
-      {/* SECTION DIVIDER 3: Principle → Services */}
-      {/* ═══════════════════════════════════════════ */}
-      <VenturiDivider variant="dark-to-light" id="divider-3" />
-
-      {/* SERVICES — funnel convergence layout */}
-      <section className="section-xl bg-cream-100">
+      {/* SERVICES */}
+      <section className="section-xl bg-cream-50" style={{ background: 'linear-gradient(180deg, #FDFCF9 0%, #FAF8F3 100%)' }}>
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-          <div className="text-center mb-16">
+          <div className="max-w-2xl mb-14">
             <span className="eyebrow">{isZh ? '我们的专业' : 'Our Expertise'}</span>
             <h2 className="section-heading text-navy-900 mb-4">{t('services.title')}</h2>
-            <span className="rule-gold-center" aria-hidden="true" />
-            <p className="text-slate-600 max-w-2xl mx-auto mt-4" style={{ fontSize: '1.0625rem', lineHeight: '1.75' }}>
+            <span className="rule-gold" aria-hidden="true" />
+            <p className="text-slate-600 mt-4" style={{ fontSize: '1.0625rem', lineHeight: '1.75' }}>
               {t('services.subtitle')}
             </p>
           </div>
 
-          {/* Top row — 3 cards (wide) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-2">
-            {services.slice(0, 3).map((service) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {services.map((service, i) => (
               <Link key={service.id} href={`/${locale}/services/${service.id}`} className="group block">
-                <article className="service-card h-full">
-                  <div className="service-icon text-gold-500">
-                    {serviceIcons[service.id]}
+                <article className="service-card h-full relative">
+                  <div className="flex items-start gap-4">
+                    <div className="service-icon text-gold-500 flex-shrink-0">
+                      {serviceIcons[service.id]}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-navy-900 mb-2 group-hover:text-gold-600 transition-colors duration-250 text-[0.95rem]">
+                        {service.title}
+                      </h3>
+                      <p className="text-slate-500 text-sm leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-navy-900 mb-2 group-hover:text-gold-600 transition-colors duration-250">
-                      {service.title}
-                    </h3>
-                    <p className="text-slate-500 text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2 text-gold-500 text-sm font-medium mt-2 opacity-0 group-hover:opacity-100 transition-all duration-250 translate-x-0 group-hover:translate-x-1">
+                  <div className="flex items-center gap-2 text-gold-500 text-sm font-medium mt-4 opacity-0 group-hover:opacity-100 transition-all duration-250 translate-x-0 group-hover:translate-x-1">
                     <span>{isZh ? '了解更多' : 'Learn more'}</span>
                     <svg className="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                       <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
@@ -465,52 +461,7 @@ export default async function HomePage({ params }: HomePageProps) {
             ))}
           </div>
 
-          {/* Convergence visualizer — narrowing effect */}
-          <div className="relative h-6 mb-2" aria-hidden="true">
-            <svg viewBox="0 0 1000 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-              <defs>
-                <linearGradient id="funnel-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%"   stopColor="#C9A961" stopOpacity="0" />
-                  <stop offset="20%"  stopColor="#C9A961" stopOpacity="0.25" />
-                  <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.50" />
-                  <stop offset="80%"  stopColor="#C9A961" stopOpacity="0.25" />
-                  <stop offset="100%" stopColor="#C9A961" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-              <path d="M50 5 Q300 20 500 20 Q700 20 950 5"    stroke="url(#funnel-grad)" strokeWidth="1.5" />
-              <path d="M80 15 Q340 22 500 22 Q660 22 920 15"  stroke="url(#funnel-grad)" strokeWidth="0.8" opacity="0.6"/>
-              <circle cx="500" cy="21" r="2.5" fill="#C9A961" opacity="0.6"/>
-            </svg>
-          </div>
-
-          {/* Bottom row — 3 cards (narrower, forming funnel) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {services.slice(3, 6).map((service) => (
-              <Link key={service.id} href={`/${locale}/services/${service.id}`} className="group block">
-                <article className="service-card h-full">
-                  <div className="service-icon text-gold-500">
-                    {serviceIcons[service.id]}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-navy-900 mb-2 group-hover:text-gold-600 transition-colors duration-250">
-                      {service.title}
-                    </h3>
-                    <p className="text-slate-500 text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2 text-gold-500 text-sm font-medium mt-2 opacity-0 group-hover:opacity-100 transition-all duration-250 translate-x-0 group-hover:translate-x-1">
-                    <span>{isZh ? '了解更多' : 'Learn more'}</span>
-                    <svg className="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                      <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                </article>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
+          <div className="text-center mt-14">
             <Link href={`/${locale}/services`} className="btn-outline-dark">
               {t('services.overview')}
               <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -520,11 +471,6 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
         </div>
       </section>
-
-      {/* ═══════════════════════════════════════════ */}
-      {/* SECTION DIVIDER 4: Services → About */}
-      {/* ═══════════════════════════════════════════ */}
-      <VenturiDivider variant="light-to-dark" id="divider-4" />
 
       {/* ABOUT STRIP */}
       <section
@@ -574,13 +520,13 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
-      {/* WHY YENTURI */}
-      <section className="section-lg bg-cream-100" style={{ borderTop: '1px solid #EDE7D8' }}>
+      {/* WHY YENTURI — streamlined pillars */}
+      <section className="section-lg" style={{ background: 'linear-gradient(180deg, #FAF8F3 0%, #FDFCF9 100%)' }}>
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-          <div className="text-center mb-12">
+          <div className="max-w-2xl mx-auto text-center mb-12">
             <span className="eyebrow text-gold-600">{isZh ? '我们的优势' : 'Why Yenturi'}</span>
             <h2 className="section-heading text-navy-900 mb-4">
-              {isZh ? '深厚专业，加速价值' : 'Institutional Expertise. Accelerated Value.'}
+              {isZh ? '深厚专业，加速价值' : 'Institutional Expertise, Accelerated Value'}
             </h2>
             <span className="rule-gold-center" aria-hidden="true" />
           </div>
@@ -590,40 +536,25 @@ export default async function HomePage({ params }: HomePageProps) {
               {
                 title: isZh ? '深度行业专业知识' : 'Deep Domain Expertise',
                 desc: isZh
-                  ? '我们的团队在金融、并购和战略咨询领域积累了数十年亚太地区专业经验。'
-                  : 'Our team brings decades of specialized experience across finance, M&A, and strategic consulting in the Asia-Pacific region.',
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
-                    <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                ),
+                  ? '金融、并购和战略咨询领域数十年亚太地区专业经验。'
+                  : 'Decades of specialized experience across finance, M&A, and strategic consulting in the Asia-Pacific region.',
               },
               {
                 title: isZh ? '完整性与透明' : 'Integrity & Clarity',
                 desc: isZh
                   ? '直接坦诚的建议，透明的沟通。我们优先考虑客户利益。'
-                  : 'Direct counsel and transparent communication. We prioritize client interests above all else.',
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
-                    <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                ),
+                  : 'Direct counsel and transparent communication. Client interests above all else.',
               },
               {
                 title: isZh ? '亚太本地化洞察' : 'APAC-Native Insights',
                 desc: isZh
-                  ? '对亚太商业生态的深刻理解，助力客户把握复杂的跨境机遇。'
-                  : 'Nuanced understanding of APAC business ecosystems helps clients navigate complex cross-border opportunities and transactions.',
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6" aria-hidden="true">
-                    <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0110.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                ),
+                  ? '对亚太商业生态的深刻理解，助力把握复杂的跨境机遇。'
+                  : 'Nuanced understanding of APAC business ecosystems to navigate complex cross-border opportunities.',
               },
             ].map((item, i) => (
-              <div key={i} className="card-premium p-8 flex flex-col gap-4">
-                <div className="text-gold-500">{item.icon}</div>
-                <h3 className="text-navy-900 font-semibold">{item.title}</h3>
+              <div key={i} className="relative p-8 flex flex-col gap-3 border-t-2 border-gold-400/30 bg-white rounded-b-lg hover:border-gold-400 transition-all duration-350">
+                <span className="text-gold-500 font-serif text-2xl font-bold opacity-20 absolute top-4 right-6">0{i + 1}</span>
+                <h3 className="text-navy-900 font-semibold text-[0.95rem]">{item.title}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}

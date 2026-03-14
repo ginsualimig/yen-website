@@ -205,18 +205,18 @@ a {
 
   /* Card base */
   .card-premium {
-    @apply bg-white rounded-lg border border-slate-200 transition-all duration-350 ease-premium;
-    box-shadow: 0 1px 4px rgba(11,22,38,0.05);
+    @apply bg-white rounded-lg border border-slate-200/80 transition-all duration-350 ease-premium;
+    box-shadow: 0 1px 3px rgba(11,22,38,0.04);
   }
   .card-premium:hover {
-    @apply border-gold-400;
-    box-shadow: 0 8px 32px rgba(11,22,38,0.1), 0 2px 8px rgba(11,22,38,0.05);
-    transform: translateY(-2px);
+    @apply border-slate-300;
+    box-shadow: 0 8px 28px rgba(11,22,38,0.08), 0 2px 6px rgba(11,22,38,0.04);
+    transform: translateY(-1px);
   }
 
   /* Service card */
   .service-card {
-    @apply card-premium p-8 flex flex-col gap-4 cursor-pointer;
+    @apply card-premium p-7 flex flex-col gap-4 cursor-pointer;
   }
 
   /* Service icon container */
@@ -300,6 +300,13 @@ a {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .grid-service {

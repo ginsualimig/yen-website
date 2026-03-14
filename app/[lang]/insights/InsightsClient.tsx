@@ -131,8 +131,8 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
         slug: article.id,
         titleEn: titleEn || article.id.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
         titleZh: titleZh || article.id,
-        descriptionEn: article.executiveSummary?.substring(0, 200) || 'Research whitepaper',
-        descriptionZh: article.executiveSummary?.substring(0, 200) || 'Research whitepaper',
+        descriptionEn: article.executiveSummary ? article.executiveSummary.split(/[.!?]\s/)[0] + '.' : 'Research whitepaper',
+        descriptionZh: article.executiveSummary ? article.executiveSummary.split(/[.!?。！？]\s?/).slice(0, 2).join('。') + '。' : '研究白皮书',
         region,
         regionLabelEn,
         regionLabelZh,
@@ -181,42 +181,49 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
 
   return (
     <>
-      {/* FILTER CONTROLS — Compact */}
-      <div className="mb-8 space-y-3">
-        {/* Regions & Topics on one line */}
-        <div className="flex flex-wrap items-center gap-2">
-          {/* Region Pills */}
-          {regions.map(region => (
-            <button
-              key={region.key}
-              onClick={() => toggleRegion(region.key)}
-              className={`px-2.5 py-1 rounded text-xs font-medium transition-all duration-250 whitespace-nowrap ${
-                selectedRegions.has(region.key)
-                  ? 'bg-navy-900 text-cream-100'
-                  : 'bg-slate-100 border border-slate-300 text-navy-900 hover:border-navy-900'
-              }`}
-              title={region.group}
-            >
-              {isZhLocale ? region.labelZh : region.labelEn}
-            </button>
-          ))}
+      {/* FILTER CONTROLS */}
+      <div className="mb-10 space-y-4">
+        <div>
+          <p className="text-xs uppercase tracking-widest font-semibold text-slate-400 mb-3">
+            {isZhLocale ? '地区' : 'Region'}
+          </p>
+          <div className="flex flex-wrap items-center gap-2">
+            {regions.map(region => (
+              <button
+                key={region.key}
+                onClick={() => toggleRegion(region.key)}
+                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-250 whitespace-nowrap ${
+                  selectedRegions.has(region.key)
+                    ? 'bg-navy-900 text-cream-100 shadow-sm'
+                    : 'bg-white border border-slate-200 text-slate-600 hover:border-navy-900 hover:text-navy-900'
+                }`}
+                title={region.group}
+              >
+                {isZhLocale ? region.labelZh : region.labelEn}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Topics on second row */}
-        <div className="flex flex-wrap items-center gap-2">
-          {topics.map(topic => (
-            <button
-              key={topic.key}
-              onClick={() => toggleTopic(topic.key)}
-              className={`px-2.5 py-1 rounded text-xs font-medium transition-all duration-250 ${
-                selectedTopics.has(topic.key)
-                  ? 'bg-gold-500 text-navy-900'
-                  : 'bg-slate-100 border border-slate-300 text-navy-900 hover:border-gold-500'
-              }`}
-            >
-              {isZhLocale ? topic.labelZh : topic.labelEn}
-            </button>
-          ))}
+        <div>
+          <p className="text-xs uppercase tracking-widest font-semibold text-slate-400 mb-3">
+            {isZhLocale ? '主题' : 'Topic'}
+          </p>
+          <div className="flex flex-wrap items-center gap-2">
+            {topics.map(topic => (
+              <button
+                key={topic.key}
+                onClick={() => toggleTopic(topic.key)}
+                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-250 ${
+                  selectedTopics.has(topic.key)
+                    ? 'bg-gold-500 text-navy-900 shadow-sm'
+                    : 'bg-white border border-slate-200 text-slate-600 hover:border-gold-500 hover:text-navy-900'
+                }`}
+              >
+                {isZhLocale ? topic.labelZh : topic.labelEn}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -233,46 +240,40 @@ export default function InsightsClient({ locale }: InsightsClientProps) {
                 href={`/${locale}/insights/${article.slug}`}
                 className="group block h-full"
               >
-                <article className="card-premium p-8 flex flex-col h-full">
-                  {/* Meta */}
-                  <div className="mb-4">
-                    <p className="text-xs uppercase tracking-widest font-semibold text-gold-600 mb-2">
+                <article className="card-premium p-7 flex flex-col h-full">
+                  {/* Region + Date */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-[0.65rem] uppercase tracking-[0.12em] font-semibold text-gold-600 bg-gold-500/8 px-2 py-0.5 rounded">
                       {isZhLocale ? article.regionLabelZh : article.regionLabelEn}
-                    </p>
-                    <p className="text-xs text-slate-400">
+                    </span>
+                    <span className="text-xs text-slate-400">
                       {new Date(article.publishedDate).toLocaleDateString(isZhLocale ? 'zh-CN' : 'en-US', {
                         year: 'numeric',
                         month: 'short',
-                        day: 'numeric',
-                      })} • {article.readTime} {isZhLocale ? '分钟阅读' : 'min read'}
-                    </p>
+                      })}
+                    </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-serif font-semibold text-navy-900 mb-3 group-hover:text-gold-600 transition-colors duration-250 text-lg leading-tight flex-1">
+                  <h3 className="font-serif font-semibold text-navy-900 mb-3 group-hover:text-gold-600 transition-colors duration-250 text-[1.05rem] leading-snug flex-1">
                     {isZhLocale ? article.titleZh : article.titleEn}
                   </h3>
 
-                  {/* Description */}
-                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                  {/* Description — first sentence only */}
+                  <p className="text-slate-500 text-[0.8125rem] leading-relaxed mb-5 line-clamp-3">
                     {isZhLocale ? article.descriptionZh : article.descriptionEn}
                   </p>
 
-                  {/* Topics */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {article.topics.map(topic => (
-                      <span key={topic} className="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">
-                        {isZhLocale ? topicLabels[topic].zh : topicLabels[topic].en}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* CTA */}
-                  <div className="flex items-center gap-2 text-gold-500 text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-250 translate-x-0 group-hover:translate-x-1">
-                    <span>{isZhLocale ? '阅读文章' : 'Read Article'}</span>
-                    <svg className="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                      <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                  {/* Topics + Read time */}
+                  <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
+                    <div className="flex flex-wrap gap-1.5">
+                      {article.topics.slice(0, 2).map(topic => (
+                        <span key={topic} className="text-[0.65rem] text-slate-500 px-1.5 py-0.5 rounded bg-slate-50 border border-slate-100">
+                          {isZhLocale ? topicLabels[topic].zh : topicLabels[topic].en}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="text-xs text-slate-400">{article.readTime} {isZhLocale ? '分钟' : 'min'}</span>
                   </div>
                 </article>
               </Link>
