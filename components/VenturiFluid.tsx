@@ -3,342 +3,233 @@
 import { useEffect, useRef, useCallback } from 'react';
 
 /**
- * VenturiFluid — Premium fluid animation clearly showing Venturi flow physics.
+ * VenturiFluid — Clean particle flow through geometric Venturi tube.
  * 
- * Visual story: fluid enters wide & slow on left → converges & accelerates at throat →
- * expands & decelerates on right. Premium caustic aesthetic with unmistakable flow direction.
+ * Aesthetic: White tube outline, discrete particles flowing L→R,
+ * converging at throat, expanding after. Blue/cyan palette.
+ * Canvas 2D, 60fps, GPU-friendly.
  */
 
-function createNoise() {
-  const perm = new Uint8Array(512);
-  const p = new Uint8Array(256);
-  for (let i = 0; i < 256; i++) p[i] = i;
-  for (let i = 255; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [p[i], p[j]] = [p[j], p[i]];
-  }
-  for (let i = 0; i < 512; i++) perm[i] = p[i & 255];
-
-  function fade(t: number) { return t * t * t * (t * (t * 6 - 15) + 10); }
-  function lerp(a: number, b: number, t: number) { return a + t * (b - a); }
-  function grad(hash: number, x: number, y: number) {
-    const h = hash & 3;
-    const u = h < 2 ? x : y;
-    const v = h < 2 ? y : x;
-    return ((h & 1) ? -u : u) + ((h & 2) ? -v : v);
-  }
-
-  return function noise2D(x: number, y: number): number {
-    const X = Math.floor(x) & 255;
-    const Y = Math.floor(y) & 255;
-    const xf = x - Math.floor(x);
-    const yf = y - Math.floor(y);
-    const u = fade(xf);
-    const v = fade(yf);
-    const aa = perm[perm[X] + Y];
-    const ab = perm[perm[X] + Y + 1];
-    const ba = perm[perm[X + 1] + Y];
-    const bb = perm[perm[X + 1] + Y + 1];
-    return lerp(
-      lerp(grad(aa, xf, yf), grad(ba, xf - 1, yf), u),
-      lerp(grad(ab, xf, yf - 1), grad(bb, xf - 1, yf - 1), u),
-      v
-    );
-  };
+interface Particle {
+  t: number;        // parametric position 0→1 along tube
+  lane: number;     // -1 to 1, vertical position within tube
+  size: number;     // base radius
+  brightness: number; // 0-1
 }
 
-interface StreamConfig {
-  yBase: number;       // normalized y position (0-1) relative to tube radius
-  speed: number;       // base flow speed
-  width: number;       // max stroke width
-  opacity: number;     // base opacity
-  noiseScale: number;  // organic displacement amount
-  noiseFreq: number;   // noise frequency
-  hueShift: number;    // color variation
-  phase: number;       // phase offset for staggered animation
+interface Speckle {
+  x: number;  // normalized 0-1
+  y: number;  // normalized -1 to 1 (within tube)
+  alpha: number;
+  size: number;
 }
 
 export default function VenturiFluid() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animRef = useRef<number>(0);
-  const noiseRef = useRef<ReturnType<typeof createNoise> | null>(null);
-  const timeRef = useRef(0);
-  const dprRef = useRef(1);
+  const stateRef = useRef<{
+    particles: Particle[];
+    speckles: Speckle[];
+    time: number;
+    isMobile: boolean;
+  } | null>(null);
 
-  const draw = useCallback((canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) => {
-    const dpr = dprRef.current;
+  // Tube geometry: returns half-height at normalized x position (0-1)
+  const tubeRadius = useCallback((nx: number): number => {
+    // Smooth Venturi: wide → narrow throat → wide
+    // Using cos^4 for smooth pinch
+    const throatRatio = 0.22; // throat is 22% of max radius
+    const pinch = Math.pow(Math.cos(Math.PI * (nx - 0.5)), 4);
+    return throatRatio + (1 - throatRatio) * (1 - pinch);
+  }, []);
+
+  // Flow speed multiplier (continuity: faster at throat)
+  const flowSpeed = useCallback((nx: number): number => {
+    const r = tubeRadius(nx);
+    return 1 / Math.max(r, 0.15);
+  }, [tubeRadius]);
+
+  // Initialize particles and speckles
+  const initState = useCallback((isMobile: boolean) => {
+    const particleCount = isMobile ? 18 : 28;
+    const particles: Particle[] = [];
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        t: Math.random(),
+        lane: (Math.random() * 2 - 1) * 0.85,
+        size: 1.5 + Math.random() * 1.5,
+        brightness: 0.6 + Math.random() * 0.4,
+      });
+    }
+
+    // Static speckle field (background texture inside tube)
+    const speckleCount = isMobile ? 120 : 250;
+    const speckles: Speckle[] = [];
+    for (let i = 0; i < speckleCount; i++) {
+      speckles.push({
+        x: Math.random(),
+        y: (Math.random() * 2 - 1) * 0.9,
+        alpha: 0.08 + Math.random() * 0.15,
+        size: 0.5 + Math.random() * 1.2,
+      });
+    }
+
+    stateRef.current = { particles, speckles, time: 0, isMobile };
+  }, []);
+
+  const draw = useCallback((canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D, dpr: number) => {
+    const state = stateRef.current;
+    if (!state) return;
+
     const w = canvas.width / dpr;
     const h = canvas.height / dpr;
-    const noise = noiseRef.current!;
-    const t = timeRef.current;
     const cx = w / 2;
     const cy = h / 2;
+    const maxR = h * 0.44; // max tube half-height
+    const t = state.time;
 
     ctx.clearRect(0, 0, w, h);
     ctx.save();
 
-    // Venturi tube shape: wide at edges, narrow at center
-    const throatWidth = 0.16;
-    const maxRadius = h * 0.48;
-    function tubeRadius(nx: number): number {
-      const shape = 1 - (1 - throatWidth) * Math.pow(Math.cos(Math.PI * (nx - 0.5)), 6);
-      return maxRadius * shape;
-    }
+    // Helper: get tube Y bounds at normalized x
+    const tubeY = (nx: number) => tubeRadius(nx) * maxR;
 
-    // Flow speed at position nx: faster at throat (continuity equation: A*v = const)
-    // Returns speed multiplier (1 at edges, higher at throat)
-    function flowSpeed(nx: number): number {
-      const r = tubeRadius(nx);
-      // Speed inversely proportional to cross-section area
-      // Clamp to avoid infinity
-      return Math.min(maxRadius / Math.max(r, maxRadius * 0.1), 6);
-    }
-
-    // --- LAYER 1: Ambient caustic glow ---
-    const causticsCount = 5;
-    for (let c = 0; c < causticsCount; c++) {
-      const phase = c * 1.7 + t * 0.15;
-      // Caustics drift left-to-right slowly
-      const drift = (t * 0.03 + c * 0.2) % 1.4 - 0.2;
-      const nx = Math.max(0, Math.min(1, drift));
-      const ny = 0.5 + 0.12 * noise(c * 3.7, t * 0.08);
-      const radius = tubeRadius(nx) * 0.5;
-      const x = nx * w;
-      const y = cy + (ny - 0.5) * radius * 2;
-      const r = 50 + 30 * Math.sin(phase);
-
-      const grad = ctx.createRadialGradient(x, y, 0, x, y, r);
-      const alpha = 0.02 + 0.015 * Math.sin(phase * 1.3);
-      grad.addColorStop(0, `rgba(201,169,97,${alpha})`);
-      grad.addColorStop(0.5, `rgba(42,82,152,${alpha * 0.5})`);
-      grad.addColorStop(1, 'rgba(42,82,152,0)');
-      ctx.fillStyle = grad;
-      ctx.beginPath();
-      ctx.arc(x, y, r, 0, Math.PI * 2);
-      ctx.fill();
-    }
-
-    // --- LAYER 2: Flowing ribbon streams with directional flow ---
-    const streams: StreamConfig[] = [
-      // Upper streams
-      { yBase: -0.88, speed: 0.8,  width: 2.2, opacity: 0.14, noiseScale: 22, noiseFreq: 0.7,  hueShift: 0,   phase: 0 },
-      { yBase: -0.68, speed: 0.9,  width: 2.8, opacity: 0.18, noiseScale: 18, noiseFreq: 0.8,  hueShift: 8,   phase: 0.6 },
-      { yBase: -0.48, speed: 1.0,  width: 3.4, opacity: 0.24, noiseScale: 16, noiseFreq: 0.9,  hueShift: 16,  phase: 1.2 },
-      { yBase: -0.28, speed: 1.1,  width: 2.8, opacity: 0.20, noiseScale: 14, noiseFreq: 1.0,  hueShift: -8,  phase: 1.8 },
-      { yBase: -0.12, speed: 1.2,  width: 2.0, opacity: 0.16, noiseScale: 12, noiseFreq: 1.1,  hueShift: 4,   phase: 2.4 },
-      // Lower streams (mirror)
-      { yBase: 0.88,  speed: 0.8,  width: 2.2, opacity: 0.14, noiseScale: 22, noiseFreq: 0.7,  hueShift: 0,   phase: 0.3 },
-      { yBase: 0.68,  speed: 0.9,  width: 2.8, opacity: 0.18, noiseScale: 18, noiseFreq: 0.8,  hueShift: 8,   phase: 0.9 },
-      { yBase: 0.48,  speed: 1.0,  width: 3.4, opacity: 0.24, noiseScale: 16, noiseFreq: 0.9,  hueShift: 16,  phase: 1.5 },
-      { yBase: 0.28,  speed: 1.1,  width: 2.8, opacity: 0.20, noiseScale: 14, noiseFreq: 1.0,  hueShift: -8,  phase: 2.1 },
-      { yBase: 0.12,  speed: 1.2,  width: 2.0, opacity: 0.16, noiseScale: 12, noiseFreq: 1.1,  hueShift: 4,   phase: 2.7 },
-      // Center streams (most visible)
-      { yBase: 0.0,   speed: 1.3,  width: 4.0, opacity: 0.30, noiseScale: 10, noiseFreq: 1.2,  hueShift: 25,  phase: 0.7 },
-      { yBase: 0.06,  speed: 1.25, width: 3.2, opacity: 0.22, noiseScale: 11, noiseFreq: 1.15, hueShift: 12,  phase: 1.4 },
-      { yBase: -0.06, speed: 1.25, width: 3.2, opacity: 0.22, noiseScale: 11, noiseFreq: 1.15, hueShift: -12, phase: 2.0 },
-    ];
-
-    const segments = 100;
-
-    for (const stream of streams) {
-      const points: { x: number; y: number; pressure: number; speed: number }[] = [];
-
-      for (let i = 0; i <= segments; i++) {
-        const nx = i / segments;
-        const x = nx * w;
-
-        // Venturi compression
-        const radius = tubeRadius(nx);
-        const compression = radius / maxRadius;
-
-        // Stream y follows tube shape
-        const baseY = cy + stream.yBase * radius;
-
-        // Flowing noise: the noise coordinates scroll left-to-right at flow speed
-        // This creates the illusion of fluid moving through the tube
-        const localSpeed = flowSpeed(nx);
-        const flowOffset = t * 0.15 * stream.speed * localSpeed;
-        
-        const noiseVal = noise(
-          nx * stream.noiseFreq * 3 + stream.phase - flowOffset * 0.3,
-          stream.phase * 10 + t * 0.04
-        );
-        const displacement = noiseVal * stream.noiseScale * compression;
-
-        const microNoise = noise(
-          nx * stream.noiseFreq * 8 + stream.phase + 100 - flowOffset * 0.5,
-          stream.phase * 10 + 50 + t * 0.06
-        ) * 4 * compression;
-
-        const y = baseY + displacement + microNoise;
-
-        const distFromCenter = Math.abs(nx - 0.5) * 2;
-        const pressure = 1 - distFromCenter;
-
-        points.push({ x, y, pressure, speed: localSpeed });
-      }
-
-      // Draw stream path with varying width, color, opacity
-      for (let i = 1; i < points.length; i++) {
-        const prev = points[i - 1];
-        const curr = points[i];
-        const nx = i / segments;
-
-        // Width: thinner at throat (fluid stretches when it accelerates)
-        const throatFactor = tubeRadius(nx) / maxRadius;
-        const widthMultiplier = 0.3 + 0.7 * throatFactor;
-        const lineWidth = stream.width * widthMultiplier;
-
-        // Opacity: brighter at throat + traveling pulse waves
-        const pressureGlow = curr.pressure * 0.5;
-        const edgeFade = Math.min(nx * 4, (1 - nx) * 4, 1);
-        
-        // Traveling opacity waves (move left to right, faster at throat)
-        const wavePhase = nx * 12 - t * 1.8 * stream.speed + stream.phase * 3;
-        const wave = 0.5 + 0.5 * Math.sin(wavePhase);
-        const waveIntensity = 0.15 * wave;
-        
-        const alpha = Math.min((stream.opacity + pressureGlow + waveIntensity) * edgeFade, 0.9);
-
-        // Color: cool blue at edges → warm gold at throat
-        const blueR = 42, blueG = 82, blueB = 152;
-        const goldR = 201, goldG = 169, goldB = 97;
-        const colorMix = Math.pow(curr.pressure, 1.8);
-        const r = Math.round(blueR + (goldR - blueR) * colorMix);
-        const g = Math.round(blueG + (goldG - blueG) * colorMix);
-        const b = Math.round(blueB + (goldB - blueB) * colorMix);
-
-        ctx.beginPath();
-        ctx.moveTo(prev.x, prev.y);
-        const midX = (prev.x + curr.x) / 2;
-        const midY = (prev.y + curr.y) / 2;
-        ctx.quadraticCurveTo(prev.x, prev.y, midX, midY);
-
-        ctx.strokeStyle = `rgba(${r},${g},${b},${alpha})`;
-        ctx.lineWidth = lineWidth;
-        ctx.lineCap = 'round';
-        ctx.stroke();
-      }
-    }
-
-    // --- LAYER 3: Traveling flow pulses (speed lines that move L→R) ---
-    // These are subtle bright pulses that travel through the streams, 
-    // moving slowly at inlet, fast at throat, medium at outlet
-    const pulseCount = 8;
-    for (let p = 0; p < pulseCount; p++) {
-      // Each pulse has a base position that advances over time
-      const basePulseSpeed = 0.06 + p * 0.005;
-      const pulsePhase = (t * basePulseSpeed + p / pulseCount) % 1.0;
-      
-      // Map pulse position through flow speed (non-linear: spends less time at throat)
-      // Integrate flow speed to get actual position
-      let nx = pulsePhase;
-      
-      if (nx < 0.02 || nx > 0.98) continue; // skip edges
-      
-      const localSpeed = flowSpeed(nx);
-      const radius = tubeRadius(nx);
-      const pulseWidth = 15 + 25 * (radius / maxRadius); // wider at inlet/outlet
-      
-      // Pulse brightness: brighter at throat
-      const distFromCenter = Math.abs(nx - 0.5) * 2;
-      const intensity = 0.04 + 0.06 * (1 - distFromCenter);
-      
-      const x = nx * w;
-      const grad = ctx.createRadialGradient(x, cy, 0, x, cy, radius * 0.8);
-      grad.addColorStop(0, `rgba(201,169,97,${intensity})`);
-      grad.addColorStop(0.3, `rgba(201,169,97,${intensity * 0.6})`);
-      grad.addColorStop(1, 'rgba(201,169,97,0)');
-      
-      // Draw as vertical ellipse matching tube shape
-      ctx.save();
-      ctx.translate(x, cy);
-      ctx.scale(pulseWidth / (radius * 0.8), 1);
-      ctx.fillStyle = grad;
-      ctx.beginPath();
-      ctx.arc(0, 0, radius * 0.8, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.restore();
-    }
-
-    // --- LAYER 4: Throat glow (emphasize the acceleration zone) ---
-    const throatGlowW = 100 + 20 * Math.sin(t * 0.3);
-    const throatGlowH = tubeRadius(0.5) * 1.5;
-    const throatAlpha = 0.10 + 0.05 * Math.sin(t * 0.25);
-    const throatGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, throatGlowW);
-    throatGrad.addColorStop(0, `rgba(201,169,97,${throatAlpha})`);
-    throatGrad.addColorStop(0.5, `rgba(201,169,97,${throatAlpha * 0.4})`);
-    throatGrad.addColorStop(1, 'rgba(201,169,97,0)');
-    ctx.save();
-    ctx.translate(cx, cy);
-    ctx.scale(1, throatGlowH / throatGlowW);
-    ctx.fillStyle = throatGrad;
+    // --- LAYER 1: Background fill inside tube (deep blue) ---
     ctx.beginPath();
-    ctx.arc(0, 0, throatGlowW, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.restore();
-
-    // --- LAYER 5: Directional flow markers (subtle elongated glows that travel L→R) ---
-    const markerCount = 12;
-    for (let m = 0; m < markerCount; m++) {
-      const markerSpeed = 0.04 + (m % 3) * 0.008;
-      const nx = ((t * markerSpeed + m / markerCount + 0.1 * noise(m * 7, 0)) % 1.2) - 0.1;
-      if (nx < 0 || nx > 1) continue;
-      
-      const localSpeed = flowSpeed(nx);
-      const radius = tubeRadius(nx);
-      
-      // Position within the tube
-      const yOffset = noise(m * 5.3, 0.5) * 0.7; // fixed y position per marker
+    const seg = 80;
+    // Top edge
+    for (let i = 0; i <= seg; i++) {
+      const nx = i / seg;
       const x = nx * w;
-      const y = cy + yOffset * radius;
-      
-      // Elongation increases with speed (stretched at throat)
-      const elongation = 2 + localSpeed * 3;
-      const markerH = 1.5 + 1.5 * (radius / maxRadius);
-      
-      const distFromCenter = Math.abs(nx - 0.5) * 2;
-      const markerAlpha = 0.06 + 0.08 * (1 - distFromCenter);
-      
-      ctx.save();
-      ctx.translate(x, y);
-      ctx.scale(elongation, 1);
+      const r = tubeY(nx);
+      if (i === 0) ctx.moveTo(x, cy - r);
+      else ctx.lineTo(x, cy - r);
+    }
+    // Bottom edge (reverse)
+    for (let i = seg; i >= 0; i--) {
+      const nx = i / seg;
+      const x = nx * w;
+      const r = tubeY(nx);
+      ctx.lineTo(x, cy + r);
+    }
+    ctx.closePath();
+    
+    // Fill with deep blue gradient
+    const bgGrad = ctx.createLinearGradient(0, cy - maxR, 0, cy + maxR);
+    bgGrad.addColorStop(0, '#1a3a6e');
+    bgGrad.addColorStop(0.5, '#2A5298');
+    bgGrad.addColorStop(1, '#1a3a6e');
+    ctx.fillStyle = bgGrad;
+    ctx.fill();
+
+    // Clip to tube interior for all inner layers
+    ctx.save();
+    ctx.clip();
+
+    // --- LAYER 2: Speckle field (static texture) ---
+    for (const sp of state.speckles) {
+      const r = tubeY(sp.x);
+      const x = sp.x * w;
+      const y = cy + sp.y * r;
       ctx.beginPath();
-      ctx.arc(0, 0, markerH, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(201,169,97,${markerAlpha})`;
+      ctx.arc(x, y, sp.size, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(0,217,255,${sp.alpha})`;
       ctx.fill();
-      ctx.restore();
     }
 
-    // --- LAYER 6: Tube boundary (subtle implied shape) ---
-    ctx.globalCompositeOperation = 'screen';
-    for (let side = -1; side <= 1; side += 2) {
-      ctx.beginPath();
-      for (let i = 0; i <= segments; i++) {
-        const nx = i / segments;
-        const x = nx * w;
-        const radius = tubeRadius(nx);
-        const y = cy + side * radius;
-        const boundaryNoise = noise(nx * 2 + 10, t * 0.05 + side * 5) * 3;
-        if (i === 0) ctx.moveTo(x, y + boundaryNoise);
-        else ctx.lineTo(x, y + boundaryNoise);
+    // --- LAYER 3: Flowing particles ---
+    const dt = 1 / 60; // approximate
+    for (const p of state.particles) {
+      // Advance particle
+      const speed = flowSpeed(p.t);
+      const baseSpeed = 0.06; // base traversal speed per second
+      p.t += baseSpeed * speed * dt;
+
+      // Wrap around
+      if (p.t > 1) {
+        p.t -= 1;
+        p.lane = (Math.random() * 2 - 1) * 0.85;
+        p.brightness = 0.6 + Math.random() * 0.4;
       }
-      const edgeFadeGrad = ctx.createLinearGradient(0, 0, w, 0);
-      edgeFadeGrad.addColorStop(0, 'rgba(201,169,97,0)');
-      edgeFadeGrad.addColorStop(0.1, 'rgba(201,169,97,0.04)');
-      edgeFadeGrad.addColorStop(0.3, 'rgba(201,169,97,0.08)');
-      edgeFadeGrad.addColorStop(0.5, 'rgba(201,169,97,0.14)');
-      edgeFadeGrad.addColorStop(0.7, 'rgba(201,169,97,0.08)');
-      edgeFadeGrad.addColorStop(0.9, 'rgba(201,169,97,0.04)');
-      edgeFadeGrad.addColorStop(1, 'rgba(201,169,97,0)');
-      ctx.strokeStyle = edgeFadeGrad;
-      ctx.lineWidth = 1.2;
+
+      const r = tubeY(p.t);
+      const x = p.t * w;
+      const y = cy + p.lane * r;
+
+      // Brightness: higher at throat
+      const distFromThroat = Math.abs(p.t - 0.5) * 2;
+      const throatBoost = 1 - distFromThroat;
+      const alpha = Math.min(p.brightness * (0.5 + throatBoost * 0.6), 1.0);
+
+      // Size: slightly larger at throat for emphasis
+      const sizeBoost = 1 + throatBoost * 0.5;
+      const radius = p.size * sizeBoost;
+
+      // Draw particle with glow
+      const grd = ctx.createRadialGradient(x, y, 0, x, y, radius * 3);
+      grd.addColorStop(0, `rgba(255,255,255,${alpha})`);
+      grd.addColorStop(0.3, `rgba(0,217,255,${alpha * 0.6})`);
+      grd.addColorStop(1, 'rgba(0,217,255,0)');
+      ctx.beginPath();
+      ctx.arc(x, y, radius * 3, 0, Math.PI * 2);
+      ctx.fillStyle = grd;
+      ctx.fill();
+
+      // Core dot
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+      ctx.fill();
+    }
+
+    // --- LAYER 4: Center throat glow ---
+    const glowPulse = 0.7 + 0.3 * Math.sin(t * 1.5);
+    const throatR = tubeY(0.5);
+    const glowR = throatR * 2.5;
+    const glowGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, glowR);
+    const glowAlpha = 0.18 * glowPulse;
+    glowGrad.addColorStop(0, `rgba(255,255,255,${glowAlpha})`);
+    glowGrad.addColorStop(0.2, `rgba(0,217,255,${glowAlpha * 0.6})`);
+    glowGrad.addColorStop(0.6, `rgba(0,217,255,${glowAlpha * 0.2})`);
+    glowGrad.addColorStop(1, 'rgba(0,217,255,0)');
+    ctx.fillStyle = glowGrad;
+    ctx.beginPath();
+    ctx.arc(cx, cy, glowR, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.restore(); // unclip
+
+    // --- LAYER 5: Tube outline (white boundary) ---
+    ctx.lineWidth = 2;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+
+    // Horizontal gradient for edge fade
+    const strokeGrad = ctx.createLinearGradient(0, 0, w, 0);
+    strokeGrad.addColorStop(0, 'rgba(240,240,240,0)');
+    strokeGrad.addColorStop(0.08, 'rgba(240,240,240,0.6)');
+    strokeGrad.addColorStop(0.3, 'rgba(240,240,240,0.85)');
+    strokeGrad.addColorStop(0.5, 'rgba(240,240,240,1)');
+    strokeGrad.addColorStop(0.7, 'rgba(240,240,240,0.85)');
+    strokeGrad.addColorStop(0.92, 'rgba(240,240,240,0.6)');
+    strokeGrad.addColorStop(1, 'rgba(240,240,240,0)');
+    ctx.strokeStyle = strokeGrad;
+
+    for (const side of [-1, 1]) {
+      ctx.beginPath();
+      for (let i = 0; i <= seg; i++) {
+        const nx = i / seg;
+        const x = nx * w;
+        const r = tubeY(nx);
+        const y = cy + side * r;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
       ctx.stroke();
     }
-    ctx.globalCompositeOperation = 'source-over';
 
     ctx.restore();
-  }, []);
+  }, [tubeRadius, flowSpeed]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -347,11 +238,12 @@ export default function VenturiFluid() {
     const ctx = canvas.getContext('2d', { alpha: true });
     if (!ctx) return;
 
-    noiseRef.current = createNoise();
+    const isMobile = window.innerWidth < 768;
+    initState(isMobile);
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
     function resize() {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      dprRef.current = dpr;
       const rect = canvas!.getBoundingClientRect();
       canvas!.width = rect.width * dpr;
       canvas!.height = rect.height * dpr;
@@ -369,15 +261,19 @@ export default function VenturiFluid() {
       const dt = (timestamp - lastTime) / 1000;
       lastTime = timestamp;
 
-      if (prefersReducedMotion) {
-        timeRef.current = 0;
-        draw(canvas!, ctx!);
-        return;
+      if (stateRef.current) {
+        if (prefersReducedMotion) {
+          stateRef.current.time = 0;
+        } else {
+          stateRef.current.time += dt;
+        }
       }
 
-      timeRef.current += dt;
-      draw(canvas!, ctx!);
-      animRef.current = requestAnimationFrame(animate);
+      draw(canvas!, ctx!, dpr);
+
+      if (!prefersReducedMotion) {
+        animRef.current = requestAnimationFrame(animate);
+      }
     }
 
     animRef.current = requestAnimationFrame(animate);
@@ -386,13 +282,13 @@ export default function VenturiFluid() {
       cancelAnimationFrame(animRef.current);
       window.removeEventListener('resize', resize);
     };
-  }, [draw]);
+  }, [draw, initState]);
 
   return (
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full"
-      style={{ opacity: 0.85 }}
+      style={{ opacity: 0.9 }}
       aria-hidden="true"
     />
   );
