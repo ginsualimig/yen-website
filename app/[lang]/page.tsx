@@ -112,199 +112,246 @@ export default async function HomePage({ params }: HomePageProps) {
             <rect width="100%" height="100%" fill="url(#grid)" />
           </svg>
 
-          {/* ═══ VENTURI TUBE SVG — the core visual metaphor ═══ */}
+          {/* ═══ VENTURI TUBE SVG — Premium Apple-level animation ═══ */}
           <svg viewBox="0 0 900 480" fill="none" xmlns="http://www.w3.org/2000/svg"
-            className="absolute inset-0 w-full h-full hidden lg:block" preserveAspectRatio="xMidYMid slice">
+            className="absolute inset-0 w-full h-full hidden lg:block venturi-hero-svg" preserveAspectRatio="xMidYMid slice">
             <defs>
-              <linearGradient id="vg-flow-a" x1="0%" y1="0%" x2="100%" y2="0%">
+              {/* Soft flow gradient — cool to warm transition */}
+              <linearGradient id="vg-flow-cool" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%"   stopColor="#2A5298" stopOpacity="0" />
-                <stop offset="42%"  stopColor="#3B6EA8" stopOpacity="0.30" />
-                <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.48" />
-                <stop offset="58%"  stopColor="#3B6EA8" stopOpacity="0.20" />
+                <stop offset="35%"  stopColor="#3B6EA8" stopOpacity="0.18" />
+                <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.32" />
+                <stop offset="65%"  stopColor="#3B6EA8" stopOpacity="0.18" />
                 <stop offset="100%" stopColor="#2A5298" stopOpacity="0" />
               </linearGradient>
-              <linearGradient id="vg-flow-b" x1="0%" y1="0%" x2="100%" y2="0%">
+              <linearGradient id="vg-flow-warm" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%"   stopColor="#1E3A6E" stopOpacity="0" />
-                <stop offset="44%"  stopColor="#2A5298" stopOpacity="0.22" />
-                <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.33" />
-                <stop offset="56%"  stopColor="#2A5298" stopOpacity="0.14" />
+                <stop offset="40%"  stopColor="#2A5298" stopOpacity="0.12" />
+                <stop offset="50%"  stopColor="#D4B896" stopOpacity="0.22" />
+                <stop offset="60%"  stopColor="#2A5298" stopOpacity="0.12" />
                 <stop offset="100%" stopColor="#1E3A6E" stopOpacity="0" />
               </linearGradient>
-              <radialGradient id="vg-glow" cx="50%" cy="50%" r="10%">
-                <stop offset="0%"   stopColor="#C9A961" stopOpacity="0.38" />
+              {/* Throat radial glow — soft, diffused */}
+              <radialGradient id="vg-throat-glow" cx="50%" cy="50%" r="18%">
+                <stop offset="0%"   stopColor="#C9A961" stopOpacity="0.22" />
+                <stop offset="40%"  stopColor="#C9A961" stopOpacity="0.08" />
                 <stop offset="100%" stopColor="#C9A961" stopOpacity="0" />
               </radialGradient>
+              {/* Tube wall gradient — ethereal */}
               <linearGradient id="vg-wall" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%"   stopColor="#C9A961" stopOpacity="0" />
-                <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.26" />
+                <stop offset="30%"  stopColor="#C9A961" stopOpacity="0.12" />
+                <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.22" />
+                <stop offset="70%"  stopColor="#C9A961" stopOpacity="0.12" />
                 <stop offset="100%" stopColor="#C9A961" stopOpacity="0" />
               </linearGradient>
+              {/* Particle glow filter — soft bokeh */}
+              <filter id="vg-particle-glow" x="-100%" y="-100%" width="300%" height="300%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              </filter>
+              <filter id="vg-particle-glow-lg" x="-100%" y="-100%" width="300%" height="300%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              </filter>
+              {/* Depth-of-field blur for background particles */}
+              <filter id="vg-bokeh" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1.5"/>
+              </filter>
+              {/* Throat heatmap effect */}
+              <radialGradient id="vg-heat" cx="50%" cy="50%" r="12%">
+                <stop offset="0%"   stopColor="#D4B896" stopOpacity="0.15" />
+                <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.06" />
+                <stop offset="100%" stopColor="#2A5298" stopOpacity="0" />
+              </radialGradient>
             </defs>
 
-            {/* Upper converging flow lines */}
-            <path d="M-80 10  Q280 170 450 240 Q620 170 980 10"  stroke="url(#vg-flow-a)" strokeWidth="0.8" opacity="0.55"/>
-            <path d="M-80 40  Q290 178 450 240 Q610 178 980 40"  stroke="url(#vg-flow-b)" strokeWidth="0.7" opacity="0.48"/>
-            <path d="M-80 70  Q300 186 450 240 Q600 186 980 70"  stroke="url(#vg-flow-a)" strokeWidth="0.6" opacity="0.40"/>
-            <path d="M-80 100 Q310 194 450 240 Q590 194 980 100" stroke="url(#vg-flow-b)" strokeWidth="0.5" opacity="0.33"/>
-            <path d="M-80 130 Q320 202 450 240 Q580 202 980 130" stroke="url(#vg-flow-a)" strokeWidth="0.5" opacity="0.26"/>
-            <path d="M-80 160 Q335 210 450 240 Q565 210 980 160" stroke="url(#vg-flow-b)" strokeWidth="0.4" opacity="0.20"/>
-
-            {/* Lower diverging flow lines (expansion after throat) */}
-            <path d="M-80 470 Q280 310 450 240 Q620 310 980 470" stroke="url(#vg-flow-a)" strokeWidth="0.8" opacity="0.55"/>
-            <path d="M-80 440 Q290 302 450 240 Q610 302 980 440" stroke="url(#vg-flow-b)" strokeWidth="0.7" opacity="0.48"/>
-            <path d="M-80 410 Q300 294 450 240 Q600 294 980 410" stroke="url(#vg-flow-a)" strokeWidth="0.6" opacity="0.40"/>
-            <path d="M-80 380 Q310 286 450 240 Q590 286 980 380" stroke="url(#vg-flow-b)" strokeWidth="0.5" opacity="0.33"/>
-            <path d="M-80 350 Q320 278 450 240 Q580 278 980 350" stroke="url(#vg-flow-a)" strokeWidth="0.5" opacity="0.26"/>
-            <path d="M-80 320 Q335 270 450 240 Q565 270 980 320" stroke="url(#vg-flow-b)" strokeWidth="0.4" opacity="0.20"/>
-
-            {/* Tube boundary walls — gold shimmer */}
-            <path d="M-80 -20 Q220 140 450 222 Q680 140 980 -20" stroke="url(#vg-wall)" strokeWidth="1.3" opacity="0.65"/>
-            <path d="M-80 500 Q220 340 450 258 Q680 340 980 500" stroke="url(#vg-wall)" strokeWidth="1.3" opacity="0.65"/>
-
-            {/* Throat glow — pressure point highlighting */}
-            <ellipse cx="450" cy="240" rx="88" ry="25" fill="url(#vg-glow)" />
-
-            {/* Animated pressure wave pulse (enhanced) */}
-            <circle cx="450" cy="240" r="16" fill="none" stroke="#C9A961" strokeWidth="1.3" opacity="0.35" style={{ animation: 'venturiThroatPulse 2.4s cubic-bezier(0.34, 1.56, 0.64, 1) infinite' }}/>
-            <circle cx="450" cy="240" r="28" fill="none" stroke="#3B6EA8" strokeWidth="0.9" opacity="0.2" style={{ animation: 'venturiThroatPulse 2.4s cubic-bezier(0.34, 1.56, 0.64, 1) infinite', animationDelay: '0.15s' }}/>
-
-            {/* Animated flowing particles — upper converging paths (enhanced) */}
-            <g opacity="0.8">
-              <animateMotion path="M -80 10 Q 280 170 450 240 Q 620 170 980 10" dur="3.2s" repeatCount="indefinite">
-                <circle r="3" fill="#C9A961"/>
-              </animateMotion>
-            </g>
-            <g opacity="0.75">
-              <animateMotion path="M -80 40 Q 290 178 450 240 Q 610 178 980 40" dur="3.5s" repeatCount="indefinite" begin="0.2s">
-                <circle r="2.8" fill="#C9A961"/>
-              </animateMotion>
-            </g>
-            <g opacity="0.7">
-              <animateMotion path="M -80 70 Q 300 186 450 240 Q 600 186 980 70" dur="3.8s" repeatCount="indefinite" begin="0.4s">
-                <circle r="2.6" fill="#C9A961"/>
-              </animateMotion>
-            </g>
-            <g opacity="0.65">
-              <animateMotion path="M -80 25 Q 285 174 450 240 Q 615 174 980 25" dur="3.3s" repeatCount="indefinite" begin="0.15s">
-                <circle r="2.7" fill="#D4B896"/>
-              </animateMotion>
-            </g>
-            <g opacity="0.7">
-              <animateMotion path="M -80 55 Q 295 182 450 240 Q 605 182 980 55" dur="3.6s" repeatCount="indefinite" begin="0.35s">
-                <circle r="2.5" fill="#C9A961"/>
-              </animateMotion>
-            </g>
-            <g opacity="0.6">
-              <animateMotion path="M -80 85 Q 305 190 450 240 Q 595 190 980 85" dur="3.9s" repeatCount="indefinite" begin="0.55s">
-                <circle r="2.4" fill="#D4B896"/>
-              </animateMotion>
+            {/* ── Flow field lines: subtle, organic, layered ── */}
+            {/* Background layer (blurred, depth) */}
+            <g className="venturi-flow-bg" opacity="0.35" filter="url(#vg-bokeh)">
+              <path d="M-80 20  C200 20 300 200 450 240 C600 200 700 20 980 20"   stroke="url(#vg-flow-warm)" strokeWidth="0.6"/>
+              <path d="M-80 60  C210 60 310 205 450 240 C590 205 690 60 980 60"   stroke="url(#vg-flow-warm)" strokeWidth="0.5"/>
+              <path d="M-80 460 C200 460 300 280 450 240 C600 280 700 460 980 460" stroke="url(#vg-flow-warm)" strokeWidth="0.6"/>
+              <path d="M-80 420 C210 420 310 275 450 240 C590 275 690 420 980 420" stroke="url(#vg-flow-warm)" strokeWidth="0.5"/>
             </g>
 
-            {/* Animated flowing particles — lower diverging paths (enhanced) */}
-            <g opacity="0.8">
-              <animateMotion path="M -80 470 Q 280 310 450 240 Q 620 310 980 470" dur="3.2s" repeatCount="indefinite">
-                <circle r="3" fill="#C9A961"/>
-              </animateMotion>
-            </g>
-            <g opacity="0.75">
-              <animateMotion path="M -80 440 Q 290 302 450 240 Q 610 302 980 440" dur="3.5s" repeatCount="indefinite" begin="0.2s">
-                <circle r="2.8" fill="#C9A961"/>
-              </animateMotion>
-            </g>
-            <g opacity="0.7">
-              <animateMotion path="M -80 410 Q 300 294 450 240 Q 600 294 980 410" dur="3.8s" repeatCount="indefinite" begin="0.4s">
-                <circle r="2.6" fill="#C9A961"/>
-              </animateMotion>
-            </g>
-            <g opacity="0.65">
-              <animateMotion path="M -80 455 Q 285 306 450 240 Q 615 306 980 455" dur="3.3s" repeatCount="indefinite" begin="0.15s">
-                <circle r="2.7" fill="#D4B896"/>
-              </animateMotion>
-            </g>
-            <g opacity="0.7">
-              <animateMotion path="M -80 425 Q 295 298 450 240 Q 605 298 980 425" dur="3.6s" repeatCount="indefinite" begin="0.35s">
-                <circle r="2.5" fill="#C9A961"/>
-              </animateMotion>
-            </g>
-            <g opacity="0.6">
-              <animateMotion path="M -80 395 Q 305 286 450 240 Q 595 286 980 395" dur="3.9s" repeatCount="indefinite" begin="0.55s">
-                <circle r="2.4" fill="#D4B896"/>
-              </animateMotion>
+            {/* Midground flow lines */}
+            <g className="venturi-flow-mid" opacity="0.5">
+              <path d="M-80 35  C220 35 320 208 450 240 C580 208 680 35 980 35"   stroke="url(#vg-flow-cool)" strokeWidth="0.7"/>
+              <path d="M-80 80  C230 80 325 212 450 240 C575 212 670 80 980 80"   stroke="url(#vg-flow-cool)" strokeWidth="0.6"/>
+              <path d="M-80 120 C250 120 335 218 450 240 C565 218 650 120 980 120" stroke="url(#vg-flow-warm)" strokeWidth="0.5"/>
+              <path d="M-80 160 C270 160 350 224 450 240 C550 224 630 160 980 160" stroke="url(#vg-flow-cool)" strokeWidth="0.4"/>
+              <path d="M-80 445 C220 445 320 272 450 240 C580 272 680 445 980 445" stroke="url(#vg-flow-cool)" strokeWidth="0.7"/>
+              <path d="M-80 400 C230 400 325 268 450 240 C575 268 670 400 980 400" stroke="url(#vg-flow-cool)" strokeWidth="0.6"/>
+              <path d="M-80 360 C250 360 335 262 450 240 C565 262 650 360 980 360" stroke="url(#vg-flow-warm)" strokeWidth="0.5"/>
+              <path d="M-80 320 C270 320 350 256 450 240 C550 256 630 320 980 320" stroke="url(#vg-flow-cool)" strokeWidth="0.4"/>
             </g>
 
-            {/* Left converging arrows */}
-            <g opacity="0.48">
-              <polyline points="185,188 218,202 185,216" fill="none" stroke="#C9A961" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
-              <polyline points="145,173 183,189 145,205" fill="none" stroke="#C9A961" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" opacity="0.65"/>
-              <polyline points="185,272 218,258 185,244" fill="none" stroke="#C9A961" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
-              <polyline points="145,283 183,269 145,255" fill="none" stroke="#C9A961" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" opacity="0.65"/>
+            {/* ── Tube walls — ethereal, breathing ── */}
+            <path className="venturi-wall-upper" d="M-80 -10 C180 -10 280 180 450 225 C620 180 720 -10 980 -10" stroke="url(#vg-wall)" strokeWidth="1" fill="none"/>
+            <path className="venturi-wall-lower" d="M-80 490 C180 490 280 300 450 255 C620 300 720 490 980 490" stroke="url(#vg-wall)" strokeWidth="1" fill="none"/>
+
+            {/* ── Throat glow — soft, diffused, breathing ── */}
+            <ellipse className="venturi-throat-ambient" cx="450" cy="240" rx="120" ry="40" fill="url(#vg-throat-glow)" />
+            <ellipse className="venturi-throat-heat" cx="450" cy="240" rx="60" ry="18" fill="url(#vg-heat)" />
+
+            {/* ── Throat rings — minimal, elegant ── */}
+            <circle className="venturi-ring-inner" cx="450" cy="240" r="12" fill="none" stroke="#C9A961" strokeWidth="0.6" opacity="0.25"/>
+            <circle className="venturi-ring-outer" cx="450" cy="240" r="24" fill="none" stroke="#C9A961" strokeWidth="0.4" opacity="0.12"/>
+
+            {/* ── PARTICLES — Layered depth system ── */}
+            
+            {/* Background particles (blurred, slower, smaller — depth illusion) */}
+            <g filter="url(#vg-bokeh)" opacity="0.4">
+              <circle r="2" fill="#8B9DC3">
+                <animateMotion path="M-80,30 C220,30 320,210 450,240 C580,210 680,30 980,30" dur="6s" repeatCount="indefinite" begin="0s"/>
+                <animate attributeName="opacity" values="0;0.5;0.8;0.5;0" dur="6s" repeatCount="indefinite" begin="0s"/>
+              </circle>
+              <circle r="1.8" fill="#8B9DC3">
+                <animateMotion path="M-80,450 C220,450 320,270 450,240 C580,270 680,450 980,450" dur="6.5s" repeatCount="indefinite" begin="0.8s"/>
+                <animate attributeName="opacity" values="0;0.4;0.7;0.4;0" dur="6.5s" repeatCount="indefinite" begin="0.8s"/>
+              </circle>
+              <circle r="1.5" fill="#7A8FB5">
+                <animateMotion path="M-80,70 C230,70 330,215 450,240 C570,215 670,70 980,70" dur="7s" repeatCount="indefinite" begin="1.5s"/>
+                <animate attributeName="opacity" values="0;0.4;0.6;0.4;0" dur="7s" repeatCount="indefinite" begin="1.5s"/>
+              </circle>
+              <circle r="1.5" fill="#7A8FB5">
+                <animateMotion path="M-80,410 C230,410 330,265 450,240 C570,265 670,410 980,410" dur="7.2s" repeatCount="indefinite" begin="2s"/>
+                <animate attributeName="opacity" values="0;0.4;0.6;0.4;0" dur="7.2s" repeatCount="indefinite" begin="2s"/>
+              </circle>
             </g>
 
-            {/* Right expanding arrows */}
-            <g opacity="0.36">
-              <polyline points="715,188 682,202 715,216" fill="none" stroke="#C9A961" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
-              <polyline points="755,173 717,189 755,205" fill="none" stroke="#C9A961" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" opacity="0.65"/>
-              <polyline points="715,272 682,258 715,244" fill="none" stroke="#C9A961" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
-              <polyline points="755,283 717,269 755,255" fill="none" stroke="#C9A961" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" opacity="0.65"/>
+            {/* Midground particles (medium glow, medium speed) */}
+            <g filter="url(#vg-particle-glow)" opacity="0.65">
+              <circle r="2.5" fill="#C9A961">
+                <animateMotion path="M-80,50 C225,50 325,212 450,240 C575,212 675,50 980,50" dur="4.8s" repeatCount="indefinite" begin="0.3s"/>
+                <animate attributeName="opacity" values="0;0.6;1;0.6;0" dur="4.8s" repeatCount="indefinite" begin="0.3s"/>
+                <animate attributeName="r" values="2.5;2.5;3.5;2.5;2.5" dur="4.8s" repeatCount="indefinite" begin="0.3s"/>
+              </circle>
+              <circle r="2.2" fill="#D4B896">
+                <animateMotion path="M-80,430 C225,430 325,268 450,240 C575,268 675,430 980,430" dur="5.2s" repeatCount="indefinite" begin="0.6s"/>
+                <animate attributeName="opacity" values="0;0.5;0.9;0.5;0" dur="5.2s" repeatCount="indefinite" begin="0.6s"/>
+                <animate attributeName="r" values="2.2;2.2;3.2;2.2;2.2" dur="5.2s" repeatCount="indefinite" begin="0.6s"/>
+              </circle>
+              <circle r="2.3" fill="#C9A961">
+                <animateMotion path="M-80,90 C240,90 335,218 450,240 C565,218 660,90 980,90" dur="5s" repeatCount="indefinite" begin="1.2s"/>
+                <animate attributeName="opacity" values="0;0.5;0.9;0.5;0" dur="5s" repeatCount="indefinite" begin="1.2s"/>
+                <animate attributeName="r" values="2.3;2.3;3.3;2.3;2.3" dur="5s" repeatCount="indefinite" begin="1.2s"/>
+              </circle>
+              <circle r="2.3" fill="#D4B896">
+                <animateMotion path="M-80,390 C240,390 335,262 450,240 C565,262 660,390 980,390" dur="5.4s" repeatCount="indefinite" begin="1.8s"/>
+                <animate attributeName="opacity" values="0;0.5;0.9;0.5;0" dur="5.4s" repeatCount="indefinite" begin="1.8s"/>
+                <animate attributeName="r" values="2.3;2.3;3;2.3;2.3" dur="5.4s" repeatCount="indefinite" begin="1.8s"/>
+              </circle>
             </g>
 
-            {/* Throat accent — gold dot at convergence point */}
-            <circle cx="450" cy="240" r="3.5" fill="#C9A961" opacity="0.72"/>
-            <circle cx="450" cy="240" r="8"   fill="none" stroke="#C9A961" strokeWidth="0.9" opacity="0.33"/>
-            <circle cx="450" cy="240" r="15"  fill="none" stroke="#C9A961" strokeWidth="0.5" opacity="0.17"/>
+            {/* Foreground particles (bright, largest, fastest — hero particles) */}
+            <g filter="url(#vg-particle-glow-lg)">
+              <circle r="3" fill="#C9A961">
+                <animateMotion path="M-80,15 C210,15 310,205 450,240 C590,205 690,15 980,15" dur="4s" repeatCount="indefinite" begin="0s"/>
+                <animate attributeName="opacity" values="0;0.7;1;0.7;0" dur="4s" repeatCount="indefinite" begin="0s"/>
+                <animate attributeName="r" values="3;3;4.5;3;3" dur="4s" repeatCount="indefinite" begin="0s"/>
+              </circle>
+              <circle r="3" fill="#C9A961">
+                <animateMotion path="M-80,465 C210,465 310,275 450,240 C590,275 690,465 980,465" dur="4.2s" repeatCount="indefinite" begin="0.5s"/>
+                <animate attributeName="opacity" values="0;0.7;1;0.7;0" dur="4.2s" repeatCount="indefinite" begin="0.5s"/>
+                <animate attributeName="r" values="3;3;4.5;3;3" dur="4.2s" repeatCount="indefinite" begin="0.5s"/>
+              </circle>
+              <circle r="2.8" fill="#D4B896">
+                <animateMotion path="M-80,130 C260,130 340,222 450,240 C560,222 640,130 980,130" dur="4.5s" repeatCount="indefinite" begin="1s"/>
+                <animate attributeName="opacity" values="0;0.6;0.95;0.6;0" dur="4.5s" repeatCount="indefinite" begin="1s"/>
+                <animate attributeName="r" values="2.8;2.8;4;2.8;2.8" dur="4.5s" repeatCount="indefinite" begin="1s"/>
+              </circle>
+              <circle r="2.8" fill="#D4B896">
+                <animateMotion path="M-80,350 C260,350 340,258 450,240 C560,258 640,350 980,350" dur="4.6s" repeatCount="indefinite" begin="1.5s"/>
+                <animate attributeName="opacity" values="0;0.6;0.95;0.6;0" dur="4.6s" repeatCount="indefinite" begin="1.5s"/>
+                <animate attributeName="r" values="2.8;2.8;4;2.8;2.8" dur="4.6s" repeatCount="indefinite" begin="1.5s"/>
+              </circle>
+            </g>
+
+            {/* ── Vapor trails — subtle streak effect at throat ── */}
+            <g opacity="0.15">
+              <line x1="420" y1="238" x2="480" y2="238" stroke="#C9A961" strokeWidth="0.8" strokeLinecap="round">
+                <animate attributeName="opacity" values="0.05;0.2;0.05" dur="3s" repeatCount="indefinite"/>
+              </line>
+              <line x1="425" y1="242" x2="475" y2="242" stroke="#D4B896" strokeWidth="0.6" strokeLinecap="round">
+                <animate attributeName="opacity" values="0.08;0.18;0.08" dur="3.5s" repeatCount="indefinite" begin="0.5s"/>
+              </line>
+              <line x1="430" y1="236" x2="470" y2="236" stroke="#C9A961" strokeWidth="0.5" strokeLinecap="round">
+                <animate attributeName="opacity" values="0.05;0.15;0.05" dur="2.8s" repeatCount="indefinite" begin="1s"/>
+              </line>
+              <line x1="428" y1="244" x2="472" y2="244" stroke="#D4B896" strokeWidth="0.5" strokeLinecap="round">
+                <animate attributeName="opacity" values="0.05;0.15;0.05" dur="3.2s" repeatCount="indefinite" begin="1.5s"/>
+              </line>
+            </g>
+
+            {/* ── Throat focal point — minimal, precious ── */}
+            <circle cx="450" cy="240" r="2" fill="#C9A961" opacity="0.6"/>
           </svg>
 
-          {/* ═══ MOBILE VENTURI EFFECT — side view: wide → narrow → wide ═══ */}
-          <div className="absolute inset-0 w-full h-full lg:hidden flex items-center justify-center pointer-events-none overflow-hidden" aria-hidden="true">
-            {/* Tube walls (visual reference) */}
-            <svg className="absolute w-full h-32 top-1/4" viewBox="0 0 400 100" preserveAspectRatio="none">
+          {/* ═══ MOBILE VENTURI — premium horizontal flow ═══ */}
+          <div className="absolute inset-0 w-full h-full lg:hidden pointer-events-none overflow-hidden" aria-hidden="true">
+            {/* Ambient throat glow */}
+            <div className="venturi-m-glow absolute left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 w-32 h-20 rounded-full"
+              style={{ background: 'radial-gradient(ellipse, rgba(201,169,97,0.15) 0%, transparent 70%)' }} />
+            
+            {/* Flow field lines — SVG */}
+            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
               <defs>
-                <linearGradient id="tube-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#C9A961" stopOpacity="0.15"/>
-                  <stop offset="25%" stopColor="#C9A961" stopOpacity="0.25"/>
-                  <stop offset="50%" stopColor="#C9A961" stopOpacity="0.35"/>
-                  <stop offset="75%" stopColor="#C9A961" stopOpacity="0.25"/>
-                  <stop offset="100%" stopColor="#C9A961" stopOpacity="0.15"/>
+                <linearGradient id="vm-flow" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%"   stopColor="#2A5298" stopOpacity="0"/>
+                  <stop offset="40%"  stopColor="#3B6EA8" stopOpacity="0.15"/>
+                  <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.25"/>
+                  <stop offset="60%"  stopColor="#3B6EA8" stopOpacity="0.15"/>
+                  <stop offset="100%" stopColor="#2A5298" stopOpacity="0"/>
                 </linearGradient>
+                <linearGradient id="vm-wall" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%"   stopColor="#C9A961" stopOpacity="0"/>
+                  <stop offset="50%"  stopColor="#C9A961" stopOpacity="0.18"/>
+                  <stop offset="100%" stopColor="#C9A961" stopOpacity="0"/>
+                </linearGradient>
+                <filter id="vm-glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+                </filter>
               </defs>
-              {/* Upper tube wall */}
-              <path d="M 0 10 L 100 10 L 150 30 L 200 40 L 150 30 L 100 10 L 400 10" 
-                fill="none" stroke="url(#tube-gradient)" strokeWidth="0.5" opacity="0.6"/>
-              {/* Lower tube wall */}
-              <path d="M 0 90 L 100 90 L 150 70 L 200 60 L 150 70 L 100 90 L 400 90" 
-                fill="none" stroke="url(#tube-gradient)" strokeWidth="0.5" opacity="0.6"/>
+              
+              {/* Tube walls */}
+              <path d="M0,80 C100,80 150,110 200,118 C250,110 300,80 400,80" stroke="url(#vm-wall)" strokeWidth="0.8" fill="none" opacity="0.5"/>
+              <path d="M0,220 C100,220 150,190 200,182 C250,190 300,220 400,220" stroke="url(#vm-wall)" strokeWidth="0.8" fill="none" opacity="0.5"/>
+              
+              {/* Flow lines */}
+              <path d="M0,100 C120,100 160,130 200,140 C240,130 280,100 400,100" stroke="url(#vm-flow)" strokeWidth="0.5" fill="none" opacity="0.4"/>
+              <path d="M0,120 C120,120 160,138 200,145 C240,138 280,120 400,120" stroke="url(#vm-flow)" strokeWidth="0.4" fill="none" opacity="0.3"/>
+              <path d="M0,200 C120,200 160,170 200,160 C240,170 280,200 400,200" stroke="url(#vm-flow)" strokeWidth="0.5" fill="none" opacity="0.4"/>
+              <path d="M0,180 C120,180 160,162 200,155 C240,162 280,180 400,180" stroke="url(#vm-flow)" strokeWidth="0.4" fill="none" opacity="0.3"/>
+
+              {/* Mobile particles — smooth Bezier paths */}
+              <g filter="url(#vm-glow)">
+                <circle r="2.5" fill="#C9A961">
+                  <animateMotion path="M0,95 C120,95 160,128 200,140 C240,128 280,95 400,95" dur="4s" repeatCount="indefinite" begin="0s"/>
+                  <animate attributeName="opacity" values="0;0.6;1;0.6;0" dur="4s" repeatCount="indefinite" begin="0s"/>
+                  <animate attributeName="r" values="2.5;2.5;3.5;2.5;2.5" dur="4s" repeatCount="indefinite" begin="0s"/>
+                </circle>
+                <circle r="2.5" fill="#C9A961">
+                  <animateMotion path="M0,205 C120,205 160,172 200,160 C240,172 280,205 400,205" dur="4.3s" repeatCount="indefinite" begin="0.5s"/>
+                  <animate attributeName="opacity" values="0;0.6;1;0.6;0" dur="4.3s" repeatCount="indefinite" begin="0.5s"/>
+                  <animate attributeName="r" values="2.5;2.5;3.5;2.5;2.5" dur="4.3s" repeatCount="indefinite" begin="0.5s"/>
+                </circle>
+                <circle r="2" fill="#D4B896">
+                  <animateMotion path="M0,140 C120,140 160,148 200,150 C240,148 280,140 400,140" dur="4.6s" repeatCount="indefinite" begin="1s"/>
+                  <animate attributeName="opacity" values="0;0.5;0.9;0.5;0" dur="4.6s" repeatCount="indefinite" begin="1s"/>
+                  <animate attributeName="r" values="2;2;3;2;2" dur="4.6s" repeatCount="indefinite" begin="1s"/>
+                </circle>
+                <circle r="2" fill="#D4B896">
+                  <animateMotion path="M0,160 C120,160 160,155 200,150 C240,155 280,160 400,160" dur="4.8s" repeatCount="indefinite" begin="1.5s"/>
+                  <animate attributeName="opacity" values="0;0.5;0.9;0.5;0" dur="4.8s" repeatCount="indefinite" begin="1.5s"/>
+                  <animate attributeName="r" values="2;2;3;2;2" dur="4.8s" repeatCount="indefinite" begin="1.5s"/>
+                </circle>
+              </g>
+              
+              {/* Throat focal point */}
+              <circle cx="200" cy="150" r="1.5" fill="#C9A961" opacity="0.5"/>
             </svg>
-
-            {/* Left inlet particles — top particle converges down */}
-            <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-75 shadow-lg" 
-              style={{ animation: 'venturiSideFlowTop 3.5s ease-in-out infinite' }}></div>
-            {/* Middle particle goes straight through */}
-            <div className="absolute w-1.5 h-1.5 rounded-full bg-[#D4B896] opacity-70 shadow-lg" 
-              style={{ animation: 'venturiSideFlow 3.5s ease-in-out infinite', animationDelay: '0.3s' }}></div>
-            {/* Bottom particle converges up */}
-            <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-75 shadow-lg" 
-              style={{ animation: 'venturiSideFlowBottom 3.5s ease-in-out infinite', animationDelay: '0.6s' }}></div>
-            
-            {/* Throat particles (tight spacing, bright, fast) */}
-            <div className="absolute w-2.5 h-2.5 rounded-full bg-[#C9A961] opacity-95 shadow-lg" 
-              style={{ left: '48%', top: '45%', animation: 'venturiSideFlowThroat 2.2s ease-in-out infinite', animationDelay: '0.15s', filter: 'drop-shadow(0 0 6px rgba(201,169,97,0.8))' }}></div>
-            <div className="absolute w-2 h-2 rounded-full bg-[#D4B896] opacity-90 shadow-lg" 
-              style={{ left: '48%', top: '55%', animation: 'venturiSideFlowThroat 2.2s ease-in-out infinite', animationDelay: '0.45s', filter: 'drop-shadow(0 0 6px rgba(201,169,97,0.8))' }}></div>
-            
-            {/* Right outlet particles — top particle diverges up */}
-            <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-75 shadow-lg" 
-              style={{ animation: 'venturiSideFlowExitTop 3.5s ease-in-out infinite', animationDelay: '0.2s' }}></div>
-            {/* Middle particle exits straight */}
-            <div className="absolute w-1.5 h-1.5 rounded-full bg-[#D4B896] opacity-70 shadow-lg" 
-              style={{ animation: 'venturiSideFlowExit 3.5s ease-in-out infinite', animationDelay: '0.5s' }}></div>
-            {/* Bottom particle diverges down */}
-            <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-75 shadow-lg" 
-              style={{ animation: 'venturiSideFlowExitBottom 3.5s ease-in-out infinite', animationDelay: '0.8s' }}></div>
-
-            {/* Throat pressure glow */}
-            <div className="absolute w-24 h-16 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-transparent via-[#C9A961] to-transparent opacity-20 blur-2xl"
-              style={{ animation: 'venturiSideThroatGlow 2.2s ease-in-out infinite' }}>
-            </div>
           </div>
         </div>
 

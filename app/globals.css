@@ -628,501 +628,92 @@ nav:hover .nav-throat-dot {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   VENTURI PARTICLE ANIMATIONS — Flowing particles through the effect
+   VENTURI PREMIUM ANIMATION — Apple-level motion design
+   
+   Design Philosophy:
+   - Layered depth: background (bokeh) → midground → foreground particles
+   - Particles grow brighter and larger at throat (pressure visualization)
+   - Soft SVG filters replace harsh CSS drop-shadows
+   - Breathing tube walls create organic, living feel
+   - All motion uses GPU-accelerated SVG SMIL animations
+   - No layout-triggering CSS properties (no left/top/width changes)
+   - Color temperature shifts: cool blue edges → warm gold throat
 ═══════════════════════════════════════════════════════════════ */
 
-/* Enhanced Venturi particle animations with dynamic glow effects */
-@keyframes venturiParticleFlow1 {
-  0% { 
-    offset-distance: 0%;
-    opacity: 0;
-    filter: blur(0px);
-  }
-  8% {
-    opacity: 0.8;
-    filter: blur(0.2px) drop-shadow(0 0 6px rgba(201,169,97,0.6));
-  }
-  50% {
-    opacity: 1;
-    filter: blur(0.1px) drop-shadow(0 0 12px rgba(201,169,97,0.9)) drop-shadow(0 0 20px rgba(59,110,168,0.4));
-  }
-  92% {
-    opacity: 0.8;
-    filter: blur(0.2px) drop-shadow(0 0 6px rgba(201,169,97,0.6));
-  }
-  100% {
-    offset-distance: 100%;
-    opacity: 0;
-    filter: blur(1px);
-  }
+/* Tube wall breathing animation — subtle organic feel */
+.venturi-wall-upper,
+.venturi-wall-lower {
+  animation: venturiWallBreathe 6s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  will-change: opacity;
 }
 
-@keyframes venturiParticleFlow2 {
-  0% { 
-    offset-distance: 0%;
-    opacity: 0;
-    filter: blur(0px);
-  }
-  12% {
-    opacity: 0.85;
-    filter: blur(0.15px) drop-shadow(0 0 8px rgba(201,169,97,0.7));
-  }
-  50% {
-    opacity: 1;
-    filter: blur(0.1px) drop-shadow(0 0 14px rgba(201,169,97,1)) drop-shadow(0 0 24px rgba(59,110,168,0.5));
-  }
-  88% {
-    opacity: 0.85;
-    filter: blur(0.15px) drop-shadow(0 0 8px rgba(201,169,97,0.7));
-  }
-  100% {
-    offset-distance: 100%;
-    opacity: 0;
-    filter: blur(1px);
-  }
+.venturi-wall-lower {
+  animation-delay: 3s;
 }
 
-@keyframes venturiParticleFlow3 {
-  0% { 
-    offset-distance: 0%;
-    opacity: 0;
-    filter: blur(0px);
-  }
-  16% {
-    opacity: 0.9;
-    filter: blur(0.12px) drop-shadow(0 0 7px rgba(201,169,97,0.8));
-  }
-  50% {
-    opacity: 1;
-    filter: blur(0.05px) drop-shadow(0 0 13px rgba(201,169,97,0.95)) drop-shadow(0 0 22px rgba(59,110,168,0.45));
-  }
-  84% {
-    opacity: 0.9;
-    filter: blur(0.12px) drop-shadow(0 0 7px rgba(201,169,97,0.8));
-  }
-  100% {
-    offset-distance: 100%;
-    opacity: 0;
-    filter: blur(1px);
-  }
+@keyframes venturiWallBreathe {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.75; }
 }
 
-@keyframes venturiParticleFlow4 {
-  0% { 
-    offset-distance: 0%;
-    opacity: 0;
-    filter: blur(0px);
-  }
-  10% {
-    opacity: 0.75;
-    filter: blur(0.25px) drop-shadow(0 0 5px rgba(201,169,97,0.5));
-  }
-  50% {
-    opacity: 1;
-    filter: blur(0.1px) drop-shadow(0 0 11px rgba(201,169,97,0.85)) drop-shadow(0 0 18px rgba(59,110,168,0.35));
-  }
-  90% {
-    opacity: 0.75;
-    filter: blur(0.25px) drop-shadow(0 0 5px rgba(201,169,97,0.5));
-  }
-  100% {
-    offset-distance: 100%;
-    opacity: 0;
-    filter: blur(1px);
-  }
+/* Throat ambient glow — soft breathing */
+.venturi-throat-ambient {
+  animation: venturiThroatBreathe 4s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  will-change: opacity;
 }
 
-@keyframes venturiParticleFlow5 {
-  0% { 
-    offset-distance: 0%;
-    opacity: 0;
-    filter: blur(0px);
-  }
-  14% {
-    opacity: 0.8;
-    filter: blur(0.18px) drop-shadow(0 0 7px rgba(201,169,97,0.65));
-  }
-  50% {
-    opacity: 1;
-    filter: blur(0.08px) drop-shadow(0 0 12px rgba(201,169,97,0.92)) drop-shadow(0 0 21px rgba(59,110,168,0.42));
-  }
-  86% {
-    opacity: 0.8;
-    filter: blur(0.18px) drop-shadow(0 0 7px rgba(201,169,97,0.65));
-  }
-  100% {
-    offset-distance: 100%;
-    opacity: 0;
-    filter: blur(1px);
-  }
+@keyframes venturiThroatBreathe {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
 }
 
-@keyframes venturiParticleFlow6 {
-  0% { 
-    offset-distance: 0%;
-    opacity: 0;
-    filter: blur(0px);
-  }
-  18% {
-    opacity: 0.85;
-    filter: blur(0.2px) drop-shadow(0 0 8px rgba(201,169,97,0.75));
-  }
-  50% {
-    opacity: 1;
-    filter: blur(0.06px) drop-shadow(0 0 13px rgba(201,169,97,0.98)) drop-shadow(0 0 23px rgba(59,110,168,0.48));
-  }
-  82% {
-    opacity: 0.85;
-    filter: blur(0.2px) drop-shadow(0 0 8px rgba(201,169,97,0.75));
-  }
-  100% {
-    offset-distance: 100%;
-    opacity: 0;
-    filter: blur(1px);
-  }
+/* Throat heat shimmer */
+.venturi-throat-heat {
+  animation: venturiHeatShimmer 3s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  will-change: opacity;
 }
 
-/* Dramatic glowing throat pulse */
-@keyframes venturiThroatPulse {
-  0%, 100% { 
-    r: 12px; 
-    opacity: 0.25;
-    filter: drop-shadow(0 0 6px rgba(201,169,97,0.3)) drop-shadow(0 0 12px rgba(59,110,168,0.15));
-  }
-  25% {
-    r: 18px; 
-    opacity: 0.45;
-    filter: drop-shadow(0 0 12px rgba(201,169,97,0.6)) drop-shadow(0 0 20px rgba(59,110,168,0.3));
-  }
-  50% { 
-    r: 22px; 
-    opacity: 0.7;
-    filter: drop-shadow(0 0 18px rgba(201,169,97,0.9)) drop-shadow(0 0 30px rgba(59,110,168,0.5));
-  }
-  75% {
-    r: 18px; 
-    opacity: 0.45;
-    filter: drop-shadow(0 0 12px rgba(201,169,97,0.6)) drop-shadow(0 0 20px rgba(59,110,168,0.3));
-  }
+@keyframes venturiHeatShimmer {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
 }
 
-/* Intense converging pressure wave */
-@keyframes venturiPressureWave {
-  0%, 100% {
-    stroke-dasharray: 0, 1000;
-    stroke-dashoffset: 0;
-    opacity: 0.1;
-    filter: drop-shadow(0 0 2px rgba(201,169,97,0.2));
-  }
-  25% {
-    stroke-dasharray: 300, 700;
-    stroke-dashoffset: -150;
-    opacity: 0.35;
-    filter: drop-shadow(0 0 6px rgba(201,169,97,0.4));
-  }
-  50% {
-    stroke-dasharray: 400, 600;
-    stroke-dashoffset: -200;
-    opacity: 0.6;
-    filter: drop-shadow(0 0 12px rgba(201,169,97,0.7)) drop-shadow(0 0 20px rgba(59,110,168,0.3));
-  }
-  75% {
-    stroke-dasharray: 300, 700;
-    stroke-dashoffset: -150;
-    opacity: 0.35;
-    filter: drop-shadow(0 0 6px rgba(201,169,97,0.4));
-  }
+/* Throat rings — elegant pulse */
+.venturi-ring-inner {
+  animation: venturiRingPulse 4s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  will-change: opacity;
 }
 
-.venturi-particle {
-  animation: venturiParticleFlow1 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-  will-change: offset-distance, opacity, filter;
-  filter: drop-shadow(0 0 4px rgba(201,169,97,0.4));
+.venturi-ring-outer {
+  animation: venturiRingPulse 4s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  animation-delay: 2s;
+  will-change: opacity;
 }
 
-.venturi-particle:nth-child(2) {
-  animation: venturiParticleFlow2 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-  animation-delay: 0.2s;
+@keyframes venturiRingPulse {
+  0%, 100% { opacity: 0.12; }
+  50% { opacity: 0.3; }
 }
 
-.venturi-particle:nth-child(3) {
-  animation: venturiParticleFlow3 3.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-  animation-delay: 0.4s;
+/* Mobile throat glow breathing */
+.venturi-m-glow {
+  animation: venturiMobileGlow 4s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  will-change: opacity;
 }
 
-.venturi-particle:nth-child(4) {
-  animation: venturiParticleFlow4 3.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-  animation-delay: 0.15s;
+@keyframes venturiMobileGlow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
 }
 
-.venturi-particle:nth-child(5) {
-  animation: venturiParticleFlow5 3.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-  animation-delay: 0.35s;
+/* Hero SVG entrance fade */
+.venturi-hero-svg {
+  animation: venturiHeroFadeIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
-.venturi-particle:nth-child(6) {
-  animation: venturiParticleFlow6 3.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-  animation-delay: 0.55s;
-}
-
-.venturi-throat-pulse {
-  animation: venturiThroatPulse 2.4s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
-  will-change: r, opacity, filter;
-}
-
-.venturi-pressure-wave {
-  animation: venturiPressureWave 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-  will-change: stroke-dasharray, stroke-dashoffset, opacity, filter;
-}
-
-/* Mobile Venturi animations — SIDE VIEW: left inlet → narrow throat → right outlet */
-
-/* Middle flow: straight through path */
-@keyframes venturiSideFlow {
-  0% {
-    left: 8%;
-    top: 50%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-  10% {
-    opacity: 0.75;
-    filter: blur(0.3px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
-  }
-  25% {
-    left: 30%;
-    opacity: 0.8;
-    filter: blur(0.2px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
-  }
-  50% {
-    left: 48%;
-    opacity: 0.85;
-    filter: blur(0.1px) drop-shadow(0 0 4px rgba(201,169,97,0.6));
-  }
-  100% {
-    left: 92%;
-    top: 50%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-}
-
-/* Top particle converges down toward center */
-@keyframes venturiSideFlowTop {
-  0% {
-    left: 8%;
-    top: 30%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-  10% {
-    opacity: 0.75;
-    filter: blur(0.3px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
-  }
-  25% {
-    left: 30%;
-    top: 42%;
-    opacity: 0.8;
-    filter: blur(0.2px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
-  }
-  48% {
-    left: 47%;
-    top: 48%;
-    opacity: 0.85;
-    filter: blur(0.1px) drop-shadow(0 0 4px rgba(201,169,97,0.6));
-  }
-  100% {
-    left: 92%;
-    top: 52%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-}
-
-/* Bottom particle converges up toward center */
-@keyframes venturiSideFlowBottom {
-  0% {
-    left: 8%;
-    top: 70%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-  10% {
-    opacity: 0.75;
-    filter: blur(0.3px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
-  }
-  25% {
-    left: 30%;
-    top: 58%;
-    opacity: 0.8;
-    filter: blur(0.2px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
-  }
-  48% {
-    left: 47%;
-    top: 52%;
-    opacity: 0.85;
-    filter: blur(0.1px) drop-shadow(0 0 4px rgba(201,169,97,0.6));
-  }
-  100% {
-    left: 92%;
-    top: 48%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-}
-
-/* Throat acceleration: particles speed up, brighten, get tighter spacing */
-@keyframes venturiSideFlowThroat {
-  0% {
-    left: 15%;
-    top: 50%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-  15% {
-    left: 40%;
-    top: 50%;
-    opacity: 0.85;
-    filter: blur(0.2px) drop-shadow(0 0 4px rgba(201,169,97,0.6));
-  }
-  40% {
-    left: 48%;
-    top: 50%;
-    opacity: 0.95;
-    filter: blur(0px) drop-shadow(0 0 6px rgba(201,169,97,0.85)) drop-shadow(0 0 12px rgba(59,110,168,0.4));
-  }
-  65% {
-    left: 52%;
-    top: 50%;
-    opacity: 0.95;
-    filter: blur(0px) drop-shadow(0 0 6px rgba(201,169,97,0.85)) drop-shadow(0 0 12px rgba(59,110,168,0.4));
-  }
-  85% {
-    left: 60%;
-    top: 50%;
-    opacity: 0.85;
-    filter: blur(0.2px) drop-shadow(0 0 4px rgba(201,169,97,0.6));
-  }
-  100% {
-    left: 85%;
-    top: 50%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-}
-
-/* Exit flow: particles slow down, spread out again */
-@keyframes venturiSideFlowExit {
-  0% {
-    left: 52%;
-    top: 50%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-  15% {
-    left: 60%;
-    top: 50%;
-    opacity: 0.85;
-    filter: blur(0.2px) drop-shadow(0 0 4px rgba(201,169,97,0.5));
-  }
-  50% {
-    left: 70%;
-    top: 50%;
-    opacity: 0.80;
-    filter: blur(0.3px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
-  }
-  90% {
-    left: 92%;
-    top: 50%;
-    opacity: 0.75;
-    filter: blur(0.4px) drop-shadow(0 0 2px rgba(201,169,97,0.4));
-  }
-  100% {
-    left: 92%;
-    top: 50%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-}
-
-/* Exit top particle diverges up away from center */
-@keyframes venturiSideFlowExitTop {
-  0% {
-    left: 52%;
-    top: 50%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-  15% {
-    left: 60%;
-    top: 48%;
-    opacity: 0.85;
-    filter: blur(0.2px) drop-shadow(0 0 4px rgba(201,169,97,0.5));
-  }
-  50% {
-    left: 70%;
-    top: 40%;
-    opacity: 0.80;
-    filter: blur(0.3px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
-  }
-  90% {
-    left: 92%;
-    top: 30%;
-    opacity: 0.75;
-    filter: blur(0.4px) drop-shadow(0 0 2px rgba(201,169,97,0.4));
-  }
-  100% {
-    left: 92%;
-    top: 30%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-}
-
-/* Exit bottom particle diverges down away from center */
-@keyframes venturiSideFlowExitBottom {
-  0% {
-    left: 52%;
-    top: 50%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-  15% {
-    left: 60%;
-    top: 52%;
-    opacity: 0.85;
-    filter: blur(0.2px) drop-shadow(0 0 4px rgba(201,169,97,0.5));
-  }
-  50% {
-    left: 70%;
-    top: 60%;
-    opacity: 0.80;
-    filter: blur(0.3px) drop-shadow(0 0 3px rgba(201,169,97,0.5));
-  }
-  90% {
-    left: 92%;
-    top: 70%;
-    opacity: 0.75;
-    filter: blur(0.4px) drop-shadow(0 0 2px rgba(201,169,97,0.4));
-  }
-  100% {
-    left: 92%;
-    top: 70%;
-    opacity: 0;
-    filter: blur(0.5px);
-  }
-}
-
-/* Throat pressure glow */
-@keyframes venturiSideThroatGlow {
-  0%, 100% {
-    opacity: 0.15;
-    width: 20px;
-  }
-  50% {
-    opacity: 0.3;
-    width: 32px;
-  }
+@keyframes venturiHeroFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* ─── Print ─────────────────────────────────────────────────── */
