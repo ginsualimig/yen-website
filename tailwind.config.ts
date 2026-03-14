@@ -109,6 +109,7 @@ export default {
         'gradient-cream': 'linear-gradient(180deg, #FDFCF9 0%, #FAF8F3 100%)',
         'gradient-gold-line': 'linear-gradient(90deg, transparent 0%, #C9A961 50%, transparent 100%)',
         'gradient-section': 'linear-gradient(180deg, #FAF8F3 0%, #F5F1E8 100%)',
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       transitionDuration: {
         '250': '250ms',
@@ -143,9 +144,6 @@ export default {
           '0%': { transform: 'scaleX(0)' },
           '100%': { transform: 'scaleX(1)' },
         },
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
     },
   },
