@@ -69,7 +69,7 @@ export default function VenturiFluid() {
       speckles.push({
         x: Math.random(),
         y: (Math.random() * 2 - 1) * 0.9,
-        alpha: 0.08 + Math.random() * 0.15,
+        alpha: 0.05 + Math.random() * 0.10,
         size: 0.5 + Math.random() * 1.2,
       });
     }
@@ -142,7 +142,7 @@ export default function VenturiFluid() {
     for (const p of state.particles) {
       // Advance particle
       const speed = flowSpeed(p.t);
-      const baseSpeed = 0.06; // base traversal speed per second
+      const baseSpeed = 0.12; // base traversal speed per second (2x faster)
       p.t += baseSpeed * speed * dt;
 
       // Wrap around
@@ -159,7 +159,7 @@ export default function VenturiFluid() {
       // Brightness: higher at throat
       const distFromThroat = Math.abs(p.t - 0.5) * 2;
       const throatBoost = 1 - distFromThroat;
-      const alpha = Math.min(p.brightness * (0.5 + throatBoost * 0.6), 1.0);
+      const alpha = Math.min(p.brightness * (0.35 + throatBoost * 0.4), 0.6);
 
       // Size: slightly larger at throat for emphasis
       const sizeBoost = 1 + throatBoost * 0.5;
@@ -167,8 +167,8 @@ export default function VenturiFluid() {
 
       // Draw particle with glow
       const grd = ctx.createRadialGradient(x, y, 0, x, y, radius * 3);
-      grd.addColorStop(0, `rgba(255,255,255,${alpha})`);
-      grd.addColorStop(0.3, `rgba(0,217,255,${alpha * 0.6})`);
+      grd.addColorStop(0, `rgba(200,230,255,${alpha * 0.7})`);
+      grd.addColorStop(0.3, `rgba(0,217,255,${alpha * 0.4})`);
       grd.addColorStop(1, 'rgba(0,217,255,0)');
       ctx.beginPath();
       ctx.arc(x, y, radius * 3, 0, Math.PI * 2);
@@ -178,7 +178,7 @@ export default function VenturiFluid() {
       // Core dot
       ctx.beginPath();
       ctx.arc(x, y, radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+      ctx.fillStyle = `rgba(200,230,255,${alpha * 0.8})`;
       ctx.fill();
     }
 
@@ -187,10 +187,10 @@ export default function VenturiFluid() {
     const throatR = tubeY(0.5);
     const glowR = throatR * 2.5;
     const glowGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, glowR);
-    const glowAlpha = 0.18 * glowPulse;
-    glowGrad.addColorStop(0, `rgba(255,255,255,${glowAlpha})`);
-    glowGrad.addColorStop(0.2, `rgba(0,217,255,${glowAlpha * 0.6})`);
-    glowGrad.addColorStop(0.6, `rgba(0,217,255,${glowAlpha * 0.2})`);
+    const glowAlpha = 0.10 * glowPulse;
+    glowGrad.addColorStop(0, `rgba(180,220,255,${glowAlpha})`);
+    glowGrad.addColorStop(0.2, `rgba(0,217,255,${glowAlpha * 0.5})`);
+    glowGrad.addColorStop(0.6, `rgba(0,217,255,${glowAlpha * 0.15})`);
     glowGrad.addColorStop(1, 'rgba(0,217,255,0)');
     ctx.fillStyle = glowGrad;
     ctx.beginPath();
@@ -288,7 +288,7 @@ export default function VenturiFluid() {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full"
-      style={{ opacity: 0.9 }}
+      style={{ opacity: 0.75 }}
       aria-hidden="true"
     />
   );
