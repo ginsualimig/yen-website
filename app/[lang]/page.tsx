@@ -254,39 +254,53 @@ export default async function HomePage({ params }: HomePageProps) {
             <circle cx="450" cy="240" r="15"  fill="none" stroke="#C9A961" strokeWidth="0.5" opacity="0.17"/>
           </svg>
 
-          {/* ═══ MOBILE VENTURI EFFECT — convergence → acceleration → divergence ═══ */}
-          <div className="absolute inset-0 w-full h-full lg:hidden flex items-center justify-center pointer-events-none" aria-hidden="true">
-            {/* Outer inlet rings (wide entrance) */}
-            <div className="absolute w-48 h-48 rounded-full border border-[#C9A961] opacity-15" 
-              style={{ animation: 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite' }}>
-            </div>
-            <div className="absolute w-56 h-56 rounded-full border-2 border-[#3B6EA8] opacity-8" 
-              style={{ animation: 'pulse 5s cubic-bezier(0.4, 0, 0.6, 1) infinite', animationDelay: '0.5s' }}>
-            </div>
+          {/* ═══ MOBILE VENTURI EFFECT — side view: wide → narrow → wide ═══ */}
+          <div className="absolute inset-0 w-full h-full lg:hidden flex items-center justify-center pointer-events-none overflow-hidden" aria-hidden="true">
+            {/* Tube walls (visual reference) */}
+            <svg className="absolute w-full h-32 top-1/4" viewBox="0 0 400 100" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="tube-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#C9A961" stopOpacity="0.15"/>
+                  <stop offset="25%" stopColor="#C9A961" stopOpacity="0.25"/>
+                  <stop offset="50%" stopColor="#C9A961" stopOpacity="0.35"/>
+                  <stop offset="75%" stopColor="#C9A961" stopOpacity="0.25"/>
+                  <stop offset="100%" stopColor="#C9A961" stopOpacity="0.15"/>
+                </linearGradient>
+              </defs>
+              {/* Upper tube wall */}
+              <path d="M 0 10 L 100 10 L 150 30 L 200 40 L 150 30 L 100 10 L 400 10" 
+                fill="none" stroke="url(#tube-gradient)" strokeWidth="0.5" opacity="0.6"/>
+              {/* Lower tube wall */}
+              <path d="M 0 90 L 100 90 L 150 70 L 200 60 L 150 70 L 100 90 L 400 90" 
+                fill="none" stroke="url(#tube-gradient)" strokeWidth="0.5" opacity="0.6"/>
+            </svg>
+
+            {/* Left inlet particles (wide spacing, slow) */}
+            <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-75 shadow-lg" 
+              style={{ left: '8%', top: '35%', animation: 'venturiSideFlow 3.5s ease-in-out infinite' }}></div>
+            <div className="absolute w-1.5 h-1.5 rounded-full bg-[#D4B896] opacity-70 shadow-lg" 
+              style={{ left: '8%', top: '50%', animation: 'venturiSideFlow 3.5s ease-in-out infinite', animationDelay: '0.3s' }}></div>
+            <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-75 shadow-lg" 
+              style={{ left: '8%', top: '65%', animation: 'venturiSideFlow 3.5s ease-in-out infinite', animationDelay: '0.6s' }}></div>
             
-            {/* Center throat (narrow acceleration point) */}
-            <div className="absolute w-16 h-16 rounded-full bg-[#C9A961] opacity-35 blur-md"
-              style={{ animation: 'venturiMobileThroat 2.2s cubic-bezier(0.34, 1.56, 0.64, 1) infinite' }}>
-            </div>
-            <div className="absolute w-12 h-12 rounded-full bg-[#C9A961] opacity-50 blur-sm"
-              style={{ animation: 'venturiMobileThroat 2.2s cubic-bezier(0.34, 1.56, 0.64, 1) infinite', animationDelay: '0.1s' }}>
-            </div>
+            {/* Throat particles (tight spacing, bright, fast) */}
+            <div className="absolute w-2.5 h-2.5 rounded-full bg-[#C9A961] opacity-95 shadow-lg" 
+              style={{ left: '48%', top: '45%', animation: 'venturiSideFlowThroat 2.2s ease-in-out infinite', animationDelay: '0.15s', filter: 'drop-shadow(0 0 6px rgba(201,169,97,0.8))' }}></div>
+            <div className="absolute w-2 h-2 rounded-full bg-[#D4B896] opacity-90 shadow-lg" 
+              style={{ left: '48%', top: '55%', animation: 'venturiSideFlowThroat 2.2s ease-in-out infinite', animationDelay: '0.45s', filter: 'drop-shadow(0 0 6px rgba(201,169,97,0.8))' }}></div>
             
-            {/* Particles flowing from all 6 directions: IN → THROAT → OUT */}
-            {/* Top inlet */}
-            <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] shadow-lg" style={{ top: '15%', left: '50%', transform: 'translateX(-50%)', animation: 'venturiMobileThroatFlow 2.8s ease-in-out infinite' }}></div>
-            {/* Bottom inlet */}
-            <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] shadow-lg" style={{ bottom: '15%', left: '50%', transform: 'translateX(-50%)', animation: 'venturiMobileThroatFlow 2.8s ease-in-out infinite', animationDelay: '0.5s' }}></div>
-            {/* Left inlet */}
-            <div className="absolute w-2 h-2 rounded-full bg-[#D4B896] shadow-lg" style={{ top: '50%', left: '12%', transform: 'translateY(-50%)', animation: 'venturiMobileThroatFlowX 2.8s ease-in-out infinite', animationDelay: '0.25s' }}></div>
-            {/* Right inlet */}
-            <div className="absolute w-2 h-2 rounded-full bg-[#D4B896] shadow-lg" style={{ top: '50%', right: '12%', transform: 'translateY(-50%)', animation: 'venturiMobileThroatFlowXReverse 2.8s ease-in-out infinite', animationDelay: '0.75s' }}></div>
-            
-            {/* Additional particles for density */}
-            <div className="absolute w-1.5 h-1.5 rounded-full bg-[#C9A961] opacity-70 shadow-lg" style={{ top: '25%', left: '35%', animation: 'venturiMobileConverge 2.8s ease-in-out infinite', animationDelay: '0.1s' }}></div>
-            <div className="absolute w-1.5 h-1.5 rounded-full bg-[#C9A961] opacity-70 shadow-lg" style={{ top: '25%', right: '35%', animation: 'venturiMobileConvergeReverse 2.8s ease-in-out infinite', animationDelay: '0.6s' }}></div>
-            <div className="absolute w-1.5 h-1.5 rounded-full bg-[#D4B896] opacity-70 shadow-lg" style={{ bottom: '30%', left: '40%', animation: 'venturiMobileConverge 2.8s ease-in-out infinite', animationDelay: '0.35s' }}></div>
-            <div className="absolute w-1.5 h-1.5 rounded-full bg-[#D4B896] opacity-70 shadow-lg" style={{ bottom: '30%', right: '40%', animation: 'venturiMobileConvergeReverse 2.8s ease-in-out infinite', animationDelay: '0.85s' }}></div>
+            {/* Right outlet particles (wide spacing again, slowing down) */}
+            <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-75 shadow-lg" 
+              style={{ right: '8%', top: '35%', animation: 'venturiSideFlowExit 3.5s ease-in-out infinite', animationDelay: '0.2s' }}></div>
+            <div className="absolute w-1.5 h-1.5 rounded-full bg-[#D4B896] opacity-70 shadow-lg" 
+              style={{ right: '8%', top: '50%', animation: 'venturiSideFlowExit 3.5s ease-in-out infinite', animationDelay: '0.5s' }}></div>
+            <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-75 shadow-lg" 
+              style={{ right: '8%', top: '65%', animation: 'venturiSideFlowExit 3.5s ease-in-out infinite', animationDelay: '0.8s' }}></div>
+
+            {/* Throat pressure glow */}
+            <div className="absolute w-24 h-16 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-transparent via-[#C9A961] to-transparent opacity-20 blur-2xl"
+              style={{ animation: 'venturiSideThroatGlow 2.2s ease-in-out infinite' }}>
+            </div>
           </div>
         </div>
 
