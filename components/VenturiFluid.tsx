@@ -51,7 +51,7 @@ export default function VenturiFluid() {
 
   // Initialize particles and speckles
   const initState = useCallback((isMobile: boolean) => {
-    const particleCount = isMobile ? 18 : 28;
+    const particleCount = isMobile ? 36 : 56;
     const particles: Particle[] = [];
     for (let i = 0; i < particleCount; i++) {
       particles.push({
@@ -69,7 +69,7 @@ export default function VenturiFluid() {
       speckles.push({
         x: Math.random(),
         y: (Math.random() * 2 - 1) * 0.9,
-        alpha: 0.05 + Math.random() * 0.10,
+        alpha: 0.10 + Math.random() * 0.10,
         size: 0.5 + Math.random() * 1.2,
       });
     }
@@ -159,7 +159,7 @@ export default function VenturiFluid() {
       // Brightness: higher at throat
       const distFromThroat = Math.abs(p.t - 0.5) * 2;
       const throatBoost = 1 - distFromThroat;
-      const alpha = Math.min(p.brightness * (0.35 + throatBoost * 0.4), 0.6);
+      const alpha = Math.min(p.brightness * (0.35 + throatBoost * 0.4), 0.78);
 
       // Size: slightly larger at throat for emphasis
       const sizeBoost = 1 + throatBoost * 0.5;
@@ -187,7 +187,7 @@ export default function VenturiFluid() {
     const throatR = tubeY(0.5);
     const glowR = throatR * 2.5;
     const glowGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, glowR);
-    const glowAlpha = 0.10 * glowPulse;
+    const glowAlpha = 0.14 * glowPulse;
     glowGrad.addColorStop(0, `rgba(180,220,255,${glowAlpha})`);
     glowGrad.addColorStop(0.2, `rgba(0,217,255,${glowAlpha * 0.5})`);
     glowGrad.addColorStop(0.6, `rgba(0,217,255,${glowAlpha * 0.15})`);
@@ -288,7 +288,7 @@ export default function VenturiFluid() {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full"
-      style={{ opacity: 0.75 }}
+      style={{ opacity: 0.85 }}
       aria-hidden="true"
     />
   );
