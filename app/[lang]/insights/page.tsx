@@ -51,7 +51,7 @@ export default async function InsightsPage({ params }: InsightsPageProps) {
       </section>
 
       {/* FILTERS & ARTICLES */}
-      <section className="py-16 md:py-20 bg-cream-100">
+      <section className="py-16 md:py-20" style={{ background: 'linear-gradient(180deg, #FDFCF9 0%, #FAF8F3 100%)' }}>
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
           <InsightsClient locale={locale} />
         </div>

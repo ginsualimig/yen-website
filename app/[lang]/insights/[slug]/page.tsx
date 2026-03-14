@@ -164,11 +164,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       {/* ARTICLE CONTENT */}
       <section className="py-16 md:py-20 bg-cream-100">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 lg:px-10">
-          <article className="prose prose-sm md:prose-base max-w-none text-slate-700">
+          <article className="max-w-none text-slate-700">
             {/* Executive Summary */}
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded mb-8">
-              <h2 className="font-serif font-bold text-navy-900 text-xl mb-3">Executive Summary</h2>
-              <p className="text-slate-700 leading-relaxed" style={{ lineHeight: '1.8', fontSize: '1rem' }}>
+            <div className="bg-cream-200/60 border-l-2 border-gold-500 p-6 rounded-r-lg mb-10">
+              <p className="text-[0.65rem] uppercase tracking-[0.15em] font-semibold text-gold-600 mb-2">Executive Summary</p>
+              <p className="text-slate-700 leading-relaxed" style={{ lineHeight: '1.85', fontSize: '1.0625rem' }}>
                 {expandedArticle.executiveSummary}
               </p>
             </div>
