@@ -114,7 +114,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
           {/* ═══ VENTURI TUBE SVG — the core visual metaphor ═══ */}
           <svg viewBox="0 0 900 480" fill="none" xmlns="http://www.w3.org/2000/svg"
-            className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice">
+            className="absolute inset-0 w-full h-full hidden lg:block" preserveAspectRatio="xMidYMid slice">
             <defs>
               <linearGradient id="vg-flow-a" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%"   stopColor="#2A5298" stopOpacity="0" />
@@ -253,6 +253,34 @@ export default async function HomePage({ params }: HomePageProps) {
             <circle cx="450" cy="240" r="8"   fill="none" stroke="#C9A961" strokeWidth="0.9" opacity="0.33"/>
             <circle cx="450" cy="240" r="15"  fill="none" stroke="#C9A961" strokeWidth="0.5" opacity="0.17"/>
           </svg>
+
+          {/* ═══ MOBILE VENTURI EFFECT — simplified for smaller screens ═══ */}
+          <div className="absolute inset-0 w-full h-full lg:hidden flex items-center justify-center pointer-events-none" aria-hidden="true">
+            {/* Outer expanding rings */}
+            <div className="absolute w-40 h-40 rounded-full border border-[#C9A961] opacity-20" 
+              style={{ animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite' }}>
+            </div>
+            <div className="absolute w-56 h-56 rounded-full border border-[#3B6EA8] opacity-10" 
+              style={{ animation: 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite', animationDelay: '0.3s' }}>
+            </div>
+            
+            {/* Center pulsing glow */}
+            <div className="absolute w-20 h-20 rounded-full bg-[#C9A961] opacity-30 blur-lg"
+              style={{ animation: 'venturiMobilePulse 2.4s cubic-bezier(0.34, 1.56, 0.64, 1) infinite' }}>
+            </div>
+            <div className="absolute w-24 h-24 rounded-full bg-[#3B6EA8] opacity-15 blur-xl"
+              style={{ animation: 'venturiMobilePulse 2.4s cubic-bezier(0.34, 1.56, 0.64, 1) infinite', animationDelay: '0.15s' }}>
+            </div>
+            
+            {/* Flowing particles */}
+            <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-80 shadow-lg" style={{ top: '30%', left: '15%', animation: 'venturiMobileParticle 3.2s ease-in-out infinite' }}></div>
+            <div className="absolute w-2 h-2 rounded-full bg-[#D4B896] opacity-70 shadow-lg" style={{ top: '55%', left: '20%', animation: 'venturiMobileParticle 3.5s ease-in-out infinite', animationDelay: '0.3s' }}></div>
+            <div className="absolute w-1.5 h-1.5 rounded-full bg-[#C9A961] opacity-60 shadow-lg" style={{ top: '42%', left: '22%', animation: 'venturiMobileParticle 3.8s ease-in-out infinite', animationDelay: '0.6s' }}></div>
+            
+            <div className="absolute w-2 h-2 rounded-full bg-[#C9A961] opacity-80 shadow-lg" style={{ top: '30%', right: '15%', animation: 'venturiMobileParticleReverse 3.2s ease-in-out infinite' }}></div>
+            <div className="absolute w-2 h-2 rounded-full bg-[#D4B896] opacity-70 shadow-lg" style={{ top: '55%', right: '20%', animation: 'venturiMobileParticleReverse 3.5s ease-in-out infinite', animationDelay: '0.3s' }}></div>
+            <div className="absolute w-1.5 h-1.5 rounded-full bg-[#C9A961] opacity-60 shadow-lg" style={{ top: '42%', right: '22%', animation: 'venturiMobileParticleReverse 3.8s ease-in-out infinite', animationDelay: '0.6s' }}></div>
+          </div>
         </div>
 
         {/* Hero content */}

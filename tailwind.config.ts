@@ -144,6 +144,9 @@ export default {
           '100%': { transform: 'scaleX(1)' },
         },
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
     },
   },
   plugins: [],

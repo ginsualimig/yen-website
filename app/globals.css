@@ -868,6 +868,56 @@ nav:hover .nav-throat-dot {
   will-change: stroke-dasharray, stroke-dashoffset, opacity, filter;
 }
 
+/* Mobile Venturi animations */
+@keyframes venturiMobilePulse {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.4;
+  }
+}
+
+@keyframes venturiMobileParticle {
+  0% {
+    left: 15%;
+    top: 50%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+  }
+}
+
+@keyframes venturiMobileParticleReverse {
+  0% {
+    right: 15%;
+    top: 50%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    right: 50%;
+    top: 50%;
+    opacity: 0;
+  }
+}
+
 /* ─── Print ─────────────────────────────────────────────────── */
 @media print {
   body { background-color: white; color: black; }
