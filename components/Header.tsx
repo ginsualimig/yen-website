@@ -74,9 +74,6 @@ export default function Header({ locale }: HeaderProps) {
             >
               Yenturi
             </span>
-            <span className="hidden sm:inline-block text-[0.6rem] text-slate-400 uppercase tracking-[0.18em] font-sans font-medium border-l border-slate-200 pl-3 ml-0.5">
-              {isZh ? '亚太咨询' : 'Advisory'}
-            </span>
           </Link>
 
           {/* ── Desktop Nav ────────────────────────────────── */}
