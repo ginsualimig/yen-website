@@ -147,7 +147,7 @@ export default function VenturiTimeline({ isZh = false, className = '' }: Ventur
             return (
               <div key={i} className={`flex flex-col gap-0.5 ${aligns[i]}`} style={{ width: i === 2 ? '10%' : i === 0 || i === 4 ? '8%' : '21%' }}>
                 <span
-                  className={`font-semibold text-xs ${i === 2 ? 'text-gold-500' : 'text-navy-900'}`}
+                  className={`font-semibold text-xs ${i === 2 ? 'text-gold-500' : 'text-slate-200'}`}
                   style={{ fontSize: '0.7rem', letterSpacing: '0.04em' }}
                 >
                   {step.label}
@@ -197,7 +197,7 @@ export default function VenturiTimeline({ isZh = false, className = '' }: Ventur
             {/* Content */}
             <div className={step.phase === 'throat' ? 'pl-2' : ''}>
               <p
-                className={`font-semibold text-sm ${step.phase === 'throat' ? 'text-gold-500' : 'text-navy-900'}`}
+                className={`font-semibold text-sm ${step.phase === 'throat' ? 'text-gold-500' : 'text-slate-200'}`}
               >
                 {step.phase === 'throat' && (
                   <span className="text-gold-400 mr-1" aria-hidden="true">✦</span>
