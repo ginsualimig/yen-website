@@ -182,11 +182,6 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════ */}
-      {/* SECTION DIVIDER 1: Hero → Clients/Social Proof */}
-      {/* ═══════════════════════════════════════════ */}
-      <VenturiDivider variant="dark-to-light" id="divider-1" />
-
       {/* VENTURI PRINCIPLE ACCENT BAND */}
       <section
         className="relative py-8 overflow-hidden"
