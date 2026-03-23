@@ -5,6 +5,12 @@ export const metadata: Metadata = {
   title: 'Yenturi Investment Consulting | APAC Financial Advisory',
   description: 'Leading investment consulting and financial advisory services across Asia-Pacific region',
   metadataBase: new URL('https://yenturi.com'),
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+  },
   robots: {
     index: true,
     follow: true,
@@ -27,11 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0A1428" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body>
         {children}
